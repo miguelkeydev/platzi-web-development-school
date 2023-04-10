@@ -1,54 +1,36 @@
 /*Main Container*/
 .main {
   display: grid;
-    place-items: center; /*Centering the items inside "login"*/
+    place-items: end center; /*Centering the items inside "login"*/
 
   width: 100%;
-  height: 100vh;
+  height: 92vh; /*Leaving space for the Header*/
 }
 
 /*Form Container*/
 .form-container {
   display: grid;
-    grid-template-rows: auto auto auto auto; /*Creating 4 rows for Logo, Title, Subtitle, and Form*/
-    justify-items: center;
+    grid-template-rows: auto 1fr; /*Creating 4 rows for Title and Form*/
   
   width: 90%;
   max-width: 40rem;
-}
-
-/*Form Container _ Logo*/
-.form-container__logo {
-  width: 20rem;
-  margin-bottom: 5rem;
+  height: 100%;
 }
 
 /*Form Container _ Title*/
 .form-container__title {
-  text-align: center;
-  
-  margin-bottom: 1.2rem;
+  margin: 4.5rem 0;
 
   font-size: var(--fl);
 
   color: var(--white);
 }
 
-/*Form Container _ Subtitle*/
-.form-container__subtitle {
-  text-align: center;
-
-  margin-bottom: 4rem;
-
-  font-size: var(--fm);
-
-  color: var(--very-light-pink);
-}
-
-/*Form*/
-.form {
+/*Form and Form _ Info*/
+.form, .form__info {
   display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
   width: 100%;
 }
@@ -100,12 +82,19 @@
 
 /*Form _ Button*/
 .form__button {
-  margin-top: 2rem;
+  margin: 2.5rem 0 2rem;
 }
 
 @media (min-width: 640px) {
-  /*Form Container _ Logo*/
-  .form-container__logo {
-    display: none;
+  /*Form Container*/
+  .form-container {
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  /*Form*/
+  .form {
+      justify-content: unset;
   }
 }

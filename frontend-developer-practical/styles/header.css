@@ -1,0 +1,35 @@
+body {
+  padding-top: 8vh; /*Creating space for the header*/
+}
+
+.header {
+  position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  height: 8vh;
+  padding: 0 1.5rem;
+  border-bottom: .3rem solid var(--text-input-field);
+}
+
+/*Header Figures*/
+.header__menu, .header__logo, .header__shopping-kart {
+  display: flex;
+    align-items: center;
+}
+
+.header__menu img {
+  height: 3vh;
+}
+
+.header__logo img {
+  height: 6vh;
+}
+
+.header__shopping-kart img {
+  height: 4vh;
+}
