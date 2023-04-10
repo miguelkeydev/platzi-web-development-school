@@ -1,6 +1,7 @@
 /*Main Container*/
 .main {
   display: grid;
+    grid-template-rows: 1fr auto;
     place-items: center; /*Centering the items inside "login"*/
 
   width: 100%;
@@ -10,7 +11,7 @@
 /*Form Container*/
 .form-container {
   display: grid;
-    grid-template-rows: auto auto auto auto; /*Creating 4 rows for Logo, Title, Subtitle, and Form*/
+    grid-template-rows: auto auto; /*Creating 2 rows for Logo and Form*/
     justify-items: center;
   
   width: 90%;
@@ -23,29 +24,7 @@
   margin-bottom: 5rem;
 }
 
-/*Form Container _ Title*/
-.form-container__title {
-  text-align: center;
-  
-  margin-bottom: 1.2rem;
-
-  font-size: var(--fl);
-
-  color: var(--white);
-}
-
-/*Form Container _ Subtitle*/
-.form-container__subtitle {
-  text-align: center;
-
-  margin-bottom: 4rem;
-
-  font-size: var(--fm);
-
-  color: var(--very-light-pink);
-}
-
-/*Form*/
+/*Form Container _ Form*/
 .form {
   display: flex;
     flex-direction: column;
@@ -100,12 +79,54 @@
 
 /*Form _ Button*/
 .form__button {
-  margin-top: 2rem;
+  margin: 2rem 0 3rem;
+}
+
+/*Form _ Anchor*/
+.form__a {
+  align-self: center;
+
+  font-size: var(--fs);
+
+  color: var(--light-golden);
+  text-decoration: none;
+}
+
+.form__a:hover {
+  color: var(--light-golden-hover);
+}
+
+/*Secondary Button*/
+.secondary-button {
+  border: .1rem solid var(--light-golden);
+
+  background-color: var(--background);
+  color: var(--light-golden);
+}
+
+.secondary-button:hover {
+  background-color: var(--black);
+}
+
+/*Form Container _ Sign Up*/
+.form-container__sign-up {
+  position: absolute;
+    bottom: 2rem;
+  
+  width: 95%;
+  max-width: 35rem;
 }
 
 @media (min-width: 640px) {
   /*Form Container _ Logo*/
   .form-container__logo {
     display: none;
+  }
+
+  /*Form Container _ Sign Up*/
+  .form-container__sign-up {
+    position: static;
+
+    margin-top: 5rem;
   }
 }
