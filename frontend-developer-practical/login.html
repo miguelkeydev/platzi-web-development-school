@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
   <!--Adding Styles-->
   <link rel="stylesheet" href="/styles/general.css">
-  <link rel="stylesheet" href="/styles/new_password.css">
-  <title>Create your password</title>
+  <link rel="stylesheet" href="/styles/login.css">
+  <title>Login</title>
 </head>
 <body>
   <!--Principal container-->
@@ -19,32 +19,30 @@
     <!--Form container-->
     <div class="form-container">
       <!--Logo-->
-      <img class="form-container__logo" src="/images/lamoure-logos/logo-golden.png" alt="L'AMOURE Logo. A golden infinity symbol, made with thick and thin molded lines">
-      <!--Title-->
-      <h1 class="form-container__title">
-        Create a new password
-      </h1>
-      <!--Subtitle-->
-      <p class="form-container__subtitle">
-        Enter a new password for your account
-      </p>
-      <!--Password Form-->
+      <img class="form-container__logo" src="/images/lamoure-logos/logo-golden-black.png" alt="L'AMOURE Logo. A golden infinity symbol, made with thick and thin molded lines">
+      <!--Login Form-->
       <form class="form form-container__form" action="">
+        <!--Email Label-->
+        <label class="form__label" for="email">
+          Email address
+        </label>
+        <!--Email Input-->
+        <input class="form__input" type="email" id="email" placeholder="camilaramos@gmail.com" required>
         <!--Password Label-->
         <label class="form__label" for="password">
           Password
         </label>
         <!--Password Input-->
         <input class="form__input" type="password" id="password" placeholder="*************" required>
-        <!--Re-Enter Password Label-->
-        <label class="form__label" for="reenter-password">
-          Re-enter password
-        </label>
-        <!--Re-Enter Password Input-->
-        <input class="form__input" type="reenter-password" id="password" placeholder="*************" required>
         <!--Submit Form-->
-        <input class="primary-button form__button" type="submit" value="Confirm">
+        <input class="primary-button form__button" type="submit" value="Log in">
+        <a class="form__a" href="">
+          Forgot my password
+        </a>
       </form>
+      <button class="primary-button secondary-button form-container__sign-up">
+        Sign Up
+      </button>
     </div>
   </main>
 </body>
