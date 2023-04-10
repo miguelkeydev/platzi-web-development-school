@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Adding Quicksand Font Family-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <!--Adding Styles-->
+  <link rel="stylesheet" href="/styles/general.css">
+  <link rel="stylesheet" href="/styles/header.css">
+  <link rel="stylesheet" href="/styles/create_edit_account.css">
+  <!--Adding Icon to Title-->
+  <link rel="shortcut icon" href="/images/lamoure-logos/logo-icon.png">
+  <title>Create your account</title>
+</head>
+<body>
+  <!--Header-->
+  <header class="header">
+    <!--Hamburguer Menu-->
+    <figure class="header__menu">
+      <img src="/images/lamoure-icons/icon_menu.svg" alt="Hamburguer Menu Icon">
+    </figure>
+    <!--Logo-->
+    <figure class="header__logo">
+      <img src="/images/lamoure-logos/logo-icon.png" alt="Lamoure Logo">
+    </figure>
+    <!--Shopping Kart-->
+    <figure class="header__shopping-kart">
+      <img src="/images/lamoure-icons/icon_shopping_cart_notification.svg" alt="Shopping Kart With Items Icon">
+    </figure>
+  </header>
+  <!--Principal container-->
+  <main class="main">
+    <!--Form container-->
+    <div class="form-container">
+      <!--Title-->
+      <h1 class="form-container__title">
+        My account
+      </h1>
+      <!--Account Form-->
+      <form class="form form-container__form" action="">
+        <div class="form__info">
+          <!--Name Label-->
+          <label class="form__label" for="name">
+            Name
+          </label>
+          <!--Name Input-->
+          <input class="form__input" type="text" id="name" placeholder="Camila Ramos" required>
+          <!--Email Label-->
+          <label class="form__label" for="email">
+            Email address
+          </label>
+          <!--Email Input-->
+          <input class="form__input" type="email" id="email" placeholder="camilaramos@gmail.com" required>
+          <!--Password Label-->
+          <label class="form__label" for="password">
+            Password
+          </label>
+          <!--Password Input-->
+          <input class="form__input" type="password" id="password" placeholder="***************">
+        </div>
+        <!--Create Account-->
+        <input class="primary-button form__button" type="submit" value="Create account">
+      </form>
+    </div>
+  </main>
+</body>
+</html>

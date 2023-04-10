@@ -1,0 +1,26 @@
+:root {
+  --background: rgb(12, 12, 12);
+  --very-light-pink: #A7A7A7;
+  --text-input-field: #292823;
+  --light-golden: #D6B17A;
+  --light-golden-hover: #d8bd94;
+  --white: #FFF;
+  --black: #000;
+  --fs: 1.4rem;
+  --fm: 1.6rem;
+  --fl: 1.8rem;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Quicksand';
+  background-color: var(--background);
+}
+input {
+  font-family: 'Quicksand';
+}
