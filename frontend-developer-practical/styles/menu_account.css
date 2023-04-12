@@ -1,0 +1,30 @@
+/*Account List*/
+.account-list {
+  padding-top: 7.5rem;
+}
+
+/*Account List*/
+.account-list {
+  border-top: .1rem solid var(--dark-golden);
+}
+
+/*Info List*/
+.info-list {
+    gap: 1rem;
+}
+
+/*Info List Options*/
+.info-list .mobile-menu__option {
+  font-size: var(--fs);
+  font-weight: 500;
+}
+
+/*Info Email element*/
+.mobile-menu__anchor--color_lgray {
+  color: var(--very-light-pink);
+}
+
+/*Info Sign Out element*/
+.mobile-menu__anchor--color_lgolden {
+  color: var(--light-golden);
+}

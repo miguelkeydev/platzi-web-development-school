@@ -2,6 +2,7 @@
   --background: rgb(12, 12, 12);
   --very-light-pink: #A7A7A7;
   --text-input-field: #292823;
+  --dark-golden: #242321;
   --light-golden: #D6B17A;
   --light-golden-hover: #d8bd94;
   --white: #FFF;
@@ -9,7 +10,8 @@
   --fxs: 1.2rem;
   --fs: 1.4rem;
   --fm: 1.6rem;
-  --fl: 2rem;
+  --fl: 1.8rem;
+  --fxl: 2rem;
   --card-width-s: 16rem;
   --card-width-m: 24rem;
   --card-width-l: 32rem;
