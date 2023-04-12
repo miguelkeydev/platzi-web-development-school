@@ -7,6 +7,7 @@ body {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 10;
   display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,6 +15,8 @@ body {
   height: 8vh;
   padding: 0 1.5rem;
   border-bottom: .3rem solid var(--text-input-field);
+
+  background-color: var(--background);
 }
 
 /*Header Figures*/

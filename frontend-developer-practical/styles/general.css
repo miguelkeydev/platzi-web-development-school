@@ -6,13 +6,18 @@
   --light-golden-hover: #d8bd94;
   --white: #FFF;
   --black: #000;
+  --fxs: 1.2rem;
   --fs: 1.4rem;
   --fm: 1.6rem;
-  --fl: 1.8rem;
+  --fl: 2rem;
+  --card-width-s: 16rem;
+  --card-width-m: 24rem;
+  --card-width-l: 32rem;
 }
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 html {
   font-size: 62.5%;
