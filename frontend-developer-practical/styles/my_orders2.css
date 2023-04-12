@@ -1,0 +1,58 @@
+/*Main Container*/
+.my-orders {
+  display: grid;
+    grid-template-rows: auto 1fr;
+    place-items: center;
+    gap: 4rem;
+  
+  width: 100%;
+  padding: 4rem 2.4rem;
+}
+
+/*My Orders Content*/
+.my-orders__content {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  width: 100%;
+
+  background-color: var(--dark-golden);
+  border-radius: 1rem;
+}
+
+/*My Orders Content*/
+.content {
+  background-color: transparent;
+}
+
+/*Content Description*/
+.content__description {
+  display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+/*Content Date*/
+.content__date {
+  font-size: var(--fm);
+
+  color: var(--white);
+}
+
+/*Content Amount*/
+.content__amount {
+  font-size: var(--fxs);
+
+  color: var(--very-light-pink);
+}
+
+/*Content Price*/
+.content__price {
+  display: flex;
+    gap: 2rem;
+
+  font-size: var(--fm);
+  
+  color: var(--very-light-pink);
+}
