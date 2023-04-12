@@ -1,0 +1,47 @@
+/*Desktop Menu*/
+.desktop-menu {
+  position: absolute;
+    right: 18rem;
+
+  width: 18.5rem;
+  height: auto;
+  padding: 3.5rem 3rem 0;
+  border: .1rem solid var(--very-light-pink);
+  
+  background-color: var(--background);
+  border-radius: 1rem;
+}
+
+/*Desktop Menu List*/
+.desktop-menu ul {
+  list-style: none;
+}
+
+/*Desktop Menu Anchors*/
+.desktop-menu li {
+  text-align: end;
+
+  margin-bottom: 3.5rem;
+}
+
+/*Desktop Menu Anchors*/
+.desktop-menu a {
+  text-decoration: none;
+
+  color: var(--white);
+}
+
+/*Desktop Menu Option*/
+.desktop-menu__option {
+  font-size: var(--fl);
+}
+
+/*Desktop Menu Sign-Out Option*/
+.desktop-menu__option:last-child {
+  padding-top: 3rem;
+  border-top: .1rem solid var(--very-light-pink);
+}
+
+.desktop-menu__option:last-child a {
+  color: var(--light-golden);
+}
