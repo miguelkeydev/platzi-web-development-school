@@ -14,15 +14,19 @@ body {
 
   height: 8vh;
   padding: 0 1.5rem;
-  border-bottom: .3rem solid var(--text-input-field);
+  border-bottom: .3rem solid var(--dark-golden);
 
   background-color: var(--background);
 }
 
-/*Header Figures*/
-.header__menu, .header__logo, .header__shopping-kart {
+/*Header Elements*/
+.header__menu, .header__logo, .header__orders, .header__shopping-kart {
   display: flex;
     align-items: center;
+
+  font-size: var(--f);
+  
+  color: var(--white);
 }
 
 .header__menu img {
