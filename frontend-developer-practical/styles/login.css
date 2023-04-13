@@ -9,7 +9,7 @@ main {
 /*Form Container*/
 .form-container {
   display: grid;
-    grid-template-rows: auto auto 1fr; /*Creating 3 rows for Logo, Form, and Sign Up*/
+    grid-template-rows: repeat(2, auto) 1fr; /*Creating 3 rows for Logo, Form, and Sign Up*/
     place-items: end center;
 
   width: 90%;
@@ -62,6 +62,7 @@ main {
   border: none;
   border-radius: 1rem;
 
+  font-family: 'Quicksand';
   font-size: var(--fl);
   font-weight: bold;
 

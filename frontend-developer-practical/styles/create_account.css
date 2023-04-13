@@ -1,16 +1,15 @@
-/*Main Container*/
-.main {
+main {
   display: grid;
     place-items: end center; /*Centering the items inside "login"*/
 
-  width: 100%;
+  width: 100vw;
   height: 92vh; /*Leaving space for the Header*/
 }
 
 /*Form Container*/
 .form-container {
   display: grid;
-    grid-template-rows: auto 1fr; /*Creating 4 rows for Title and Form*/
+    grid-template-rows: auto 1fr; /*Creating 2 rows for Title and Form*/
   
   width: 90%;
   max-width: 40rem;
@@ -86,7 +85,7 @@
   margin: 2.5rem 0 2rem;
 }
 
-/*Form _ Button - Link*/
+/*Primary Button - Link*/
 .primary-button__link {
   display: flex;
     align-items: center;
