@@ -1,0 +1,25 @@
+/*Form _ Labels*/
+.form__label {
+  color: var(--red-error);
+}
+
+/*Form _ Inputs*/
+.form__input {
+  border: .1rem solid var(--red-error);
+}
+
+/*Form _ Error*/
+.form__error {
+  text-align: center;
+
+  font-size: var(--fs);
+
+  color: var(--red-error);
+}
+
+/*Form _ Button*/
+.form__button {
+  background-color: var(--dark-golden);
+  
+  opacity: 25%;
+}

@@ -11,10 +11,11 @@
   <!--Adding Styles-->
   <link rel="stylesheet" href="/styles/general.css">
   <link rel="stylesheet" href="/styles/header.css">
-  <link rel="stylesheet" href="/styles/create_account.css">
+  <link rel="stylesheet" href="/styles/login.css">
+  <link rel="stylesheet" href="/styles/login_error1.css">
   <!--Adding Icon to Title-->
   <link rel="shortcut icon" href="/images/lamoure-logos/logo-icon.png">
-  <title>Create your account</title>
+  <title>Login Error</title>
 </head>
 <body>
   <!--Header-->
@@ -83,43 +84,45 @@
       </a>
     </figure>
   </header>
-  <!--Principal container-->
-  <main class="main">
+  <!--Main Container-->
+  <main>
     <!--Form container-->
     <div class="form-container">
-      <!--Title-->
-      <h1 class="form-container__title">
-        My account
-      </h1>
-      <!--Account Form-->
-      <form class="form form-container__form" autocomplete="off">
-        <div class="form__info">
-          <!--Name Label-->
-          <label class="form__label" for="name">
-            Name
-          </label>
-          <!--Name Input-->
-          <input class="form__input" type="text" id="name" placeholder="Camila Ramos" required>
-          <!--Email Label-->
-          <label class="form__label" for="email">
-            Email address
-          </label>
-          <!--Email Input-->
-          <input class="form__input" type="email" id="email" placeholder="camilaramos@gmail.com" required>
-          <!--Password Label-->
-          <label class="form__label" for="password">
-            Password
-          </label>
-          <!--Password Input-->
-          <input class="form__input" type="password" id="password" placeholder="***************">
-        </div>
-        <!--Create Account-->
+      <!--Logo-->
+      <img class="form-container__logo" src="/images/lamoure-logos/logo-golden-black.png" alt="L'AMOURE Logo. A golden infinity symbol, made with thick and thin molded lines">
+      <!--Login Form-->
+      <form class="form form-container__form"  autocomplete="off">
+        <!--Email Label-->
+        <label class="form__label" for="email">
+          Email address
+        </label>
+        <!--Email Input-->
+        <input class="form__input" type="text" id="email" placeholder="camilaramos@gmail.com">
+        <!--Password Label-->
+        <label class="form__label" for="password">
+          Password
+        </label>
+        <!--Password Input-->
+        <input class="form__input" type="password" id="password" placeholder="*************">
+        <!--Error Message-->
+        <span class="form__error">
+          Invalid user ID and password combination
+        </span>
+        <!--Submit Button-->
         <button class="primary-button form__button">
-          <a class="primary-button__link" href="/home.html">
-            Create account
+          <a class="primary-button__link" href="/login_error2.html">
+            Log in
           </a>
         </button>
+        <a class="form__a" href="/password_recovery1.html">
+          Forgot my password
+        </a>
       </form>
+      <button class="primary-button secondary-button form-container__sign-up">
+        <a class="primary-button__link" href="/create_account.html">
+          Sign Up
+        </a>
+      </button>
     </div>
   </main>
 </body>
