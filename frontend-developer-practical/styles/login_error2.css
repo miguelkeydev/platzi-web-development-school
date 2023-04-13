@@ -1,0 +1,16 @@
+/*Email Label*/
+.email__label {
+  color: var(--red-error);
+}
+
+/*Email Input*/
+.email__input {
+  border: .1rem solid var(--red-error);
+}
+
+/*Form _ Button*/
+.form__button {
+  background-color: var(--dark-golden);
+  
+  opacity: 25%;
+}

@@ -1,21 +1,21 @@
-/*Main Container*/
-.main {
+main {
   display: grid;
-    grid-template-rows: 1fr auto;
-    place-items: center; /*Centering the items inside "login"*/
+    place-items: end center;
 
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: 92vh;
 }
 
 /*Form Container*/
 .form-container {
   display: grid;
-    grid-template-rows: auto auto; /*Creating 2 rows for Logo and Form*/
-    justify-items: center;
-  
+    grid-template-rows: auto auto 1fr; /*Creating 3 rows for Logo, Form, and Sign Up*/
+    place-items: end center;
+
   width: 90%;
   max-width: 35rem;
+  height: 85%;
+  padding-bottom: 2rem;
 }
 
 /*Form Container _ Logo*/
@@ -82,6 +82,19 @@
   margin: 2rem 0 3rem;
 }
 
+/*Form _ Button - Link*/
+.primary-button__link {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  color: inherit;
+  text-decoration: none;
+}
+
 /*Form _ Anchor*/
 .form__a {
   align-self: center;
@@ -110,14 +123,22 @@
 
 /*Form Container _ Sign Up*/
 .form-container__sign-up {
-  position: absolute;
-    bottom: 2rem;
-  
-  width: 90%;
-  max-width: 40rem;
+
+  width: 100%;
 }
 
 @media (min-width: 640px) {
+  main {
+      place-items: center;
+  }
+
+  /*Form Container*/
+  .form-container {
+      grid-template-rows: repeat(2, auto);
+
+    max-width: 40rem;
+    height: 50%;
+  }
   /*Form Container _ Logo*/
   .form-container__logo {
     display: none;
@@ -125,8 +146,6 @@
 
   /*Form Container _ Sign Up*/
   .form-container__sign-up {
-    position: static;
-
     margin-top: 5rem;
   }
 }

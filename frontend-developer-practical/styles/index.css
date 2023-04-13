@@ -7,13 +7,15 @@ main {
 }
 
 .title {
+  font-size: 2.4rem;
+
   color: var(--light-golden);
 }
 
 /*Pages Container*/
 .pages {
   display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
 }
 
@@ -68,4 +70,37 @@ main {
   font-weight: bold;
 
   padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.8rem;
+  }
+
+  /*Pages Container*/
+  .pages {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1080px) {
+  .title {
+    font-size: 3.2rem;
+  }
+
+  /*Pages Container*/
+  .pages {
+      grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  /*Pages Container*/
+  .pages {
+      grid-template-columns: repeat(6, 1fr);
+  }
 }
