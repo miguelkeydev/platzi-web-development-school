@@ -1,5 +1,5 @@
-/*Desktop Menu*/
-.desktop-menu {
+/*Account Menu*/
+.account__menu {
   position: absolute;
     right: 18rem;
 
@@ -12,36 +12,33 @@
   border-radius: 1rem;
 }
 
-/*Desktop Menu List*/
-.desktop-menu ul {
+/*Account List*/
+.account__list {
   list-style: none;
 }
 
-/*Desktop Menu Anchors*/
-.desktop-menu li {
+/*Account Option*/
+.account__option {
   text-align: end;
+
+  font-size: var(--fl);
 
   margin-bottom: 3.5rem;
 }
 
-/*Desktop Menu Anchors*/
-.desktop-menu a {
+/*Account Option Sign-Out Option*/
+.account__option:last-child {
+  padding-top: 3rem;
+  border-top: .1rem solid var(--very-light-pink);
+}
+
+/*Account Link*/
+.account__link {
   text-decoration: none;
 
   color: var(--white);
 }
 
-/*Desktop Menu Option*/
-.desktop-menu__option {
-  font-size: var(--fl);
-}
-
-/*Desktop Menu Sign-Out Option*/
-.desktop-menu__option:last-child {
-  padding-top: 3rem;
-  border-top: .1rem solid var(--very-light-pink);
-}
-
-.desktop-menu__option:last-child a {
+.account__option:last-child .account__link {
   color: var(--light-golden);
 }

@@ -14,21 +14,38 @@
   --fl: 1.8rem;
   --fxl: 2rem;
   --card-width-s: 16rem;
-  --card-width-m: 24rem;
-  --card-width-l: 32rem;
+  --card-width-m: 20rem;
+  --card-width-l: 24rem;
 }
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 62.5%;
 }
+
 body {
   font-family: 'Quicksand';
   background-color: var(--background);
 }
+
+::-webkit-scrollbar {
+  width: .8rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--dark-golden);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--light-golden);
+  border-radius: .8rem;
+}
+
 input {
   font-family: 'Quicksand';
 }
