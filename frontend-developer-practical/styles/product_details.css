@@ -1,0 +1,245 @@
+/*Product Detail Container*/
+.product-detail {
+  display: grid;
+    grid-template-rows: auto 1fr; /*Product and Details*/
+    gap: 2rem;
+    place-items: center;
+
+  width: 100vw;
+  height: 92vh;
+  padding-bottom: 2rem;
+}
+
+/*Product Figure*/
+.product-detail__fig {
+  position: relative;
+
+  width: 100%;
+}
+
+/*Product Image*/
+.product-detail__img {
+  width: 100%;
+  border: none;
+  
+  border-radius: 0 0 2.8rem 2.8rem;
+}
+
+/*Product Close*/
+.product-detail__close {
+  position: absolute;
+    top: 1.2rem;
+    right: 1.6rem;
+}
+
+/*Product Current Image*/
+.product-detail__current-img {
+  text-align: center;
+
+  font-size: var(--fxl);
+
+  color: var(--dark-golden);
+}
+
+/*Current Image _ Current*/
+.current-img__current {
+  color: var(--very-light-pink);
+}
+
+/*Details Container*/
+.product-detail__details {
+  display: flex;
+    flex-direction: column;
+
+  width: 90%;
+  height: 100%;
+
+  color: var(--very-light-pink);
+}
+
+/*Details Price*/
+.product-detail__price {
+  font-size: var(--fl);
+
+  color: var(--white);
+}
+
+/*Details Name*/
+.product-detail__name {
+  padding-top: .4rem;
+
+  font-size: var(--fm);
+}
+
+/*Details Description*/
+.product-detail__description {
+  padding-top: 2.8rem;
+
+  font-size: var(--fs);
+}
+
+/*Details Add to Cart*/
+.product-detail__add-to-cart {
+  display: flex;
+    align-items: end;
+
+  height: 100%;
+}
+
+/*Primary Button*/
+.primary-button {
+  width: 100%;
+  height: 5.5rem;
+  border: none;
+  border-radius: 1rem;
+
+  font-family: 'Quicksand';
+  font-size: var(--fl);
+  font-weight: bold;
+
+  background-color: var(--light-golden);
+  color: var(--black);
+  
+  cursor: pointer;
+
+  transition: .15s;
+}
+
+.primary-button:hover {
+  background-color: var(--light-golden-hover);
+}
+
+/*Details Add to Cart Button*/
+.product-detail__button {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+}
+
+@media (min-width: 640px) {
+  /*Product Detail Container*/
+  .product-detail {
+    position: relative;
+      gap: 1.2rem;
+
+    padding-top: 2rem;
+  }
+
+  /*Product Container*/
+  .product-detail__product {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /*Product Figure*/
+  .product-detail__fig {
+    position: static;
+
+    width: 45%;
+  }
+
+  /*Product Image*/
+  .product-detail__img {
+    border-radius: 2.8rem;
+  }
+
+  /*Product Close*/
+  .product-detail__close {
+      top: 2.4rem;
+      right: 2.4rem;
+  }
+
+  /*Product Close Image*/
+  .product-detail__close img {
+    width: 2.4rem;
+  }
+
+  /*Product Current Image*/
+  .product-detail__current-img {
+    font-size: 3.2rem;
+  }
+
+  /*Product Price*/
+  .product-detail__price {
+    font-size: var(--fxl);
+  }
+
+  /*Product Name*/
+  .product-detail__name {
+    padding-top: .8rem;font-size: var(--fl);
+  }
+  
+  /*Product Description*/
+  .product-detail__description {
+    font-size: var(--fm);
+
+    padding-top: 1.2rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  /*Product Detail Container*/
+  .product-detail {
+    display: grid;
+      grid-template-rows: none;
+      grid-template-columns: auto 1fr;
+      justify-content: space-evenly;
+
+    padding: 8rem;
+  }
+
+  /*Product Figure*/
+  .product-detail__fig {
+    position: static;
+
+    width: fit-content;
+    height: 70vh;
+  }
+
+  /*Product Image*/
+  .product-detail__img {
+    width: none;
+    height: 100%;
+  }
+
+  /*Product Close*/
+  .product-detail__close {
+      top: 3.2rem;
+      right: 3.2rem;
+  }
+
+  /*Product Close Image*/
+  .product-detail__close img {
+    width: 2.8rem;
+  }
+
+  /*Product Current Image*/
+  .product-detail__current-img {
+    font-size: 4.8rem;
+  }
+
+  /*Details Container*/
+  .product-detail__details {
+    width: 70%;
+    padding: 8rem 0;
+  }
+
+  /*Details Price*/
+  .product-detail__price {
+    font-size: var(--fxxl);
+  }
+
+  /*Details Name*/
+  .product-detail__name {
+    padding-top: .8rem;font-size: var(--fxl);
+  }
+  
+  /*Details Description*/
+  .product-detail__description {
+    font-size: var(--fl);
+
+    padding-top: 1.2rem;
+  }
+}
