@@ -19,7 +19,7 @@ body {
   background-color: var(--background);
 }
 
-/*Hamburguer Menu, Logo, My Orders, and Shopping Cart*/
+/*Hamburguer Menu, Logo, My Order, and Shopping Cart*/
 .header__hamburguer, .header__logo, .header__orders, .header__shopping-cart {
   display: flex;
     align-items: center;
@@ -43,8 +43,8 @@ body {
   transition: .15s;
 }
 
-/*Logo, Menu, Sign In, Account, and Shopping Cart*/
-.header__logo, .header__menu, .header__sign-in, .header__account, .header__shopping-cart {
+/*Logo, Menu, Sign In, and Account*/
+.header__logo, .header__menu, .header__sign-in, .header__account {
   display: none;
 }
 
@@ -56,7 +56,6 @@ body {
   font-weight: bold;
 
   width: 100%;
-  padding-right: 3.2rem;
 
   color: var(--light-golden);
 }
@@ -86,7 +85,7 @@ body {
 @media (min-width: 1080px) {
   .header {
     display: grid;
-      grid-template-columns: auto 1fr 1fr auto;
+      grid-template-columns: auto 1fr 1fr auto auto;
 
     padding: 0 3rem;
   }

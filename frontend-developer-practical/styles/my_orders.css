@@ -1,0 +1,93 @@
+main {
+  display: grid;
+    grid-template-rows: auto 1fr;
+    place-items: center;
+    gap: 1.2rem;
+  
+  width: 100vw;
+  padding: 2rem 1.2rem;
+}
+
+/*My Orders Container*/
+.my-orders {
+  width: 100%;
+  padding: 2rem 1.2rem;
+
+  background-color: transparent;
+  border-radius: 1rem;
+
+  cursor: pointer;
+  transition: .15s;
+}
+
+/*My Orders Link*/
+.my-orders__link {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  text-decoration: none;
+}
+
+.my-orders:hover {
+  background-color: var(--dark-golden);
+}
+
+/*My Orders _ Description*/
+.my-orders__description {
+  display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+/*My Orders _ Date*/
+.my-orders__date {
+  font-size: var(--fm);
+
+  color: var(--white);
+}
+
+/*My Orders _ Amount*/
+.my-orders__amount {
+  font-size: var(--fxs);
+
+  color: var(--very-light-pink);
+}
+
+/*My Orders _ Price*/
+.my-orders__price {
+  display: flex;
+    gap: 2rem;
+
+  font-size: var(--fm);
+  
+  color: var(--very-light-pink);
+}
+
+@media (min-width: 1080px) {
+  main {
+      gap: 2rem;
+
+    padding: 4rem;
+  }
+
+  /*My Orders Container*/
+  .my-orders {
+    width: 50%;
+  }
+
+  /*My Orders _ Date*/
+  .my-orders__date {
+    font-size: var(--fxl);
+  }
+
+  /*My Orders _ Amount*/
+  .my-orders__amount {
+    font-size: var(--fm);
+  }
+
+  /*My Orders _ Price*/
+  .my-orders__price {
+    font-size: var(--fxl);
+  }
+}

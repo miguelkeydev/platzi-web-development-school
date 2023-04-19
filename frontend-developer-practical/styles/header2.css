@@ -196,6 +196,10 @@ body {
     color: var(--white);
   }
 
+  .account__option:hover .account__link {
+    color: var(--light-golden-hover);
+  }
+
   .account__option:last-child .account__link {
     color: var(--light-golden);
   }

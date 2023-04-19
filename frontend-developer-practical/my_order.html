@@ -10,11 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
   <!--Adding Styles-->
   <link rel="stylesheet" href="/styles/general.css">
-  <link rel="stylesheet" href="/styles/header3.css">
+  <link rel="stylesheet" href="/styles/header4.css">
   <link rel="stylesheet" href="/styles/my_order.css">
   <!--Adding Icon to Title-->
   <link rel="shortcut icon" href="/images/lamoure-logos/logo-icon.png">
-  <title>My order</title>
+  <title>My Order</title>
 </head>
 <body>
   <!--Header-->
@@ -70,7 +70,7 @@
     </ul>
     <!--Page title-->
     <span class="header__title">
-      My Orders
+      My Order
     </span>
     <!--Account-->
     <div class="account header__account">
@@ -81,118 +81,124 @@
         <img class="account__arrow" src="/images/lamoure-icons/arrow-down.svg" alt="Arrow Down Icon">
       </a>
     </div>
+    <!--Shopping Cart-->
+    <figure class="header__shopping-cart">
+      <a href="/shopping_cart1.html">
+        <img src="/images/lamoure-icons/icon_shopping_cart_notification.svg" alt="Shopping Cart With Items Icon">
+      </a>
+    </figure>
   </header>
-  <!--My Orders-->
-  <main class="my-orders">
-    <!--My Orders Content-->
-    <div class="content my-orders__content">
-      <!--My Orders Description-->
-      <div class="content__description">
-        <span class="content__date">
-          04/24/23
+  <!--Main Container-->
+  <main class="my-order">
+    <!--My Order Info-->
+    <div class="my-order__info">
+      <!--Info Description-->
+      <div class="my-order__description">
+        <!--Info Date-->
+        <span class="my-order__date">
+          18/04/23
         </span>
-        <span class="content__amount">
+        <!--Info Articles Amount-->
+        <span class="my-order__articles">
           6 articles
         </span>
       </div>
-      <!--My Orders Price-->
-      <div class="content__price">
-        <span>
-          COP 110.000
-        </span>
-      </div>
+      <!--Info Total-->
+      <span class="my-order__total">
+        COP 100.000
+      </span>
     </div>
-    <!--My Orders Container-->
-    <div class="container my-orders__container">
-      <!--Product Container - Blue Eyes Earrings-->
-      <div class="container__product">
-        <!--Product Image-->
-        <figure>
-          <img class="container__image" src="/images/lamoure-products/product_earrings1.jpg" alt="Earrings: Blue eyes with large eyelashes and with three pearls hanging on each of them">
-        </figure>
-        <!--Product Description-->
-        <span class="container__description">
-          Blue Eyes Earrings
-        </span>
-        <!--Product Price-->
-        <span class="container__price">
-          COP 15.000
-        </span>
+    <!--My Order Products-->
+    <div class="my-order__products">
+      <!--Product - Black Quartz Necklace-->
+      <div class="product my-order__product">
+        <a class="product__link" href="/product_details.html">
+          <!--Product Image-->
+          <img class="product__img" src="/images/lamoure-products/product_necklace3.jpg" alt="Black Quartz Necklace">
+          <!--Product Name-->
+          <span class="product__name">
+            Black Quartz Necklace
+          </span>
+          <!--Product Price-->
+          <span class="product__price">
+            COP 25.000
+          </span>
+        </a>
       </div>
-      <!--Product Container - Silver Earrings-->
-      <div class="container__product">
-        <!--Product Image-->
-        <figure>
-          <img class="container__image" src="/images/lamoure-products/product_earrings4.jpg" alt="Earrings: Silver vertical rectangles with a hole in the middle">
-        </figure>
-        <!--Product Description-->
-        <span class="container__description">
-          Silver Earrings
-        </span>
-        <!--Product Price-->
-        <span class="container__price">
-          COP 15.000
-        </span>
+      <!--Product - Amethyst Quartz Ring-->
+      <div class="product my-order__product">
+        <a class="product__link" href="/product_details.html">
+          <!--Product Image-->
+          <img class="product__img" src="/images/lamoure-products/product_ring3.png" alt="Amethyst Quartz Ring">
+          <!--Product Name-->
+          <span class="product__name">
+            Amethyst Quartz Ring
+          </span>
+          <!--Product Price-->
+          <span class="product__price">
+            COP 10.000
+          </span>
+        </a>
       </div>
-      <!--Product Container - Golden Dandelions-->
-      <div class="container__product">
-        <!--Product Image-->
-        <figure>
-          <img class="container__image" src="/images/lamoure-products/product_earrings8.jpg" alt="Earrings: Golden dandelions">
-        </figure>
-        <!--Product Description-->
-        <span class="container__description">
-          Golden Dandelions
-        </span>
-        <!--Product Price-->
-        <span class="container__price">
-          COP 15.000
-        </span>
+      <!--Product - Shell Earrings-->
+      <div class="product my-order__product">
+        <a class="product__link" href="/product_details.html">
+          <!--Product Image-->
+          <img class="product__img" src="/images/lamoure-products/product_earrings3.jpg" alt="Shell Earrings">
+          <!--Product Name-->
+          <span class="product__name">
+            Shell Earrings
+          </span>
+          <!--Product Price-->
+          <span class="product__price">
+            COP 15.000
+          </span>
+        </a>
       </div>
-      <!--Product Container - Black Quartz Necklace-->
-      <div class="container__product">
-        <!--Product Image-->
-        <figure>
-          <img class="container__image" src="/images/lamoure-products/product_necklace3.jpg" alt="Necklace: Black quartz">
-        </figure>
-        <!--Product Description-->
-        <span class="container__description">
-          Black Quartz Necklace
-        </span>
-        <!--Product Price-->
-        <span class="container__price">
-          COP 25.000
-        </span>
+      <!--Product - Glass Earrings-->
+      <div class="product my-order__product">
+        <a class="product__link" href="/product_details.html">
+          <!--Product Image-->
+          <img class="product__img" src="/images/lamoure-products/product_earrings10.jpg" alt="Glass Earrings">
+          <!--Product Name-->
+          <span class="product__name">
+            Glass Earrings
+          </span>
+          <!--Product Price-->
+          <span class="product__price">
+            COP 15.000
+          </span>
+        </a>
       </div>
-      <!--Product Container - Pink Earrings-->
-      <div class="container__product">
-        <!--Product Image-->
-        <figure>
-          <img class="container__image" src="/images/lamoure-products/product_earrings6.jpg" alt="Earrings: Pink circles with a circled hol ine the middle and a smaller pink circle above">
-        </figure>
-        <!--Product Description-->
-        <span class="container__description">
-          Pink Earrings
-        </span>
-        <!--Product Price-->
-        <span class="container__price">
-          COP 15.000
-        </span>
+      <!--Product - Dandelion Earrings-->
+      <div class="product my-order__product">
+        <a class="product__link" href="/product_details.html">
+          <!--Product Image-->
+          <img class="product__img" src="/images/lamoure-products/product_earrings8.jpg" alt="Dandelion Earrings">
+          <!--Product Name-->
+          <span class="product__name">
+            Dandelion Earrings
+          </span>
+          <!--Product Price-->
+          <span class="product__price">
+            COP 15.000
+          </span>
+        </a>
       </div>
-      <!--Product Container - Yellow Quartz Necklace-->
-      <div class="container__product">
-        <!--Product Image-->
-        <figure>
-          <img class="container__image" src="/images/lamoure-products/product_necklace2.jpg" alt="Necklace: Yellow quartz">
-        </figure>
-        <!--Product Description-->
-        <span class="container__description">
-          Yellow Quartz Necklace
-        </span>
-        <!--Product Price-->
-        <span class="container__price">
-          COP 25.000
-        </span>
+      <!--Product - x3 Bracelets-->
+      <div class="product my-order__product">
+        <a class="product__link" href="/product_details.html">
+          <!--Product Image-->
+          <img class="product__img" src="/images/lamoure-products/product_bracelet2.jpg" alt="x3 Bracelets">
+          <!--Product Name-->
+          <span class="product__name">
+            x3 Bracelets
+          </span>
+          <!--Product Price-->
+          <span class="product__price">
+            COP 20.000
+          </span>
+        </a>
       </div>
     </div>
   </main>
