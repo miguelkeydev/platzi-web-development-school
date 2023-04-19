@@ -11,10 +11,10 @@
   <!--Adding Styles-->
   <link rel="stylesheet" href="/styles/general.css">
   <link rel="stylesheet" href="/styles/header2.css">
-  <link rel="stylesheet" href="/styles/account.css">
+  <link rel="stylesheet" href="/styles/product_details.css">
   <!--Adding Icon to Title-->
   <link rel="shortcut icon" href="/images/lamoure-logos/logo-icon.png">
-  <title>My account</title>
+  <title>Product Details</title>
 </head>
 <body>
   <!--Header-->
@@ -68,12 +68,13 @@
         </a>
       </li>
     </ul>
-    <!--Sign In-->
-    <div class="header__sign-in">
-      <a class="header__link" href="/login.html">
-        <span class="header__sign-in--color-golden">
-          Sign In
+    <!--Account-->
+    <div class="account header__account">
+      <a class="account__link header__link" href="/home2.html">
+        <span class="account__email">
+          camilaramos@gmail.com
         </span>
+        <img class="account__arrow" src="/images/lamoure-icons/arrow-down.svg" alt="Arrow Down Icon">
       </a>
     </div>
     <!--Shopping Cart-->
@@ -83,49 +84,49 @@
       </a>
     </figure>
   </header>
-  <!--Principal container-->
-  <main>
-    <!--Form container-->
-    <div class="form-container">
-      <!--Title-->
-      <h1 class="form-container__title">
-        My account
-      </h1>
-      <!--Account Form-->
-      <form class="form form-container__form" action="">
-        <div class="form__info">
-          <!--Name Label-->
-          <label class="form__label" for="name">
-            Name
-          </label>
-          <!--Name Value-->
-          <p class="form__value">
-            Camila Ramos
-          </p>
-          <!--Email Label-->
-          <label class="form__label" for="email">
-            Email address
-          </label>
-          <!--Email Value-->
-          <p class="form__value">
-            camilaramos@gmail.com
-          </p>
-          <!--Password Label-->
-          <label class="form__label" for="password">
-            Password
-          </label>
-          <!--Password Value-->
-          <p class="form__value">
-            ****************
-          </p>
-        </div>
-        <!--Edit Account-->
-        <button class="primary-button secondary-button form__button">
-          <a class="primary-button__link" href="/edit_account.html">
-            Edit
-          </a>
+  <!--Main Container-->
+  <main class="product-detail">
+    <!--Product-->
+    <div class="product-detail__product">
+      <!--Product Image-->
+      <figure class="product-detail__fig">
+        <!--Product Image-->
+        <img class="product-detail__img" src="/images/lamoure-products/product_necklace3.jpg" alt="Black Quatrz Necklace">
+        <!--Close Icon-->
+        <a class="product-detail__close" href="/home1.html">
+          <img src="/images/lamoure-icons/icon_close.png" alt="Close Icon">
+        </a>
+      </figure>
+      <!--Product Current Image-->
+      <p class="current-img product-detail__current-img">
+        <span class="current-img__current">&#8226;</span> &#8226; &#8226;
+      </p>
+    </div>
+    <!--Details-->
+    <div class="product-detail__details">
+      <!--Product Price-->
+      <p class="product-detail__price">
+        COP 25.000
+      </p>
+      <!--Product Name-->
+      <p class="product-detail__name">
+        Black Quartz Necklace
+      </p>
+      <!--Product Description-->
+      <p class="product-detail__description">
+        This beautiful necklace with its elegant black quartz crystal, it exudes a sense of mystery and sophistication. It's said to promote grounding, spiritual transformation, and intuition, while providing balance and harmony. Perfect for those who seek to enhance their spiritual practice and embrace their inner power.
+      </p>
+      <!--Product Add to Cart-->
+      <div class="product-detail__add-to-cart">
+        <button class="primary-button product-detail__button">
+          <!--Add to Cart Icon-->
+          <img src="/images/lamoure-icons/icon_shopping_cart.svg" alt="Add to Cart Icon">
+          <!--Add to Cart Text-->
+          <span>
+            Add to cart
+          </span>
         </button>
-      </form>
+      </div>
     </div>
   </main>
 </body>

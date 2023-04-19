@@ -10,30 +10,81 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
   <!--Adding Styles-->
   <link rel="stylesheet" href="/styles/general.css">
-  <link rel="stylesheet" href="/styles/header.css">
-  <link rel="stylesheet" href="/styles/create_edit_account.css">
+  <link rel="stylesheet" href="/styles/header2.css">
+  <link rel="stylesheet" href="/styles/account.css">
   <!--Adding Icon to Title-->
   <link rel="shortcut icon" href="/images/lamoure-logos/logo-icon.png">
-  <title>Create your account</title>
+  <title>Edit account</title>
 </head>
 <body>
   <!--Header-->
   <header class="header">
     <!--Hamburguer Menu-->
-    <figure class="header__menu">
+    <figure class="header__hamburguer">
       <img src="/images/lamoure-icons/icon_menu.svg" alt="Hamburguer Menu Icon">
     </figure>
     <!--Logo-->
     <figure class="header__logo">
-      <img src="/images/lamoure-logos/logo-icon.png" alt="Lamoure Logo">
+      <a href="/index.html">
+        <img src="/images/lamoure-logos/logo-icon.png" alt="Lamoure Logo">
+      </a>
     </figure>
-    <!--Shopping Kart-->
-    <figure class="header__shopping-kart">
-      <img src="/images/lamoure-icons/icon_shopping_cart_notification.svg" alt="Shopping Kart With Items Icon">
+    <!--Menu-->
+    <ul class="header__menu">
+      <!--All Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          All
+        </a>
+      </li>
+      <!--Bracelets Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Bracelets
+        </a>
+      </li>
+      <!--Necklaces Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Necklaces
+        </a>
+      </li>
+      <!--Rings Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Rings
+        </a>
+      </li>
+      <!--Quartzes Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Quartzes
+        </a>
+      </li>
+      <!--Others Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Others
+        </a>
+      </li>
+    </ul>
+    <!--Sign In-->
+    <div class="header__sign-in">
+      <a class="header__link" href="/login.html">
+        <span class="header__sign-in--color-golden">
+          Sign In
+        </span>
+      </a>
+    </div>
+    <!--Shopping Cart-->
+    <figure class="header__shopping-cart">
+      <a href="/shopping_cart1.html">
+        <img src="/images/lamoure-icons/icon_shopping_cart_notification.svg" alt="Shopping Cart With Items Icon">
+      </a>
     </figure>
   </header>
   <!--Principal container-->
-  <main class="main">
+  <main>
     <!--Form container-->
     <div class="form-container">
       <!--Title-->
@@ -41,29 +92,33 @@
         My account
       </h1>
       <!--Account Form-->
-      <form class="form form-container__form" action="">
+      <form class="form form-container__form">
         <div class="form__info">
           <!--Name Label-->
           <label class="form__label" for="name">
             Name
           </label>
           <!--Name Input-->
-          <input class="form__input" type="text" id="name" placeholder="Camila Ramos" required>
+          <input class="form__input" type="text" placeholder="Camila Ramos">
           <!--Email Label-->
           <label class="form__label" for="email">
             Email address
           </label>
           <!--Email Input-->
-          <input class="form__input" type="email" id="email" placeholder="camilaramos@gmail.com" required>
+          <input class="form__input" type="email" placeholder="camilaramos@gmail.com">
           <!--Password Label-->
           <label class="form__label" for="password">
             Password
           </label>
           <!--Password Input-->
-          <input class="form__input" type="password" id="password" placeholder="***************">
+          <input class="form__input" type="password" placeholder="*****************">
         </div>
-        <!--Create Account-->
-        <input class="primary-button form__button" type="submit" value="Save">
+        <!--Save Changes-->
+        <button class="primary-button secondary-button form__button">
+          <a class="primary-button__link" href="/my_account.html">
+            Save
+          </a>
+        </button>
       </form>
     </div>
   </main>
