@@ -33,10 +33,14 @@ main {
   height: 100vh;
 }
 
-h1 {
+.heading {
   text-align: center;
 
+  font-size: 3.2rem;
+
   padding-top: .8rem;
+
+  text-shadow: 0 0 .8rem black;
 }
 
 a {
@@ -55,6 +59,7 @@ a {
   width: 16rem;
   height: 26rem;
   padding: 1.2rem;
+  margin: 1rem;
 
   background: var(--project-background);
   color: var(--project-text);
@@ -66,6 +71,9 @@ a {
 .project:hover {
   width: 18rem;
   height: 28rem;
+  margin: 0;
+
+  box-shadow: 0 0 2rem black;
 }
 
 .project__link {
