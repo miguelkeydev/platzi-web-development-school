@@ -1,0 +1,27 @@
+/*Images Text*/
+.main__images {
+  position: absolute;
+    right: 36%;
+
+  font-size: 1.6rem;
+
+  pointer-events: none;
+}
+
+/**/
+.main__search-by-image {
+  right: 5.2rem;
+}
+
+/*Magnifying Glass Blue Image*/
+.magnifying-glass-blue {
+    top: 4.2rem;
+    left: 56rem;
+
+  width: 1.8rem;
+}
+
+/*Learn*/
+.main__learn {
+  padding-top: 0;
+}

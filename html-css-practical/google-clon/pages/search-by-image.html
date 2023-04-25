@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Adding Styles-->
+  <link rel="stylesheet" href="../styles/general.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/search-by-image.css">
+  <link rel="stylesheet" href="../styles/footer.css">
+  <!--Adding Icon Shortcut-->
+  <link rel="shortcut icon" href="../images/google_icon.png">
+  <title>Google</title>
+</head>
+<body>
+  <!--Header-->
+  <header class="header">
+    <!--Gmail-->
+    <span class="header__gmail">
+      <!--Gmail Link-->
+      <a class="header__link" href="https://mail.google.com/mail/u/0/?ogbl#inbox">
+        Gmail
+      </a>
+    </span>
+    <!--Images-->
+    <span class="header__images">
+      <!--Images Link-->
+      <a class="header__link" href="https://www.google.com.co/imghp?hl=es-419&authuser=0&ogbl">
+        Images
+      </a>
+    </span>
+    <!--Apps-->
+    <figure class="header__apps">
+      <!--Apps Link-->
+      <a class="apps-link header__link" href="https://about.google/intl/es-419/products/">
+        <!--Apps Icon-->
+        <img class="apps-icon" src="../images/apps.svg" alt="Apps Icon">
+        <!--Apps Tooltip-->
+        <span class="tooltip">
+          Google Apps
+        </span>
+      </a>
+    </figure>
+    <!--Account-->
+    <figure class="header__account">
+      <a class="header__link" href="https://accounts.google.com/SignOutOptions?hl=es-419&continue=https://www.google.com/">
+        <!--Account Picture-->
+        <img class="account-img" src="../images/pp.jpg" alt="account Picture">
+        <!--Account Tooltip-->
+        <span class="tooltip account-tooltip">
+          Google Account<br>
+          <span class="tooltip--gray">
+            Miguel Suarez<br>
+            miguelsuarezm14@gmail.com
+          </span>
+        </span>
+      </a>
+    </figure>
+  </header>
+  <!--Main-->
+  <main class="main">
+    <!--Google Logo-->
+    <figure class="main__logo">
+      <img class="google-logo" src="../images/google_logo.svg" alt="Google Logo">
+    </figure>
+    <!--Search by Image-->
+    <div class="search-by-img main__search-by-img">
+      <!--Heading-->
+      <span class="search-by-img__heading">
+        Search any image with Google Lens
+      </span>
+      <!--Upload Image Close-->
+      <a href="./index.html">
+        <img class="search-by-img__close" src="../images/close-icon.svg" alt="Close Icon">
+      </a>
+      <!--Upload Image Container-->
+      <div class="upload-img search-by-img__upload-img">
+        <!--Drag Image Container-->
+        <div class="upload-img__drag-img">
+          <!--Drag Image Icon-->
+          <img src="../images/drag-image.svg" alt="Drag Image Icon">
+          <!--Drag Image Text-->
+          <div class="upload-img__text">
+            Drag an image here or
+            <!--Upload a File-->
+            <span class="upload-img__upload">
+              upload a file
+            </span>
+          </div>
+        </div>
+        <!--Upload Image Division-->
+        <div class="division upload-img__division">
+          <!--Division Left-->
+          <div class="division__line"></div>
+          <!--Division Or-->
+          <span class="division__or">
+            or
+          </span>
+          <!--Division Right-->
+          <div class="division__line"></div>
+        </div>
+        <!--Upload Image URL-->
+        <div class="insert-url upload-img__insert-url">
+          <!--Input URL-->
+          <input class="insert-url__input" type="text" placeholder="Paste image URL">
+          <!--Search Button-->
+          <input class="insert-url__search" type="submit" value="Search">
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--Footer-->
+  <footer class="footer">
+    <!--Country-->
+    <div class="footer__country">
+      Colombia
+    </div>
+    <!--Links-->
+    <div class="links footer__links">
+      <!--Links Left-->
+      <div class="links__left">
+        <!--About Google-->
+        <span class="links__option">
+          <!--Link-->
+          <a class="footer__link" href="https://about.google/?utm_source=google-CO&utm_medium=referral&utm_campaign=hp-footer&fg=1">
+            About Google
+          </a>
+        </span>
+        <!--Publicity-->
+        <span class="links__option">
+          <!--Link-->
+          <a class="footer__link" href="https://ads.google.com/intl/es-419_co/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">
+            Publicity
+          </a>
+        </span>
+        <!--Business-->
+        <span class="links__option">
+          <!--Link-->
+          <a class="footer__link" href="https://smallbusiness.withgoogle.com/intl/es-419_co/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=ww-ww-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u&c=CO#!/">
+            Business
+          </a>
+        </span>
+        <!--How Search Work-->
+        <span class="links__option">
+          <!--Link-->
+          <a class="footer__link" href="https://www.google.com/search/howsearchworks/?fg=1">
+            How search work
+          </a>
+        </span>
+      </div>
+      <!--Links Right-->
+      <div class="links__right">
+        <!--Privacity-->
+        <span class="links__option">
+          <!--Link-->
+          <a class="footer__link" href="https://policies.google.com/privacy?hl=es-419&fg=1">
+            Privacity
+          </a>
+        </span>
+        <!--Terms-->
+        <span class="links__option">
+          <!--Link-->
+          <a class="footer__link" href="https://policies.google.com/terms?hl=es-419&fg=1">
+            Terms
+          </a>
+        </span>
+        <!--Preferences-->
+        <span class="links__option">
+          <!--Link-->
+          <a class="footer__link" href="./preferences.html">
+            Preferences
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
