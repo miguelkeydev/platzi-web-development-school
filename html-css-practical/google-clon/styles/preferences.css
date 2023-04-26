@@ -13,7 +13,7 @@
 
   font-size: 1.4rem;
 
-  background-color: var(--background);
+  background-color: var(--white);
 }
 
 /*Preferences Option*/
@@ -21,11 +21,13 @@
   width: 100%;
   padding: .8rem 1.2rem;
 
+  color: var(--dark-gray);
+
   white-space: nowrap;
 }
 
 .preferences__option:hover {
-  background-color: var(--dark-gray-light);
+  background-color: var(--very-light-gray);
 }
 
 /*Preferences Link*/
@@ -36,7 +38,7 @@
 /*Theme Option*/
 .preferences__option--theme {
   padding: .4rem 0;
-  border-top: .1rem solid var(--dark-gray-light);
+  border-top: .1rem solid var(--very-light-gray);
 
   white-space: nowrap;
 }
@@ -48,10 +50,12 @@
     gap: 1.2rem;
 
   padding: .8rem 1.2rem;
+
+  color: var(--dark-gray);
 }
 
 .theme__link:hover {
-  background-color: var(--dark-gray-light);
+  background-color: var(--very-light-gray);
 }
 
 /*Theme Image*/
@@ -62,5 +66,5 @@
 }
 
 .theme__link:hover .theme__img {
-  opacity: 1;
+  opacity: .4;
 }

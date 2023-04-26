@@ -7,8 +7,8 @@
   <!--Adding Styles-->
   <link rel="stylesheet" href="../styles/general.css">
   <link rel="stylesheet" href="../styles/header.css">
-  <link rel="stylesheet" href="../styles/white-theme.css">
   <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/search-by-image.css">
   <link rel="stylesheet" href="../styles/footer.css">
   <!--Adding Icon Shortcut-->
   <link rel="shortcut icon" href="../images/google_icon.png">
@@ -27,14 +27,14 @@
     <!--Images-->
     <span class="header__images">
       <!--Images Link-->
-      <a class="header__link" href="https://www.google.com.co/imghp?hl=es-419&authuser=0&ogbl">
+      <a class="header__link" href="./images.html">
         Images
       </a>
     </span>
     <!--Apps-->
     <figure class="header__apps">
       <!--Apps Link-->
-      <a class="apps-link header__link" href="https://about.google/intl/es-419/products/">
+      <a class="apps-link header__link" href="./apps.html">
         <!--Apps Icon-->
         <img class="apps-icon" src="../images/apps.svg" alt="Apps Icon">
         <!--Apps Tooltip-->
@@ -45,7 +45,7 @@
     </figure>
     <!--Account-->
     <figure class="header__account">
-      <a class="header__link" href="https://accounts.google.com/SignOutOptions?hl=es-419&continue=https://www.google.com/">
+      <a class="header__link" href="./account.html">
         <!--Account Picture-->
         <img class="account-img" src="../images/pp.jpg" alt="account Picture">
         <!--Account Tooltip-->
@@ -65,38 +65,50 @@
     <figure class="main__logo">
       <img class="google-logo" src="../images/google_logo.svg" alt="Google Logo">
     </figure>
-    <!--Google Search Container-->
-    <div class="main__search">
-      <!--Search Input-->
-      <input class="main__input" type="text">
-      <!--Magnifying Glass Icon-->
-      <img class="main__magnifying-glass" src="../images/magnifying-glass.svg" alt="Magnifying Glass Icon">
-      <!--Search by Image Container-->
-      <figure class="main__search-by-image">
-        <!--Search by Image Link-->
-        <a class="main__link" href="./search-by-image.html">
-          <!--Search by Image Icon-->
-          <img class="main__camera" src="../images/camera.svg" alt="Camera Icon">
-          <!--Search by Image Tooltip-->
-          <span class="tooltip search-by-image__tooltip">
-            Search by image
+    <!--Search by Image-->
+    <div class="search-by-img main__search-by-img">
+      <!--Heading-->
+      <span class="search-by-img__heading">
+        Search any image with Google Lens
+      </span>
+      <!--Upload Image Close-->
+      <a href="./index.html">
+        <img class="search-by-img__close" src="../images/close-icon.svg" alt="Close Icon">
+      </a>
+      <!--Upload Image Container-->
+      <div class="upload-img search-by-img__upload-img">
+        <!--Drag Image Container-->
+        <div class="upload-img__drag-img">
+          <!--Drag Image Icon-->
+          <img src="../images/drag-image.svg" alt="Drag Image Icon">
+          <!--Drag Image Text-->
+          <div class="upload-img__text">
+            Drag an image here or
+            <!--Upload a File-->
+            <span class="upload-img__upload">
+              upload a file
+            </span>
+          </div>
+        </div>
+        <!--Upload Image Division-->
+        <div class="division upload-img__division">
+          <!--Division Left-->
+          <div class="division__line"></div>
+          <!--Division Or-->
+          <span class="division__or">
+            or
           </span>
-        </a>
-      </figure>
-    </div>
-    <!--Google Buttons-->
-    <div class="main__buttons">
-      <!--Google Search Button-->
-      <button class="main__button">
-        Google Search
-      </button>
-      <!--Feeling Lucky Button-->
-      <button class="main__button">
-        <!--Feeling Lucky Link-->
-        <a class="main__link" href="https://www.google.com/doodles">
-          I'm feeling lucky
-        </a>
-      </button>
+          <!--Division Right-->
+          <div class="division__line"></div>
+        </div>
+        <!--Upload Image URL-->
+        <div class="insert-url upload-img__insert-url">
+          <!--Input URL-->
+          <input class="insert-url__input" type="text" placeholder="Paste image URL">
+          <!--Search Button-->
+          <input class="insert-url__search" type="submit" value="Search">
+        </div>
+      </div>
     </div>
   </main>
   <!--Footer-->
@@ -140,11 +152,11 @@
       </div>
       <!--Links Right-->
       <div class="links__right">
-        <!--Privacity-->
+        <!--Privacy-->
         <span class="links__option">
           <!--Link-->
           <a class="footer__link" href="https://policies.google.com/privacy?hl=es-419&fg=1">
-            Privacity
+            Privacy
           </a>
         </span>
         <!--Terms-->
