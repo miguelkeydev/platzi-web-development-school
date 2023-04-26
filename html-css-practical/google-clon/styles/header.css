@@ -74,6 +74,7 @@
   position: absolute;
     bottom: -2.8rem;
     left: -2.4rem;
+    z-index: 10;
   white-space: nowrap;
   line-height: 1.6rem;
 
@@ -102,6 +103,6 @@
     left: -13.6rem;
 }
 
-.header__apps:hover .tooltip, .header__account:hover .tooltip {
+.header__link:hover .tooltip {
   opacity: 1;
 }
