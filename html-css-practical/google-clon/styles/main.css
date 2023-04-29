@@ -1,0 +1,142 @@
+.main {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  width: 100vw;
+  height: calc(100% - 9.5rem);
+}
+
+/*Google Logo*/
+.main__logo {
+  position: relative;
+  display: grid;
+    place-items: end center;
+
+  width: 100%;
+  height: 32.5%;
+}
+
+/*Google Search Container*/
+.main__search {
+  position: relative;
+  display: grid;
+    place-items: center;
+  
+  width: 65%;
+  max-width: 60rem;
+  padding: 2.8rem 0;
+}
+
+/*Search Input*/
+.main__input {
+  font-family: arial, sans-serif;
+  font-size: 1.6rem;
+
+  width: 100%;
+  padding: 1.3rem 4.8rem;
+  border: .1rem solid var(--very-light-gray);
+
+  background-color: transparent;
+  border-radius: 3.2rem;
+}
+
+.main__input:hover {
+  padding: 1.4rem 4.8rem;
+  border: none;
+
+  box-shadow: .1rem .1rem .4rem var(--gray);
+}
+
+/*Magnifying Glass Icon*/
+.main__magnifying-glass {
+  position: absolute;
+    top: 4.4rem;
+    left: 2rem;
+
+  width: 1.6rem;
+}
+
+/*Search by Image Container*/
+.main__search-by-image {
+  position: absolute;
+    top: 3.6rem;
+    right: 1.4rem;
+  display: grid;
+    place-items: center;
+
+  width: 3.2rem;
+  height: 3rem;
+}
+
+/*Search by Image Tooltip*/
+.search-by-image__tooltip {
+    bottom: -4.4rem;
+    left: -4.4rem;
+
+  font-size: 1.1rem;
+  border: .1rem solid var(--dark-gray-light);
+  
+  background-color: var(--dark-background);
+  border-radius: .1rem;
+}
+
+.main__search-by-image:hover .tooltip {
+  opacity: 1;
+}
+
+/*Link*/
+.main__link {
+  position: relative;
+}
+
+/*Camera Icon*/
+.main__camera {
+  width: 2rem;
+}
+
+/*Buttons*/
+.main__buttons {
+  display: flex;
+    gap: 1.6rem;
+}
+
+/*Button*/
+.main__button {
+  font-size: 1.4rem;
+
+  padding: 1rem 1.6rem;
+  border: none;
+
+  background-color: var(--almost-white);
+  border-radius: .4rem;
+}
+
+.main__button:hover {
+  padding: .9rem 1.5rem;
+  border: .1rem solid var(--very-light-gray);
+}
+
+.main__button:active {
+  border-color: var(--blue-link);
+}
+
+/*Learn*/
+.main__learn {
+  font-size: 1.3rem;
+
+  padding-top: 2.4rem;
+}
+
+/*Learn Link*/
+.main__link--color-blue {
+  color: var(--blue-link);
+}
+
+.main__link--color-blue:hover {
+  text-decoration: underline;
+}
+
+.main__link--color-blue:visited {
+  color: var(--dark-blue-link); 
+}

@@ -1,0 +1,108 @@
+.header {
+  position: fixed;
+    top: 0;
+    right: 1.6rem;
+    left: 0;
+    z-index: 10;
+  display: flex;
+    align-items: center;
+    justify-content: end;
+  
+  height: 8vh;
+}
+
+/*Gmail and Images*/
+.header__gmail, .header__images {
+  font-size: 1.3rem;
+
+  margin-right: 1.6rem;
+}
+
+.header__gmail:hover, .header__images:hover {
+  text-decoration: underline;
+}
+
+/*Images*/
+.header__images {
+  margin-right: 1.6rem;
+}
+
+/*Apps and Account*/
+.header__apps, .header__account {
+  display: flex;
+    justify-content: center;
+  
+  width: 4rem;
+  height: 4rem;
+  border: none;
+
+  border-radius: 80%;
+}
+
+.header__link {
+  position: relative;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+
+  width: 100%;
+}
+
+/*Apps*/
+.header__apps {
+  margin-right: .8rem;
+}
+
+/*Apps and Account hover*/
+.header__apps:hover, .header__account:hover {
+  background-color: var(--very-light-gray);
+}
+
+/*Apps Icon*/
+.apps-icon {
+  width: 1.6rem;
+}
+
+/*Account Image*/
+.account-img {
+  width: 3.4rem;
+  border-radius: 80%;
+}
+
+/*Tooltip*/
+.tooltip {
+  position: absolute;
+    bottom: -2.8rem;
+    left: -2.4rem;
+    z-index: 10;
+  white-space: nowrap;
+  line-height: 1.6rem;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  padding: .5rem .7rem;
+
+  background-color: var(--dark-gray-light);
+  color: var(--white);
+  border-radius: .4rem;
+
+  pointer-events: none;
+  opacity: 0;
+  transition: .25s;
+}
+
+/*Tooltip - Color Gray*/
+.tooltip--gray {
+  color: var(--gray);
+}
+
+/*Account Tooltip*/
+.account-tooltip {
+    bottom: -6rem;
+    left: -13.6rem;
+}
+
+.header__link:hover .tooltip {
+  opacity: 1;
+}

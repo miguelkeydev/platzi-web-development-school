@@ -1,0 +1,256 @@
+/*Account Container*/
+.account {
+  position: absolute;
+    top: 7.2rem;
+    right: 0;
+  display: flex;
+    flex-direction: column;
+
+  width: 38rem;
+  padding: 1rem 1rem 0;
+
+  background-color: var(--almost-white);
+  border-radius: 3.2rem;
+  box-shadow: 0 .2rem .8rem var(--gray);
+}
+
+/*Account Section*/
+.account__section {
+  display: grid;
+    grid-template-columns: 10rem 1fr;
+
+  width: 100%;
+
+  background-color: var(--white);
+}
+
+/*Account Section Transparent Selector*/
+.account__section--transparent {
+  background-color: transparent;
+}
+
+/*Account Info Section*/
+.account__info {
+  padding: 2rem 0;
+  border-bottom: .4rem solid var(--almost-white);
+
+  border-radius: 2.4rem 2.4rem .4rem .4rem;
+}
+
+/*Profile Image Contianer*/
+.info__profile-img-container {
+  position: relative;
+  display: grid;
+    place-items: start center;
+}
+
+/*Profile Image*/
+.info__profile-img {
+  width: 7rem;
+
+  border-radius: 50%;
+}
+
+/*Change Profile Image Container*/
+.info__change-profile-img-container {
+  position: absolute;
+    right: .8rem;
+    bottom: 3.8rem;
+
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: .4rem;
+
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+/*Change Profile Image Figure*/
+.info__change-profile-img {
+  width: 100%;
+  height: 100%;
+  border: .1rem solid var(--light-gray);
+
+  border-radius: 50%;
+}
+
+.info__change-profile-img:hover {
+  background-color: var(--very-light-gray);
+}
+
+/*Change Profile Image Icon*/
+.info__change-profile-img-icon {
+  width: 1.6rem;
+}
+
+/*Account Info Container*/
+.info__info-container {
+  display: grid;
+    gap: 3rem;
+
+  font-size: 1.4rem;
+
+  height: 100%;
+  padding: 1.6rem 3.2rem 0 0;
+}
+
+/*Account Info Gmail*/
+.info__info-gmail {
+  display: grid;
+    gap: .3rem;
+}
+
+/*Account Info Email*/
+.info__info-email {
+  font-size: 1.2rem;
+
+  opacity: .65;
+}
+
+/*Account Info Manage*/
+.info__info-manage {
+  border: .1rem solid var(--dark-gray);
+
+  background-color: transparent;
+  border-radius: 1rem;
+}
+
+.info__info-manage:hover {
+  background-color: var(--very-light-gray);
+}
+
+/*Account Info Manage Link*/
+.info__info-manage a {
+  padding: .8rem 0;
+}
+
+/*Other Accounts Section*/
+.account__accounts {
+  display: flex;
+    flex-direction: column;
+
+  border-radius: .4rem .4rem 2.4rem 2.4rem;
+
+  overflow: hidden;
+}
+
+/*Other Accounts Option*/
+.accounts__option {
+  position: relative;
+  display: grid;
+    grid-template-columns: 10rem 1fr;
+
+  font-size: 1.4rem;
+
+  padding: 1.4rem 0;
+
+  cursor: pointer;
+  transition: .1s;
+}
+
+.accounts__option:hover {
+  background-color: var(--blue-hover);
+}
+
+/*Other Accounts Image*/
+.accounts__profile-img {
+  display: grid;
+    place-items: center;
+}
+
+/*Other Accounts Picture*/
+.accounts__profile-img-pic {
+  width: 3.4rem;
+
+  border-radius: 50%;
+}
+
+/*Other Accounts Info*/
+.accounts__info {
+  display: grid;
+    gap: .2rem;
+}
+
+/*Other Accounts Email*/
+.accounts__email {
+  font-size: 1.2rem;
+
+  opacity: .65;
+}
+
+/*Other Accounts Closed Session*/
+.accounts__closed-session {
+  position: absolute;
+    top: 1.4rem;
+    right: 1.6rem;
+
+  font-size: 1.2rem;
+
+  opacity: .65;
+}
+
+/*Other Accounts Add Account*/
+.add-account {
+  display: block;
+
+  padding: 0;
+}
+
+/*Add Account Link*/
+.add-account a {
+  display: grid;
+    grid-template-columns: 10rem 1fr;
+
+  padding: 1.4rem 0;
+}
+
+/*Log Out from All Accounts*/
+.account__log-out {
+  padding: 1.4rem 0;
+  border-bottom: .1rem solid var(--very-light-gray);
+
+  cursor: pointer;
+  transition: .1s;
+}
+
+.account__log-out:hover {
+  background-color: var(--blue-hover);
+}
+
+/*Log Out Icon*/
+.log-out__profile-img-pic {
+  width: 2rem;
+}
+
+/*Log Out Info*/
+.log-out__info {
+  display: flex;
+    align-items: center;
+
+  font-size: 1.4rem;
+}
+
+/*Account Privacy and Terms Container*/
+.account__privacy-terms {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+  
+  font-size: 1.2rem;
+
+  padding: 1.4rem 0;
+
+  opacity: .7;
+}
+
+/*Account Privacy and Terms Option*/
+.privacy-terms__option {
+  padding: .4rem .8rem;
+
+  border-radius: .4rem;
+}
+
+.privacy-terms__option:hover {
+  background-color: var(--blue-hover);
+}

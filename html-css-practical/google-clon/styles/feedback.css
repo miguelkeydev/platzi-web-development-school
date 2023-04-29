@@ -1,0 +1,266 @@
+body {
+  overflow-y: hidden;
+}
+
+/*Feedback Container*/
+.main__feedback {
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+  display: flex;
+    justify-content: end;
+
+  background-color: var(--gray-transparent);
+}
+
+/*Feedback Card*/
+.feedback {
+  position: relative;
+    display: grid;
+      grid-template-rows: auto 1fr auto;
+
+  width: 41rem;
+  height: 100%;
+  padding: 6rem 1.6rem 7.2rem;
+
+  background-color: var(--white);
+  border-radius: .8rem 0 0 .8rem;
+  box-shadow: 0 0 .4rem var(--dark-gray-light);
+}
+
+/*Header*/
+.feedback__header {
+  position: absolute;
+    top: .4rem;
+    right: 0;
+    left: 0;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  font-size: 1.8rem;
+
+  padding: .4rem 2rem;
+  border-bottom: .1rem solid var(--very-light-gray);
+
+  color: var(--dark-gray-light);
+  box-shadow: 0 .2rem .2rem -.1rem var(--very-light-gray);
+}
+
+/*Close Figure*/
+.feedback__close {
+  position: relative;
+
+  width: 4.6rem;
+  height: 4.6rem;
+
+  font-size: 2.3rem;
+  font-weight: 600;
+
+  border-radius: 50%;
+
+  transition: .1s;
+}
+
+.feedback__close:hover {
+  background-color: var(--very-light-gray);
+}
+
+/*Close Tooltip*/
+.close-tooltip {
+    bottom: -3.2rem;
+    left: 0;
+}
+
+.feedback__close:hover .close-tooltip {
+  opacity: 1;
+}
+
+/*Close Icon*/
+.feedback__icon-close {
+  width: 2.4rem;
+}
+
+/*Description*/
+.feedback__description {
+  font-size: 1.4rem;
+
+  padding: 2.8rem 0;
+}
+
+/*Decription Title*/
+.description__title {
+  display: block;
+  padding-bottom: 1.2rem;
+}
+
+/*Description Text Area*/
+.description__textarea {
+  width: 100%;
+  height: 12rem;
+  padding: 1.6rem;
+  border-radius: .4rem;
+
+  resize: none;
+}
+
+.description__textarea::placeholder {
+  font-family: arial, sans-serif;
+  font-size: 1.4rem;
+
+  color: var(--dark-gray-light);
+}
+
+/*Description Sensitive Information*/
+.description__sensitive-info {
+  display: flex;
+    align-items: center;
+    gap: .8rem;
+
+  font-size: 1.2rem;
+
+  padding-top: .4rem;
+
+  opacity: .8;
+}
+
+/*Description Figure*/
+.description__fig {
+  position: relative;
+  display: grid;
+    place-items: center;
+
+  width: 1.6rem;
+}
+
+/*Sensitive Tooltip*/
+.sensitive-tooltip {
+    left: -19rem;
+    bottom: -6rem;
+
+  width: 31rem;
+
+  white-space: unset;
+}
+
+.description__fig:hover .sensitive-tooltip {
+  opacity: 1;
+}
+
+/*Screenshot*/
+.feedback__screenshot {
+  display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: .8rem;
+
+  font-size: 1.4rem;
+
+  width: 100%;
+
+  line-height: 2rem;
+}
+
+/*Screenshot Button*/
+.screenshot__button {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+
+  font-size: 1.5rem;
+  
+  padding: .8rem;
+  border: .1rem solid var(--gray);
+
+  background-color: transparent;
+  color: var(--blue-link);
+  border-radius: .4rem;
+
+  cursor: pointer;
+}
+
+.screenshot__button:hover {
+  border-color: var(--dark-blue-link);
+}
+
+/*Screenshot Icon*/
+.screenshot__img {
+  width: 2rem;
+}
+
+/*Additional Info*/
+.feedback__additional-info {
+  display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+
+  padding-bottom: 2.4rem;
+
+  color: var(--dark-gray-light);
+}
+
+/*Additional Info Checkout*/
+.additional-info__checkbox {
+  display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+  font-size: 1.4rem;
+
+  padding-left: .8rem;
+}
+
+/*Additional Info Input*/
+.additional-info__input {
+  width: 1.8rem;
+  height: 1.8rem;
+
+  cursor: pointer;
+}
+
+/*Additional Info Legal Info*/
+.additional-info__legal {
+  text-align: justify;
+
+  font-size: 1.2rem;
+
+  word-spacing: .15rem;
+}
+
+/*Additional Info Link*/
+.additional-info__link {
+  color: var(--blue-link);
+  text-decoration: underline;
+}
+
+/*Footer*/
+.feedback__footer {
+  position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  display: flex;
+    align-items: center;
+    justify-content: end;
+
+  height: 7.2rem;
+  padding: .4rem 2.4rem 0 0;
+  border-top: .1rem solid var(--very-light-gray);
+
+  box-shadow: 0 -.2rem .2rem -.1rem var(--very-light-gray);
+}
+
+/*Send Button*/
+.feedback__send-button {
+  padding: 1rem 2.6rem;
+  border: none;
+
+  background-color: var(--very-light-gray);
+  color: var(--gray);
+  border-radius: .4rem;
+
+  cursor: pointer;
+}

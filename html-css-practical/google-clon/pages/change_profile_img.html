@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Adding Styles-->
+  <link rel="stylesheet" href="../styles/general.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link rel="stylesheet" href="../styles/account.css">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/change_profile_image.css">
+  <link rel="stylesheet" href="../styles/footer.css">
+  <!--Adding Icon Shortcut-->
+  <link rel="shortcut icon" href="../images/google_icon.png">
+  <title>Google</title>
+</head>
+<body>
+  <!--Header-->
+  <header class="header">
+    <!--Gmail-->
+    <span class="header__gmail">
+      <!--Gmail Link-->
+      <a class="header__link" href="https://mail.google.com/mail/u/0/?ogbl#inbox">
+        Gmail
+      </a>
+    </span>
+    <!--Images-->
+    <span class="header__images">
+      <!--Images Link-->
+      <a class="header__link" href="./images.html">
+        Images
+      </a>
+    </span>
+    <!--Apps-->
+    <figure class="header__apps">
+      <!--Apps Link-->
+      <a class="apps-link header__link" href="./apps.html">
+        <!--Apps Icon-->
+        <img class="apps-icon" src="../images/apps.svg" alt="Apps Icon">
+        <!--Apps Tooltip-->
+        <span class="tooltip">
+          Google Apps
+        </span>
+      </a>
+    </figure>
+    <!--Account-->
+    <figure class="header__account">
+      <a class="header__link" href="./index.html">
+        <!--Account Picture-->
+        <img class="account-img" src="../images/pp.jpg" alt="account Picture">
+        <!--Account Tooltip-->
+        <span class="tooltip account-tooltip">
+          Google Account<br>
+          <span class="tooltip--gray">
+            Miguel Suarez<br>
+            miguelsuarezm14@gmail.com
+          </span>
+        </span>
+      </a>
+      <!--Account Container-->
+      <div class="account">
+        <!--Account Info-->
+        <div class="info account__info account__section">
+          <!--Account Profile Image Contianer-->
+          <div class="info__profile-img-container">
+            <!--Profile Image-->
+            <img class="info__profile-img" src="../images/pp.jpg" alt="Profile Picture">
+            <!--Change Profile Image Container-->
+            <div class="info__change-profile-img-container">
+              <!--Change Profile Image Figure-->
+              <figure class="info__change-profile-img">
+                <!--Change Profile Image Link-->
+                <a class="button-link" href="./change_profile_img.html">
+                  <!--Change Profile Image Icon-->
+                  <img class="info__change-profile-img-icon" src="../images/camera-black.svg" alt="Camera Icon">
+                </a>
+              </figure>
+            </div>
+          </div>
+          <!--Account Info Container-->
+          <div class="info__info-container">
+            <!--Account Info Gmail-->
+            <div class="info__info-gmail">
+              <!--Account Info Name-->
+              <span>
+                Miguel Suarez
+              </span>
+              <!--Account Info Email-->
+              <span class="info__info-email">
+                miguelsuarezm14@gmail.com
+              </span>
+            </div>
+            <!--Account Info Manage-->
+            <button class="info__info-manage">
+              <!--Account Info Link-->
+              <a class="button-link" href="https://myaccount.google.com/?hl=es&utm_source=OGB&utm_medium=act">
+                Manage your Google account
+              </a>
+            </button>
+          </div>
+        </div>
+        <!--Other Accounts-->
+        <div class="accounts account__accounts account__section">
+          <!--First Account-->
+          <div class="accounts__option">
+            <!--Account Profile Image-->
+            <figure class="accounts__profile-img">
+              <img class="accounts__profile-img-pic" src="../images/pp2.jpg" alt="Profile Picture">
+            </figure>
+            <!--Account Info-->
+            <div class="accounts__info">
+              <!--Account Name-->
+              <span>
+                Miguel Suarez
+              </span>
+              <!--Account Email-->
+              <span class="accounts__email">
+                miguelon14112003@gmail.com
+              </span>
+              <!--Account Closed Session-->
+              <span class="accounts__closed-session">
+                Closed session
+              </span>
+            </div>
+          </div>
+          <!--Add Account-->
+          <div class="add-account accounts__option">
+            <!--Add Account Link-->
+            <a class="button-link" href="https://accounts.google.com/v3/signin/identifier?dsh=S1644403458%3A1682456499374779&authuser=1&continue=https%3A%2F%2Fwww.google.com%2Fwebhp%3Fauthuser%3D1&ec=GAlAmgQ&hl=es-419&flowName=GlifWebSignIn&flowEntry=AddSession">
+              <!--Add Account Icon-->
+              <figure class="accounts__profile-img">
+                <img src="../images/add-account.svg" alt="Add Account Icon">
+              </figure>
+              <!--Add Account Info-->
+              <span class="accounts__info">
+                Add another account
+              </span>
+            </a>
+          </div>
+        </div>
+        <!--Log Out from All Accounts-->
+        <div class="log-out account__log-out account__section
+        account__section--transparent">
+          <!--Log Out Icon-->
+          <figure class="accounts__profile-img">
+            <img class="log-out__profile-img-pic" src="../images/logout.svg" alt="Log Out Icon">
+          </figure>
+          <!--Log Out Info-->
+          <span class="log-out__info">
+            Log out from all accounts
+          </span>
+        </div>
+        <!--Account Privacy and Terms-->
+        <div class="privacy-terms account__privacy-terms account__section
+        account__section--transparent">
+          <!--Privacy-->
+          <span class="privacy-terms__option">
+            <!--Privacy Link-->
+            <a class="button-link" href="https://policies.google.com/privacy?hl=es">
+              Privacy Policies
+            </a>
+          </span>
+          <span>
+            &#8226;
+          </span>
+          <!--Terms-->
+          <span class="privacy-terms__option">
+            <!--Terms Link-->
+            <a href="https://policies.google.com/terms?hl=es">
+              Service Terms
+            </a>
+          </span>
+        </div>
+      </div>
+    </figure>
+  </header>
+  <!--Main-->
+  <main class="main">
+    <!--Google Logo-->
+    <figure class="main__logo">
+      <img class="google-logo" src="../images/google_logo.svg" alt="Google Logo">
+    </figure>
+    <!--Google Search Container-->
+    <div class="main__search">
+      <!--Search Input-->
+      <input class="main__input" type="text">
+      <!--Magnifying Glass Icon-->
+      <img class="main__magnifying-glass" src="../images/magnifying-glass.svg" alt="Magnifying Glass Icon">
+      <!--Search by Image Container-->
+      <figure class="main__search-by-image">
+        <!--Search by Image Link-->
+        <a class="main__link" href="./search_by_image.html">
+          <!--Search by Image Icon-->
+          <img class="main__camera" src="../images/camera.svg" alt="Camera Icon">
+          <!--Search by Image Tooltip-->
+          <span class="tooltip search-by-image__tooltip">
+            Search by image
+          </span>
+        </a>
+      </figure>
+    </div>
+    <!--Google Buttons-->
+    <div class="main__buttons">
+      <!--Google Search Button-->
+      <button class="main__button">
+        Google Search
+      </button>
+      <!--Feeling Lucky Button-->
+      <button class="main__button">
+        <!--Feeling Lucky Link-->
+        <a class="main__link" href="https://www.google.com/doodles">
+          I'm feeling lucky
+        </a>
+      </button>
+    </div>
+    <!--Google Learn-->
+    <span class="main__learn">
+      Learn how to help restore coral reefs, 
+      <a class="main__link main__link--color-blue" href="https://artsandculture.google.com/experiment/zgFx1tMqeIZyTw?hl=es">
+        just listen
+      </a>
+    </span>
+    <!--Change Profile Image Container-->
+    <div class="main__change-profile-img">
+      <!--Change Profile Image Card-->
+      <div class="profile-img">
+        <!--Header-->
+        <header class="profile-img__header">
+          <!--Close-->
+          <div class="profile-img__close">
+            <!--Close Link-->
+            <a class="button-link" href="./account.html">
+              <!--Close Image-->
+              <img class="profile-img__icon-close" src="../images/close-icon.svg" alt="">
+            </a>
+          </div>
+          <!--Heading-->
+          <span class="profile-img__heading">
+            <!--Google Logo-->
+            <img class="profile-img__logo" src="../images/google_logo.svg" alt="Google Logo">
+            <!--Account-->
+            <span>
+              Account
+            </span>
+          </span>
+          <!--Options-->
+          <div class="profile-img__options">
+            <!--Close Link-->
+            <a class="button-link" href="./change_profile_img_options.html">
+              <!--Close Image-->
+              <span class="profile-img__icon-options">
+                &#8942;
+              </span>
+            </a>
+          </div>
+        </header>
+        <!--Info-->
+        <div class="profile-img__info">
+          <!--Heading-->
+          <span>
+            Profile picture
+          </span>
+          <p class="profile-img__text">
+            A picture helps people to recognise you and lets you know when you're signed in to your account
+          </p>
+        </div>
+        <!--Visible-->
+        <div class="visible profile-img__visible">
+          <!--Visible Link-->
+          <a class="button__link" href="./change_profile_img_visible.html">
+            <!--Earth Icon-->
+            <img class="visible__icon" src="../images/globe-icon.svg" alt="Globe Icon">
+            <!--Text-->
+            <span>
+              Visible to anyone
+            </span>
+            <!--Next-->
+            <img class="visible__next" src="../images/next-icon.svg" alt="Next Icon">
+          </a>
+        </div>
+        <!--Current Profile Image Container-->
+        <figure class="current profile-img__current">
+          <!--Current Profile Image Container-->
+          <img class="current__img" src="../images/pp.jpg" alt="Profile Picture">
+        </figure>
+        <!--Buttons-->
+        <div class="profile-img__buttons">
+          <!--Change-->
+          <button class="profile-img__button">
+            <!--Change Icon-->
+            <img class="button-img" src="../images/edit-icon.svg" alt="Edit Icon">
+            <span>
+              Change
+            </span>
+          </button>
+          <!--Remove-->
+          <button class="profile-img__button">
+            <!--Remove Icon-->
+            <img class="button-img" src="../images/trash-icon.svg" alt="Edit Icon">
+            <span>
+              Remove
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--Footer-->
+  <footer class="footer">
+    <!--Country-->
+    <div class="footer__country">
+      Colombia
+    </div>
+    <!--Links-->
+    <div class="links footer__links">
+      <!--Links Left-->
+      <div class="links__left">
+        <!--About Google-->
+        <span class="links__option">
+          <!--Link-->
+          <a class="footer__link" href="https://about.google/?utm_source=google-CO&utm_medium=referral&utm_campaign=hp-footer&fg=1">
+            About Google
+          </a>
+        </span>
+        <!--Publicity-->
+        <span class="links__option">
+          <!--Link-->
+          <a class="footer__link" href="https://ads.google.com/intl/es-419_co/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">
+            Publicity
+          </a>
+        </span>
+        <!--Business-->
+        <span class="links__option">
+          <!--Link-->
+          <a class="footer__link" href="https://smallbusiness.withgoogle.com/intl/es-419_co/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=ww-ww-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u&c=CO#!/">
+            Business
+          </a>
+        </span>
+        <!--How Search Work-->
+        <span class="links__option">
+          <!--Link-->
+          <a class="footer__link" href="https://www.google.com/search/howsearchworks/?fg=1">
+            How search work
+          </a>
+        </span>
+      </div>
+      <!--Links Right-->
+      <div class="links__right">
+        <!--Privacy-->
+        <span class="links__option">
+          <!--Link-->
+          <a class="footer__link" href="https://policies.google.com/privacy?hl=es-419&fg=1">
+            Privacy
+          </a>
+        </span>
+        <!--Terms-->
+        <span class="links__option">
+          <!--Link-->
+          <a class="footer__link" href="https://policies.google.com/terms?hl=es-419&fg=1">
+            Terms
+          </a>
+        </span>
+        <!--Preferences-->
+        <span class="links__option">
+          <!--Link-->
+          <a class="footer__link" href="./preferences.html">
+            Preferences
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
