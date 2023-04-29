@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../styles/general.css">
   <link rel="stylesheet" href="../styles/header.css">
   <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/feedback.css">
   <link rel="stylesheet" href="../styles/footer.css">
   <!--Adding Icon Shortcut-->
   <link rel="shortcut icon" href="../images/google_icon.png">
@@ -26,14 +27,14 @@
     <!--Images-->
     <span class="header__images">
       <!--Images Link-->
-      <a class="header__link" href="https://www.google.com.co/imghp?hl=es-419&authuser=0&ogbl">
+      <a class="header__link" href="./images.html">
         Images
       </a>
     </span>
     <!--Apps-->
     <figure class="header__apps">
       <!--Apps Link-->
-      <a class="apps-link header__link" href="https://about.google/intl/es-419/products/">
+      <a class="apps-link header__link" href="./apps.html">
         <!--Apps Icon-->
         <img class="apps-icon" src="../images/apps.svg" alt="Apps Icon">
         <!--Apps Tooltip-->
@@ -44,7 +45,7 @@
     </figure>
     <!--Account-->
     <figure class="header__account">
-      <a class="header__link" href="https://accounts.google.com/SignOutOptions?hl=es-419&continue=https://www.google.com/">
+      <a class="header__link" href="./account.html">
         <!--Account Picture-->
         <img class="account-img" src="../images/pp.jpg" alt="account Picture">
         <!--Account Tooltip-->
@@ -96,6 +97,96 @@
           I'm feeling lucky
         </a>
       </button>
+    </div>
+    <!--Google Learn-->
+    <span class="main__learn">
+      Learn how to help restore coral reefs, 
+      <a class="main__link main__link--color-blue" href="https://artsandculture.google.com/experiment/zgFx1tMqeIZyTw?hl=es">
+        just listen
+      </a>
+    </span>
+    <!--Feedback Container-->
+    <div class="main__feedback">
+      <!--Feedback Card-->
+      <div class="feedback">
+        <!--Header-->
+        <header class="feedback__header">
+          <span>
+            Send feedback to Google
+          </span>
+          <!--Close-->
+          <figure class="feedback__close">
+            <a class="button-link" href="./index.html">
+              <img class="feedback__icon-close" src="../images/close-icon.svg" alt="Close Icon">
+              <!--Tooltip-->
+              <span class="tooltip close-tooltip">
+                Close
+              </span>
+            </a>
+          </figure>
+        </header>
+        <!--Feedback Description-->
+        <div class="description feedback__description">
+          <!--Title-->
+          <span class="description__title">
+            Describe your feedback
+          </span>
+          <!--Text Area-->
+          <textarea class="description__textarea" placeholder="Tell us what prompted this feedback..."></textarea>
+          <!--Sensitive Information-->
+          <div class="description__sensitive-info">
+            <span>
+              Please don't include any sensitive information
+            </span>
+            <!--Sensitive Icon-->
+            <figure class="description__fig">
+              <img class="description__icon" src="../images/help-icon.svg" alt="Help Icon">
+              <!--Tooltip-->
+              <span class="tooltip sensitive-tooltip">
+                Sensitive information is any data that should be protected. For example, don't include passwords, credit card numbers and personal details.
+              </span>
+            </figure>
+          </div>
+        </div>
+        <!--Screenshot-->
+        <div class="screenshot feedback__screenshot">
+          <span>
+            A screenshot will help us better understand your feedback. (optional)
+          </span>
+          <!--Screenshot Button-->
+          <button class="screenshot__button">
+            <img class="screenshot__img" src="../images/screenshot-icon.svg" alt="Screenshot Icon">
+            <span>
+              Capture screenshot
+            </span>
+          </button>
+        </div>
+        <!--Additional Info-->
+        <div class="additional-info feedback__additional-info">
+          <!--Email-->
+          <div class="additional-info__checkbox">
+            <!--Input-->
+            <input class="additional-info__input" id="email" type="checkbox">
+            <label for="email">
+              We may email you form more information or updates
+            </label>
+          </div>
+          <!--Legal Info-->
+          <span class="additional-info__legal">
+            Some <span class="additional-info__link"><a href="">account and system information</a></span> may be sent to Google. We will use it to fix problems and improve our services, subject to our <span class="additional-info__link"><a href="https://policies.google.com/privacy?hl=en-GB" target="_blank">privacy policy</a></span> and <span class="additional-info__link"><a href="https://policies.google.com/terms?hl=en-GB" target="_blank">Terms of Service.</a></span> We may email you for more information or updates. Go to <span class="additional-info__link"><a href="https://support.google.com/legal/answer/3110420?hl=en-GB&authuser=0" target="_blank">Legal help</a></span> to ask for content changes for legal reasons.
+          </span>
+        </div>
+        <!--Footer-->
+        <footer class="feedback__footer">
+          <!--Send Button-->
+          <button class="feedback__send-button">
+            Send
+            <span class="tooltip">
+              All questions are required unless marked as optional
+            </span>
+          </button>
+        </footer>
+      </div>
     </div>
   </main>
   <!--Footer-->

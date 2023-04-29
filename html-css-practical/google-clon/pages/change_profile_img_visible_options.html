@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../styles/general.css">
   <link rel="stylesheet" href="../styles/header.css">
   <link rel="stylesheet" href="../styles/account.css">
+  <link rel="stylesheet" href="../styles/visible.css">
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/footer.css">
   <!--Adding Icon Shortcut-->
@@ -220,6 +221,115 @@
         just listen
       </a>
     </span>
+    <!--Visible Container-->
+    <div class="main__visible">
+      <!--Visible Card-->
+      <div class="visible">
+        <!--Header-->
+        <div class="visible__header">
+          <!--Back-->
+          <figure class="back visible__back">
+            <!--Back Link-->
+            <a class="button-link" href="./change_profile_img.html">
+              <!--Back Icon-->
+              <img class="back__icon" src="../images/arrow-back.svg" alt="Go Back Icon">
+            </a>
+          </figure>
+          <!--Options-->
+          <div class="options visible__options">
+            <!--Options Link-->
+            <a class="button-link" href="./change_profile_img_visible_options.html">
+              <!--Options Image-->
+              <span>
+                &#8942;
+              </span>
+            </a>
+            <!--Options Menu Container-->
+            <div class="options__menu">
+              <!--Menu Option-->
+              <div class="options__option">
+                <a class="button-link" href="./past_profile_pictures.html">
+                  Past profile pictures
+                </a>
+              </div>
+              <!--Menu Option-->
+              <div class="options__option">
+                <a class="button-link" href="https://support.google.com/accounts/answer/27442" target="_blank">
+                  Help
+                </a>
+              </div>
+              <!--Menu Option-->
+              <div class="options__option">
+                <a class="button-link" href="./change_profile_img_feedback.html">
+                  Send feedback
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Form-->
+        <form class="visible__form">
+          <!--Choose-->
+          <span class="visible__choose">
+            Choose who can see your profile picture
+          </span>
+          <!--Anyone-->
+          <div class="visible__option">
+            <input class="visible__input" id="anyone" name="privacy" type="radio" checked>
+            <!--Label-->
+            <label class="label visible__label" for="anyone">
+              <!--Label Heading-->
+              <span class="label__heading">
+                <!--Icon-->
+                <img class="label__icon" src="../images/globe-icon-dark.svg" alt="Globe Icon">
+                <!--Option-->
+                <span>
+                  Anyone
+                </span>
+              </span>
+              <!--Label Description-->
+              <span class="label__description">
+                Anyone can see this info if they have your contact info or view content that you create in Google services. <span class="label__link"><a href="https://support.google.com/accounts/answer/6304920?hl=es" target="_blank">Find out more</a></span>
+              </span>
+            </label>
+          </div>
+          <!--People that you Tnteract with-->
+          <div class="visible__option">
+            <input class="visible__input" id="interact" name="privacy" type="radio">
+            <!--Label-->
+            <label class="label visible__label" for="interact">
+              <!--Label Heading-->
+              <span class="label__heading">
+                <!--Icon-->
+                <img class="label__icon" src="../images/contacts.svg" alt="Globe Icon">
+                <!--Option-->
+                <span class="label__option">
+                  People that you interact with
+                </span>
+              </span>
+              <!--Label Description-->
+              <span class="label__description">
+                This info is visible to people that you interact with in Google services. For example, if you share an album in Google Photos or chat in Google Chat. <span class="label__link"><a href="https://support.google.com/accounts/answer/6304920?hl=es" target="_blank">Find out more</a></span>
+              </span>
+            </label>
+          </div>
+          <!--Buttons-->
+          <div class="visible__buttons">
+            <!--Cancel-->
+            <button class="visible__cancel">
+              <a class="button-link" href="./change_profile_img.html">
+              Cancel
+              </a>
+            </button>
+            <button class="visible__save">
+              <a href="./change_profile_img.html">
+              Save
+              </a>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   </main>
   <!--Footer-->
   <footer class="footer">

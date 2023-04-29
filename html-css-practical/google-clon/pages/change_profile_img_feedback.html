@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../styles/header.css">
   <link rel="stylesheet" href="../styles/account.css">
   <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/feedback.css">
+  <link rel="stylesheet" href="../styles/change_profile_image.css">
   <link rel="stylesheet" href="../styles/footer.css">
   <!--Adding Icon Shortcut-->
   <link rel="shortcut icon" href="../images/google_icon.png">
@@ -126,7 +128,7 @@
           <!--Add Account-->
           <div class="add-account accounts__option">
             <!--Add Account Link-->
-            <a class="button-link" href="https://accounts.google.com/AddSession/signinchooser?hl=es&continue=https%3A%2F%2Fwww.google.com%2F%3Fpccc%3D1&ec=GAlAmgQ&authuser=0&flowName=GlifWebSignIn&flowEntry=AddSession">
+            <a class="button-link" href="https://accounts.google.com/v3/signin/identifier?dsh=S1644403458%3A1682456499374779&authuser=1&continue=https%3A%2F%2Fwww.google.com%2Fwebhp%3Fauthuser%3D1&ec=GAlAmgQ&hl=es-419&flowName=GlifWebSignIn&flowEntry=AddSession">
               <!--Add Account Icon-->
               <figure class="accounts__profile-img">
                 <img src="../images/add-account.svg" alt="Add Account Icon">
@@ -220,6 +222,173 @@
         just listen
       </a>
     </span>
+    <!--Change Profile Image Container-->
+    <div class="main__change-profile-img">
+      <!--Change Profile Image Card-->
+      <div class="profile-img">
+        <!--Header-->
+        <header class="profile-img__header">
+          <!--Close-->
+          <div class="profile-img__close">
+            <!--Close Link-->
+            <a class="button-link" href="./account.html">
+              <!--Close Image-->
+              <img class="profile-img__icon-close" src="../images/close-icon.svg" alt="">
+            </a>
+          </div>
+          <!--Heading-->
+          <span class="profile-img__heading">
+            <!--Google Logo-->
+            <img class="profile-img__logo" src="../images/google_logo.svg" alt="Google Logo">
+            <!--Account-->
+            <span>
+              Account
+            </span>
+          </span>
+          <!--Options-->
+          <div class="options profile-img__options">
+            <!--Options Link-->
+            <a class="button-link" href="./change_profile_img.html">
+              <!--Options Image-->
+              <span>
+                &#8942;
+              </span>
+            </a>
+          </div>
+        </header>
+        <!--Info-->
+        <div class="profile-img__info">
+          <!--Heading-->
+          <span>
+            Profile picture
+          </span>
+          <p class="profile-img__text">
+            A picture helps people to recognise you and lets you know when you're signed in to your account
+          </p>
+        </div>
+        <!--Visible-->
+        <div class="visible profile-img__visible">
+          <!--Visible Link-->
+          <a class="button__link" href="./change_profile_img-visible.html">
+            <!--Earth Icon-->
+            <img class="visible__icon" src="../images/globe-icon.svg" alt="Globe Icon">
+            <!--Text-->
+            <span>
+              Visible to anyone
+            </span>
+            <!--Next-->
+            <img class="visible__next" src="../images/next-icon.svg" alt="Next Icon">
+          </a>
+        </div>
+        <!--Current Profile Image Container-->
+        <figure class="current profile-img__current">
+          <!--Current Profile Image Container-->
+          <img class="current__img" src="../images/pp.jpg" alt="Profile Picture">
+        </figure>
+        <!--Buttons-->
+        <div class="profile-img__buttons">
+          <!--Change-->
+          <button class="profile-img__button">
+            <!--Change Icon-->
+            <img class="button-img" src="../images/edit-icon.svg" alt="Edit Icon">
+            <span>
+              Change
+            </span>
+          </button>
+          <!--Remove-->
+          <button class="profile-img__button">
+            <!--Remove Icon-->
+            <img class="button-img" src="../images/trash-icon.svg" alt="Edit Icon">
+            <span>
+              Remove
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--Feedback Container-->
+    <div class="main__feedback">
+      <!--Feedback Card-->
+      <div class="feedback">
+        <!--Header-->
+        <header class="feedback__header">
+          <span>
+            Send feedback to Google
+          </span>
+          <!--Close-->
+          <figure class="feedback__close">
+            <a class="button-link" href="./change_profile_img.html">
+              <img class="feedback__icon-close" src="../images/close-icon.svg" alt="Close Icon">
+              <!--Tooltip-->
+              <span class="tooltip close-tooltip">
+                Close
+              </span>
+            </a>
+          </figure>
+        </header>
+        <!--Feedback Description-->
+        <div class="description feedback__description">
+          <!--Title-->
+          <span class="description__title">
+            Describe your feedback
+          </span>
+          <!--Text Area-->
+          <textarea class="description__textarea" placeholder="Tell us what prompted this feedback..."></textarea>
+          <!--Sensitive Information-->
+          <div class="description__sensitive-info">
+            <span>
+              Please don't include any sensitive information
+            </span>
+            <!--Sensitive Icon-->
+            <figure class="description__fig">
+              <img class="description__icon" src="../images/help-icon.svg" alt="Help Icon">
+              <!--Tooltip-->
+              <span class="tooltip sensitive-tooltip">
+                Sensitive information is any data that should be protected. For example, don't include passwords, credit card numbers and personal details.
+              </span>
+            </figure>
+          </div>
+        </div>
+        <!--Screenshot-->
+        <div class="screenshot feedback__screenshot">
+          <span>
+            A screenshot will help us better understand your feedback. (optional)
+          </span>
+          <!--Screenshot Button-->
+          <button class="screenshot__button">
+            <img class="screenshot__img" src="../images/screenshot-icon.svg" alt="Screenshot Icon">
+            <span>
+              Capture screenshot
+            </span>
+          </button>
+        </div>
+        <!--Additional Info-->
+        <div class="additional-info feedback__additional-info">
+          <!--Email-->
+          <div class="additional-info__checkbox">
+            <!--Input-->
+            <input class="additional-info__input" id="email" type="checkbox">
+            <label for="email">
+              We may email you form more information or updates
+            </label>
+          </div>
+          <!--Legal Info-->
+          <span class="additional-info__legal">
+            Some <span class="additional-info__link"><a href="">account and system information</a></span> may be sent to Google. We will use it to fix problems and improve our services, subject to our <span class="additional-info__link"><a href="https://policies.google.com/privacy?hl=en-GB" target="_blank">privacy policy</a></span> and <span class="additional-info__link"><a href="https://policies.google.com/terms?hl=en-GB" target="_blank">Terms of Service.</a></span> We may email you for more information or updates. Go to <span class="additional-info__link"><a href="https://support.google.com/legal/answer/3110420?hl=en-GB&authuser=0" target="_blank">Legal help</a></span> to ask for content changes for legal reasons.
+          </span>
+        </div>
+        <!--Footer-->
+        <footer class="feedback__footer">
+          <!--Send Button-->
+          <button class="feedback__send-button">
+            Send
+            <span class="tooltip">
+              All questions are required unless marked as optional
+            </span>
+          </button>
+        </footer>
+      </div>
+    </div>
   </main>
   <!--Footer-->
   <footer class="footer">

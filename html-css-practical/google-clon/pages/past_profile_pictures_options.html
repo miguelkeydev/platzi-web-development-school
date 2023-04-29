@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../styles/header.css">
   <link rel="stylesheet" href="../styles/account.css">
   <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/past_profile_pictures.css">
   <link rel="stylesheet" href="../styles/footer.css">
   <!--Adding Icon Shortcut-->
   <link rel="shortcut icon" href="../images/google_icon.png">
@@ -126,7 +127,7 @@
           <!--Add Account-->
           <div class="add-account accounts__option">
             <!--Add Account Link-->
-            <a class="button-link" href="https://accounts.google.com/AddSession/signinchooser?hl=es&continue=https%3A%2F%2Fwww.google.com%2F%3Fpccc%3D1&ec=GAlAmgQ&authuser=0&flowName=GlifWebSignIn&flowEntry=AddSession">
+            <a class="button-link" href="https://accounts.google.com/v3/signin/identifier?dsh=S1644403458%3A1682456499374779&authuser=1&continue=https%3A%2F%2Fwww.google.com%2Fwebhp%3Fauthuser%3D1&ec=GAlAmgQ&hl=es-419&flowName=GlifWebSignIn&flowEntry=AddSession">
               <!--Add Account Icon-->
               <figure class="accounts__profile-img">
                 <img src="../images/add-account.svg" alt="Add Account Icon">
@@ -220,6 +221,67 @@
         just listen
       </a>
     </span>
+    <!--Change Past Profile Pictures Container-->
+    <div class="main__past-p-p">
+      <!--Past Profile Pictures Card-->
+      <div class="past-p-p">
+        <!--Header-->
+        <div class="past-p-p__header">
+          <!--Back-->
+          <figure class="back past-p-p__back">
+            <!--Back Link-->
+            <a class="button-link" href="./change_profile_img.html">
+              <!--Back Icon-->
+              <img class="back__icon" src="../images/arrow-back.svg" alt="Go Back Icon">
+            </a>
+          </figure>
+          <!--Heading-->
+          <span class="past-p-p__heading">
+            Past profile pictures
+          </span>
+          <!--Options-->
+          <div class="options past-p-p__options">
+            <!--Options Link-->
+            <a class="button-link" href="./past_profile_pictures.html">
+              <!--Options Image-->
+              <span>
+                &#8942;
+              </span>
+            </a>
+            <!--Options Menu Container-->
+            <div class="options__menu">
+              <!--Menu Option-->
+              <div class="options__option">
+                <a class="button-link" href="https://support.google.com/accounts/answer/27442" target="_blank">
+                  Help
+                </a>
+              </div>
+              <!--Menu Option-->
+              <div class="options__option">
+                <a class="button-link" href="./past_profile_pictures_feedback.html">
+                  Send feedback
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Pictures Container-->
+        <div class="pictures plast-p-p__pictures">
+          <!--First Picture-->
+          <figure class="pictures__fig">
+            <img class="pictures__pic" src="../images/pp.jpg" alt="Profile Picture">
+            <!--Hover Effect-->
+            <div class="pictures__hover"></div>
+          </figure>
+          <!--Second Picture-->
+          <figure class="pictures__fig">
+            <img class="pictures__pic" src="../images/pp2.jpg" alt="Profile Picture">
+            <!--Hover Effect-->
+            <div class="pictures__hover"></div>
+          </figure>
+        </div>
+      </div>
+    </div>
   </main>
   <!--Footer-->
   <footer class="footer">

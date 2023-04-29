@@ -8,6 +8,9 @@
   --dark-gray-light: #414242;
   --dark-gray: #303134;
   --black: #171717;
+  --black-transparent: #00000070;
+  --gray-transparent: #80808067;
+  --almost-transparent: #00000013;
   --very-light-blue: #cce6ff85;
   --blue-hover: #9abfff38;
   --blue-link: #4a80e4;
@@ -19,6 +22,12 @@
 
   padding: 0;
   margin: 0;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  src: url(../fonts/Product\ Sans\ Regular.ttf);
+  src: url(../fonts/Product\ Sans\ Bold.ttf);
 }
 
 html {

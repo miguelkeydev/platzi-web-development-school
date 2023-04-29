@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../styles/header.css">
   <link rel="stylesheet" href="../styles/account.css">
   <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/past_profile_pictures.css">
+  <link rel="stylesheet" href="../styles/feedback.css">
   <link rel="stylesheet" href="../styles/footer.css">
   <!--Adding Icon Shortcut-->
   <link rel="shortcut icon" href="../images/google_icon.png">
@@ -126,7 +128,7 @@
           <!--Add Account-->
           <div class="add-account accounts__option">
             <!--Add Account Link-->
-            <a class="button-link" href="https://accounts.google.com/AddSession/signinchooser?hl=es&continue=https%3A%2F%2Fwww.google.com%2F%3Fpccc%3D1&ec=GAlAmgQ&authuser=0&flowName=GlifWebSignIn&flowEntry=AddSession">
+            <a class="button-link" href="https://accounts.google.com/v3/signin/identifier?dsh=S1644403458%3A1682456499374779&authuser=1&continue=https%3A%2F%2Fwww.google.com%2Fwebhp%3Fauthuser%3D1&ec=GAlAmgQ&hl=es-419&flowName=GlifWebSignIn&flowEntry=AddSession">
               <!--Add Account Icon-->
               <figure class="accounts__profile-img">
                 <img src="../images/add-account.svg" alt="Add Account Icon">
@@ -220,6 +222,150 @@
         just listen
       </a>
     </span>
+    <!--Change Past Profile Pictures Container-->
+    <div class="main__past-p-p">
+      <!--Past Profile Pictures Card-->
+      <div class="past-p-p">
+        <!--Header-->
+        <div class="past-p-p__header">
+          <!--Back-->
+          <figure class="back past-p-p__back">
+            <!--Back Link-->
+            <a class="button-link" href="./change_profile_img.html">
+              <!--Back Icon-->
+              <img class="back__icon" src="../images/arrow-back.svg" alt="Go Back Icon">
+            </a>
+          </figure>
+          <!--Heading-->
+          <span class="past-p-p__heading">
+            Past profile pictures
+          </span>
+          <!--Options-->
+          <div class="options past-p-p__options">
+            <!--Options Link-->
+            <a class="button-link" href="./past_profile_pictures.html">
+              <!--Options Image-->
+              <span>
+                &#8942;
+              </span>
+            </a>
+            <!--Options Menu Container-->
+            <div class="options__menu">
+              <!--Menu Option-->
+              <div class="options__option">
+                <a class="button-link" href="https://support.google.com/accounts/answer/27442" target="_blank">
+                  Help
+                </a>
+              </div>
+              <!--Menu Option-->
+              <div class="options__option">
+                <a class="button-link" href="./feedback.html">
+                  Send feedback
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Pictures Container-->
+        <div class="pictures plast-p-p__pictures">
+          <!--First Picture-->
+          <figure class="pictures__fig">
+            <img class="pictures__pic" src="../images/pp.jpg" alt="Profile Picture">
+            <!--Hover Effect-->
+            <div class="pictures__hover"></div>
+          </figure>
+          <!--Second Picture-->
+          <figure class="pictures__fig">
+            <img class="pictures__pic" src="../images/pp2.jpg" alt="Profile Picture">
+            <!--Hover Effect-->
+            <div class="pictures__hover"></div>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!--Feedback Container-->
+    <div class="main__feedback">
+      <!--Feedback Card-->
+      <div class="feedback">
+        <!--Header-->
+        <header class="feedback__header">
+          <span>
+            Send feedback to Google
+          </span>
+          <!--Close-->
+          <figure class="feedback__close">
+            <a class="button-link" href="./past_profile_pictures.html">
+              <img class="feedback__icon-close" src="../images/close-icon.svg" alt="Close Icon">
+              <!--Tooltip-->
+              <span class="tooltip close-tooltip">
+                Close
+              </span>
+            </a>
+          </figure>
+        </header>
+        <!--Feedback Description-->
+        <div class="description feedback__description">
+          <!--Title-->
+          <span class="description__title">
+            Describe your feedback
+          </span>
+          <!--Text Area-->
+          <textarea class="description__textarea" placeholder="Tell us what prompted this feedback..."></textarea>
+          <!--Sensitive Information-->
+          <div class="description__sensitive-info">
+            <span>
+              Please don't include any sensitive information
+            </span>
+            <!--Sensitive Icon-->
+            <figure class="description__fig">
+              <img class="description__icon" src="../images/help-icon.svg" alt="Help Icon">
+              <!--Tooltip-->
+              <span class="tooltip sensitive-tooltip">
+                Sensitive information is any data that should be protected. For example, don't include passwords, credit card numbers and personal details.
+              </span>
+            </figure>
+          </div>
+        </div>
+        <!--Screenshot-->
+        <div class="screenshot feedback__screenshot">
+          <span>
+            A screenshot will help us better understand your feedback. (optional)
+          </span>
+          <!--Screenshot Button-->
+          <button class="screenshot__button">
+            <img class="screenshot__img" src="../images/screenshot-icon.svg" alt="Screenshot Icon">
+            <span>
+              Capture screenshot
+            </span>
+          </button>
+        </div>
+        <!--Additional Info-->
+        <div class="additional-info feedback__additional-info">
+          <!--Email-->
+          <div class="additional-info__checkbox">
+            <!--Input-->
+            <input class="additional-info__input" id="email" type="checkbox">
+            <label for="email">
+              We may email you form more information or updates
+            </label>
+          </div>
+          <!--Legal Info-->
+          <span class="additional-info__legal">
+            Some <span class="additional-info__link"><a href="">account and system information</a></span> may be sent to Google. We will use it to fix problems and improve our services, subject to our <span class="additional-info__link"><a href="https://policies.google.com/privacy?hl=en-GB" target="_blank">privacy policy</a></span> and <span class="additional-info__link"><a href="https://policies.google.com/terms?hl=en-GB" target="_blank">Terms of Service.</a></span> We may email you for more information or updates. Go to <span class="additional-info__link"><a href="https://support.google.com/legal/answer/3110420?hl=en-GB&authuser=0" target="_blank">Legal help</a></span> to ask for content changes for legal reasons.
+          </span>
+        </div>
+        <!--Footer-->
+        <footer class="feedback__footer">
+          <!--Send Button-->
+          <button class="feedback__send-button">
+            Send
+            <span class="tooltip">
+              All questions are required unless marked as optional
+            </span>
+          </button>
+        </footer>
+      </div>
+    </div>
   </main>
   <!--Footer-->
   <footer class="footer">

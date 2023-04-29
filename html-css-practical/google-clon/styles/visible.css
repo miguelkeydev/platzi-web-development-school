@@ -1,0 +1,209 @@
+/*Visible Container*/
+.main__visible {
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+  display: grid;
+    place-items: center;
+
+  background-color: var(--black-transparent);
+}
+
+/*Visible Card*/
+.visible {
+  display: grid;
+    grid-template-rows: auto 1fr;
+
+  width: 54rem;
+  height: 37.5rem;
+
+  background-color: var(--white);
+  border-radius: .8rem;
+  box-shadow: 0 0 .4rem var(--dark-gray-light);
+}
+
+/*Header*/
+.visible__header {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  width: 100%;
+  padding: .4rem;
+}
+
+/*Back and Options*/
+.back, .options {
+  position: relative;
+  
+  width: 4.6rem;
+  height: 4.6rem;
+
+  font-size: 2.3rem;
+  font-weight: 600;
+
+  border-radius: 50%;
+
+  transition: .15s;
+}
+
+.options a {
+  border-radius: 50%;
+}
+
+.back:hover, .options a:hover {
+  background-color: var(--very-light-gray);
+}
+
+/*Back Icon*/
+.back__icon {
+  width: 2.4rem;
+}
+
+/*Form*/
+.visible__form {
+  display: grid;
+    grid-template-rows: repeat(4, auto);
+    gap: 2.4rem;
+
+  width: 100%;
+  padding: 0 2.8rem;
+}
+
+/*Form Heading*/
+.visible__choose {
+  font-size: 1.8rem;
+}
+
+/*Form Option*/
+.visible__option {
+  display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: 1.6rem;
+}
+
+/*Input*/
+.visible__input {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+/*Label*/
+.label {
+  display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/*Option Heading*/
+.label__heading {
+  display: flex;
+    align-items: center;
+    gap: .8rem;
+
+  font-size: 1.6rem;
+}
+
+/*Option Icon*/
+.label__icon {
+  width: 2rem;
+}
+
+/*Option Description*/
+.label__description {
+  font-size: 1.4rem;
+
+  word-spacing: .15rem;
+  line-height: 2rem;
+}
+
+/*Option Link*/
+.label__link {
+  color: var(--blue-link);
+}
+
+/*Buttons*/
+.visible__buttons {
+  display: flex;
+    justify-content: end;
+    gap: 2.8rem;
+
+  padding: 0 1.6rem 2rem 0;
+}
+
+/*Cancel*/
+.visible__cancel {
+  font-size: 1.5rem;
+
+  padding: 1rem;
+  border: none;
+
+  background-color: transparent;
+  color: var(--blue-link);
+  border-radius: .4rem;
+}
+
+.visible__cancel:hover {
+  color: var(--dark-blue-link);
+}
+
+.visible__cancel:active {
+  background-color: var(--blue-hover);
+}
+
+/*Save*/
+.visible__save {
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  padding: .9rem 2.4rem 1rem;
+  border: none;
+
+  background-color: var(--blue-link);
+  color: var(--white);
+  border-radius: .4rem;
+}
+
+.visible__save:hover {
+  background-color: #3371e2;
+}
+
+.visible__save:active {
+  background-color: #175ad8;
+}
+
+/*Options Menu*/
+.options__menu {
+  position: absolute;
+    top: 4.8rem;
+    right: .8rem;
+  display: grid;
+    grid-template-rows: repeat(3, auto);
+
+  padding-top: .4rem;
+
+  background-color: var(--white);
+  box-shadow: 0 .2rem .8rem var(--gray);
+}
+
+/*Menu Option*/
+.options__option {
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  white-space: nowrap;
+  transition: .1s;
+}
+
+/*Menu Option Link*/
+.options__option a {
+    justify-content: start;
+
+  padding: 1.6rem;
+
+  border-radius: 0%;
+}
