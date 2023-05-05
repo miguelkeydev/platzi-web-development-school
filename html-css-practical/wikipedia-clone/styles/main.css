@@ -107,6 +107,7 @@
 /* Search Search Button */
 .search__search {
   padding: 0 1.6rem;
+  border: none;
 
   background-color: var(--blue);
   border-radius: 0 .4rem .4rem 0;
@@ -122,6 +123,56 @@
 /* Search Search Button Icon */
 .search__search-icon {
   width: 2.4rem;
+}
+
+/* Languages Section */
+.languages {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+
+  font-family: 'Roboto', sans-serif;
+
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+/* Languages Option */
+.languages__option {
+  text-align: center;
+
+  padding: 1.6rem 1.2rem 0;
+}
+
+/* Languages Option Link */
+.languages__option .button-link {
+    flex-direction: column;
+    gap: .8rem;
+
+  padding: .2rem .8rem;
+}
+
+.languages__option .button-link:hover {
+  background-color: var(--option-hover);
+}
+
+/* Language */
+.languages__lang {
+  font-size: var(--medium-f);
+  font-weight: 700;
+
+  color: var(--blue);
+}
+
+.button-link:hover .languages__lang {
+  text-decoration: underline;
+}
+
+/* Articles */
+.languages__articles {
+  line-height: 1.8rem;
+
+  font-size: var(--small-f);
 }
 
 img {
