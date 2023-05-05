@@ -1,0 +1,41 @@
+:root {
+  --blue: #36c;
+  --blue-hover: #447ff5;
+  --gray: #a2a9b1;
+  --dark-gray: #72777d;
+  --gray-hover: #f8f9fa;
+  --xlarge-f: 2.2rem;
+  --large-f: 1.6rem;
+  --medium-f: 1.4rem;
+  --small-f: 1.3rem;
+}
+
+@font-face {
+  font-family: 'Linux Libertine';
+  src: url(../fonts/LinLibertine_R.ttf);
+}
+
+* {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.button-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
