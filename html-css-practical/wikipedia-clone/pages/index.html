@@ -1,12 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Adding Styles -->
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <!-- Shortcut Icon -->
+    <link rel="shortcut icon" href="../images/wikipedia_w_logo.svg">
+    <title>Wikipedia</title>
+  </head>
+  <body>
+    <!-- Main Container -->
+    <main class="main">
+      <!-- Heading -->
+      <h1 class="heading">
+        <!-- Heading Title -->
+        <span class="title heading__title">
+          <span class="title__bigger">W</span>IKIPEDI<span class="title__bigger"
+            >A</span
+          >
+        </span>
+        <!-- Heading Subtitle -->
+        <span class="heading__subtitle"> The Free Encyclopedia </span>
+        <!-- Logo -->
+        <img
+          class="heading__logo"
+          src="../images/Wikipedia_logo.png"
+          alt="Wikipedia Logo"
+        />
+      </h1>
+      <!-- Search Section -->
+      <section class="search">
+        <!-- Input -->
+        <input class="search__input" type="text" />
+        <!-- Language Button -->
+        <button class="search__change-language">
+          <span> EN </span>
+          <!-- More Icon -->
+          <img
+            class="search__more-icon"
+            src="../images/arrow-down.svg"
+            alt="Arrow Down Icon"
+          />
+        </button>
+        <!-- Search Button -->
+        <button class="search__search">
+          <!-- Search Icon -->
+          <img
+            class="search__search-icon"
+            src="../images/magnifying_glass.svg"
+            alt="Search Icon"
+          />
+        </button>
+      </section>
+      <!-- Languages Section -->
+      <section class="languages">
+        <!-- English -->
+        <div class="languages__option">
+          <a class="button-link" href="https://en.wikipedia.org/wiki/Main_Page">
+            <span class="languages__lang"> English </span
+            ><span class="languages__articles"> 6 644 000+ articles </span></a
+          >
+        </div>
+        <!-- Spanish -->
+        <div class="languages__option">
+          <a class="button-link" href="https://es.wikipedia.org/wiki/Wikipedia:Portada"
+            ><span class="languages__lang"> Spanish </span
+            ><span class="languages__articles"> 1 854 000+ artículos </span></a
+          >
+        </div>
+        <!-- Русский -->
+        <div class="languages__option">
+          <a class="button-link" href="https://ru.wikipedia.org/wiki/Заглавная_страница"
+            ><span class="languages__lang"> Русский </span
+            ><span class="languages__articles"> 1 909 000+ статей </span></a
+          >
+        </div>
+        <!-- 日本語 -->
+        <div class="languages__option">
+          <a class="button-link" href="https://ja.wikipedia.org/wiki/メインページ"
+            ><span class="languages__lang"> 日本語 </span
+            ><span class="languages__articles"> 1 370 000+ 記事 </span></a
+          >
+        </div>
+        <!-- Deutsch -->
+        <div class="languages__option">
+          <a class="button-link" href="https://de.wikipedia.org/wiki/Wikipedia:Hauptseite"
+            ><span class="languages__lang"> Deutsch </span
+            ><span class="languages__articles"> 2 792 000+ Artikel </span></a
+          >
+        </div>
+        <!-- Français -->
+        <div class="languages__option">
+          <a class="button-link" href="https://fr.wikipedia.org/wiki/Wikipédia:Accueil_principal"
+            ><span class="languages__lang"> Français </span
+            ><span class="languages__articles"> 2 514 000+ articles </span></a
+          >
+        </div>
+        <!-- Italiano -->
+        <div class="languages__option">
+          <a class="button-link" href="https://it.wikipedia.org/wiki/Pagina_principale"
+            ><span class="languages__lang"> Italiano </span
+            ><span class="languages__articles"> 1 806 000+ voci </span></a
+          >
+        </div>
+        <!-- 中文 -->
+        <div class="languages__option">
+          <a class="button-link" href="https://zh.wikipedia.org/wiki/Wikipedia:首页"
+            ><span class="languages__lang"> 中文 </span
+            ><span class="languages__articles">
+              1 347 000+ 条目 / 條目
+            </span></a
+          >
+        </div>
+        <!-- فارسی -->
+        <div class="languages__option">
+          <a class="button-link" href="https://fa.wikipedia.org/wiki/صفحهٔ_اصلی"
+            ><span class="languages__lang"> فارسی </span
+            ><span class="languages__articles"> 959 000+ مقاله </span></a
+          >
+        </div>
+        <!-- Português -->
+        <div class="languages__option">
+          <a class="button-link" href="https://pt.wikipedia.org/wiki/Wikipédia:Página_principal"
+            ><span class="languages__lang"> Português </span
+            ><span class="languages__articles"> 1 101 000+ artigos </span></a
+          >
+        </div>
+      </section>
+      <!-- Your Language -->
+      <section class="your-lang">
+        <!-- Language Icon -->
+        <img
+          class="your-lang__icon"
+          src="../images/language.svg"
+          alt="Language Icon"
+        />
+        <span> Read Wikipedia in your language </span>
+        <!-- More Languages -->
+        <img
+          class="your-lang__more"
+          src="../images/arrow_down_blue.svg"
+          alt="Arrow Down Icon"
+        />
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- Footer Content -->
+      <section class="content footer-content">
+        <!-- Hosted -->
+        <div class="content__hosted">
+          <!-- Wikimedia Icon -->
+          <img
+            class="content__icon"
+            src="../images/wikimedia_logo.png"
+            alt="Wikimedia Logo"
+            />
+          <!-- Wikimedia Info -->
+          <span>
+            Wikipedia is hosted by the Wikimedia Foundation, a non-profit organization that also hosts a range of other projects.
+          </span>
+          <!-- Wikimedia Support -->
+          <span>
+            <a class="content__link" href="https://donate.wikimedia.org/w/index.php?title=Special:LandingPage&country=CO&uselang=en&utm_medium=portal&utm_source=portalFooter&utm_campaign=portalFooter" target="_blank">
+              You can support our work with a donation.
+            </a>
+          </span>
+        </div>
+        <!-- Projects -->
+        <div class="projects content__projects">
+          <!-- Commons -->
+          <div class="projects__option">
+            <a class="button-link" href="https://commons.wikimedia.org/wiki/Main_Page">
+              <!-- Project Logo -->
+              <img class="projects__logo" src="../images/commons_logo.svg" alt="Commons Logo">
+              <!-- Project Info -->
+              <div class="projects__info">
+                <!-- Project Title -->
+                <span class="projects__title"> Commons </span>
+                <!-- Project Description -->
+                <span class="projects__description"> Freely usable photos & more </span>
+              </div>
+            </a>
+          </div>
+          <!-- Wikivoyage -->
+          <div class="projects__option">
+            <a class="button-link" href="https://www.wikivoyage.org">
+              <!-- Project Logo -->
+              <img class="projects__logo" src="../images/wikivoyage_logo.svg" alt="Wikivoyage Logo">
+              <!-- Project Info -->
+              <div class="projects__info">
+                <!-- Project Title -->
+                <span class="projects__title"> Wikivoyage </span>
+                <!-- Project Description -->
+                <span class="projects__description"> Free travel guide </span>
+              </div>
+            </a>
+          </div>
+          <!-- Wiktionary -->
+          <div class="projects__option">
+            <a class="button-link" href="https://www.wiktionary.org">
+              <!-- Project Logo -->
+              <img class="projects__logo" src="../images/wiktionary_logo.svg" alt="Wiktionary Logo">
+              <!-- Project Info -->
+              <div class="projects__info">
+                <!-- Project Title -->
+                <span class="projects__title"> Wiktionary </span>
+                <!-- Project Description -->
+                <span class="projects__description"> Free dictionary </span>
+              </div>
+            </a>
+          </div>
+          <!-- Wikibooks -->
+          <div class="projects__option">
+            <a class="button-link" href="https://www.wikibooks.org">
+              <!-- Project Logo -->
+              <img class="projects__logo" src="../images/wikibooks_logo.svg" alt="Wikibooks Logo">
+              <!-- Project Info -->
+              <div class="projects__info">
+                <!-- Project Title -->
+                <span class="projects__title"> Wikibooks </span>
+                <!-- Project Description -->
+                <span class="projects__description"> Free textbooks </span>
+              </div>
+            </a>
+          </div>
+          <!-- Wikinews -->
+          <div class="projects__option">
+            <a class="button-link" href="https://www.wikinews.org">
+              <!-- Project Logo -->
+              <img class="projects__logo" src="../images/wikinews_logo.svg" alt="Wikinews Logo">
+              <!-- Project Info -->
+              <div class="projects__info">
+                <!-- Project Title -->
+                <span class="projects__title"> Wikinews </span>
+                <!-- Project Description -->
+                <span class="projects__description"> Free news source </span>
+              </div>
+            </a>
+          </div>
+          <!-- Wikidata -->
+          <div class="projects__option">
+            <a class="button-link" href="https://www.wikidata.org/wiki/Wikidata:Main_Page">
+              <!-- Project Logo -->
+              <img class="projects__logo" src="../images/wikidata_logo.svg" alt="Wikidata Logo">
+              <!-- Project Info -->
+              <div class="projects__info">
+                <!-- Project Title -->
+                <span class="projects__title"> Wikidata </span>
+                <!-- Project Description -->
+                <span class="projects__description"> Free knowledge base </span>
+              </div>
+            </a>
+          </div>
+          <!-- Wikiversity -->
+          <div class="projects__option">
+            <a class="button-link" href="https://www.wikiversity.org">
+              <!-- Project Logo -->
+              <img class="projects__logo" src="../images/wikiversity_logo.svg" alt="Wikiversity Logo">
+              <!-- Project Info -->
+              <div class="projects__info">
+                <!-- Project Title -->
+                <span class="projects__title"> Wikiversity </span>
+                <!-- Project Description -->
+                <span class="projects__description">Free course materials </span>
+              </div>
+            </a>
+          </div>
+          <!-- Wikiquote -->
+          <div class="projects__option">
+            <a class="button-link" href="https://www.wikiquote.org">
+              <!-- Project Logo -->
+              <img class="projects__logo" src="../images/wikiquote_logo.svg" alt="Wikiquote Logo">
+              <!-- Project Info -->
+              <div class="projects__info">
+                <!-- Project Title -->
+                <span class="projects__title"> Wikiquote </span>
+                <!-- Project Description -->
+                <span class="projects__description"> Free quote compendium </span>
+              </div>
+            </a>
+          </div>
+          <!-- MediaWiki -->
+          <div class="projects__option">
+            <a class="button-link" href="https://www.mediawiki.org/wiki/MediaWiki">
+              <!-- Project Logo -->
+              <img class="projects__logo" src="../images/mediawiki_logo.svg" alt="MediaWiki Logo">
+              <!-- Project Info -->
+              <div class="projects__info">
+                <!-- Project Title -->
+                <span class="projects__title"> MediaWiki </span>
+                <!-- Project Description -->
+                <span class="projects__description"> Free & open wiki application </span>
+              </div>
+            </a>
+          </div>
+          <!-- Wikisource -->
+          <div class="projects__option">
+            <a class="button-link" href="https://wikisource.org/wiki/Main_Page">
+              <!-- Project Logo -->
+              <img class="projects__logo" src="../images/wikisource_logo.svg" alt="Wikisource Logo">
+              <!-- Project Info -->
+              <div class="projects__info">
+                <!-- Project Title -->
+                <span class="projects__title"> Wikisource </span>
+                <!-- Project Description -->
+                <span class="projects__description"> Free library </span>
+              </div>
+            </a>
+          </div>
+          <!-- Wikispecies -->
+          <div class="projects__option">
+            <a class="button-link" href="https://species.wikimedia.org/wiki/Main_Page">
+              <!-- Project Logo -->
+              <img class="projects__logo" src="../images/wikispecies_logo.svg" alt="Wikispecies Logo">
+              <!-- Project Info -->
+              <div class="projects__info">
+                <!-- Project Title -->
+                <span class="projects__title"> Wikispecies </span>
+                <!-- Project Description -->
+                <span class="projects__description"> Free species directory </span>
+              </div>
+            </a>
+          </div>
+          <!-- Meta-Wiki -->
+          <div class="projects__option">
+            <a class="button-link" href="https://meta.wikimedia.org/wiki/Main_Page">
+              <!-- Project Logo -->
+              <img class="projects__logo" src="../images/metawiki_logo.svg" alt="Meta-Wiki Logo">
+              <!-- Project Info -->
+              <div class="projects__info">
+                <!-- Project Title -->
+                <span class="projects__title"> Meta-Wiki </span>
+                <!-- Project Description -->
+                <span class="projects__description"> Community coordination & documentation </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Donwload -->
+        <div class="download content__download">
+          <!-- Download for Mobile -->
+          <div class="download__mobile">
+            <!-- Wikipedia W Logo -->
+            <img
+              class="download__wiki-icon"
+              src="../images/wikipedia_w.svg"
+              alt="Wikipedia W Icon"
+              >
+            <a class="download__link" href="https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications">
+              <span> Download Wikipedia for Android or iOS </span>
+            </a>
+          </div>
+          <!-- Download Info -->
+          <span class="download__info">
+            Save your favorite articles to read offline, sync your reading lists across devices and customize your reading experience with the official Wikipedia app.
+          </span>
+            <!-- Mobile Stores -->
+          <div class="download__stores">
+            <!-- Google Play -->
+            <figure class="download__fig">
+              <a class="button-link" href="https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3Dportal%26utm_medium%3Dbutton%26anid%3Dadmob">
+                <img
+                  class="download__store"
+                  src="../images/google_play.svg"
+                  alt="Get It on Google Plat"
+                  >
+              </a>
+            </figure>
+            <!-- App Store -->
+            <figure class="download__fig">
+              <a class="button-link" href="https://apps.apple.com/app/apple-store/id324715238">
+                <img
+                    class="download__store"
+                    src="../images/app_store.svg"
+                    alt="Download on the App Store"
+                    >
+              </a>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <!-- Footer Info -->
+      <section class="footer__info">
+        <span>
+          This page is available under the <span class="footer__link"><a href="https://creativecommons.org/licenses/by-sa/3.0/"> Creative Commons Attribution-ShareAlike License </a></span> &#8226; <span class="footer__link"><a href="https://meta.wikimedia.org/wiki/Terms_of_use"> Terms of Use </a></span> &#8226; <span class="footer__link"><a href="https://meta.wikimedia.org/wiki/Privacy_policy"> Privacy Policy </a></span>
+        </span>
+      </section>
+    </footer>
+  </body>
 </html>
