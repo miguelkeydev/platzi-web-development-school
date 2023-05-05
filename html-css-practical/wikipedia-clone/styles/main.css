@@ -5,7 +5,7 @@
     align-items: center;
 
   width: 100vw;
-  padding: 0 2.4rem 2rem 1.2rem;
+  padding: 0 2.4rem 3.6rem 1.2rem;
 }
 
 /* Heading */
@@ -170,9 +170,10 @@
 
 /* Articles */
 .languages__articles {
+  font-size: var(--small-f);
   line-height: 1.8rem;
 
-  font-size: var(--small-f);
+  color: var(--dark-gray);
 }
 /* Your Language */
 .your-lang {
@@ -212,8 +213,4 @@
 .your-lang__more {
   width: 1rem;
   margin-top: .2rem;
-}
-
-img {
-  width: 3rem;
 }
