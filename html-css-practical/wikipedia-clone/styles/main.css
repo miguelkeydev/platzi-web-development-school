@@ -173,6 +173,8 @@
   line-height: 1.8rem;
 
   font-size: var(--small-f);
+
+  color: var(--dark-gray);
 }
 /* Your Language */
 .your-lang {
