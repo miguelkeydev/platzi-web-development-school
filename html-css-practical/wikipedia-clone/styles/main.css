@@ -170,9 +170,8 @@
 
 /* Articles */
 .languages__articles {
-  line-height: 1.8rem;
-
   font-size: var(--small-f);
+  line-height: 1.8rem;
 
   color: var(--dark-gray);
 }
@@ -214,8 +213,4 @@
 .your-lang__more {
   width: 1rem;
   margin-top: .2rem;
-}
-
-img {
-  width: 3rem;
 }
