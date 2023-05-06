@@ -1,0 +1,226 @@
+@media (min-width: 570px) {
+  /* Heading */
+  .heading {
+    padding: 5.2rem 0 2.8rem 0;
+  }
+
+  /* Title */
+  .heading__title {
+    font-size: var(--xxlarge-f);
+  }
+
+  .title__bigger {
+    font-size: 3.8rem;
+  }
+
+  /* Logo */
+  .heading__logo {
+    position: absolute;
+      top: 20rem;
+      right: 0;
+    
+    width: 20rem;
+  }
+
+  /* Languages Section */
+  .languages {
+    position: relative;
+
+    max-width: 55rem;
+    height: 33rem;
+  }
+
+  /* Languages Option */
+  .languages__option {
+    position: absolute;
+
+    width: 15.6rem;
+    padding: 0;
+  }
+
+  /*  Option Link */
+  .languages__option .button-link {
+    padding: .2 4rem;
+  }
+
+  /* Language */
+  .languages__lang {
+    font-size: var(--large-f);
+  }
+
+  /* English */
+  .languages :nth-child(1) {
+      top: 0;
+      left: 11%;
+  }
+
+  /* Spanish */
+  .languages :nth-child(2) {
+      top: 0;
+      right: 11%;
+  }
+
+  /* Russian */
+  .languages :nth-child(3) {
+      top: 20%;
+      left: 2%;
+  }
+
+  /* Japanese */
+  .languages :nth-child(4) {
+      top: 20%;
+      right: 2%;
+  }
+
+  /* German */
+  .languages :nth-child(5) {
+      top: 40%;
+      left: 0;
+  }
+
+  /* French */
+  .languages :nth-child(6) {
+      top: 40%;
+      right: 0;
+  }
+
+  /* Italian */
+  .languages :nth-child(7) {
+      top: 60%;
+      left: 2%;
+  }
+
+  /* Chinese */
+  .languages :nth-child(8) {
+      top: 60%;
+      right: 2%;
+  }
+
+  /* Arabic */
+  .languages :nth-child(9) {
+      top: 80%;
+      left: 11%;
+  }
+
+  /* Portuguese */
+  .languages :nth-child(10) {
+      top: 80%;
+      right: 11%;
+  }
+
+  /* Search */
+  .search {
+    order: 1;
+
+    width: 82%;
+    max-width: 44rem;
+  }
+
+  /* Your Language */
+  .your-lang {
+    position: relative;
+    order: 2;
+
+    width: 55%;
+    max-width: 30rem;
+    margin-top: 3.2rem;
+  }
+
+  /* Your Language Horizontal Divisions */
+  .your-lang__division {
+    position: absolute;
+    display: block;
+
+    width: 18%;
+    border-top: .1rem solid var(--gray);
+  }
+
+  /* Left Division */
+  .your-lang__division:first-of-type {
+      left: -7.2rem;
+  }
+
+  /* Right Division */
+  .your-lang__division:last-of-type {
+      right: -7.2rem;
+  }
+
+  /* Projects Container */
+  .projects {
+    display: grid;
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 769px) {
+  /* Content Section */
+  .content {
+    position: relative;
+    display: grid;
+      grid-template-columns: 32% 68%;
+      grid-auto-rows: auto;
+      justify-items: center;
+
+    padding-top: 2rem;
+  }
+
+  /* Content Hosted */
+  .content__hosted {
+      flex-direction: row;
+      align-items: start;
+      justify-content: center;
+      gap: 1.2rem;
+
+    text-align: start;
+
+    max-width: 32.5rem;
+    padding: 3.2rem 1.6rem 0;
+  }
+
+  /* Content Icon */
+  .content__icon {
+    padding: 0;
+  }
+
+  /* Content Download */
+  .download {
+      justify-items: end;
+
+    text-align: start;
+
+    max-width: 32.5rem;
+    padding: 3.2rem 1.6rem 0;
+  }
+
+  /* Download Mobile */
+  .download__mobile {
+      gap: 1.6rem;
+  }
+
+  /* Download Mobile Icon */
+  .download__wiki-icon {
+    width: 3.2rem;
+    margin-top: 0rem;
+  }
+
+  /* Download Info */
+  .download__info {
+    text-align: start;
+
+    width: 83%;
+    padding-top: 0rem;
+  }
+
+  /* Download Stores */
+  .download__stores {
+      align-items: start;
+      gap: .2rem;
+
+    width: 80%;
+  }
+
+  /* Projects Container */
+  .projects {
+      grid-row: span 2;
+  }
+}
