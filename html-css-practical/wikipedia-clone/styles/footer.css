@@ -11,6 +11,8 @@
 .content {
   display: flex;
     flex-direction: column;
+
+  border-top: .1rem solid var(--gray);
 }
 
 /* Content Hosted */
@@ -22,8 +24,6 @@
   font-size: var(--small-f);
   line-height: 1.8rem;
   text-align: center;
-
-  border-top: .1rem solid var(--gray);
   
   color: var(--dark-gray);
 }
