@@ -147,7 +147,7 @@
 /* Languages Option Link */
 .languages__option .button-link {
     flex-direction: column;
-    gap: .8rem;
+    gap: .4rem;
 
   padding: .2rem .8rem;
 }
@@ -175,6 +175,7 @@
 
   color: var(--dark-gray);
 }
+
 /* Your Language */
 .your-lang {
   display: flex;
@@ -213,4 +214,9 @@
 .your-lang__more {
   width: 1rem;
   margin-top: .2rem;
+}
+
+/* Your Language Horizontal Divisions */
+.your-lang__division {
+  display: none;
 }
