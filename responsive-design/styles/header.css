@@ -1,0 +1,63 @@
+header {
+  position: relative;
+  display: grid;
+    grid-template-rows: repeat(2, auto) 1fr;
+    place-items: start center;
+
+  text-align: center;
+
+  width: 100%;
+  min-width: 32rem;
+  height: 28rem;
+
+  background: var(--color-background);
+}
+
+/* Logo */
+.header__logo {
+  padding: 4rem 0;
+}
+
+/* Title Container */
+.header__title-container {
+  display: grid;
+    gap: 3.2rem;
+
+  width: 90%;
+  min-width: 28.8rem;
+  max-width: 90rem;
+}
+
+/* Title */
+.header__title {
+  font-size: var(--font-size-sans-l);
+  line-height: var(--line-height-sans-l);
+
+  color: white;
+}
+
+/* Subtitle */
+.header__subtitle {
+  font-size: var(--font-size-sans-s);
+  line-height: var(--line-height-sans-s);
+
+  color: var(--color-orange-soft);
+}
+
+/* Plans Button */
+.header__plans {
+  position: absolute;
+    bottom: -2.4rem;
+
+  box-shadow: 0 .6rem .8rem var(--color-black-shadow);
+
+  transition: .15s;
+}
+
+.header__plans:hover {
+  background-color: var(--color-white-off);
+}
+
+.header__plans a {
+  gap: .8rem;
+}
