@@ -8,6 +8,7 @@
   --color-black-warm: #201E1C;
   --color-black-cool: #282623;
   --color-black-shadow: rgba(89,73,30,0.16);
+  --color-gray-dark: #757575;
   --color-gray: #BABABA;
   --color-white-off: #FAF8F7;
   /* Font */
@@ -15,7 +16,8 @@
   --font-size-sans-m: 1.8rem;
   --font-size-sans-l: 2.4rem;
   --font-size-inter-s: 1.2rem;
-  --font-size-inter-m: 1.6rem;
+  --font-size-inter-m: 1.4rem;
+  --font-size-inter-l: 1.6rem;
   --line-height-sans-s: 1.8rem;
   --line-height-sans-m: 2.3rem;
   --line-height-sans-l: 2.6rem;
