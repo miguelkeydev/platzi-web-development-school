@@ -5,7 +5,7 @@ main {
   background-color: var(--color-white-off);
 }
 
-/* Exchange Container */
+/*============ Exchange Section ============*/
 .main__exchange-container {
   display: grid;
     justify-items: center;
@@ -15,7 +15,7 @@ main {
   width: 100%;
 }
 
-/* Exchange Image */
+/* Image */
 .exchange-container__background {
   width: 20rem;
   height: 20rem;
@@ -24,7 +24,7 @@ main {
   background: url("../assets/images/bitcoin.svg") center no-repeat;
 }
 
-/* Exchange Info */
+/* Info */
 .exchange-container__info {
   display: grid;
     gap: 2.8rem;
@@ -34,13 +34,13 @@ main {
   max-width: 90rem;
 }
 
-/* Exchange Title */
+/* Title */
 .exchange-container__title {
   font-size: var(--font-size-sans-l);
   line-height: var(--line-height-sans-l);
 }
 
-/* Exchange Description */
+/* Description */
 .exchange-container__description {
   font-size: var(--font-size-sans-s);
   line-height: var(--line-height-sans-s);
@@ -135,4 +135,81 @@ main {
 
   background-color: var(--color-orange-soft);
   border-radius: .8rem;
+}
+
+/*============ Product Section ============*/
+.main__product-container {
+  position: relative;
+  display: grid;
+    place-items: center;
+
+  width: 100%;
+  min-width: 32rem;
+  padding: 6rem 1.6rem 4rem;
+
+  background-color: var(--color-black-warm);
+  color: white;
+}
+
+/* Logo */
+.product-container__logo {
+  position: absolute;
+    top: -1.2rem;
+}
+
+/* Title Container */
+.product-container__title-container {
+  display: grid;
+    gap: 2.8rem;
+  
+  text-align: center;
+
+  padding-bottom: 3.2rem;
+}
+
+/* Title */
+.product-container__title {
+  font-size: var(--font-size-sans-l);
+  line-height: var(--line-height-sans-l);
+}
+
+/* Subtitle */
+.product-container__subtitle {
+  font-size: var(--font-size-sans-s);
+  font-weight: 500;
+
+  color: var(--color-gray-dark);
+}
+
+/* Benefits Container */
+.benefits {
+  display: grid;
+    gap: 2rem;
+}
+
+/* Benefits Card */
+.benefits__card {
+  font-weight: 600;
+
+  min-height: 14rem;
+  padding: 1.6rem;
+  
+  background-color: var(--color-black-cool);
+  border-radius: .4rem;
+  box-shadow: 0 .4rem .8rem #00000026;
+}
+
+/* Benefits Name */
+.benefits__name {
+  font-size: var(--font-size-sans-m);
+
+  padding: .4rem 0 .8rem;
+}
+
+/* Benefits Description */
+.benefits__description {
+  font-size: var(--font-size-sans-s);
+  line-height: var(--line-height-sans-s);
+
+  color: var(--color-gray-dark);
 }
