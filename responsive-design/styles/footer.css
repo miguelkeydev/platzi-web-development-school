@@ -1,0 +1,21 @@
+footer {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+  
+  font-size: var(--font-size-sans-s);
+  font-weight: 500;
+    
+  width: 100%;
+  height: 15rem;
+
+  background-color: var(--color-orange-bitcoin);
+  color: var(--color-white-off);
+}
+
+/* Footer List */
+.footer__contact {
+  display: grid;
+    gap: 1.2rem;
+}

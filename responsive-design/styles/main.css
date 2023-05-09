@@ -56,56 +56,72 @@ main {
 }
 
 /* Tables Container */
-.tables {
+.exchange__tables {
   display: grid;
-    gap: 1.6rem;
+    grid-template-columns: 100% 100%;
+    gap: 30%;
 
   font-family: 'Inter', sans-serif;
   text-align: start;
   
-  width: 60%;
-  max-width: 80rem;
-  padding: 6rem 0;
+  width: 80%;
+  padding: 6rem 10%;
+
+  overflow: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
 }
 
-/* Tables Title */
-.tables__title {
+.exchange__tables::-webkit-scrollbar {
+  opacity: 0;
+}
+
+/* Table Container */
+.table {
+  display: grid;
+
+  scroll-snap-align: center;
+}
+
+/* Table Title */
+.table__title {
   font-family: 'DM Sans', sans-serif;
   font-size: var(--font-size-sans-m);
+
+  padding-bottom: 1.2rem;
 
   color: var(--color-orange-bitcoin);
 }
 
-/* Tables Container */
-.tables__currencies {
-  width: 100%;
-
-  background-color: white;
-  border-radius: 1.2rem;
+/* Table Title Blue */
+.table__title--blue {
+  color: var(--color-blue-secondary);
 }
 
-/* Table */
-.tables table {
+/* Table Container */
+.table__container {
   font-size: var(--font-size-inter-l);
 
   width: 100%;
 
+  background-color: white;
   color: var(--color-gray);
+  border-radius: 1.2rem;
 }
 
 /* Table Rows and Data */
-.tables tr, .tables td {
+.table__container tr, .table__container td {
   padding: 1.2rem;
   border-bottom: .1rem solid var(--color-white-off);
 }
 
-/* Tables Bottom */
-.tables__bottom td, .tables__bottom {
+/* Table Bottom */
+.table__bottom td {
   border: none;
 }
 
 /* Table Right Data */
-.tables__right {
+.table__right {
   text-align: center;
   
   border-left: .1rem solid var(--color-white-off);
@@ -113,8 +129,8 @@ main {
   color: var(--color-gray-dark);
 }
 
-/* Tables Icon */
-.tables__icon {
+/* Table Icon */
+.table__icon {
   display: inline-block;
 
   width: 1.2rem;
@@ -124,14 +140,14 @@ main {
   background: url("../assets/icons/trending_down.svg") center/cover no-repeat;
 }
 
-/* Tables Icon Up */
-.tables__icon--up {
+/* Table Icon Up */
+.table__icon--up {
   background: url("../assets/icons/trending_up.svg") center/cover no-repeat;
 
 }
 
-/* Tables Update */
-.tables__update {
+/* Table Update */
+.table__update {
   justify-self: center;
 
   font-size: var(--font-size-inter-m);
@@ -139,9 +155,15 @@ main {
 
   width: 85%;
   padding: .8rem;
+  margin-top: 1.6rem;
 
   background-color: var(--color-orange-soft);
   border-radius: .8rem;
+}
+
+/* Table Update Blue */
+.table__update--blue {
+  background-color: var(--color-blue-soft);
 }
 
 /*============ Product Section ============*/
