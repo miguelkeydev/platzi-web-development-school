@@ -18,8 +18,8 @@ header {
   padding: 4rem 0;
 }
 
-/* Title Container */
-.header__title-container {
+/* Info Container */
+.header__info-container {
   display: grid;
     gap: 3.2rem;
 
@@ -30,17 +30,11 @@ header {
 
 /* Title */
 .header__title {
-  font-size: var(--font-size-sans-l);
-  line-height: var(--line-height-sans-l);
-
   color: white;
 }
 
-/* Subtitle */
-.header__subtitle {
-  font-size: var(--font-size-sans-s);
-  line-height: var(--line-height-sans-s);
-
+/* Description */
+.header__description {
   color: var(--color-orange-soft);
 }
 

@@ -25,20 +25,20 @@
       src="../assets/images/logo.svg"
       alt="Batatabit Logo"
     >
-    <!-- Title Container -->
-    <div class="header__title-container">
+    <!-- Info Container -->
+    <div class="header__info-container">
       <!-- Title -->
-      <h1 class="header__title">
+      <h1 class="title header__title">
         The next cryptocurrency exchange revolution
       </h1>
-      <!-- Subtitle -->
-      <p class="header__subtitle">
+      <!-- Description -->
+      <p class="description header__description">
         Batatabit helps you navigate through different prices and trends
       </p>
     </div>
     <!-- Plans Button -->
     <button class="button header__plans">
-      <a class="button__link" href="">
+      <a class="button__link" href="#plans">
         <span>
         Know Our Plans
         </span>
@@ -53,22 +53,22 @@
   <!-- Main -->
   <main>
     <!-- Exchange Section -->
-    <section class="exchange-container main__exchange-container">
+    <section class="exchange main__exchange">
       <!-- Bitcoin Image Container -->
-      <div class="exchange-container__background"></div>
+      <div class="exchange__background"></div>
       <!-- Info Container -->
-      <div class="exchange-container__info">
+      <div class="info-container">
         <!-- Title -->
-        <h2 class="exchange-container__title">
+        <h2 class="title">
           We make all exchange rates visible
         </h2>
         <!-- Description -->
-        <p class="exchange-container__description">
+        <p class="description description--gray">
           We bring real-time information from exchange rates and the most important curriencies in the world.
         </p>
       </div>
       <!-- Exchange Stats Container -->
-      <section class="tables exchange-container__tables">
+      <section class="tables exchange__tables">
         <!-- Title -->
         <h4 class="tables__title">
           Currencies
@@ -111,11 +111,9 @@
             </tr>
           </table>
         </div>
-        <div class="tables__update">
-          <p>
+        <p class="tables__update">
             <b>Updated:</b> May 8th, 16:59
-          </p>
-        </div>
+        </p>
       </section>
     </section>
     <!-- Product Section -->
@@ -126,14 +124,14 @@
         src="../assets/icons/batata.svg"
         alt="Batata Logo"
       >
-      <!-- Title Container -->
-      <div class="product-container__title-container">
+      <!-- Info Container -->
+      <div class="info-container">
         <!-- Title -->
-        <h2 class="product-container__title">
+        <h2 class="title">
           We create an incomparable product
         </h2>
-        <!-- Subtitle -->
-        <p class="product-container__subtitle">
+        <!-- Description -->
+        <p class="description description--gray">
           Realiable and designed for daily use
         </p>
       </div>
@@ -151,7 +149,7 @@
             Real Time
           </p>
           <!-- Benefit Description -->
-          <p class="benefits__description">
+          <p class="description description--gray">
             Our API takes minute-by-minute information about the rates that most determine behavior.
           </p>
         </article>
@@ -167,7 +165,7 @@
             No hidden rates
           </p>
           <!-- Benefit Description -->
-          <p class="benefits__description">
+          <p class="description description--gray">
             Whether you're buying or exiting, Batabit always shows you the real cost of what you are acquiring.
           </p>
         </article>
@@ -183,7 +181,7 @@
             Buy currencies
           </p>
           <!-- Benefit Description -->
-          <p class="benefits__description">
+          <p class="description description--gray">
             No more rummors, with Batatabit you will know the real value of each currency in the current market.
           </p>
         </article>
@@ -199,19 +197,78 @@
             Reliable information
           </p>
           <!-- Benefit Description -->
-          <p class="benefits__description">
+          <p class="description description--gray">
             Our sources are 100% verified and we continue to audit their content as they are updated.
           </p>
         </article>
       </div>
     </section>
     <!-- Extra Section -->
-    <section>
-
+    <section class="main__extra">
+      <!-- Title -->
+      <h2 class="title">
+        Get to know it today
+      </h2>
     </section>
-    <!-- Section -->
-    <section>
-
+    <!-- Plans Section -->
+    <section class="plans main__plans" id="plans">
+      <!-- Info Container -->
+      <div class="info-container">
+        <!-- Title -->
+        <h2 class="title">
+          Choose the plan that best suits you
+        </h2>
+        <!-- Description -->
+        <p class="description description--gray">
+          Any plan gives you full access to our platform.
+        </p>
+      </div>
+      <!-- Plans Container -->
+      <section class="plans_container">
+        <!-- Left Card -->
+        <div class="left-card plan-card__aside"></div>
+        <!-- Plan Card -->
+        <article class="plan-card plans__plan-card">
+          <!-- Recommended -->
+          <p class="plan-card__recomended">
+            Recommended
+          </p>
+          <!-- Card -->
+          <div class="plan-card__plan">
+            <!-- Name -->
+            <h3 class="plan-card__name">
+              Anual Payment
+            </h3>
+            <!-- Price -->
+            <p class="plan-card__price">
+              <span class="plan-card__price--small">
+                $
+              </span>
+              99
+            </p>
+            <!-- Description -->
+            <p class="plan-card__description">
+              *You save $129 compared to the monthly plan.
+            </p>
+            <!-- Buy Button -->
+            <div class="plan-card__button">
+              <button class="button">
+                <a class="button__link" href="">
+                  <span>
+                  Choose this one
+                  </span>
+                  <!-- Arrow Icon -->
+                  <img
+                    src="../assets/icons/arrow_right.svg" alt="Arrow Right Icon"
+                  >
+                </a>
+              </button>
+            </div>
+          </div>
+        </article>
+        <!-- Right Card -->
+        <div class="right-card plan-card__aside"></div>
+      </section>
     </section>
   </main>
   <!-- Footer -->
