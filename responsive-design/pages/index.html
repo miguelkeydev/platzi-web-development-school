@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../styles/general.css">
   <link rel="stylesheet" href="../styles/header.css">
   <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/footer.css">
   <title>Batata Bit</title>
 </head>
 <body>
@@ -225,9 +226,42 @@
       </div>
       <!-- Plans Container -->
       <section class="plans_container">
-        <!-- Left Card -->
-        <div class="left-card plan-card__aside"></div>
-        <!-- Plan Card -->
+        <!-- Monthly Card -->
+        <article class="plan-card plans__plan-card">
+          <!-- Card -->
+          <div class="plan-card__plan">
+            <!-- Name -->
+            <h3 class="plan-card__name">
+              Monthly Payment
+            </h3>
+            <!-- Price -->
+            <p class="plan-card__price">
+              <span class="plan-card__price--small">
+                $
+              </span>
+              20
+            </p>
+            <!-- Description -->
+            <p class="plan-card__description">
+              You save about $5 compared to the weekly plan.
+            </p>
+            <!-- Buy Button -->
+            <div class="plan-card__button">
+              <button class="button">
+                <a class="button__link" href="">
+                  <span>
+                  Choose this one
+                  </span>
+                  <!-- Arrow Icon -->
+                  <img
+                    src="../assets/icons/arrow_right.svg" alt="Arrow Right Icon"
+                  >
+                </a>
+              </button>
+            </div>
+          </div>
+        </article>
+        <!-- Anual Card -->
         <article class="plan-card plans__plan-card">
           <!-- Recommended -->
           <p class="plan-card__recomended">
@@ -248,7 +282,7 @@
             </p>
             <!-- Description -->
             <p class="plan-card__description">
-              *You save $129 compared to the monthly plan.
+              You save $129 compared to the monthly plan.
             </p>
             <!-- Buy Button -->
             <div class="plan-card__button">
@@ -266,14 +300,74 @@
             </div>
           </div>
         </article>
-        <!-- Right Card -->
-        <div class="right-card plan-card__aside"></div>
+        <!-- Weekly Card -->
+        <article class="plan-card plans__plan-card">
+          <!-- Card -->
+          <div class="plan-card__plan">
+            <!-- Name -->
+            <h3 class="plan-card__name">
+              Weekly Payment
+            </h3>
+            <!-- Price -->
+            <p class="plan-card__price">
+              <span class="plan-card__price--small">
+                $
+              </span>
+              6
+            </p>
+            <!-- Description -->
+            <p class="plan-card__description">
+              You will be able to enjoy all our content for one week.
+            </p>
+            <!-- Buy Button -->
+            <div class="plan-card__button">
+              <button class="button">
+                <a class="button__link" href="">
+                  <span>
+                  Choose this one
+                  </span>
+                  <!-- Arrow Icon -->
+                  <img
+                    src="../assets/icons/arrow_right.svg" alt="Arrow Right Icon"
+                  >
+                </a>
+              </button>
+            </div>
+          </div>
+        </article>
       </section>
     </section>
   </main>
   <!-- Footer -->
   <footer>
-
+    <!-- Contact Info -->
+    <section>
+      <!-- Contact List -->
+      <ul class="footer__contact">
+        <!-- Contact Option -->
+        <li>
+          <a href="">
+            LinkedIn
+          </a>
+        </li>
+        <!-- Contact Option -->
+        <li>
+          <a href="">
+            Crunchbase
+          </a>
+        </li>
+        <!-- Contact Option -->
+        <li>
+          <a href="">
+            Hackernews
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- Vigency Logo -->
+    <section>
+      <img class="footer__logo" src="../assets/images/logo_vigency.svg" alt="Batatabit Vigency Logo">
+    </section>
   </footer>
 </body>
 </html>

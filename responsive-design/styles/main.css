@@ -214,7 +214,7 @@ main {
   display: grid;
     gap: 4rem;
 
-  padding: 6rem 0;
+  padding: 6rem 0 4rem;
 
   background-color: var(--color-white-off);
 }
@@ -233,32 +233,31 @@ main {
 /* Plans Container */
 .plans_container {
   position: relative;
+  justify-self: center;
   display: grid;
-    grid-template-columns: 20% 1fr 20%;
+    grid-template-columns: repeat(3, 20rem);
     align-items: end;
     gap: 1.2rem;
 
-  width: 100%;
-  height: 42vh;
+  width: calc(100% - .4rem);
+  height: 45vh;
+  padding: 0 2rem 1.2rem;
+
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
 }
 
-/* Aside Card */
-.plan-card__aside {
-  height: 95%;
-
-  background-color: white;
+/* Scrollbarr */
+.plans_container::-webkit-scrollbar {
+  height: .3rem;
+  
+  background-color: var(--color-orange-soft);
+  border-radius: .4rem;
 }
 
-/* Left Card */
-.left-card {
-  border-radius: 0 1.2rem 1.2rem 0;
-  box-shadow: .4rem .4rem .8rem var(--color-gray);
-}
-
-/* Right Card */
-.right-card {
-  border-radius: 1.2rem 0 0 1.2rem;
-  box-shadow: -.4rem .4rem .8rem var(--color-gray);
+.plans_container::-webkit-scrollbar-thumb {
+  background-color: var(--color-orange-bitcoin);
 }
 
 /* Plan Card */
@@ -271,9 +270,10 @@ main {
   height: 95%;
 
   border-radius: 1.2rem;
-  box-shadow: 0 .4rem 1.2rem var(--color-gray-dark);
+  box-shadow: 0 .4rem 1.2rem var(--color-gray);
 
   overflow: hidden;
+  scroll-snap-align: center;
 }
 
 /* Recommended */
@@ -305,13 +305,14 @@ main {
   font-size: var(--font-size-sans-s);
   font-weight: 600;
 
-  padding: 3.2rem 0 1.2rem;
+  padding: 3.2rem 0 1.6rem;
 }
 
 /* Plan Price */
 .plan-card__price {
   display: flex;
     justify-content: center;
+    gap: .4rem;
   
   font-family: 'Inter';
   font-size: 5.2rem;
@@ -333,14 +334,19 @@ main {
   font-weight: 600;
   line-height: var(--line-height-inter-s);
 
-  padding: 1.6rem 0;
+  padding-top: 2rem;
 
-  color: var(--color-gray-dark);
+  color: var(--color-gray);
 }
 
-/* Plan Button */
+/* Plan Button Container */
+.plan-card__button {
+  display: grid;
+    place-items: center;
+}
+
+/* Button */
 .plan-card__button .button {
-  
   width: 85%;
   padding: 0;
   border: .2rem solid var(--color-orange-bitcoin);
