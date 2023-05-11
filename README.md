@@ -7,6 +7,8 @@ Git, GitHub, HTML, CSS...
 ## 🧮 Projects created
 - Lamoure Jewlery & Accessories Store
 - Google Clone
+- Wikipedia main page Clone
+- Batata Bit
 
 ### ☝👀 If you want to look at them
 [Here they are!](https://miguelkeydev.github.io/platzi-web-development-school/)
