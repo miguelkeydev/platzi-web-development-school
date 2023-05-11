@@ -1,8 +1,7 @@
 footer {
   display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 6rem;
+    justify-content: space-around;
   
   font-size: var(--font-size-sans-s);
   font-weight: 500;

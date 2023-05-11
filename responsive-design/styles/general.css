@@ -7,7 +7,7 @@
   --color-blue-soft: #E7F5FF;
   --color-black-warm: #201E1C;
   --color-black-cool: #282623;
-  --color-black-shadow: rgba(89,73,30,0.16);
+  --color-black-shadow: #59491e29;
   --color-gray-dark: #757575;
   --color-gray: #BABABA;
   --color-white-off: #FAF8F7;
@@ -35,6 +35,10 @@
 html {
   font-family: 'DM Sans', sans-serif;
   font-size: 62.5%;
+}
+
+::-webkit-scrollbar {
+  opacity: 0;
 }
 
 a {
