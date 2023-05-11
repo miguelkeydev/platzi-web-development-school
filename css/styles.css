@@ -11,7 +11,7 @@
   --font-xl: 1.8rem;
   --font-xxl: 2rem;
   --project-text: #c7c7c7;
-  --subtitle-text: #a0a0a0;
+  --description-text: #a0a0a0;
   --row-s: 26rem;
   --row-m: 28rem;
   --row-l: 32rem;
@@ -51,7 +51,7 @@ html {
 body {
   font-family: 'Roboto';
 
-  background-image: url(./images/wpp_phone.jpg);
+  background-image: url(../images/wpp_phone.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -68,7 +68,7 @@ main {
     grid-template-rows: auto 1fr;
     gap: 1.6rem;
 
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding-top: 1.6rem;
 }
@@ -88,9 +88,6 @@ main {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: var(--row-s);
     justify-items: center;
-
-  width: 100%;
-  padding: 0 .8rem;
 }
 
 .project {
@@ -139,13 +136,9 @@ main {
 }
 
 .project__img {
-  width: 75%;
-  object-fit: cover;
-}
+  width: 70%;
 
-/* Wikipedia Logo */
-.wikipedia-img {
-  width: 38%;
+  object-fit: cover;
 }
 
 .project__name {
@@ -161,11 +154,11 @@ main {
   font-size: var(--font-l);
 }
 
-.project__subtitle {
+.project__description {
   text-align: center;
   font-size: var(--font-xs);
 
-  color: var(--subtitle-text);
+  color: var(--description-text);
 }
 
 .project__technologies {
@@ -189,178 +182,5 @@ main {
   .projects-container {
       grid-template-columns: repeat(3, 1fr);
     padding: 0 .8rem;
-  }
-}
-
-@media (min-width: 640px) {
-  body {
-    background-image: url(./images/wpp_tablet.jpg);
-  }
-
-  main {
-      gap: 2rem;
-
-    padding-top: 2rem;
-  }
-
-  .heading {
-    font-size: var(--heading-m)
-  }
-
-  .projects-container {
-      grid-auto-rows: var(--row-m);
-
-    padding: 0 1.2rem;
-  }
-
-  .project {
-    width: var(--card-width-m);
-    height: var(--card-height-m);
-    padding: var(--card-padding-m);
-  }
-
-  .project:hover {
-    width: var(--card-width-l);
-    height: var(--card-height-l);
-  }
-
-  .project__date {
-    font-size: var(--font-m);
-  }
-
-  .project__title {
-    font-size: var(--font-xl);
-  }
-
-  .project__subtitle {
-    font-size: var(--font-s);
-  }
-
-  .project__technologies {
-      gap: 1.6rem;
-  }
-
-  .project__tech {
-    width: var(--tech-m);
-  }
-}
-
-@media (min-width: 750px) {
-  .projects-container {
-      grid-template-columns: repeat(4, 1fr);
-    padding: 0 1.2rem;
-  }
-}
-
-@media (min-width: 960px) {
-  .projects-container {
-      grid-template-columns: repeat(5, 1fr);
-    padding: 0 1.6rem;
-  }
-}
-
-@media (min-width: 1080px) {
-  body {
-    background-image: url(./images/wpp_desktop.jpg);
-  }
-
-  main {
-      gap: 2.4rem;
-
-    padding-top: 2.4rem;
-  }
-
-  .heading {
-    font-size: var(--heading-l)
-  }
-
-  .projects-container {
-      grid-auto-rows: var(--row-l);
-  }
-
-  .project {
-    width: var(--card-width-l);
-    height: var(--card-height-l);
-    padding: var(--card-padding-l);
-
-    transition: .2s;
-  }
-
-  .project:hover {
-    width: var(--card-width-xl);
-    height: var(--card-height-xl);
-  }
-
-  .project__date {
-    font-size: var(--font-l);
-  }
-
-  .project__title {
-    font-size: var(--font-xxl);
-  }
-
-  .project__subtitle {
-    font-size: var(--font-m);
-  }
-
-  .project__technologies {
-      gap: 2rem;
-  }
-
-  .project__tech {
-    width: var(--tech-l);
-  }
-}
-
-@media (min-width: 1280px) {
-  .heading {
-    font-size: var(--heading-l)
-  }
-
-  .projects-container {
-      grid-template-columns: repeat(6, 1fr);
-      grid-auto-rows: var(--row-l);
-      
-    padding: 0 2rem;
-  }
-}
-
-@media (min-width: 1610px) {
-  main {
-      gap: 2.8rem;
-
-    padding-top: 2.8rem;
-  }
-
-  .heading {
-    font-size: var(--heading-xl)
-  }
-
-  .projects-container {
-      grid-template-columns: repeat(7, 1fr);
-      grid-auto-rows: var(--row-xl);
-      
-    padding: 0 2.4rem;
-  }
-
-  .project {
-    width: var(--card-width-xl);
-    height: var(--card-height-xl);
-  }
-
-  .project:hover {
-    width: var(--card-width-xxl);
-    height: var(--card-height-xxl);
-  }
-
-  .project__tech {
-    width: var(--tech-xl);
-  }
-}
-
-@media (min-width: 1860px) {
-  .projects-container {
-      grid-template-columns: repeat(8, 1fr);
-    padding: 0 auto;
   }
 }

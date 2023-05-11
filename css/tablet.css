@@ -1,0 +1,66 @@
+@media (min-width: 640px) {
+  body {
+    background-image: url(../images/wpp_tablet.jpg);
+  }
+
+  main {
+      gap: 2rem;
+
+    padding-top: 2rem;
+  }
+
+  .heading {
+    font-size: var(--heading-m)
+  }
+
+  .projects-container {
+      grid-auto-rows: var(--row-m);
+
+    padding: 0 1.2rem;
+  }
+
+  .project {
+    width: var(--card-width-m);
+    height: var(--card-height-m);
+    padding: var(--card-padding-m);
+  }
+
+  .project:hover {
+    width: var(--card-width-l);
+    height: var(--card-height-l);
+  }
+
+  .project__date {
+    font-size: var(--font-m);
+  }
+
+  .project__title {
+    font-size: var(--font-xl);
+  }
+
+  .project__description {
+    font-size: var(--font-s);
+  }
+
+  .project__technologies {
+      gap: 1.6rem;
+  }
+
+  .project__tech {
+    width: var(--tech-m);
+  }
+}
+
+@media (min-width: 750px) {
+  .projects-container {
+      grid-template-columns: repeat(4, 1fr);
+    padding: 0 1.2rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .projects-container {
+      grid-template-columns: repeat(5, 1fr);
+    padding: 0 1.6rem;
+  }
+}
