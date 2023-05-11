@@ -143,6 +143,11 @@ main {
   object-fit: cover;
 }
 
+/* Wikipedia Logo */
+.wikipedia-img {
+  width: 38%;
+}
+
 .project__name {
   display: grid;
     place-items: start center;

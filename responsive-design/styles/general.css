@@ -1,0 +1,72 @@
+:root {
+  /* Colors */
+  --color-background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+  --color-orange-bitcoin: #F7931A;
+  --color-orange-soft: #FFE9D5;
+  --color-blue-secondary: #1A9AF7;
+  --color-blue-soft: #E7F5FF;
+  --color-black-warm: #201E1C;
+  --color-black-cool: #282623;
+  --color-black-shadow: #59491e29;
+  --color-gray-dark: #757575;
+  --color-gray: #BABABA;
+  --color-white-off: #FAF8F7;
+  /* Font */
+  --font-size-sans-s: 1.4rem;
+  --font-size-sans-m: 1.8rem;
+  --font-size-sans-l: 2.4rem;
+  --font-size-inter-s: 1.2rem;
+  --font-size-inter-m: 1.4rem;
+  --font-size-inter-l: 1.6rem;
+  --line-height-sans-s: 1.8rem;
+  --line-height-sans-m: 2.3rem;
+  --line-height-sans-l: 2.6rem;
+  --line-height-inter-s: 1.5rem;
+  --line-height-inter-m: 1.9rem;
+}
+
+* {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 62.5%;
+}
+
+::-webkit-scrollbar {
+  opacity: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.button {
+  font-size: var(--font-size-sans-s);
+  font-weight: bold;
+
+  padding: 1.6rem;
+  border: none;
+  
+  background-color: white;
+  color: var(--color-black-warm);
+  border-radius: .4rem;
+}
+
+.button__link {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}

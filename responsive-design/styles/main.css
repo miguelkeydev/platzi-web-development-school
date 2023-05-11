@@ -1,0 +1,374 @@
+main {
+  width: 100%;
+  min-width: 32rem;
+
+  background-color: var(--color-white-off);
+}
+
+/*============ Exchange Section ============*/
+.main__exchange {
+  display: grid;
+    justify-items: center;
+
+  text-align: center;
+
+  width: 100%;
+
+  background-color: var(--color-white-off);
+}
+
+/* Image */
+.exchange__background {
+  width: 20rem;
+  height: 20rem;
+  margin: 6.8rem 0 4rem;
+
+  background: url("../assets/images/bitcoin.svg") center no-repeat;
+}
+
+/* Info */
+.info-container {
+  display: grid;
+    gap: 2.8rem;
+    place-items: center;
+  
+  text-align: center;
+}
+
+/* Title */
+.title {
+  font-size: var(--font-size-sans-l);
+  line-height: var(--line-height-sans-l);
+}
+
+/* Description */
+.description {
+  font-size: var(--font-size-sans-s);
+  line-height: var(--line-height-sans-s);
+  font-weight: 500;
+
+  width: 95%;
+}
+
+/* Description Gray*/
+.description--gray {
+  color: var(--color-gray-dark);
+}
+
+/* Tables Container */
+.exchange__tables {
+  display: grid;
+    grid-template-columns: 100% 100%;
+    gap: 30%;
+
+  font-family: 'Inter', sans-serif;
+  text-align: start;
+  
+  width: 80%;
+  max-width: 36rem;
+  padding: 6rem 10%;
+
+  overflow: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+}
+
+/* Table Container */
+.table {
+  display: grid;
+
+  scroll-snap-align: center;
+}
+
+/* Table Title */
+.table__title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: var(--font-size-sans-m);
+
+  padding-bottom: 1.2rem;
+
+  color: var(--color-orange-bitcoin);
+}
+
+/* Table Title Blue */
+.table__title--blue {
+  color: var(--color-blue-secondary);
+}
+
+/* Table Container */
+.table__container {
+  font-size: var(--font-size-inter-l);
+
+  width: 100%;
+
+  background-color: white;
+  color: var(--color-gray);
+  border-radius: 1.2rem;
+}
+
+/* Table Rows and Data */
+.table__container tr, .table__container td {
+  padding: 1.2rem;
+  border-bottom: .1rem solid var(--color-white-off);
+}
+
+/* Table Bottom */
+.table__bottom td {
+  border: none;
+}
+
+/* Table Right Data */
+.table__right {
+  text-align: center;
+  
+  border-left: .1rem solid var(--color-white-off);
+
+  color: var(--color-gray-dark);
+}
+
+/* Table Icon */
+.table__icon {
+  display: inline-block;
+
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: .8rem;
+
+  background: url("../assets/icons/trending_down.svg") center/cover no-repeat;
+}
+
+/* Table Icon Up */
+.table__icon--up {
+  background: url("../assets/icons/trending_up.svg") center/cover no-repeat;
+
+}
+
+/* Table Update */
+.table__update {
+  justify-self: center;
+
+  font-size: var(--font-size-inter-m);
+  text-align: center;
+
+  width: 85%;
+  padding: .8rem;
+  margin-top: 1.6rem;
+
+  background-color: var(--color-orange-soft);
+  border-radius: .8rem;
+}
+
+/* Table Update Blue */
+.table__update--blue {
+  background-color: var(--color-blue-soft);
+}
+
+/*============ Product Section ============*/
+.main__product-container {
+  position: relative;
+  display: grid;
+    place-items: center;
+
+  width: 100%;
+  min-width: 32rem;
+  padding: 6rem 1.6rem 4rem;
+
+  background-color: var(--color-black-warm);
+  color: white;
+}
+
+/* Logo */
+.product-container__logo {
+  position: absolute;
+    top: -1.2rem;
+}
+
+/* Benefits Container */
+.benefits {
+  display: grid;
+    gap: 2rem;
+
+  padding-top: 3.2rem;
+}
+
+/* Benefits Card */
+.benefits__card {
+  font-weight: 600;
+
+  max-width: 45rem;
+  min-height: 14rem;
+  padding: 1.6rem;
+  
+  background-color: var(--color-black-cool);
+  border-radius: .4rem;
+  box-shadow: 0 .4rem .8rem #00000026;
+}
+
+/* Benefits Name */
+.benefits__name {
+  font-size: var(--font-size-sans-m);
+
+  padding: .4rem 0 .8rem;
+}
+
+/*============ Extra Section ============*/
+.main__extra {
+  display: grid;
+    grid-template-rows: 22% 1fr;
+    place-items: end center;
+  
+  width: 100%;
+  min-width: 32rem;
+  height: 50vh;
+
+  background: url("../assets/images/bitcoin_picture_2x.jpg") center/cover no-repeat;
+}
+
+/* Extra Title */
+.main__extra .title {
+  color: white;
+}
+
+/*============ Plans Section ============*/
+.main__plans {
+  display: grid;
+    gap: 4rem;
+
+  padding: 6rem 0 4rem;
+
+  background-color: var(--color-white-off);
+}
+
+/* Title */
+.plans .title {
+  align-self: center;
+  width: 90%;
+}
+
+/* Description */
+.plans .description {
+  width: 80%;
+}
+
+/* Plans Container */
+.plans_container {
+  position: relative;
+  justify-self: center;
+  display: grid;
+    grid-template-columns: repeat(3, 20rem);
+    align-items: end;
+    gap: 1.2rem;
+
+  width: calc(100% - .4rem);
+  height: 45vh;
+  padding: 0 2rem 1.2rem;
+
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+}
+
+/* Plan Card */
+.plan-card {
+  display: grid;
+    place-items: start center;
+
+  text-align: center;
+
+  height: 95%;
+
+  border-radius: 1.2rem;
+  box-shadow: 0 .4rem 1.2rem var(--color-gray);
+
+  overflow: hidden;
+  scroll-snap-align: center;
+}
+
+/* Recommended */
+.plan-card__recomended {
+  position: absolute;
+    top: 0;
+
+  font-family: 'Inter';
+  font-size: var(--font-size-inter-s);
+  font-weight: 500;
+
+  padding: .6rem .8rem .8rem;
+  
+  background-color: var(--color-orange-bitcoin);
+  color: var(--color-white-off);
+  border-radius: .8rem;
+}
+
+/* Plan Card */
+.plan-card__plan {
+  display: grid;
+    grid-template-rows: repeat(3, auto) 1fr;
+
+  height: 100%;
+}
+
+/* Plan Name */
+.plan-card__name {
+  font-size: var(--font-size-sans-s);
+  font-weight: 600;
+
+  padding: 3.2rem 0 1.6rem;
+}
+
+/* Plan Price */
+.plan-card__price {
+  display: flex;
+    justify-content: center;
+    gap: .4rem;
+  
+  font-family: 'Inter';
+  font-size: 5.2rem;
+  font-weight: bold;
+}
+
+/* Plan Price Small */
+.plan-card__price--small {
+  font-size: var(--font-size-inter-s);
+
+  margin-top: 1.2rem;
+
+  color: var(--color-black-cool);
+}
+
+/* Plan Description */
+.plan-card__description {
+  font-size: var(--font-size-inter-s);
+  font-weight: 600;
+  line-height: var(--line-height-inter-s);
+
+  padding-top: 2rem;
+
+  color: var(--color-gray);
+}
+
+/* Plan Button Container */
+.plan-card__button {
+  display: grid;
+    place-items: center;
+}
+
+/* Button */
+.plan-card__button .button {
+  width: 85%;
+  padding: 0;
+  border: .2rem solid var(--color-orange-bitcoin);
+
+  background-color: var(--color-white-off);
+  border-radius: .6rem;
+}
+
+.plan-card__button .button__link {
+    gap: 0.8rem;
+
+  padding: 1rem;
+}
+
+.plan-card__button .button:hover {
+  background-color: var(--color-orange-soft);
+}

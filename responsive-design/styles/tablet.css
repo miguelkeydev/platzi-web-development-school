@@ -1,0 +1,24 @@
+@media (min-width: 640px) {
+  /* ========== Header ========== */
+  /* Logo */
+  .header__logo {
+    width: 20rem;
+  }
+
+  /* ========== Currencies Section ========== */
+  /* Tables Container */
+  .exchange__tables {
+    padding: 6rem 6.5rem;
+  }
+  
+  /* ========== Plans Section ========== */
+  /* Plans Container */
+  .plans_container {
+      justify-content: center;
+      gap: 2.4rem;
+    
+    overflow-x: unset;
+    overscroll-behavior-x: unset;
+    scroll-snap-type: x unset;
+  }
+}
