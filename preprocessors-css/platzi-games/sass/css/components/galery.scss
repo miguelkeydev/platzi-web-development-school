@@ -1,0 +1,23 @@
+.galeria {
+  width: 50%;
+  height: 25;
+  margin: 1rem auto;
+  padding: 2rem;
+  @include caja;
+
+  &__foto-principal {
+    float: left;
+    margin-right: 3rem;
+  }
+  &__fotos-adicionales img {
+    height: 7rem;
+  }
+  h2 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+		@include titulos($font-text);
+  }
+  img {
+    border-radius: 1rem;
+  }
+}
