@@ -1,0 +1,27 @@
+header 
+    // Logo
+    figure.header__logo: img(src="../assets/images/css_logo.png", alt="CSS Logo")
+    // Menu
+    nav.menu.header__menu
+      // Arrow Left
+      figure.menu__figure 
+        img(src="../assets/icons/arrow_left.svg", alt="Arrow Left Icon")
+      // Options
+      ul 
+        li: a(href="#")
+          | Home
+        li: a(href="#")
+          | HTML
+        li: a(href="#")
+          | CSS
+        li: a(href="#")
+          | JavaScript
+      // Arrow right
+      figure.menu__figure
+        img(src="../assets/icons/arrow_right.svg", alt="Arrow Right Icon")
+    // Search
+    .header__search
+      // Search Icon
+      img(src="../assets/icons/magnifying_glass.svg", alt="Search Icon")
+      // Search Input
+      input(type="text" placeholder="Search")

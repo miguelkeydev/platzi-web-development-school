@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+include components/head.pug
+include components/mixins.pug
+body
+  include components/header.pug
+  main
+    // Preprocessors Article
+    +main-article("preprocessor_draw.png", "Preprocessors", "Featured", "Learn about the features of CSS and HTML Preprocessors", "Using the CSS and HTML preprocessors the users will be able to spend less time coding and write clearer code thanks to the useful tools that they offer.", "143", "722", "73")
+    // SASS Preprocessor
+    +article("small-article", "sass.png", "SASS", "CSS", "SASS Preprocessor", "73", "353", "25")
+    // Learn Web Development Banner
+    aside.banner
+      // Title 
+      h2 Learn web development: read about the best practices when building websites
+      // Description
+      p 
+        | If your goal is to learn Web Development easily, here's your place. We have the most useful information for you to understand how the web development works and create your own website.
+      // Read More Button
+      button.button Read more
+    // Sidebar Courses
+    aside.sidebar
+      h3 Featured articles
+      +sidebar__course("1", "HTML and CSS: Advanced")
+      +sidebar__course("2", "JavaScript: Basic")
+      +sidebar__course("3", "React: The most used Framework")
+    // Web Development
+    +article("medium-article", "web_dev.png", "Web Development", "Web Development", "Build your website", "89", "643", "201")
+    // LESS Preprocessor
+    +article("small-article", "less.png", "LESS", "CSS", "LESS Preprocessor", "43", "466", "62")
+    // PUG Preprocessor
+    +article("small-article", "pug.png", "PUG", "HTML", "HTML Preprocessor", "35", "243", "94")
+    // STYLUS Preprocessor
+    +article("small-article", "stylus.png", "STYLUS", "CSS", "STYLUS Preprocessor", "39", "282", "88")
+  include components/footer.pug

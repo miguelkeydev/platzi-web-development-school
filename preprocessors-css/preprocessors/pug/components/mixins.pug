@@ -1,0 +1,47 @@
+mixin article__stats(shares, views, comments)
+  .article__stats 
+    ul 
+      // Shares 
+      li 
+        img(src="/preprocessors/assets/icons/share.svg", alt="Shares Icon")
+        span=shares 
+      // Views 
+      li 
+        img(src="/preprocessors/assets/icons/eye.svg", alt="Views Icon")
+        span=views
+      // Comments
+      li 
+        img(src="/preprocessors/assets/icons/comments.svg", alt="Comments Icon")
+        span=comments
+
+mixin main-article(image, name, category, title, description, shares, views, comments)
+  article.main-article
+    a(href="#")
+      img(src="../assets/images/"+image, alt=name+" Picture")
+      // Category 
+      span=category
+      // Info
+      .main-article__info
+        // Title 
+        h1=title
+        // Description 
+        p=description 
+      // Stats
+      +article__stats(shares, views, comments) 
+
+mixin article(classname, image, name, category, title, shares, views, comments)
+  article(class=classname)
+    a(href="#")
+      img(src="../assets/images/"+image, alt=name+" Picture")
+      span=category 
+      // Info
+      .article__info
+        // Title 
+        h1=title
+      // Stats 
+      +article__stats(shares, views, comments)
+
+mixin sidebar__course(number, name)
+  section.sidebar__course
+    span=number 
+    p=name
