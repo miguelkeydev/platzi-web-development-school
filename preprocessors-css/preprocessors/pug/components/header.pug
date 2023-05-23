@@ -1,13 +1,12 @@
-header 
-    // Logo
-    figure.header__logo: img(src="../assets/images/css_logo.png", alt="CSS Logo")
+header.header
     // Menu
-    nav.menu.header__menu
-      // Arrow Left
-      figure.menu__figure 
-        img(src="../assets/icons/arrow_left.svg", alt="Arrow Left Icon")
+    img(class="header__menu" src="../assets/icons/menu_icon.svg")
+    // Logo
+    img(class="header__logo" src="../assets/images/css_logo.png", alt="CSS Logo")
+    // Navbar
+    nav.navbar.header__navbar
       // Options
-      ul 
+      ul.navbar__options
         li: a(href="#")
           | Home
         li: a(href="#")
@@ -16,9 +15,8 @@ header
           | CSS
         li: a(href="#")
           | JavaScript
-      // Arrow right
-      figure.menu__figure
-        img(src="../assets/icons/arrow_right.svg", alt="Arrow Right Icon")
+        li: a(href="#")
+          | Tips
     // Search
     .header__search
       // Search Icon

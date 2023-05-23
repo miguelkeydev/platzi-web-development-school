@@ -1,0 +1,37 @@
+.small-article {
+  position: relative;
+  
+  width: 100%;
+  padding: .8rem 0;
+  border-bottom: .1rem solid $color-secondary;
+
+  a {
+      grid-template-columns: 35% 1fr;
+      gap: 5%;
+    @include link;
+  }
+
+  &__category {
+    @extend .main-article__category;
+    position: absolute;
+      top: .8rem;
+      left: 40%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .article__stats {
+    @include article-stats;
+      right: 8%;
+      bottom: .8rem;
+  }
+  
+  @include hover-title;
+}
+
+@import "./sass_article.scss";
+@import "./less_article.scss";
+@import "./pug_article.scss";
+@import "./stylus_article.scss";

@@ -17,9 +17,9 @@ mixin article__stats(shares, views, comments)
 mixin main-article(image, name, category, title, description, shares, views, comments)
   article.main-article
     a(href="#")
-      img(src="../assets/images/"+image, alt=name+" Picture")
+      img(class="main-article__image" src="../assets/images/"+image, alt=name+" Picture")
       // Category 
-      span=category
+      span.main-article__category=category
       // Info
       .main-article__info
         // Title 
@@ -33,15 +33,10 @@ mixin article(classname, image, name, category, title, shares, views, comments)
   article(class=classname)
     a(href="#")
       img(src="../assets/images/"+image, alt=name+" Picture")
-      span=category 
+      span.small-article__category=category 
       // Info
       .article__info
         // Title 
         h1=title
       // Stats 
       +article__stats(shares, views, comments)
-
-mixin sidebar__course(number, name)
-  section.sidebar__course
-    span=number 
-    p=name

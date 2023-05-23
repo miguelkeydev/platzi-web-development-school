@@ -1,0 +1,9 @@
+.medium-article {
+  display: grid;
+    place-items: center;
+  order: 4;
+
+  min-height: 12.5rem;
+
+  @extend .small-article;
+}

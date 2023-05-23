@@ -1,0 +1,56 @@
+.main-article {
+  position: relative;
+  
+  width: 100%;
+  border-bottom: .1rem solid $color-primary;
+  margin-bottom: 1.2rem;
+
+  a {
+    @include link;
+  }
+
+  &__image {
+    width: 100%;
+
+    @include box-shadow($color-tertiary);
+  }
+
+  &__category {
+    font-size: 1.4rem;
+    font-weight: 500;
+    
+    width: fit-content;
+    padding: 0 .4rem;
+    margin: .4rem 0;
+    
+    background-color: $color-tertiary;
+    color: $color-secondary;
+
+    @include font-family($font-title);
+  }
+
+  &__info {
+    text-align: justify;
+
+    h1 {
+      font-size: $font-size-xl;
+    }
+    p {
+      font-size: $font-size-m;
+
+      padding: .8rem .8rem 2rem;
+
+      color: $color-tertiary;
+      
+      @include font-family($font-text);
+    }
+  }
+
+  .article__stats {
+    @include article-stats;
+      top: 30%;
+      right: 0;
+  }
+
+  @include hover-title;
+}
