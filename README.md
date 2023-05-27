@@ -2,7 +2,7 @@
 Repository created to register my progress on [Web Development School](https://platzi.com/escuela/escuela-web/) from [Platzi💚](https://platzi.com)
 
 ## 🛠 Skills used so far
-Git, GitHub, HTML, CSS...
+Git, GitHub, HTML, PUG, CSS, SASS...
 
 ## 🧮 Projects created
 - Lamoure Jewlery & Accessories Store
