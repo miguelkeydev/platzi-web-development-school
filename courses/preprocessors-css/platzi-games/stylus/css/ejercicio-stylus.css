@@ -1,0 +1,118 @@
+h3 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h1 {
+  font-size: 3rem;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  text-transform: uppercas;
+  color: #333;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.encabezado--con-filtros {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+.encabezado--con-filtros h2 {
+  margin-top: 10rem;
+  font-size: 5rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  text-transform: uppercas;
+}
+.encabezado--con-filtros .filtros {
+  width: 25rem;
+  height: 7.5rem;
+  padding: 2rem;
+  margin-left: auto;
+  background-color: color-width;
+  box-shadow: 0 2rem 3.3rem 0 rgba(0,0,0,0.2);
+}
+.encabezado--con-filtros .filtros span {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  text-transform: uppercas;
+}
+.encabezado--con-filtros .filtros a {
+  margin-left: 2rem;
+  font-size: 2.5rem;
+}
+.contenido {
+  margin-bottom: 4rem;
+  justify-content: space-evenly;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+.caja {
+  max-width: 40rem;
+  background-color: color-width;
+  box-shadow: 0 2rem 3.3rem 0 rgba(0,0,0,0.2);
+}
+.caja__contenido {
+  padding: 2rem;
+  background-color: #fff;
+}
+.caja__contenido span {
+  color: #8841da;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  text-transform: uppercas;
+}
+.caja__contenido h3 {
+  font-weight: normal;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  text-transform: uppercas;
+}
+.buscador {
+  width: 100%;
+  height: 25rem;
+  padding: 10rem;
+  background-image: url("../images/cover.jpg");
+  background-size: cover;
+  text-align: center;
+}
+.buscador__input {
+  width: 75%;
+  height: 6rem;
+  padding: 2rem;
+  border: none;
+  border-radius: 3rem;
+  font-size: 2.5rem;
+}
+.estadistica--articulos {
+  height: 7rem;
+  padding: 2rem;
+  border-top: 0.1rem solid #333;
+}
+.estadistica--articulos ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.estadistica--articulos li {
+  list-style: none;
+  color: rgba(51,51,51,0.3);
+}
+.estadistica--articulos span {
+  margin-left: 1rem;
+}

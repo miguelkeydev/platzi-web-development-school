@@ -1,0 +1,9 @@
+-var subtitles = ["Subtitle 1", "Subtitle 2", "Subtitle 3"]
+-var user = "Miguel"
+-var links= ['About', 'News', 'Contact']
+mixin box(image, title, content)
+  .box 
+    .box__image: img(src="../assets/images/"+image)
+    .box__content
+      h3= title
+      p= content

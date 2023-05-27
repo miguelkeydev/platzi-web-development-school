@@ -1,0 +1,33 @@
+.contenedor--cajas {
+  display: flex;
+    justify-content: space-evenly;
+    gap: 1.6rem;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  .caja {
+    max-width: 28rem;
+    overflow: hidden;
+    .sombra-caja;
+    &__imagen img {
+      width: 100%;
+      height: 30rem;
+      object-fit: cover;
+    }
+    &__contenido {
+      padding: 2.4rem;
+      background-color: @color-secundario;
+    }
+    span {
+      color: @color-primario;
+      .oswald;
+    }
+    h3 {
+      color: @color-claro;
+    }
+    a {
+      color: @color-claro;
+      .oswald;
+    }
+  }
+}

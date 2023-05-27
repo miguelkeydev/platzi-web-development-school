@@ -1,0 +1,12 @@
+.footer {
+  background-color: #FFC4C4;
+
+  &__more span:hover {
+    color: #EE6983;
+  }
+
+  &__us {
+    width: 50%;
+    padding: 0 0 2.8rem;
+  }
+}

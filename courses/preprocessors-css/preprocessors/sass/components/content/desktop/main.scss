@@ -1,0 +1,18 @@
+.main {
+  display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  
+  width: 90%;
+  max-width: 100rem;
+  max-height: 100rem;
+  padding: 10rem 2.4rem 2rem;
+  border-bottom: none;
+  margin: 0 auto;
+
+  @import "./main_article";
+  @import "./small_article";
+  @import "./banner";
+  @import "./sidebar";
+  @import "./medium_article.scss";
+}

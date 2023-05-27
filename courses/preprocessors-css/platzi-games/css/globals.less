@@ -1,0 +1,50 @@
+@color-claro: #fff;
+@color-primario: #333;
+@color-secundario: #8841da;
+@color-variacion: #012179;
+@fuente-principal: 'Lato', sans-serif;
+@fuente-secundaria: 'Oswald', sans-serif;
+@fuente-base: 18px;
+
+.sombra-caja {
+  box-shadow: 0 .5rem 1.5rem 0 fade(@color-primario, 20%);
+}
+
+.oswald {
+  font-family: @fuente-secundaria;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.fuente(@font-size) {
+  font-size: @font-size;
+  line-height: @font-size + 10%;
+}
+
+* {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+	font-family: @fuente-principal;
+  background-color: @color-primario;
+  color: @color-claro;
+  .fuente(@fuente-base);
+}
+
+h1, h2, h3 {
+  .oswald;
+  color: @color-secundario;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

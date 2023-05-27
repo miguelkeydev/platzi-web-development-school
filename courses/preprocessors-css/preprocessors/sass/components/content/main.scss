@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+    flex-direction: column;
+
+  width: 100%;
+  padding: 10rem 1.2rem 0;
+  border-bottom: .1rem solid $color-primary;
+  
+  @import "./main_article";
+  @import "./small_article";
+  @import "./banner";
+  @import "./medium_article";
+  @import "./sidebar";
+}

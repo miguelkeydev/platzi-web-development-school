@@ -1,0 +1,15 @@
+.small-article {
+  padding: 1.6rem 0;
+
+  &__category {
+    @extend .main-article__category;
+  }
+
+  .article__stats {
+      left: 48%;
+      bottom: 1.6rem;
+    ul {
+        justify-content: center;
+    }
+  }
+}

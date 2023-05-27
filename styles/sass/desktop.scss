@@ -1,0 +1,98 @@
+@import "./globals/globals_desktop";
+
+body {
+  background-image: url(../../assets/images/wpp_desktop.jpg);
+}
+
+main {
+    gap: 2.4rem;
+
+  padding-top: 2.4rem;
+}
+
+.heading {
+  font-size: $font-size-heading;
+}
+
+.projects-container {
+    grid-auto-rows: var(--row-l);
+}
+
+.project {
+  width: $card-with;
+  height: $card-height;
+  padding: $card-padding;
+
+  transition: $transition;
+
+  &:hover {
+    width: $card-with-hover;
+    height: $card-height-hover;
+  }
+
+  &__date {
+    font-size: $font-size-l;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+  }
+
+  &__description {
+    font-size: $font-size-m;
+  }
+
+  &__technologies {
+      gap: 2rem;
+
+    .project__tech {
+      width: 4.6rem;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .projects-container {
+      grid-template-columns: repeat(8, 1fr);
+      
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1610px) {
+  main {
+      gap: 2.8rem;
+
+    padding-top: 2.8rem;
+  }
+
+  .projects-container {
+      grid-template-columns: repeat(7, 1fr);
+      grid-auto-rows: $row-size-l;
+    
+    padding: 0 2.4rem;
+  }
+
+  .project {
+    width: $card-with-l;
+    height: $card-height-l;
+
+    &:hover {
+      width: $card-with-hover-l;
+      height: $card-height-hover-l;
+    }
+
+    &__technologies {
+      .project__tech {
+        width: 4.8rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1860px) {
+  .projects-container {
+      grid-template-columns: repeat(8, 1fr);
+    padding: 0 auto;
+  }
+}

@@ -1,0 +1,14 @@
+.navbar {
+  position: static;
+
+  flex: 1;
+  height: auto;
+  padding: 0;
+
+  border-bottom: none;
+
+  &__options {
+      justify-content: space-evenly;
+      gap: 0;
+  }
+}

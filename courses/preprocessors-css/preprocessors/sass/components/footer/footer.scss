@@ -1,0 +1,54 @@
+.footer {
+  display: grid;
+    place-items: center;
+
+  padding: .4rem 1.2rem 1.6rem;
+
+  &__more {
+    display: flex;
+      justify-content: end;
+      gap: .4rem;
+
+    font-size: $font-size-s;
+      
+    width: 100%;
+
+    color: $color-primary;
+
+    transition: .15s;
+
+    @include font-family($font-title);
+
+    & span:hover {
+      color: $color-secondary;
+    }
+  }
+
+  &__us {
+    text-align: center;
+
+    font-size: $font-size-s;
+
+    width: 85%;
+    padding: 2rem;
+
+    a {
+      color: $color-tertiary;
+
+      transition: .15s;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__logo {
+    width: 30%;
+    max-width: 10rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.main {
+  padding: 7.2rem 2.4rem 0;
+  
+  @import "./main_article";
+  @import "./small_article";
+  @import "./banner";
+  @import "./medium_article";
+  @import "./sidebar";
+}

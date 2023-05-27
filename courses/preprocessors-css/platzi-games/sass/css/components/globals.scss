@@ -1,0 +1,59 @@
+$font-title: 'Lato', sans-serif;
+$font-text: 'Oswald', sans-serif;
+$color-black: #333;
+$color-white: #fff;
+$color-background: #8841da;
+$color-additional: #3f579a;
+
+@mixin caja {
+	border-radius: 3rem;
+	box-shadow: 0 2rem 3.3rem 0 rgba(0, 0, 0, .2);
+	background-color: $color-white;
+	color: $color-black;
+}
+
+@mixin titulos($fuente) {
+	@if $fuente==$font-title {
+		font-family: $font-title;
+	} @else {
+		font-family: $font-text;
+		text-transform: uppercase;
+	}
+}
+
+@function get-opacity($color, $nivel) {
+	@return rgba($color, $nivel);
+}
+
+@each $heading, $size in (h1: 3rem, h2: 2rem, h3: 1.2rem) {
+	#{$heading} {
+		font-size: $size;
+		margin: 0;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	@include titulos($font-title);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+main {
+	display: flex;
+		justify-content: space-between;
+	width: 100%;
+	height: 100vh;
+}

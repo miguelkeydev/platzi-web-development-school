@@ -1,0 +1,26 @@
+.articulos {
+  width: 50%;
+  padding: 7rem;
+  background-color: $color-black;
+}
+
+.articulo {
+  margin-bottom: 7rem;
+  border-bottom: .3rem solid $color-background;
+
+  &__categoria {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: $color-background;
+    @include titulos($font-text);
+  }
+  &__titulo {
+    color: $color-white;
+    @include titulos($font-text);
+  }
+  &__descripcion {
+    font-size: 1.8rem;
+    margin: 1.2rem 3rem 3rem 0;
+    color: get-opacity($color-white, .85);
+  }
+}

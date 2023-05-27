@@ -1,0 +1,50 @@
+.small-article {
+  position: relative;
+  
+  width: 100%;
+  padding: .8rem 0;
+  border-bottom: .1rem solid $color-secondary;
+
+  a {
+      grid-template-columns: 35% 1fr;
+      gap: 5%;
+    @include link;
+  }
+
+  &__category {
+    @extend .main-article__category;
+    position: absolute;
+      top: .8rem;
+      left: 40%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .article__stats {
+    @include article-stats;
+      right: 8%;
+      bottom: .8rem;
+  }
+  
+  @include hover-title;
+}
+
+.sass-article {
+  order: 1;
+}
+
+.less-article {
+  order: 2;
+}
+
+.pug-article {
+  order: 7;
+
+  border-bottom: none;
+}
+
+.stylus-article {
+  order: 6;
+}

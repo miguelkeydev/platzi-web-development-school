@@ -1,0 +1,11 @@
+.sidebar {
+    grid-row: 3 / 5;
+    grid-column: 1 / 2;
+    order: unset;
+
+  width: 100%;
+
+  h3 {
+    line-height: 2.4rem;
+  }
+}

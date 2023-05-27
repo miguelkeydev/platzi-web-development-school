@@ -1,0 +1,37 @@
+.sidebar {
+  order: 5;
+  
+  width: 80%;
+  padding: 1.2rem;
+  margin: 1.2rem auto;
+
+  border-radius: 1.2rem;
+
+  @include box-shadow($color-secondary);
+
+  h3 {
+    font-size: $font-size-l;
+    
+    color: $color-primary;
+    
+    @include font-family($font-title);
+  }
+
+  &__news li {
+    font-size: $font-size-s;
+    font-weight: 500;
+    
+    padding: 1.6rem .4rem;
+    border-top: .1rem solid $color-tertiary;
+
+    color: $color-primary;
+    list-style: decimal inside;
+
+    &:hover {
+      color: $color-tertiary;
+      text-decoration: underline;
+
+      cursor: pointer;
+    }
+  }
+}

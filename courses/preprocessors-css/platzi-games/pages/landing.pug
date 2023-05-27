@@ -1,0 +1,22 @@
+extends components/template.pug
+block contents
+  // Intro Section 
+  section.intro
+    // Intro Image 
+    .intro__image: img(src="../assets/images/imagen.png")
+    // Intro Content 
+    .intro__content 
+      // Title 
+      h2 Main Title
+      // Paragraph 
+      p 
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam repellendus ex accusantium voluptas sunt voluptatibus repellat
+        // Modified Paragraph
+        span 
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, eligendi distinctio!
+      // Read More 
+      a.button Read more
+  main.content
+    +box('imagen.png', subtitles[0], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+    +box('imagen.png', subtitles[1], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+    +box('imagen.png', subtitles[2], 'Lorem ipsum dolor sit amet consectetur adipisicing elit.')

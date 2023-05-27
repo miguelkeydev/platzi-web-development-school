@@ -1,0 +1,27 @@
+html {
+  font-size: 70%;
+}
+
+.header {
+  padding: 0 2.4rem;
+  
+  border-bottom: .1rem solid;
+
+  &__menu {
+    margin-right: 2rem;
+  }
+
+  @import "./navbar";
+
+  &__search {
+    max-width: 5rem;
+
+    img {
+      width: 50%;
+    }
+
+    input {
+      display: none;
+    }
+  }
+}

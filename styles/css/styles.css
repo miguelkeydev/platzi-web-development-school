@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto";
+  background-image: url(../../assets/images/wpp_phone.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 100% 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1.6rem;
+  width: 100%;
+  height: 100vh;
+  padding-top: 1.6rem;
+}
+
+.heading {
+  text-align: center;
+  font-family: "Bruno Ace SC", cursive;
+  font-size: 2.8rem;
+  color: white;
+  text-shadow: 0 0 1.2rem black;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 26rem;
+  justify-items: center;
+}
+
+.project {
+  width: 14rem;
+  height: 24rem;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1.2rem;
+  background: linear-gradient(180deg, #000 25%, #494949 60%, #c6c6c6 100%);
+  color: #C7C7C7;
+  transition: 0.15s;
+}
+.project:hover {
+  width: 16rem;
+  height: 26rem;
+  margin: 0;
+  box-shadow: 0 0 2rem white;
+}
+.project__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.project__date {
+  font-family: "Bruno Ace SC", cursive;
+  font-size: 1.2rem;
+  width: 100%;
+}
+.project__fig {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+.project__fig img {
+  width: 70%;
+  object-fit: cover;
+}
+.project__name {
+  display: grid;
+  place-items: start center;
+  gap: 0.4rem;
+  text-align: center;
+}
+.project__title {
+  font-family: "Bruno Ace SC", cursive;
+  font-size: 1.6rem;
+}
+.project__description {
+  font-size: 1.1rem;
+  color: #A0A0A0;
+}
+.project__technologies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 100%;
+}
+.project__technologies .project__tech {
+  width: 4rem;
+}
+.project__technologies .tech__img {
+  width: 100%;
+}
+
+@media (min-width: 520px) {
+  .projects-container {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 0.8rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
