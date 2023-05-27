@@ -1,0 +1,26 @@
+.banner {
+    grid-template-rows: auto 1fr;
+    grid-row: 2 / 4;
+    grid-column: 4 / 5;
+    gap: 1.6rem;
+    order: unset;
+
+  padding: 2.4rem;
+  margin: 2rem .8rem;
+
+  &__description {
+    grid-template-columns: none;
+    grid-template-rows: auto 1fr;
+    place-items: center;
+
+    button {
+      width: 50%;
+      height: 80%;
+
+      &:hover {
+        width: 60%;
+        height: 85%;
+      }
+    }
+  }
+}

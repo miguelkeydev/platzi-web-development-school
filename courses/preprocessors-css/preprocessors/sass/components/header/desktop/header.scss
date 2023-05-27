@@ -1,0 +1,32 @@
+html {
+  font-size: 80%;
+}
+
+.header {
+  height: 7.2rem;
+
+  @import "./navbar";
+
+  &__search {
+    max-width: none;
+    height: 50%;
+
+    img {
+      width: 50%;
+    }
+
+    input {
+      text-align: start;
+      display: flex;
+
+      width: 50%;
+      max-width: 10rem;
+      height: 100%;
+      padding-left: .8rem;
+
+      &::placeholder {
+        text-align: start;
+      }
+    }
+  }
+}

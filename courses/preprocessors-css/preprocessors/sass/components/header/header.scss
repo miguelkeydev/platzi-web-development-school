@@ -1,0 +1,77 @@
+.header {
+  position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  height: 6rem;
+  padding: 0 1.2rem;
+  
+  background-color: $color-additional;
+  color: $color-primary;
+
+  &__menu {
+    width: 8%;
+    max-width: 3.2rem;
+    margin-right: 1.2rem;
+
+    border-radius: 90%;
+
+    cursor: pointer;
+    transition: .15s;
+    
+    &:hover {
+    background-color: $color-secondary;
+    }
+  }
+
+  &__logo {
+    width: 20%;
+    max-width: 8rem
+  }
+
+  @import "./navbar";
+
+  &__search {
+    display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: .4rem;
+    flex: 1;
+
+    img {
+      width: 8%;
+      max-width: 2.5rem;
+      margin-top: .2rem;
+
+      cursor: pointer;
+    }
+    input {
+      text-align: center;
+      
+      font-size: 1.5rem;
+
+      width: 30%;
+      max-width: 12rem;
+      padding: .4rem 0;
+      border: none;
+
+      background-color: transparent;
+      color: $color-tertiary;
+      border-radius: .4rem;
+      
+      @include font-family($font-text);
+      
+      &::placeholder {
+        font-size: 1.7rem;
+        font-weight: 700;
+      
+        color: $color-primary;
+      }
+    }
+  }
+}
