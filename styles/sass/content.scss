@@ -76,10 +76,12 @@
   &__title {
     font-family: $font-bruno;
     font-size: $font-size-l;
+    text-transform: uppercase;
   }
 
   &__description {
     font-size: $font-size-s;
+    text-transform: uppercase;
 
     color: $color-text-description;
   }
