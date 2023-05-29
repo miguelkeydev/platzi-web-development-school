@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../sass/generals.scss","../sass/header/header.scss","../sass/footer/footer.scss"],"names":[],"mappings":"AAQA;EACE;EAEA;EACA;;;AAGF;EACE;;;AAGF;EACE,aApBW;EAsBX,kBApBc;;;AAuBhB;EACE;EACA;;;AAGF;EACE;;;AC/BF;EACE;EACE;EACA;EAEF;EACA;EACA;;AAEA;EACE;EACE;EAEF;;AAEA;EACE;;AAKF;EACE;EACE;;;ACvBR;EACE;EACA;EAEA,kBFEiB","file":"main.css"}

@@ -1,0 +1,33 @@
+$font-stack: 'IBM Plex Sans', sans-serif;
+
+$color-primary: #FFEFE7;
+$color-secondary: #FFDAC6;
+$color-tertiary: #BABD8D;
+$color-text-primary: #7C6A0A;
+$color-additional: #F2BED1;
+
+* {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-stack;
+  
+  background-color: $color-primary;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
