@@ -3,15 +3,15 @@ mixin article__stats(shares, views, comments)
     ul 
       // Shares 
       li 
-        img(src="/preprocessors/assets/icons/share.svg", alt="Shares Icon")
+        img(src="../assets/icons/share.svg", alt="Shares Icon")
         span=shares 
       // Views 
       li 
-        img(src="/preprocessors/assets/icons/eye.svg", alt="Views Icon")
+        img(src="../assets/icons/eye.svg", alt="Views Icon")
         span=views
       // Comments
       li 
-        img(src="/preprocessors/assets/icons/comments.svg", alt="Comments Icon")
+        img(src="../assets/icons/comments.svg", alt="Comments Icon")
         span=comments
 
 mixin main-article(image, name, category, title, description, shares, views, comments)
