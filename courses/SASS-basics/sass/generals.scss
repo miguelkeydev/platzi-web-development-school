@@ -6,6 +6,78 @@ $color-tertiary: #BABD8D;
 $color-text-primary: #7C6A0A;
 $color-additional: #F2BED1;
 
+@mixin title($font-size) {
+  font-size: $font-size;
+  text-transform: uppercase;
+}
+
+@mixin transition {
+  overflow: hidden;
+  transition: .2s;
+}
+
+@function opacity($color, $grade) {
+  @return rgba($color, $grade);
+}
+
+@mixin clickeable($color-hover, $color-active) {
+  border-radius: 50%;
+
+  @include transition();
+
+  &:hover {
+    background-color: $color-hover;
+  }
+
+  &:active {
+    background-color: $color-active;
+  }
+}
+
+@mixin product-card($size) {
+
+    &__picture {
+      justify-self: center;
+      display: flex;
+      
+      width: 85%;
+
+      overflow: hidden;
+
+      img {
+        width: 100%;
+
+        border-radius: .8rem;
+      }
+    }
+
+    &__info {
+      flex-direction: column;
+
+      line-height: 1.8rem;
+
+      h3 {
+        font-size: 1.8rem;
+
+        margin: 2rem 0 .8rem;
+      }
+    }
+  }
+
+@mixin section-scrollbar($color) {
+  &::-webkit-scrollbar {
+    height: 1.2rem;
+
+    background-color: opacity($color, .5);
+    border-radius: .6rem;
+
+    &-thumb {
+      background-color: $color;
+      border-radius: .6rem;
+    }
+  }
+}
+
 * {
   box-sizing: border-box;
 
@@ -19,8 +91,21 @@ html {
 
 body {
   font-family: $font-stack;
+  font-size: 1.6rem;
   
   background-color: $color-primary;
+  color: $color-text-primary;
+}
+
+body::-webkit-scrollbar {
+  width: 1.2rem;
+
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  margin-top: 2rem;
+  background: linear-gradient(to right, $color-secondary 70%, transparent 70%);
 }
 
 a {
@@ -30,4 +115,12 @@ a {
 
 li {
   list-style: none;
+}
+
+.button-link {
+  display: grid;
+    place-items: center;
+
+  width: 100%;
+  height: 100%;
 }

@@ -1,0 +1,57 @@
+.card {
+  display: grid;
+    grid-template-rows: auto 17rem 1fr;
+    justify-items: center;
+  
+  min-height: 28rem;
+  padding: .6rem;
+
+  border-radius: .6rem;
+
+  cursor: pointer;
+  
+  @include transition;
+
+  &__favorites {
+      justify-self: end;
+    display: grid;
+      place-items: center;
+
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-bottom: .4rem;
+
+    img {
+      width: 2rem;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    
+    width: 80%;
+
+    overflow: hidden;
+
+    img {
+      width: 100%;
+
+      border-radius: .4rem;
+    }
+  }
+
+  &__info {
+      flex-direction: column;
+
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    
+    width: 80%;
+
+    h3 {
+      font-size: 1.5rem;
+
+      margin: 1.2rem 0 .6rem;
+    }
+  }
+}

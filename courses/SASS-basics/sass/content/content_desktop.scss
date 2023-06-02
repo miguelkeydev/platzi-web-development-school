@@ -1,0 +1,6 @@
+main {
+  padding: 6rem 4rem;
+
+  @import './components/desktop/main-article';
+  @import './components/desktop/product-section';
+}

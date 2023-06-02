@@ -1,0 +1,86 @@
+.product-container {
+  display: grid;
+    gap: 5rem;
+
+  width: 100%;
+  margin-top: 6rem;
+
+  // Product Sections
+  &__section {
+    position: relative;
+    
+    padding-bottom: 2rem;
+    
+    overflow-x: scroll;
+
+    // Title
+    h2 {
+      position: sticky;
+        top: 0;
+        left: 0;
+      
+      font-weight: 400;
+
+      margin-bottom: 4rem;
+
+      @include title(2.4rem);
+    }
+  }
+
+  // Cards Container
+  &__cards-container {
+    display: grid;
+      gap: 3.2rem;
+  }
+  
+  // Product Card
+  @import './product-container__card';
+
+  // Product Section - Health Care
+  &__section--health-care {
+    @include section-scrollbar($color-secondary);
+
+    // Cards Container
+    .product-container__cards-container {
+      grid-template-columns: repeat(6, 50%);
+    }
+
+    // Product Card
+    .card {
+      background-color: $color-secondary;
+
+      &__favorites {
+        @include clickeable($color-additional, $color-primary);
+      }
+
+      &:hover {
+        background-color: opacity($color-secondary, .8);
+      }
+    }
+  }
+
+  // Product Section - Furniture
+  &__section--furniture {
+    @include section-scrollbar($color-tertiary);
+
+    // Cards Container
+    .product-container__cards-container {
+      grid-template-columns: repeat(9, 50%);
+    }
+
+    // Product Card
+    .card {
+      background-color: $color-tertiary;
+      color: white;
+
+      &__favorites {
+        @include clickeable($color-tertiary, $color-text-primary);
+      }
+
+      &:hover {
+        background-color: opacity($color-tertiary, .8);
+      }
+    }
+  }
+}
+ 

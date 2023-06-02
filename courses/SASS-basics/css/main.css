@@ -10,7 +10,19 @@ html {
 
 body {
   font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.6rem;
   background-color: #FFEFE7;
+  color: #7C6A0A;
+}
+
+body::-webkit-scrollbar {
+  width: 1.2rem;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  margin-top: 2rem;
+  background: linear-gradient(to right, #FFDAC6 70%, transparent 70%);
 }
 
 a {
@@ -20,6 +32,13 @@ a {
 
 li {
   list-style: none;
+}
+
+.button-link {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 header {
@@ -36,13 +55,312 @@ header .header__figure {
   height: 100%;
 }
 header .header__figure img {
-  height: 80%;
+  height: 65%;
 }
-header .navbar ul {
-  display: flex;
-  gap: 2rem;
+header .navbar {
+  display: none;
+}
+header .header__menu {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: 0.2s;
+}
+header .header__menu:hover {
+  background-color: #FFDAC6;
+}
+header .header__menu:active {
+  background-color: #F2BED1;
 }
 
+@media (min-width: 1024px) {
+  header {
+    padding: 0 4rem;
+  }
+  header .header__figure img {
+    height: 80%;
+  }
+  header .navbar {
+    display: flex;
+  }
+  header .navbar ul {
+    display: flex;
+    gap: 0.8rem;
+  }
+  header .navbar li {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+  header .navbar li:hover {
+    background-color: #FFDAC6;
+  }
+  header .navbar li:active {
+    background-color: #F2BED1;
+  }
+  header .header__menu {
+    display: none;
+  }
+}
+main {
+  width: 100%;
+  padding: 0 2rem;
+}
+main .main-article {
+  display: grid;
+  grid-template-rows: 50vh 1fr;
+  overflow: hidden;
+}
+main .main-article__image {
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  border-radius: 3%;
+  overflow: hidden;
+}
+main .main-article__image img {
+  width: 100%;
+}
+main .main-article__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1.6rem;
+}
+main .main-article__info h1 {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+}
+main .main-article__info button {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  width: 45%;
+  height: 4rem;
+  border: none;
+  background-color: #F2BED1;
+  color: white;
+  border-radius: 2.4rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.2s;
+}
+main .main-article__info button:hover {
+  background-color: rgba(242, 190, 209, 0.7);
+}
+main .main-article__info button:active {
+  background-color: #FFDAC6;
+  color: #7C6A0A;
+}
+main .product-container {
+  display: grid;
+  gap: 5rem;
+  width: 100%;
+  margin-top: 6rem;
+}
+main .product-container__section {
+  position: relative;
+  padding-bottom: 2rem;
+  overflow-x: scroll;
+}
+main .product-container__section h2 {
+  position: sticky;
+  top: 0;
+  left: 0;
+  font-weight: 400;
+  margin-bottom: 4rem;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+main .product-container__cards-container {
+  display: grid;
+  gap: 3.2rem;
+}
+main .product-container .card {
+  display: grid;
+  grid-template-rows: auto 17rem 1fr;
+  justify-items: center;
+  min-height: 28rem;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.2s;
+}
+main .product-container .card__favorites {
+  justify-self: end;
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-bottom: 0.4rem;
+}
+main .product-container .card__favorites img {
+  width: 2rem;
+}
+main .product-container .card__picture {
+  display: flex;
+  width: 80%;
+  overflow: hidden;
+}
+main .product-container .card__picture img {
+  width: 100%;
+  border-radius: 0.4rem;
+}
+main .product-container .card__info {
+  flex-direction: column;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  width: 80%;
+}
+main .product-container .card__info h3 {
+  font-size: 1.5rem;
+  margin: 1.2rem 0 0.6rem;
+}
+main .product-container__section--health-care::-webkit-scrollbar {
+  height: 1.2rem;
+  background-color: rgba(255, 218, 198, 0.5);
+  border-radius: 0.6rem;
+}
+main .product-container__section--health-care::-webkit-scrollbar-thumb {
+  background-color: #FFDAC6;
+  border-radius: 0.6rem;
+}
+main .product-container__section--health-care .product-container__cards-container {
+  grid-template-columns: repeat(6, 50%);
+}
+main .product-container__section--health-care .card {
+  background-color: #FFDAC6;
+}
+main .product-container__section--health-care .card__favorites {
+  border-radius: 50%;
+  overflow: hidden;
+  transition: 0.2s;
+}
+main .product-container__section--health-care .card__favorites:hover {
+  background-color: #F2BED1;
+}
+main .product-container__section--health-care .card__favorites:active {
+  background-color: #FFEFE7;
+}
+main .product-container__section--health-care .card:hover {
+  background-color: rgba(255, 218, 198, 0.8);
+}
+main .product-container__section--furniture::-webkit-scrollbar {
+  height: 1.2rem;
+  background-color: rgba(186, 189, 141, 0.5);
+  border-radius: 0.6rem;
+}
+main .product-container__section--furniture::-webkit-scrollbar-thumb {
+  background-color: #BABD8D;
+  border-radius: 0.6rem;
+}
+main .product-container__section--furniture .product-container__cards-container {
+  grid-template-columns: repeat(9, 50%);
+}
+main .product-container__section--furniture .card {
+  background-color: #BABD8D;
+  color: white;
+}
+main .product-container__section--furniture .card__favorites {
+  border-radius: 50%;
+  overflow: hidden;
+  transition: 0.2s;
+}
+main .product-container__section--furniture .card__favorites:hover {
+  background-color: #BABD8D;
+}
+main .product-container__section--furniture .card__favorites:active {
+  background-color: #7C6A0A;
+}
+main .product-container__section--furniture .card:hover {
+  background-color: rgba(186, 189, 141, 0.8);
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 6rem 4rem;
+  }
+  main .main-article {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: none;
+    gap: 10%;
+  }
+  main .main-article__info {
+    align-items: start;
+    gap: 6rem;
+  }
+  main .main-article__info h1 {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+  }
+  main .main-article__info button {
+    height: 5.2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  main .main-article__image {
+    grid-row: unset;
+  }
+  main .main-article__image img {
+    max-height: 50rem;
+    object-fit: cover;
+    border-radius: 2%;
+  }
+  main .product-container__section {
+    padding-bottom: 0;
+    overflow: unset;
+  }
+  main .product-container__section h2 {
+    position: relative;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+  }
+  main .product-container__cards-container {
+    justify-content: space-between;
+    justify-items: center;
+    row-gap: 6rem;
+  }
+  main .product-container .card {
+    grid-template-rows: auto 25rem 1fr;
+    width: 92%;
+    min-height: 43rem;
+    padding: 1.2rem;
+    margin: 4%;
+    border-radius: 0.8rem;
+  }
+  main .product-container .card__favorites {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+  main .product-container .card__favorites img {
+    width: 2.4rem;
+  }
+  main .product-container .card__picture img {
+    border-radius: 0.8rem;
+  }
+  main .product-container .card__info {
+    font-size: unset;
+    line-height: 1.8rem;
+  }
+  main .product-container .card__info h3 {
+    font-size: 1.8rem;
+    margin: 2rem 0 0.8rem;
+  }
+  main .product-container .card:hover {
+    width: 100%;
+    margin: 0;
+    box-shadow: 0 0 2rem lightgray;
+  }
+  main .product-container__section .product-container__cards-container {
+    grid-template-columns: 30% 30% 30%;
+  }
+}
 .footer {
   width: 100%;
   height: 15vh;

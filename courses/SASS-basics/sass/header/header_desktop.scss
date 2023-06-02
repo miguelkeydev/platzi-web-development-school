@@ -1,0 +1,32 @@
+header {
+  padding: 0 4rem;
+
+  // Logo
+  .header__figure {
+    img {
+      height: 80%;
+    }
+  }
+
+  // Navigation Bar
+  .navbar {
+    display: flex;
+
+    ul {
+      display: flex;
+        gap: .8rem;
+    }
+
+    li {
+      width: 4rem;
+      height: 4rem;
+      
+      @include clickeable($color-secondary, $color-additional); 
+    }
+  }
+
+  // Mobile Hamburguer Menu 
+  .header__menu {
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+.card {
+    grid-template-rows: auto 25rem 1fr;
+
+  width: 92%;
+  min-height: 43rem;
+  padding: 1.2rem;
+  margin: 4%;
+
+  border-radius: .8rem;
+
+  &__favorites {
+    width: 2.8rem;
+    height: 2.8rem;
+
+    img {
+      width: 2.4rem;
+    }
+  }
+
+  &__picture {
+    img {
+      border-radius: .8rem;
+    }
+  }
+
+  &__info {
+    font-size: unset;
+    line-height: 1.8rem;
+
+    h3 {
+      font-size: 1.8rem;
+
+      margin: 2rem 0 .8rem;
+    }
+  }
+
+  &:hover {
+    width: 100%;
+    margin: 0;
+
+    box-shadow: 0 0 2rem lightgray;
+  }
+}

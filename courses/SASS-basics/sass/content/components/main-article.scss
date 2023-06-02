@@ -1,0 +1,63 @@
+.main-article {
+  display: grid;
+    grid-template-rows: 50vh 1fr;
+
+  overflow: hidden;
+
+  // Figure
+  &__image {
+      grid-row: 1 / 2;
+    display: flex;
+      align-items: center;
+
+    border-radius: 3%;
+      
+    overflow: hidden;
+
+    // Image
+    img {
+      width: 100%;
+    }
+  }
+
+  // Info Container
+  &__info {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    
+    padding-top: 1.6rem;
+
+    // Title
+    h1 {
+      @include title(2.8rem);
+    }
+
+    // Learn More Button
+    button {
+      font-family: $font-stack;
+      font-weight: 500;
+
+      width: 45%;
+      height: 4rem;
+      border: none;
+      
+      background-color: $color-additional;
+      color: white;
+      border-radius: 2.4rem;
+
+      @include title(1.6rem);
+      @include transition;
+
+      &:hover {
+        background-color: opacity($color-additional, .7);
+      }
+      
+      &:active {
+        background-color: $color-secondary;
+        color: $color-text-primary;
+      }
+    }
+  }
+}

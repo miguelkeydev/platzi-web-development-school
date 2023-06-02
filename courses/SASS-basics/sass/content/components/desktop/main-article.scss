@@ -1,0 +1,32 @@
+.main-article {
+  display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: none;
+    gap: 10%;
+
+  &__info {
+      align-items: start;
+      gap: 6rem;
+
+    h1 {
+      @include title(3.2rem);
+    }
+
+    button {
+      height: 5.2rem;
+
+      @include title(2rem);
+    }
+  }
+
+  &__image {
+    grid-row: unset;
+
+    img {
+      max-height: 50rem;
+
+      object-fit: cover;
+      border-radius: 2%;
+    }
+  }
+}

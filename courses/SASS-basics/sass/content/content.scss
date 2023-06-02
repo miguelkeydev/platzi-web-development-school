@@ -1,0 +1,12 @@
+main {
+  width: 100%;
+  padding: 0 2rem;
+
+  @import './components/main-article';
+  @import './components/product-section';
+}
+
+// Desktop Styles
+@media (min-width: 1024px) {
+  @import './content_desktop';
+}

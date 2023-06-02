@@ -10,7 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- Styles -->
   <link rel="stylesheet" href="../css/main.css">
-  <title>Document</title>
+  <!-- Shortcut Icon -->
+  <link rel="shortcut icon" href="../assets/images/ecostore-logo.png">
+  <title>Eco Store</title>
 </head>
 <body>
   <!-- Header -->
@@ -29,7 +31,7 @@
       <ul>
         <!-- Navbar Option -->
         <li class="navbar__option">
-          <a href="#">
+          <a class="button-link" href="#">
           <!-- Option Icon -->
             <img 
               src="../assets/icons/profile.svg"
@@ -39,7 +41,7 @@
         </li>
         <!-- Navbar Option -->
         <li class="navbar__option">
-          <a href="#">
+          <a class="button-link" href="#">
           <!-- Option Icon -->
             <img 
               src="../assets/icons/heart.svg"
@@ -49,7 +51,7 @@
         </li>
         <!-- Navbar Option -->
         <li class="navbar__option">
-          <a href="#">
+          <a class="button-link" href="#">
           <!-- Option Icon -->
             <img 
               src="../assets/icons/shopping-cart.svg"
@@ -59,6 +61,16 @@
         </li>
       </ul>
     </nav>
+    <!-- Mobile Menu -->
+    <figure class="header__menu">
+      <a class="button-link" href="#">
+        <img
+        src="../assets/icons/hamburguer-menu.svg"
+        alt="Hamburguer Menu Icon"
+      >
+      </a>
+      
+    </figure>
   </header>
   <!-- Main Content -->
   <main>
@@ -72,40 +84,464 @@
         </h1>
         <!-- Text -->
         <p>
-
+          Due to the environmental impact caused by human activities that modify the environment, Eco-Store is committed to crafting its products in an artisanal manner and using materials that promote environmental care.
         </p>
         <!-- Learn More -->
         <button>
+          <a class="button-link" href="#">
           Learn more
+          </a>
         </button>
       </div>
       <!-- Article Image -->
       <fig class="main-article__image">
         <img
-          src=""
-          alt=""
+          src="../assets/images/main-image.jpg"
+          alt="Combs and Towels dangle from a hanger"
         >
       </fig>
     </article>
-    <!-- Product Section -->
-    <section class="product-section">
+    <!-- Product Container -->
+    <section class="product-container">
       <!-- Health Care -->
-      <div class="product-section__health-care">
+      <div class="product-container__section product-container__section--health-care">
         <!-- Heading -->
-        <h2 class="section__heading">
+        <h2>
           Health Care
         </h2>
-        <!-- Products Container -->
-
+        <!-- Cards Container -->
+        <div class="product-container__cards-container">
+          <!-- Product Card - Toothbrush -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+                src="../assets/icons/heart.svg"
+                alt="Heart Icon"
+              >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/products/toothbrush.jpg"
+                alt="Photo of two bamboo toothbrushes inside a glass"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3>
+                Bamboo Toothbrush
+              </h3>
+              <!-- Product Description -->
+              <p>
+                Two-units pack 100% made of ecological materials.
+              </p>
+            </div>
+          </div>
+          <!-- Product Card - Hand Cream -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+                src="../assets/icons/heart.svg"
+                alt="Heart Icon"
+              >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/products/hand-cream.jpeg"
+                alt="Photo of a hands cream jar"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3 class="card__title">
+                Hand Cream
+              </h3>
+              <!-- Product Description -->
+              <p class="card__description">
+                Moisturizing cream with eucalyptus that helps care for the skin.
+              </p>
+            </div>
+          </div>
+          <!-- Product Card - Moisturizing Serum -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+                src="../assets/icons/heart.svg"
+                alt="Heart Icon"
+              >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/products/serum.jpg"
+                alt="Photo of a jar of moisturizing serum"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3 class="card__title">
+                Moisturizing Serum
+              </h3>
+              <!-- Product Description -->
+              <p class="card__description">
+                Serum made from natural extracts and hyaluronic acid.
+              </p>
+            </div>
+          </div>
+          <!-- Product Card - Travel Kit -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+                src="../assets/icons/heart.svg"
+                alt="Heart Icon"
+              >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/products/organic-kit.jpg"
+                alt="Photo of a Travel Kit"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3 class="card__title">
+                Travel Kit
+              </h3>
+              <!-- Product Description -->
+              <p class="card__description">
+                Includes a wooden comb and toothbrush, an organic eucalyptus soap, and a travel-size shampoo.
+              </p>
+            </div>
+          </div>
+          <!-- Product Card - Set of Soaps -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+                src="../assets/icons/heart.svg"
+                alt="Heart Icon"
+              >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/products/organic-soap.jpg"
+                alt="Photo of two organic soaps"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3 class="card__title">
+                Set of Soaps
+              </h3>
+              <!-- Product Description -->
+              <p class="card__description">
+                Two-units pack of activated charcoal and coconut soap.
+              </p>
+            </div>
+          </div>
+          <!-- Product Card - Skincare Kit -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+                src="../assets/icons/heart.svg"
+                alt="Heart Icon"
+              >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/products/guasha-kit.jpg"
+                alt="Photo of a skincare kit"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3 class="card__title">
+                Skincare Kit
+              </h3>
+              <!-- Product Description -->
+              <p class="card__description">
+                Includes two rollers and a gua sha.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Home Decoration -->
-      <div class="product-section__furniture">
+      <div class="product-container__section product-container__section--furniture">
         <!-- Heading -->
-        <h2 class="section__heading">
+        <h2>
           Home Decoration
         </h2>
-        <!-- Products Container -->
-
+        <!-- Cards Container -->
+        <div class="product-container__cards-container">
+          <!-- Product Card - Bamboo Chair -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+              src="../assets/icons/heart-white.svg"
+              alt="Heart Icon"
+            >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/furniture/wood-chair.jpg"
+                alt="Photo of a bamboo chair"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3>
+                Bamboo Chair
+              </h3>
+              <!-- Product Description -->
+              <p>
+                Available in two colors; black and white, with a bamboo finish.
+              </p>
+            </div>
+          </div>
+          <!-- Product Card - Small Bench -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+              src="../assets/icons/heart-white.svg"
+              alt="Heart Icon"
+            >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/furniture/small-table.jpeg"
+                alt="Photo of a small wooden bench"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3>
+                Small Bench
+              </h3>
+              <!-- Product Description -->
+              <p>
+                Ideal for adding a touch of style to your spaces.
+              </p>
+            </div>
+          </div>
+          <!-- Product Card - Nightstand Crafted with Bamboo -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+              src="../assets/icons/heart-white.svg"
+              alt="Heart Icon"
+            >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/furniture/stand-table.jpg"
+                alt="Photo of a bamboo nightstand"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3>
+                Nightstand
+              </h3>
+              <!-- Product Description -->
+              <p>
+                Crafted with bamboo having two drawers to keep your elements.
+              </p>
+            </div>
+          </div>
+          <!-- Product Card - Dresser -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+              src="../assets/icons/heart-white.svg"
+              alt="Heart Icon"
+            >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/furniture/dresser.jpg"
+                alt="Photo of a dresser"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3>
+                Dresser
+              </h3>
+              <!-- Product Description -->
+              <p>
+                Two-units pack 100% made of ecologic materials.
+              </p>
+            </div>
+          </div>
+          <!-- Product Card - Wall Mirror -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+              src="../assets/icons/heart-white.svg"
+              alt="Heart Icon"
+            >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/furniture/mirror.jpg"
+                alt="Photo of a wall mirror"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3>
+                Wall Mirror
+              </h3>
+              <!-- Product Description -->
+              <p>
+                Perfect to use your skincare products properly.
+              </p>
+            </div>
+          </div>
+          <!-- Product Card - Bamboo Desk Lamp -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+              src="../assets/icons/heart-white.svg"
+              alt="Heart Icon"
+            >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/furniture/desk-lamp.jpg"
+                alt="Photo of a bamboo desk lamp"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3>
+                Bamboo Desk Lamp
+              </h3>
+              <!-- Product Description -->
+              <p>
+                Glow up your workspace with a functional bamboo desk lamp.
+              </p>
+            </div>
+          </div>
+          <!-- Product Card - Stand Table -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+              src="../assets/icons/heart-white.svg"
+              alt="Heart Icon"
+            >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/furniture/stand.jpg"
+                alt="Photo of a stand table"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3>
+                Stand Table
+              </h3>
+              <!-- Product Description -->
+              <p>
+                Stylish and practical bamboo stand table, offering versatility.
+              </p>
+            </div>
+          </div>
+          <!-- Product Card - Mini Table for Breakfast -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+              src="../assets/icons/heart-white.svg"
+              alt="Heart Icon"
+            >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/furniture/mini-table.jpg"
+                alt="Photo of a small table for having breakfast"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3>
+                Mini Table for Breakfast
+              </h3>
+              <!-- Product Description -->
+              <p>
+                Compact and perfect for convenient and enjoyable morning meals.
+              </p>
+            </div>
+          </div>
+          <!-- Product Card - Bamboo Table -->
+          <div class="card product-container__card">
+            <!-- Add to Favorites -->
+            <figure class="card__favorites">
+              <img
+              src="../assets/icons/heart-white.svg"
+              alt="Heart Icon"
+            >
+            </figure>
+            <!-- Product Picture -->
+            <figure class="card__picture">
+              <img
+                src="../assets/images/furniture/table.jpg"
+                alt="Photo of a bamboo table"
+              >
+            </figure>
+            <!-- Product Info -->
+            <div class="card__info">
+              <!-- Product Name -->
+              <h3>
+                Bamboo Table
+              </h3>
+              <!-- Product Description -->
+              <p>
+                Small and elegant, ideal for adding a touch of natural beauty to any space.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- About Us Section -->

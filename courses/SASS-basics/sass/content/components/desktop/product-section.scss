@@ -1,0 +1,32 @@
+.product-container {
+  // Product Sections
+  &__section {
+    padding-bottom: 0;
+
+    overflow: unset;
+
+    h2 {
+      position: relative;
+
+      @include title(2.8rem);
+    }
+  }
+
+  // Cards Container
+  &__cards-container {
+      justify-content: space-between;
+      justify-items: center;
+      row-gap: 6rem;
+  }
+  
+  // Product Card
+  @import './product-container__card';
+
+  // Product Section
+  &__section {
+    // Cards Container
+    .product-container__cards-container {
+      grid-template-columns: 30% 30% 30%;
+    }
+  }
+}

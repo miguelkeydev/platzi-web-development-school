@@ -7,6 +7,7 @@ header {
   height: 10vh;
   padding: 0 3.2rem;
 
+  // Logo
   .header__figure {
     display: flex;
       align-items: center;
@@ -14,15 +15,25 @@ header {
     height: 100%;
 
     img {
-      height: 80%;
+      height: 65%;
     }
   }
 
+  // Navigation Bar
   .navbar {
-    ul {
-      display: flex;
-        gap: 2rem;
-    }
+    display: none;
   }
 
+  // Mobile Hamburguer Menu 
+  .header__menu {
+    width: 4rem;
+    height: 4rem;
+    
+    @include clickeable($color-secondary, $color-additional);
+  }
+}
+
+// Desktop Styles
+@media (min-width: 1024px) {
+  @import './header_desktop';
 }
