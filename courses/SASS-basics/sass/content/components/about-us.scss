@@ -1,7 +1,9 @@
 &__about-us {
   display: grid;
     place-items: center;
-      gap: 4rem;
+    gap: 4rem;
+
+    width: 100%;
 
   h2 {
     font-weight: 500;

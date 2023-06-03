@@ -285,12 +285,15 @@ main .product-container__section--furniture .card:hover {
   background-color: rgba(186, 189, 141, 0.8);
 }
 main .company-section {
+  display: grid;
+  gap: 4rem;
   margin-top: 6rem;
 }
 main .company-section__about-us {
   display: grid;
   place-items: center;
   gap: 4rem;
+  width: 100%;
 }
 main .company-section__about-us h2 {
   font-weight: 500;
@@ -306,9 +309,6 @@ main .company-section__feature {
 }
 main .company-section__feature img {
   width: 50%;
-}
-main .company-section__galery {
-  margin-top: 2rem;
 }
 main .company-section__pictures {
   display: grid;
@@ -327,6 +327,25 @@ main .company-section__pictures img {
 main .company-section__pictures img:hover {
   transform: scale(1.1);
   box-shadow: 0 0 2rem lightgray;
+}
+main .company-section__find-us {
+  display: grid;
+  grid-template-rows: auto 60vh;
+}
+main .company-section__find-us img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+main .company-section__location {
+  display: grid;
+  gap: 2rem;
+}
+main .company-section__location h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  width: 40%;
+  margin-top: 4rem;
 }
 
 @media (min-width: 1024px) {
@@ -408,6 +427,9 @@ main .company-section__pictures img:hover {
   main .product-container__section .product-container__cards-container {
     grid-template-columns: 30% 30% 30%;
   }
+  main .company-section {
+    gap: 8rem;
+  }
   main .company-section__about-us {
     display: grid;
     gap: 8rem;
@@ -432,7 +454,7 @@ main .company-section__pictures img:hover {
     width: 25%;
   }
   main .company-section__galery {
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
   main .company-section__pictures {
     grid-template-rows: unset;
