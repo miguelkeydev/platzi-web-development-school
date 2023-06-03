@@ -1,0 +1,27 @@
+&__galery {
+  margin-top: 2rem;
+}
+
+&__pictures {
+  display: grid;
+    grid-template-rows: repeat(3, 30rem);
+    place-items: center;
+    gap: 2rem;
+
+    img {
+      width: 27rem;
+      height: 90%;
+
+      border-radius: 5%;
+      
+      object-fit: cover;
+
+      @include transition;
+
+      &:hover {
+        transform: scale(1.1);
+
+        box-shadow: 0 0 2rem lightgray;
+      }
+    }
+}

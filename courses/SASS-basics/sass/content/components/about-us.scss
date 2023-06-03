@@ -1,0 +1,26 @@
+&__about-us {
+  display: grid;
+    place-items: center;
+      gap: 4rem;
+
+  h2 {
+    font-weight: 500;
+  }
+}
+
+&__feature {
+  display: grid;
+    place-items: center;
+    gap: 2rem;
+  
+  text-align: center;
+    
+  width: 60%;
+  margin: 0 auto 4rem;
+
+  color: $color-text-primary;
+
+  img {
+    width: 50%;
+  }
+}

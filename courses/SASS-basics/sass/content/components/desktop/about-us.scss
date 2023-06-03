@@ -1,0 +1,28 @@
+&__about-us {
+  display: grid;
+    gap: 8rem;
+}
+
+&__info {
+  display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    gap: 10rem;
+}
+
+&__feature {
+  display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0;
+  
+  font-size: 2.2rem;
+  text-align: center;
+    
+  width: 100%;
+  margin: 0;
+
+  img {
+    width: 25%;
+  }
+}

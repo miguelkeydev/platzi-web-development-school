@@ -16,14 +16,10 @@ $color-additional: #F2BED1;
   transition: .2s;
 }
 
-@function opacity($color, $grade) {
-  @return rgba($color, $grade);
-}
-
 @mixin clickeable($color-hover, $color-active) {
   border-radius: 50%;
 
-  @include transition();
+  @include transition;
 
   &:hover {
     background-color: $color-hover;
@@ -33,36 +29,6 @@ $color-additional: #F2BED1;
     background-color: $color-active;
   }
 }
-
-@mixin product-card($size) {
-
-    &__picture {
-      justify-self: center;
-      display: flex;
-      
-      width: 85%;
-
-      overflow: hidden;
-
-      img {
-        width: 100%;
-
-        border-radius: .8rem;
-      }
-    }
-
-    &__info {
-      flex-direction: column;
-
-      line-height: 1.8rem;
-
-      h3 {
-        font-size: 1.8rem;
-
-        margin: 2rem 0 .8rem;
-      }
-    }
-  }
 
 @mixin section-scrollbar($color) {
   &::-webkit-scrollbar {
@@ -76,6 +42,31 @@ $color-additional: #F2BED1;
       border-radius: .6rem;
     }
   }
+}
+
+@mixin section-cards-container($columns, $background-color, $color, $hover-color, $active-color) {
+  // Cards Container
+  .product-container__cards-container {
+    grid-template-columns: repeat($columns, 50%);
+  }
+
+  // Product Card
+  .card {
+    background-color: $background-color;
+    color: $color;
+
+    &__favorites {
+      @include clickeable($hover-color, $active-color);
+    }
+
+    &:hover {
+      background-color: opacity($background-color, .8);
+    }
+  }
+}
+
+@function opacity($color, $grade) {
+  @return rgba($color, $grade);
 }
 
 * {
@@ -106,6 +97,14 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   margin-top: 2rem;
   background: linear-gradient(to right, $color-secondary 70%, transparent 70%);
+}
+
+h2 {
+  font-weight: 400;
+
+  margin-bottom: 4rem;
+
+  @include title(2.4rem);
 }
 
 a {
