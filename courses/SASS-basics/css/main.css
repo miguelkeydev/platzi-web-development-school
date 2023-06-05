@@ -11,18 +11,19 @@ html {
 body {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1.6rem;
+  padding-top: 10vh;
   background-color: #FFEFE7;
   color: #7C6A0A;
 }
 
 body::-webkit-scrollbar {
-  width: 1.2rem;
+  width: 0.6rem;
   background-color: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
-  margin-top: 2rem;
-  background: linear-gradient(to right, #FFDAC6 70%, transparent 70%);
+  background-color: #F2BED1;
+  border-radius: 0.8rem;
 }
 
 h2 {
@@ -49,12 +50,16 @@ li {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 10vh;
   padding: 0 3.2rem;
+  background-color: #FFEFE7;
 }
 header .header__figure {
   display: flex;
@@ -188,6 +193,7 @@ main .product-container .card {
   grid-template-rows: auto 17rem 1fr;
   justify-items: center;
   min-height: 28rem;
+  max-width: 24rem;
   padding: 0.6rem;
   border-radius: 0.6rem;
   cursor: pointer;
@@ -333,6 +339,7 @@ main .company-section__find-us {
   grid-template-rows: auto 60vh;
 }
 main .company-section__find-us img {
+  justify-self: center;
   height: 100%;
   max-width: 100%;
   object-fit: cover;
@@ -469,8 +476,28 @@ main .company-section__location h3 {
 }
 .footer {
   width: 100%;
-  height: 15vh;
-  background-color: #F2BED1;
+  padding: 3%;
+  margin-top: 6rem;
+  background-color: #FFDAC6;
+}
+.footer .info-container {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1.6rem 0;
+}
+.footer .info-container li {
+  font-weight: 500;
+  cursor: pointer;
+}
+.footer .social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+.footer .social-media img {
+  width: 3.2rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

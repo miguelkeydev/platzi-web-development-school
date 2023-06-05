@@ -83,20 +83,22 @@ html {
 body {
   font-family: $font-stack;
   font-size: 1.6rem;
+
+  padding-top: 10vh;
   
   background-color: $color-primary;
   color: $color-text-primary;
 }
 
 body::-webkit-scrollbar {
-  width: 1.2rem;
+  width: .6rem;
 
   background-color: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
-  margin-top: 2rem;
-  background: linear-gradient(to right, $color-secondary 70%, transparent 70%);
+  background-color: $color-additional;
+  border-radius: .8rem;
 }
 
 h2 {
