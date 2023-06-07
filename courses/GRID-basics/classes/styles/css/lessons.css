@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h2 {
+  text-align: center;
+  font-size: 4rem;
+  color: darkblue;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 0.2rem;
+  font-size: 2rem;
+  margin: 2rem;
+  border: 4px solid #e1bee7;
+  background-color: #fff1ff;
+}
+.container__item {
+  border: 2px solid turquoise;
+}
+
+.challenge {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(2rem, 10rem));
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "logo navbar navbar" "content content ad" "contact help questions";
+  place-content: center;
+  gap: 0.8rem;
+  font-size: 2rem;
+  padding: 2rem;
+  margin: 2rem;
+  border: 3px solid darkblue;
+}
+.challenge__item:first-child {
+  grid-area: logo;
+  background-color: gray;
+}
+.challenge__item:nth-child(2) {
+  grid-area: navbar;
+  background-color: lightgray;
+}
+.challenge__item:nth-child(3) {
+  grid-area: content;
+  background-color: rgb(82, 82, 82);
+}
+.challenge__item:nth-child(4) {
+  grid-area: ad;
+  background-color: gray;
+}
+.challenge__item:nth-child(5) {
+  grid-area: contact;
+  background-color: lightgray;
+}
+.challenge__item:nth-child(6) {
+  grid-area: help;
+  background-color: grey;
+}
+.challenge__item:last-child {
+  grid-area: questions;
+  background-color: rgb(82, 82, 82);
+}
+
+/*# sourceMappingURL=lessons.css.map */
