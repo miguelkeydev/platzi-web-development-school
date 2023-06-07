@@ -44,6 +44,17 @@ main {
   width: 80%;
 }
 
+.product {
+  padding: 4rem 0;
+  max-width: 90%;
+}
+.product h2 {
+  font-size: 3.6rem;
+}
+.product .dishes {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 @media (min-width: 1920px) {
   main {
     max-width: 1400px;

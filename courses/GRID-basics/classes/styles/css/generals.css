@@ -2,7 +2,7 @@
   --color-light: #fffcf6;
   --color-primary: #1E3163;
   --color-secondary: #FF8400;
-  --color-tertiary: #FFD93D;
+  --color-tertiary: hsla(223, 53%, 25%, 0.658);
 }
 
 * {

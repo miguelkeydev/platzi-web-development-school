@@ -8,7 +8,7 @@ main {
   justify-items: center;
   gap: 6rem;
   padding: 5rem 0;
-  border-bottom: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-tertiary);
 }
 .hero__info {
   display: grid;
@@ -58,6 +58,39 @@ main {
 .hero__image img {
   justify-self: center;
   width: 100%;
+}
+
+.product {
+  display: grid;
+  justify-items: center;
+  gap: 4rem;
+  width: 100%;
+  padding: 5rem 0;
+  margin: 0 auto;
+}
+.product h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-tertiary);
+}
+.product .dishes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  justify-content: center;
+  gap: 1.2rem;
+  max-width: 90%;
+}
+.product .dishes__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+.product .dishes__image--video {
+  grid-area: 1/1/3/3;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=project.css.map */
