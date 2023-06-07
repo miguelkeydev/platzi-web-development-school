@@ -1,27 +1,79 @@
-* {
-  box-sizing: border-box;
-
-  font-family: 'Roboto,' sans-serif;
-  
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
 main {
-  font-size: 'Robot', sans-serif;
-  
+  max-width: 90%;
   margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+    justify-items: center;
+    gap: 6rem;
+
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--color-primary);
+
+  &__info {
+    display: grid;
+      justify-items: center;
+      gap: 2.8rem;
+
+    color: var(--color-primary);
+  }
+
+  h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 2.2rem;
+    
+    width: 90%;
+  }
+
+  button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    width: 65%;
+    height: 5.2rem;
+    margin: .2rem 0;
+    border: none;
+
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    border-radius: 3.2rem;
+
+    overflow: hidden;
+    transition: .3s;
+
+    a {
+      gap: 1.2rem;
+    }
+
+    &:hover {
+      width: 70%;
+      height: 5.6rem;
+      margin: 0;
+
+      opacity: .8;
+    }
+  }
+
+  &__image {
+    display: grid;
+
+    width: 100%;
+
+    object-fit: contain;
+
+    img {
+        justify-self: center;
+      
+      width: 100%;
+    }
+  }
 }
