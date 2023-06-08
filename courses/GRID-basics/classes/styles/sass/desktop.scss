@@ -65,6 +65,7 @@ main {
   padding: 4rem 0;
 
   max-width: 90%;
+  padding: 7rem 0;
 
   h2 {
     font-size: 3.6rem;
@@ -72,6 +73,42 @@ main {
 
   .dishes {
       grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Menu Section
+.menu {
+  padding: 7rem 0;
+
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  &__plates {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.6rem;
+  }
+
+  &__option {
+    &:first-child {
+        grid-area: unset;
+    }
+
+    &:nth-child(2) {
+        grid-area: unset;
+    }
+
+    &:nth-child(3) {
+        grid-area: unset;
+    }
+
+    &:nth-child(4) {
+        grid-area: unset;
+    }
+
+    &:last-child {
+        grid-area: unset;
+    }
   }
 }
 

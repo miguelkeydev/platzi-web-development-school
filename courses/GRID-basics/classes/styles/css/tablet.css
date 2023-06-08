@@ -44,4 +44,32 @@ main {
   max-width: 75%;
 }
 
+.menu {
+  padding: 6rem 0;
+}
+.menu h2 {
+  font-size: 3.2rem;
+}
+.menu__plates {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.6rem;
+}
+.menu__option:first-child {
+  grid-area: 1/1/2/3;
+}
+.menu__option:nth-child(2) {
+  grid-area: 1/3/2/5;
+}
+.menu__option:nth-child(3) {
+  grid-area: 1/5/2/7;
+}
+.menu__option:nth-child(4) {
+  grid-area: 2/2/3/4;
+}
+.menu__option:last-child {
+  grid-area: 2/4/3/6;
+  justify-self: unset;
+  width: 100%;
+}
+
 /*# sourceMappingURL=tablet.css.map */

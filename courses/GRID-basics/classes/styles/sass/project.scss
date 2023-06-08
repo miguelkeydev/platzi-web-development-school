@@ -87,21 +87,22 @@ main {
   width: 100%;
   padding: 5rem 0;
   margin: 0 auto;
+  border-bottom: 1px solid var(--color-tertiary);
 
   h2 {
     font-size: 2.8rem;
     text-align: center;
     text-transform: uppercase;
-
+  
     color: var(--color-tertiary);
   }
 
   .dishes {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 1fr;
-    justify-content: center;
-    gap: 1.2rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 1fr;
+      justify-content: center;
+      gap: 1.2rem;
 
     max-width: 90%;
 
@@ -117,6 +118,40 @@ main {
 
         cursor: pointer;
       }
+    }
+  }
+}
+
+// Menu Section
+.menu {
+  @extend .product;
+
+  &__plates {
+    display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+      
+    max-width: 90%;
+  }
+
+  &__option {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 1.6rem;
+
+    transition: .3s;
+    cursor: pointer;
+
+    &:last-child {
+        grid-area: 3 / 1 / 4 / 3;
+        justify-self: center;
+
+      width: 50%;
+    }
+
+    &:hover {
+      background-color: var(--color-cuaternary); 
     }
   }
 }

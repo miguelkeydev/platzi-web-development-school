@@ -47,12 +47,39 @@ main {
 .product {
   padding: 4rem 0;
   max-width: 90%;
+  padding: 7rem 0;
 }
 .product h2 {
   font-size: 3.6rem;
 }
 .product .dishes {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.menu {
+  padding: 7rem 0;
+}
+.menu h2 {
+  font-size: 3.6rem;
+}
+.menu__plates {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.6rem;
+}
+.menu__option:first-child {
+  grid-area: unset;
+}
+.menu__option:nth-child(2) {
+  grid-area: unset;
+}
+.menu__option:nth-child(3) {
+  grid-area: unset;
+}
+.menu__option:nth-child(4) {
+  grid-area: unset;
+}
+.menu__option:last-child {
+  grid-area: unset;
 }
 
 @media (min-width: 1920px) {
