@@ -1,0 +1,88 @@
+.header {
+  position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  height: 6vh;
+  padding: 0 2%;
+
+  background-color: $color-primary;
+
+  &__left {
+    display: grid;
+      grid-template-columns: 20% 1fr;
+      align-items: center;
+  }
+
+  &__menu {
+    display: grid;
+      place-items: center;
+
+    width: 100%;
+    max-width: 50px;
+    height: 60%;
+    max-height: 50px;
+    border: none;
+
+    background-color: transparent;
+    border-radius: 50%;
+
+    transition: .15s;
+
+    &:hover {
+      background-color: rgba($color-secondary, .2);
+    }
+
+    img {
+      width: 80%;
+    }
+  }
+
+  &__logo {
+    justify-self: center;
+    
+    font-size: 28px;
+
+    color: $color-secondary;
+
+    pointer-events: none;
+  }
+
+  &__right {
+    display: grid;
+      grid-template-columns: repeat(2, auto);
+      justify-content: end;
+      place-items: center;
+      gap: 10px;
+  }
+
+  .button {
+    transition: .15s;
+
+    &:hover {
+      background-color: rgba($color-secondary, .9);
+    }
+
+    &__link {
+        grid-auto-flow: column;
+        gap: 4px;
+    }
+
+    &--yellow {
+      background-color: $color-additional;
+
+      transition: .15s;
+
+      &:hover {
+        background-color: rgba($color-additional, .9);
+      }
+    }
+
+    img {
+      width: 20px;
+    }
+  }
+}
