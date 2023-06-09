@@ -1,0 +1,45 @@
+.title-container {
+  position: relative;
+  display: grid;
+
+  width: 100%;
+  height: 60vh;
+  max-height: 540px;
+
+  &__background {
+    position: absolute;
+      z-index: 2;
+
+    width: 100%;
+  }
+
+  &__title {
+    position: relative;
+      z-index: 5;
+      align-self: end;
+
+    font-size: 38px;
+    line-height: 100%;
+    text-align: center;
+
+    padding-bottom: 10px;
+
+    color: $color-secondary;
+    text-shadow: 4px 4px 5px $color-primary;
+
+    &--blue {
+      color: $color-tertiary;
+      text-shadow: 1px 1px 4px $color-secondary;
+    }
+
+    &--red {
+      color: $color-primary;
+      text-shadow: 1px 1px 4px $color-secondary;
+    }
+
+    &--yellow {
+      color: $color-additional;
+      text-shadow: none;
+    }
+  }
+}

@@ -3,6 +3,7 @@
     top: 0;
     right: 0;
     left: 0;
+    z-index: 10;
   display: grid;
     grid-template-columns: 1fr 1fr;
 
@@ -30,7 +31,7 @@
     background-color: transparent;
     border-radius: 50%;
 
-    transition: .15s;
+    transition: $transition-normal;
 
     &:hover {
       background-color: rgba($color-secondary, .2);
@@ -60,7 +61,7 @@
   }
 
   .button {
-    transition: .15s;
+    transition: $transition-normal;
 
     &:hover {
       background-color: rgba($color-secondary, .9);
@@ -74,7 +75,7 @@
     &--yellow {
       background-color: $color-additional;
 
-      transition: .15s;
+      transition: $transition-normal;
 
       &:hover {
         background-color: rgba($color-additional, .9);
