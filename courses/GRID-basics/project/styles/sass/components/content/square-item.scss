@@ -1,0 +1,63 @@
+.moments__item--square {
+  .moments__title {
+    font-size: 18px;
+    
+    padding: 6px 0;
+  }
+
+  .stats {
+    padding: 4px;
+
+    &__item {
+        gap: 6px;
+  
+      font-size: 20px;
+  
+      img {
+        width: 22px;
+      }
+    }
+  }
+
+  .moments__tooltip {
+    font-size: 12px;
+
+    padding: 2px 4px;
+  }
+
+  .moments__match {
+      top: 4px;
+      right: 4px;
+
+    padding: 4px;
+
+    .moments__tooltip {
+        right: -2px;
+    }
+  }
+
+  .moments__opponent {
+      gap: 8px;
+
+    font-size: 20px;
+  }
+
+  &:hover {
+    .moments__title {
+      font-size: $font-size-large;
+    }
+  }
+}
+
+// Grid Elements
+.moments__item {
+  &--five-goals {
+    grid-row: 4 / 6;
+    grid-column: 2 / 4;
+  }
+
+  &--masterclass {
+    grid-row: 9 / 11;
+    grid-column: 1 / 3;
+  }
+}

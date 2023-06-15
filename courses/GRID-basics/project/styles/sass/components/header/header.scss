@@ -67,7 +67,7 @@
       background-color: rgba($color-secondary, .9);
     }
 
-    &__link {
+    a {
         grid-auto-flow: column;
         gap: 4px;
     }

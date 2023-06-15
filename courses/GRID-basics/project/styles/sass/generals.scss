@@ -2,11 +2,24 @@ $font-title: 'Merriweather', sans-serif;
 $font-primary: 'Rowdies', sans-serif;
 $font-secondary: 'Poppins', cursive;
 $font-size-small: 12px;
+$font-size-medium: 15px;
+$font-size-large: 22px;
+$font-size-xlarge: 26px;
 $color-primary: #8a2742;
 $color-secondary: #dddbd7;
 $color-tertiary: #1c2565;
 $color-additional: #eeb92a;
 $transition-normal: .15s;
+$transition-slow: .5s;
+$opacity-moments: .9;
+
+@mixin text-shadow($color) {
+  text-shadow: 4px 2px 5px $color;
+}
+
+@mixin background-color {
+  background-color: rgba(black, .3);
+}
 
 * {
   box-sizing: border-box;
@@ -16,9 +29,23 @@ $transition-normal: .15s;
 }
 
 body {
+  font-family: $font-primary;
+  
   padding-top: 6vh;
   
-  background-color: $color-secondary;
+  background-color: $color-primary;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  
+  background-color: $color-primary;
+
+  &-thumb {
+    border-radius: 4px;
+    
+    background-color: $color-tertiary;
+  }
 }
 
 h1, h2, h3 {
@@ -43,7 +70,7 @@ a {
   color: $color-tertiary;
 }
 
-.button__link {
+.link-container {
   display: grid;
     place-items: center;
 

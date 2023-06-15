@@ -1,0 +1,62 @@
+.moments__item--large {
+  .moments__title {
+    padding: 8px 0;
+  }
+
+  .stats {
+    padding: 6px;
+
+    &__item {
+        gap: 6px;
+  
+      font-size: 22px;
+  
+      img {
+        width: 25px;
+      }
+    }
+  }
+
+  .moments__tooltip {
+    font-size: 12px;
+
+    padding: 2px 4px;
+  }
+
+  .moments__match {
+      top: 4px;
+      right: 4px;
+
+    padding: 4px;
+
+    .moments__tooltip {
+        right: -2px;
+    }
+  }
+
+  .moments__opponent {
+      gap: 8px;
+
+    font-size: 20px;
+  }
+
+  &:hover {
+    .moments__title {
+      font-size: $font-size-xlarge;
+    }
+  }
+}
+
+// Grid Elements
+.moments__item {
+  // First Hat-Trick
+  &--hat-trick {
+    grid-area: hat-trick;
+  }
+
+  // Bayern Munich game
+  &--bayern {
+    grid-row: 6 / 8;
+    grid-column: 1 / 4;
+  }
+}
