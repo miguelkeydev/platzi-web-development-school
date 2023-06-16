@@ -5,62 +5,8 @@
     font-size: 13px;
   }
 
-  .stats {
+  .stats, .moments__tooltip, .moments__match, .moments__date {
     display: none;
-    //   top: 2px;
-    //   left: 2px;
-    //   place-items: center;
-
-    // padding: 2px;
-  
-    // @include background-color;
-
-    // &__item {
-    //     gap: 4px;
-
-    //   font-size: 14px;
-
-    //   img {
-    //     width: 18px;
-    //   }
-    // }
-  }
-
-  .moments__tooltip {
-    display: none;
-    // font-size: 10px;
-
-    // padding: 1px 2px;
-  }
-
-  .moments__match {
-    display: none;
-    //   top: 2px;
-    //   right: 2px;
-    
-    // font-size: 14px;
-
-    // .moments__tooltip {
-    //     right: unset;
-    //     bottom: unset;
-    //     right: 20px;
-    // }
-  }
-
-  .moments__date {
-    display: none;
-    // padding: 2px;
-    // border-radius: 4px;
-
-    // @include background-color;
-  }
-
-  .moments__opponent {
-      gap: 2px;
-
-    font-size: 16px;
-    
-    @extend .moments__date;
   }
 
   &:hover {

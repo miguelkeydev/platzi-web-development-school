@@ -37,6 +37,10 @@
       grid-column: 2 / 4;
       grid-row: 2 / 3;
     }
+
+    img {
+      width: 30px;
+    }
   }
 
   .contact-us {
@@ -55,9 +59,5 @@
       
       color: $color-tertiary;
     }
-  }
-
-  img {
-    max-width: 30px;
   }
 }

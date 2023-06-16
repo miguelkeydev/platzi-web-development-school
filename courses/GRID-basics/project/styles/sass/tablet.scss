@@ -1,0 +1,8 @@
+body {
+  padding-top: 8vh
+}
+
+@import './generals';
+@import './components/header/header-tablet';
+@import './components/content/tablet/main';
+@import './components/footer/footer-tablet';

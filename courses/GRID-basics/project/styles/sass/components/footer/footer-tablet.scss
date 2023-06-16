@@ -1,0 +1,48 @@
+.footer {
+    grid-template-columns: 1fr 1fr;
+    
+  padding: 15px;
+
+  h3 {
+    font-size: $font-size-xlarge;
+  }
+
+  .follow-us {
+    align-content: unset;
+    
+    &__grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: none;
+    }
+
+    &__item--facebook {
+      grid-column: unset;
+      grid-row: unset;
+    }
+
+    &__item--instagram {
+      grid-column: unset;
+      grid-row: unset;
+    }
+
+    &__item--twitter {
+      grid-column: unset;
+      grid-row: unset;
+    }
+
+    img {
+      width: 38px;
+    }
+  }
+
+  .contact-us {
+      align-content: space-around;
+
+    &__grid {
+        gap: 0;
+        align-items: center;
+
+      font-size: $font-size-large;
+    }
+  }
+}

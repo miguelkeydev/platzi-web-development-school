@@ -45,7 +45,7 @@
   &__logo {
     justify-self: center;
     
-    font-size: 28px;
+    font-size: $font-size-xlarge;
 
     color: $color-secondary;
 
@@ -74,8 +74,6 @@
 
     &--yellow {
       background-color: $color-additional;
-
-      transition: $transition-normal;
 
       &:hover {
         background-color: rgba($color-additional, .9);

@@ -1,0 +1,71 @@
+.moments__item--small {
+  .moments__title {
+      padding: 4px 0;
+
+    font-size: 16px;
+  }
+
+  .stats {
+    display: block;
+      top: 4px;
+      left: 8px;
+
+    @include text-shadow(black);
+
+    &__item {
+        gap: 8px;
+
+      font-size: $font-size-large;
+
+      img {
+        width: 22px;
+      }
+    }
+  }
+
+  .moments__tooltip {
+    display: block;
+    font-size: $font-size-small;
+
+    padding: 1px 2px;
+  }
+
+  .moments__match {
+    display: block;
+      top: 8px;
+      right: 8px;
+  }
+
+  .moments__date {
+    display: block;
+
+    font-size: $font-size-medium;
+  }
+
+  .moments__opponent {
+    display: grid;
+      justify-content: end;
+      gap: 8px;
+  }
+
+  &:hover {
+    .moments__title {
+      font-size: 18px;
+    }
+  }
+}
+
+// Grid Elements
+.moments__item {
+  // Five Contributions
+  &--five-contributions {
+      grid-row: 2 / 4;
+      grid-column: 4 / 5;
+  }
+
+  // T-Shirt
+  &--t-shirt {
+    grid-row: 3 / 5;
+    grid-column: 1 / 2;
+  }
+}

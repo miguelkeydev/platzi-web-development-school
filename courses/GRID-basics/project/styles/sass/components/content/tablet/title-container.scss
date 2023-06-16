@@ -1,0 +1,13 @@
+.title-container {
+  padding-bottom: 40px;
+
+  &__title {
+      left: 5%;
+      right: 5%;
+      bottom: 60px;
+    
+    font-size: $font-size-xxxlarge;
+
+    width: 90%;
+  }
+}

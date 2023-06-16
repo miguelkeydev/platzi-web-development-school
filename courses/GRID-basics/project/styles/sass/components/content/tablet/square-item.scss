@@ -1,23 +1,13 @@
 .moments__item--square {
   .moments__title {
-    font-size: 18px;
-    
-    padding: 6px 0;
+    padding: 10px 0;
   }
 
   .stats {
-    padding: 4px;
-
     &__item {
       img {
-        width: 22px;
+        width: 28px;
       }
-    }
-  }
-
-  &:hover {
-    .moments__title {
-      font-size: $font-size-large;
     }
   }
 }
@@ -26,11 +16,11 @@
 .moments__item {
   &--five-goals {
     grid-row: 4 / 6;
-    grid-column: 2 / 4;
+    grid-column: 3 / 5;
   }
 
   &--masterclass {
-    grid-row: 9 / 11;
+    grid-row: 5 / 7;
     grid-column: 1 / 3;
   }
 }

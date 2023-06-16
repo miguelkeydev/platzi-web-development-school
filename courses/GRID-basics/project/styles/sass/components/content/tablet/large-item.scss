@@ -1,0 +1,29 @@
+.moments__item--large {
+  .moments__title {
+    font-size: $font-size-xlarge;
+    
+    padding: 12px 0;
+  }
+
+  .stats {
+    &__item {
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  &:hover {
+    .moments__title {
+      font-size: $font-size-xxlarge;
+    }
+  }
+}
+// Grid Elements
+.moments__item {
+  // Bayern Munich game
+  &--bayern {
+    grid-row: 7 / 9;
+    grid-column: 1 / 5;
+  }
+}

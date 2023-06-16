@@ -1,0 +1,25 @@
+.header {
+  height: 8vh;
+
+  &__menu {
+    max-width: 60px;
+    max-height: 60px;
+  }
+  
+  &__logo {
+    position: absolute;
+      left: 30%;
+      right: 30%;
+
+    width: 40%;
+    
+    font-size: $font-size-xxlarge;
+    text-align: center;
+  }
+
+  .button {
+    font-size: $font-size-medium;
+
+    padding: 4px 8px;
+  }
+}
