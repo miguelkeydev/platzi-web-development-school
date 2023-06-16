@@ -1,0 +1,8 @@
+body {
+  padding-top: 12vh;
+
+  @import './generals';
+  @import './components/header/header-desktop';
+  @import './components/content/desktop/main';
+  @import './components/footer/footer-desktop';
+}

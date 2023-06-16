@@ -66,10 +66,8 @@ a {
 .header__menu {
   display: grid;
   place-items: center;
-  width: 100%;
-  max-width: 50px;
-  height: 60%;
-  max-height: 50px;
+  width: 40px;
+  height: 40px;
   border: none;
   background-color: transparent;
   border-radius: 50%;
@@ -132,6 +130,9 @@ a {
   width: 100%;
   opacity: 0.95;
 }
+.main .title-container__background--desktop {
+  display: none;
+}
 .main .title-container__title {
   position: absolute;
   bottom: 5%;
@@ -169,7 +170,7 @@ a {
   margin: 2px;
   color: #dddbd7;
   object-fit: contain;
-  transition: 0.15s;
+  transition: 0.5s;
   overflow-y: hidden;
 }
 .main .moments__image {

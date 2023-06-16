@@ -14,11 +14,13 @@
 
 // Grid Elements
 .moments__item {
+  // Five Goals
   &--five-goals {
     grid-row: 4 / 6;
     grid-column: 3 / 5;
   }
 
+  // Masterclass
   &--masterclass {
     grid-row: 5 / 7;
     grid-column: 1 / 3;

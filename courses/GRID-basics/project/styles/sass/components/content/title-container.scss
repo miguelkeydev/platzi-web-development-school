@@ -15,6 +15,10 @@
     opacity: .95;
   }
 
+  &__background--desktop {
+    display: none;
+  }
+
   &__title {
     position: absolute;
       bottom: 5%;

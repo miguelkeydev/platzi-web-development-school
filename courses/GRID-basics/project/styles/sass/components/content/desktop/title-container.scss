@@ -1,0 +1,23 @@
+.title-container {
+  padding-bottom: 50px;
+
+  &__background {
+    display: none;
+  }
+
+  &__background--desktop {
+    display: block;
+  }
+
+  &__title {
+    line-height: 110%;
+  }
+}
+
+@media (min-width: 1310px) {
+  .title-container {
+    &__title {
+      font-size: 56px;
+    }
+  }
+}

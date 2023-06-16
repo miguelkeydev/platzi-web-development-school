@@ -1,0 +1,21 @@
+.moments {
+    grid-template-columns: repeat(5, 1fr);
+
+  padding: 8px;
+
+  &__item {
+    margin: 8px;
+  }
+
+  @import './large-item';
+
+  @import './small-item';
+
+  @import './square-item';
+}
+
+@media (min-width: 1310px) {
+  .moments {
+      grid-template-columns: repeat(6, 1fr);
+  }
+}

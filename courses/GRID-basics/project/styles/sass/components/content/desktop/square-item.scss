@@ -1,0 +1,89 @@
+.moments__item--square {
+  .moments__title {
+    padding: 16px 0;
+  }
+
+  .stats {
+    &__item {
+      font-size: 30px;
+      
+      img {
+        width: 30px;
+      }
+    }
+  }
+}
+
+// Grid Elements
+.moments__item {
+  // Five Goals
+  &--five-goals {
+    grid-row: 7 / 9;
+    grid-column: 4 / 6;
+  }
+
+  // Masterclass
+    &--masterclass {
+      grid-row: 6 / 8;
+      grid-column: 2 / 4;
+    }
+}
+
+@media (min-width: 1310px) {
+  .moments__item--square {
+    .moments__title {
+      padding: 20px 0;
+
+      font-size: $font-size-xlarge;
+    }
+  
+    .stats {
+      &__item {
+        font-size: $font-size-xxlarge;
+        
+        img {
+          width: 38px;
+        }
+      }
+    }
+
+    .moments__date {
+      font-size: $font-size-xlarge;
+    }
+
+    .moments__opponent {
+        gap: 20px;
+      
+      font-size: 32px;
+
+      img {
+        width: 35px;
+      }
+    }
+
+    .moments__tooltip {
+      font-size: 18px;
+    }
+
+    &:hover {
+      .moments__title {
+        font-size: $font-size-xxlarge;
+      }
+    }
+  }
+  
+  // Grid Elements
+  .moments__item {
+    // Five Goals
+    &--five-goals {
+      grid-row: 3 / 5;
+      grid-column: 2 / 4;
+    }
+
+    // Masterclass
+    &--masterclass {
+      grid-row: 4 / 6;
+      grid-column: 5 / 7;
+    }
+  }
+}

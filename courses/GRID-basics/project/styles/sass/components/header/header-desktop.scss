@@ -1,0 +1,50 @@
+.header {
+  height: 12vh;
+  padding: 0 3%;
+
+  &__menu {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__logo {
+    font-size: $font-size-xxxlarge;
+  }
+
+  &__right {
+      gap: 20px;
+  }
+
+  .button {
+    font-size: $font-size-large;
+  }
+}
+
+@media (min-width: 1310px) {
+  .header {
+    &__menu {
+      width: 100px;
+      height: 100px;
+    }
+
+    &__logo {
+      font-size: 72px;
+    }
+
+    &__right {
+        gap: 28px;
+    }
+  
+    .button {
+      font-size: $font-size-xlarge;
+
+      a {
+        gap: 12px;
+      }
+
+      img {
+        width: 30px;
+      }
+    }
+  }
+}
