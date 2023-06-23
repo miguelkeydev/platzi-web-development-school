@@ -1,11 +1,13 @@
 $font-primary: 'Lilita One', cursive;
 $font-secondary: 'Noto Sans', sans-serif;
 $color-primary: #0A4D68;
-$color-secondary: #088395;
+$color-secondary: #00FFCA;
 $color-tertiary: #05BFDB;
-$color-cuaternary: #00FFCA;
+$color-cuaternary: #088395;
 $color-dark: #002d35;
+$color-light: #b7e9ff;
 $transition-normal: .15s;
+$transition-slow: .3s;
 
 * {
   box-sizing: border-box;
@@ -22,7 +24,7 @@ body {
 
 .link-container {
   display: grid;
-    align-items: center;
+    place-items: center;
   
   width: 100%;
   height: 100%;
