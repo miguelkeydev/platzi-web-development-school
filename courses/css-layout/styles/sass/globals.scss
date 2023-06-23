@@ -1,0 +1,32 @@
+$font-primary: 'Lilita One', cursive;
+$font-secondary: 'Noto Sans', sans-serif;
+$color-primary: #0A4D68;
+$color-secondary: #088395;
+$color-tertiary: #05BFDB;
+$color-cuaternary: #00FFCA;
+$color-dark: #002d35;
+$transition-normal: .15s;
+
+* {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $font-secondary;
+
+  color: $color-dark;
+}
+
+.link-container {
+  display: grid;
+    align-items: center;
+  
+  width: 100%;
+  height: 100%;
+
+  color: inherit;
+  text-decoration: none;
+}
