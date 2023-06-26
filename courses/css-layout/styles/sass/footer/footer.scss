@@ -1,0 +1,41 @@
+.footer {
+  display: grid;
+    grid-template-columns: 70% 1fr;
+
+  font-size: 20px;
+  
+  height: 16vh;
+  padding: 0 3vw;
+  border-top: 4vh solid $color-cuaternary;
+
+  background-color: $color-dark;
+  color: $color-light;
+
+  &__terms-privacy {
+    display: grid;
+      align-items: center;
+      justify-self: center;
+    
+    text-align: center;
+
+    width: 90%;
+  }
+
+  &__copyright-container {
+    display: grid;
+      place-items: center end;
+  }
+
+  &__link {
+    color: $color-secondary;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: $color-cuaternary;
+    }
+  }
+}

@@ -1,5 +1,11 @@
-$font-primary: 'Lilita One', cursive;
-$font-secondary: 'Noto Sans', sans-serif;
+$font-title: 'Lilita One', cursive;
+$font-primary: 'Source Code Pro', monospace;
+$font-secondary: 'Exo 2', sans-serif;
+$font-size-xsmall: 10px;
+$font-size-small: 12px;
+$font-size-large: 28px;
+$font-size-xlarge: 40px;
+$font-size-2xlarge: 44px;
 $color-primary: #0A4D68;
 $color-secondary: #00FFCA;
 $color-tertiary: #05BFDB;
@@ -17,7 +23,10 @@ $transition-slow: .3s;
 }
 
 body {
-  font-family: $font-secondary;
+  font-family: $font-primary;
+  
+  width: 100vw;
+  height: 100vh;
 
   color: $color-dark;
 }
@@ -31,4 +40,32 @@ body {
 
   color: inherit;
   text-decoration: none;
+}
+
+.button__read-more {
+  font-family: $font-primary;
+  font-size: 24px;
+  white-space: nowrap;
+  
+  width: fit-content;
+  padding: 12px 24px;
+  border: 1px solid $color-tertiary;
+
+  background-color: transparent;
+  color: $color-dark;
+
+  transition: $transition-normal;
+
+  &:hover {
+    padding: 16px 32px;
+
+    background-color: rgba($color-tertiary, .3);
+  }
+
+  &:active {
+    padding: 16px 32px;
+
+    background-color: rgba($color-primary, .7);
+    color: $color-light;
+  }
 }

@@ -1,0 +1,11 @@
+@import './globals';
+@import './header/header';
+
+.main {
+  display: grid;
+
+  @import './content/blogs-main-blog';
+  @import './content/blogs-latest-blogs';
+}
+
+@import './footer/footer';
