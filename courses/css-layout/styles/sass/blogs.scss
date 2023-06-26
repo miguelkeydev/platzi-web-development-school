@@ -1,7 +1,7 @@
 @import './globals';
 @import './header/header';
 
-.main {
+main {
   display: grid;
 
   @import './content/blogs-main-blog';

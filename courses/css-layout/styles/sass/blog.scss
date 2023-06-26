@@ -1,0 +1,93 @@
+@import './globals';
+@import './header/header';
+
+main {
+  display: grid;
+
+  .figure {
+    display: grid;
+      justify-items: center;
+    
+    width: 100%;
+    padding: 5vh 0;
+
+    img {
+      width: 80%;
+    }
+  }
+
+  .blog {
+    display: grid;
+      gap: 5vh;
+    
+    width: 75%;
+    margin: 0 auto 5vh;
+
+    &__topic {
+      font-size: 28px;
+      font-weight: bold;
+
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba($color-primary, .5);
+
+      color: $color-tertiary;
+    }
+
+    h1 {
+      font-size: 44px;
+      text-transform: uppercase;
+
+      color: $color-primary;
+    }
+
+    p {
+      font-size: 28px;
+      line-height: 125%;
+    }
+  }
+
+  .more {
+    display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+    
+    width: 100%;
+    padding: 12vh 0;
+
+    background-color: $color-light;
+
+    &__section {
+      display: grid;
+        grid-template-columns: 25% 1fr;
+        gap: 20px;
+      
+      width: 75%;
+    }
+
+    &__figure {
+      width: 100%;
+
+      img {
+        width: 100%
+      }
+    }
+
+    &__info {
+      display: grid;
+        place-content: center;
+        gap: 12px;
+
+      font-size: 28px;
+      
+      h3 {
+        width: fit-content;
+        padding-bottom: 8px;
+        border-bottom: 1px solid;
+
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@import './footer/footer';
