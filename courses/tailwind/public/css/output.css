@@ -1150,51 +1150,51 @@ video {
 }
 
 .bg-diningRoom-1 {
-  background-image: url('./public/assets/images/dining-room-1.jpg');
+  background-image: url('https://i.imgur.com/UWXEJT9.jpg');
 }
 
 .bg-diningRoom-2 {
-  background-image: url('./public/assets/images/dining-room-2.jpg');
+  background-image: url('https://i.imgur.com/RzKDf7o.jpg');
 }
 
 .bg-hotel-1 {
-  background-image: url('./public/assets/images/hotel-1.jpg');
+  background-image: url('https://i.imgur.com/RwZT3tE.jpg');
 }
 
 .bg-hotel-10 {
-  background-image: url('./public/assets/images/hotel-10.jpg');
+  background-image: url('https://i.imgur.com/Rta7t7s.jpg');
 }
 
 .bg-hotel-2 {
-  background-image: url('./public/assets/images/hotel-2.jpg');
+  background-image: url('https://i.imgur.com/6E6rsib.jpg');
 }
 
 .bg-hotel-3 {
-  background-image: url('./public/assets/images/hotel-3.jpg');
+  background-image: url('https://i.imgur.com/FAb0qkT.jpg');
 }
 
 .bg-hotel-4 {
-  background-image: url('./public/assets/images/hotel-4.jpg');
+  background-image: url('https://i.imgur.com/6B4R85s.jpg');
 }
 
 .bg-hotel-5 {
-  background-image: url('./public/assets/images/hotel-5.jpg');
+  background-image: url('https://i.imgur.com/LUdYZIp.jpg');
 }
 
 .bg-hotel-6 {
-  background-image: url('./public/assets/images/hotel-6.jpg');
+  background-image: url('https://i.imgur.com/KpnxmuG.jpg');
 }
 
 .bg-hotel-7 {
-  background-image: url('./public/assets/images/hotel-7.jpg');
+  background-image: url('https://i.imgur.com/ZXuiZva.jpg');
 }
 
 .bg-hotel-8 {
-  background-image: url('./public/assets/images/hotel-8.jpg');
+  background-image: url('https://i.imgur.com/pdud1L6.jpg');
 }
 
 .bg-livingRoom {
-  background-image: url('./public/assets/images/living-room.jpg');
+  background-image: url('https://i.imgur.com/Wk7M0j4.jpg');
 }
 
 .from-black-100 {
@@ -1511,6 +1511,26 @@ video {
 :is(.dark .dark\:placeholder\:text-primary)::placeholder {
   --tw-text-opacity: 1;
   color: rgb(83 43 136 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:placeholder\:text-primary-50)::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(200 177 228 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:placeholder\:text-primary-50)::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(200 177 228 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:placeholder\:text-primary-100)::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(155 114 207 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:placeholder\:text-primary-100)::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(155 114 207 / var(--tw-text-opacity));
 }
 
 :is(.dark .dark\:hover\:bg-secondary:hover) {
