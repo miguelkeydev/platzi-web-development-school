@@ -2,15 +2,17 @@
 Repository created to register my progress on [Web Development School](https://platzi.com/escuela/escuela-web/) from [Platzi💚](https://platzi.com)
 
 ## 🛠 Skills used so far
-Git, GitHub, HTML, PUG, CSS, SASS...
+Git, GitHub, HTML, PUG, CSS, SASS, Tailwind
 
 ## 🧮 Projects created
-- Lamoure Jewlery & Accessories Store
+- Lamoure Jewelry & Accessories Store
 - Google Clone
 - Wikipedia main page Clone
 - Batata Bit
 - Preprocessors Landing Page Blog
-- Eco Store Landing Page 
+- Eco Store Landing Page
+- Messi's Best Moments
+- Hotel Heaven
 
 ### ☝👀 If you want to look at them
 [Here they are!](https://miguelkeydev.github.io/platzi-web-development-school/)
