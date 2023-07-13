@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="../public/css/output.css">
+  <link rel="shortcut icon" href="../public/assets/images/hotel-heaven-logo.png">
+  <title>Hotel Heaven</title>
+</head>
+<body class="font-Montserrat dark:bg-gray-900">
+  <!-- Header -->
+  <header class="absolute z-10 right-8 flex items-center justify-end h-20 md:right-auto md:left-auto md:justify-between md:w-full md:px-4 md:bg-white lg:fixed lg:flex lg:h-16 lg:px-6 xl:h-20 xl:px-10 2xl:h-[85px] dark:md:bg-gray-900">
+    <!-- Left Side Container -->
+    <div class="hidden md:flex md:items-center md:h-full">
+      <a href="" class="flex items-center gap-2 md:gap-3 lg:gap-4">
+        <!-- Logo -->
+        <img
+          class="w-12 md:w-14 lg:w-12 xl:w-14"
+          src="../public/assets/images/hotel-heaven-logo.png"
+          alt="Hotel Heaven Logo"
+        >
+        <!-- Name -->
+        <h1 class="text-xl font-bold text-primary md:text-2xl 2xl:text-[26px] dark:text-primary-100">
+          Hotel Heaven
+        </h1>
+      </a>
+    </div>
+    <!-- Middle Side Container -->
+    <div class="hidden lg:flex lg:items-center lg:h-full">
+      <ul class="flex gap-10 font-bold text-primary-100 dark:text-primary-50 xl:text-lg 2xl:gap-12 2xl:text-xl">
+        <li class="Navbar__element"><a href="#recommendations"><span>Locations</span></a></li>
+        <li class="Navbar__element"><a href="#trending"><span>Stays</span></a></li>
+        <li class="Navbar__element"><a href="#faqs"><span>FAQs</span></a></li>
+        <li class="Navbar__element"><a href="#about-us"><span>About Us</span></a></li>
+      </ul>
+    </div>
+    <!-- Right Side Container -->
+    <div class="py-1.5 px-6 bg-white rounded-full md:flex md:gap-8 md:px-4 md:bg-none md:rounded-none lg:gap-9 lg:px-5 xl:gap-10 xl:px-6 2xl:gap-12 dark:bg-gray-900">
+      <!-- Magnifying Glass Icon -->
+      <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Navbar__icon hidden lg:block lg:mt-1 lg:cursor-pointer xl:w-7 xl:h-7 2xl:w-8 2xl:h-8">
+        <path opacity="0.1" d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" fill="none"/>
+        <path d="M15 15L21 21" stroke="#532b88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#532b88" stroke-width="2"/>
+      </svg>
+      <!-- Moon Icon -->
+      <svg id="toggle" width="25" height="25" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="Navbar__icon lg:cursor-pointer md:w-7 md:h-7 dark:hidden xl:w-8 xl:h-8 2xl:w-9 2xl:h-9">
+        <g id="moon">
+        <path id="Vector" d="M17.293 13.293C15.8115 13.9631 14.161 14.1659 12.5614 13.8743C10.9617 13.5827 9.48893 12.8106 8.33918 11.6608C7.18943 10.5111 6.41732 9.03827 6.12573 7.43863C5.83413 5.839 6.03689 4.18849 6.707 2.707C5.52756 3.24001 4.49503 4.0512 3.698 5.07096C2.90097 6.09072 2.36323 7.28862 2.13091 8.56189C1.89859 9.83515 1.97863 11.1458 2.36416 12.3813C2.74969 13.6168 3.4292 14.7404 4.3444 15.6556C5.2596 16.5708 6.38316 17.2503 7.61869 17.6358C8.85423 18.0214 10.1648 18.1014 11.4381 17.8691C12.7114 17.6368 13.9093 17.099 14.929 16.302C15.9488 15.505 16.76 14.4724 17.293 13.293V13.293Z" fill="#532b88"/>
+        </g>
+      </svg>
+      <!-- Switch Icon -->
+      <svg id="toggle-desktop" fill="#532b88" width="28" height="28" viewBox="0 0 24.00 24.00" xmlns="http://www.w3.org/2000/svg" transform="rotate(0)matrix(-1, 0, 0, 1, 0, 0)" stroke="#532b88" stroke-width="0.00024000000000000003" class="Navbar__icon hidden md:w-8 md:h-8 dark:block dark:lg:cursor-pointer xl:w-9 xl:h-9 2xl:w-10 2xl:h-10">
+        <g id="SVGRepo_bgCarrier" stroke-width="1px"/>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#374151" stroke-width="0.4800000000000001"/>
+        <g id="SVGRepo_iconCarrier">
+          <path d="m0 11.617c0-3.763 3.05-6.814 6.813-6.817h10.371c3.765 0 6.817 3.052 6.817 6.817s-3.052 6.817-6.817 6.817h-10.366c-3.763 0-6.814-3.05-6.817-6.813zm6.817 4.543c2.507-.002 4.539-2.035 4.539-4.542 0-2.509-2.034-4.542-4.542-4.542s-4.542 2.034-4.542 4.542c0 1.254.508 2.389 1.329 3.21.822.823 1.958 1.332 3.214 1.332h.003z"/>
+        </g>
+      </svg>
+      <!-- Profile Icon -->
+      <a href="">
+        <svg width="25" height="25" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="Navbar__icon hidden md:w-7 md:h-7 md:block xl:w-8 xl:h-8 2xl:w-9 2xl:h-9">
+          <g id="Icons/Fill/User">
+          <g id="Shape">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5.78225 19.6464C7.4799 17.2799 10.4865 15.4999 15.4999 15.4999C20.5132 15.4999 23.5199 17.2799 25.2175 19.6464C26.8582 21.9336 27.1196 24.5552 27.1248 26.0058C27.13 27.4645 25.9071 28.4166 24.6533 28.4166H6.34642C5.09262 28.4166 3.86971 27.4645 3.87496 26.0058C3.88017 24.5552 4.1415 21.9336 5.78225 19.6464Z" fill="#532b88"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 12.9166C18.3535 12.9166 20.6667 10.6034 20.6667 7.74992C20.6667 4.89645 18.3535 2.58325 15.5 2.58325C12.6465 2.58325 10.3333 4.89645 10.3333 7.74992C10.3333 10.6034 12.6465 12.9166 15.5 12.9166Z" fill="#532b88"/>
+          </g>
+          </g>
+        </svg>
+      </a>
+    </div>
+  </header>
+  <!-- Content -->
+  <main class="w-full">
+    <!-- Home Section -->
+    <section id="home" class="relative w-full md:h-[60vh] lg:h-[75vh]">
+      <!-- Background Image -->
+      <figure class="w-full md:h-full md:flex md:items-center md:overflow-hidden">
+        <!-- Mobile Image -->
+        <img
+          class="md:hidden"
+          src="../public/assets/images/view-1.jpg"
+          alt="Beautiful view of the huge pool of a hotel"
+        >
+        <!-- Tablet Image -->
+        <img
+          class="hidden md:block md:h-full md:object-cover lg:hidden"
+          src="../public/assets/images/view-2.jpg"
+          alt="Beautiful view of a pool of an outdoor hotel"
+        >
+        <!-- Desktop Image -->
+        <img
+          class="hidden lg:block lg:w-full lg:object-cover"
+          src="../public/assets/images/view-3.jpg"
+          alt="Beautiful view of a pool of an outdoor hotel"
+        >
+      </figure>
+      <!-- Inputs Container -->
+      <div class="flex flex-col items-center justify-between absolute top-20 bottom-16 w-full md:top-4 md:right-1/4 md:bottom-10 md:z-20 md:w-1/2 lg:top-20 lg:left-20 lg:z-0 lg:justify-center lg:items-start lg:gap-4 lg:w-1/3 xl:gap-8">
+        <!-- Desktop Heading -->
+        <h2 class="hidden lg:block lg:text-3xl lg:font-bold lg:leading-snug lg:uppercase lg:text-secondary xl:text-4xl 2xl:text-5xl dark:text-gray-900">
+          Find more hotels like this
+        </h2>
+        <!-- Search Button -->
+        <div class="relative grid place-items-center w-full md:ml-20 lg:hidden">
+          <!-- Magnifying Glass Icon -->
+          <img
+            class="absolute top-1/4 bottom-1/4 left-11 h-1/2 md:left-[18%]"
+            src="../public/assets/icons/magnifying_glass.svg"
+            alt="Magnifying Glass Icon"
+          >
+          <!-- Search Input -->
+          <input type="search" placeholder="New York" class="w-[330px] py-2.5 px-14 text-primary rounded-full shadow-lg outline-none duration-300 placeholder:text-md placeholder:font-normal placeholder:text-center placeholder:text-secondary focus:shadow-sm focus:ring-2 focus:w-11/12 md:w-72 md:px-16 md:border-2 md:border-primary-100 md:focus:w-80 md:focus:border-primary dark:bg-gray-900 dark:text-primary-50 dark:placeholder:text-primary">
+        </div>
+        <!-- Explore Button -->
+        <button class="text-sm font-semibold w-1/2 py-3 mb-1 bg-white text-primary rounded-full shadow-lg transition-all duration-500 ease-in-out hover:bg-primary-100 hover:text-black hover:-translate-y-1 hover:scale-110 hover:mb-0 md:text-base md:w-auto md:px-12 xl:text-lg lg:active:bg-primary lg:active:text-primary-50 dark:bg-gray-900 dark:hover:bg-secondary dark:hover:text-primary-100 dark:lg:text-primary-100 dark:active:bg-primary-50 dark:active:text-primary">
+          Explore More
+        </button>
+      </div>
+    </section>
+    <!-- Recommendations Section -->
+    <section id="recommendations" class="Section grid gap-4 pt-8 xl:pt-10 ">
+      <!-- Section Heading -->
+      <h1 class="Section-heading dark:text-primary-50">
+        Our Recommendations
+      </h1>
+      <!-- Cards Container -->
+      <div class="grid grid-rows-2 grid-flow-col gap-4 h-76 py-2 px-4 ml-2 overflow-x-auto overscroll-x-auto scrollbar-hide md:gap-6 md:py-4 md:ml-1 lg:grid-rows-1 lg:gap-5 lg:py-2 lg:m-0 xl:gap-6 xl:py-4">
+        <!-- Light Card - London -->
+        <div class="Card bg-hotel-1">
+          <!-- Card Info Container-->
+          <div class="Card__info from-black-100 to-black-150">
+            <!-- Location -->
+            <p class="Card__location text-white">
+              London, England
+            </p>
+            <!-- Description -->
+            <p class="Card__description text-tertiary">
+              Thameside Manor
+            </p>
+          </div>
+          <!-- Card Favorite -->
+          <img
+            class="Card__favorite"
+            src="../public/assets/icons/heart-black.svg"
+            alt="Heart Icon"
+          >
+        </div>
+        <!-- Dark Card - Tokyo -->
+        <div class="Card bg-hotel-2">
+          <!-- Card Info Container-->
+          <div class="Card__info from-white-100 to-white-50">
+            <!-- Location -->
+            <p class="Card__location text-black drop-shadow-lg shadow-white">
+              Tokyo, Japan
+            </p>
+            <!-- Description -->
+            <p class="Card__description text-black">
+              Sakura Serenity Retreat
+            </p>
+          </div>
+          <!-- Card Favorite -->
+          <img
+            class="Card__favorite"
+            src="../public/assets/icons/heart.svg"
+            alt="Heart Icon"
+          >
+        </div>
+        <!-- Dark Card - Mexico City -->
+        <div class="Card bg-hotel-3 lg:col-start-4">
+          <!-- Card Info Container-->
+          <div class="Card__info from-white-100 to-white-50">
+            <!-- Location -->
+            <p class="Card__location text-black drop-shadow-lg shadow-white">
+              Mexico City, Mexico
+            </p>
+            <!-- Description -->
+            <p class="Card__description text-black">
+              Z&oacute;calo Plaza Retreat
+            </p>
+          </div>
+          <!-- Card Favorite -->
+          <img
+            class="Card__favorite"
+            src="../public/assets/icons/heart.svg"
+            alt="Heart Icon"
+          >
+        </div>
+        <!-- Light Card - Istanbul -->
+        <div class="Card bg-hotel-4">
+          <!-- Card Info Container-->
+          <div class="Card__info from-black-100 to-black-150">
+            <!-- Location -->
+            <p class="Card__location text-white">
+              Istanbul, Turkey
+            </p>
+            <!-- Description -->
+            <p class="Card__description text-tertiary">
+              Bosphorus Bliss Resorts
+            </p>
+          </div>
+          <!-- Card Favorite -->
+          <img
+            class="Card__favorite"
+            src="../public/assets/icons/heart-black.svg"
+            alt="Heart Icon"
+          >
+        </div>
+        <!-- Light Card - Sydney -->
+        <div class="Card bg-hotel-5">
+          <!-- Card Info Container-->
+          <div class="Card__info from-black-100 to-black-150">
+            <!-- Location -->
+            <p class="Card__location text-white">
+              Sydney, Australia
+            </p>
+            <!-- Description -->
+            <p class="Card__description text-tertiary">
+              Harbor Haven Suite
+            </p>
+          </div>
+          <!-- Card Favorite -->
+          <img
+            class="Card__favorite"
+            src="../public/assets/icons/heart-black.svg"
+            alt="Heart Icon"
+          >
+        </div>
+        <!-- Dark Card - Mumbai -->
+        <div class="Card bg-hotel-6">
+          <!-- Card Info Container-->
+          <div class="Card__info from-white-100 to-white-50">
+            <!-- Location -->
+            <p class="Card__location text-black drop-shadow-lg shadow-white">
+              Mumbai, India
+            </p>
+            <!-- Description -->
+            <p class="Card__description text-black">
+              Sakura Serenity Retreat
+            </p>
+          </div>
+          <!-- Card Favorite -->
+          <img
+            class="Card__favorite"
+            src="../public/assets/icons/heart.svg"
+            alt="Heart Icon"
+          >
+        </div>
+        <!-- Dark Card - Bangkok -->
+        <div class="Card bg-hotel-7 lg:col-start-8">
+          <!-- Card Info Container-->
+          <div class="Card__info from-white-100 to-white-50">
+            <!-- Location -->
+            <p class="Card__location text-black drop-shadow-lg shadow-white">
+              Bangkok, Thailand
+            </p>
+            <!-- Description -->
+            <p class="Card__description text-black">
+              Riverside Retreat
+            </p>
+          </div>
+          <!-- Card Favorite -->
+          <img
+            class="Card__favorite"
+            src="../public/assets/icons/heart.svg"
+            alt="Heart Icon"
+          >
+        </div>
+        <!-- Light Card - Toronto -->
+        <div class="Card bg-hotel-8">
+          <!-- Card Info Container-->
+          <div class="Card__info from-black-100 to-black-150">
+            <!-- Location -->
+            <p class="Card__location text-white">
+              Toronto, Canada
+            </p>
+            <!-- Description -->
+            <p class="Card__description text-tertiary">
+              Skyline Heights Residences
+            </p>
+          </div>
+          <!-- Card Favorite -->
+          <img
+            class="Card__favorite"
+            src="../public/assets/icons/heart-black.svg"
+            alt="Heart Icon"
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Trending Hotels Section-->
+    <section id="trending" class="Section pt-6 xl:pt-10">
+      <!-- Section Heading -->
+      <h1 class="Section-heading mb-4 dark:text-primary-50">
+        Trending Hotels
+      </h1>
+      <!-- Hotels Container -->
+      <div class="grid gap-2 w-full py-2 px-6 md:grid-cols-2 md:grid-rows-3 md:px-4 lg:gap-4 xl:gap-6 xl:px-6 xl:py-4">
+        <!-- Hotel Container - Prague -->
+        <div class="Hotel__container lg:col-start-1 lg:col-end-3 lg:row-start-3 lg:row-end-5">
+          <!-- Hotel Card -->
+          <div class="Hotel bg-hotel-10">
+            <!-- Hotel Name -->
+            <h3 class="Hotel__name">
+              Castle Vista Residence, Prague
+            </h3>
+            <!-- Hotel Description -->
+            <p class="Hotel__description">
+              4 rooms, 3 bathrooms, kitchen and private pool.
+            </p>
+          </div>
+        </div>
+        <!-- Hotel Container - Moscow -->
+        <div class="Hotel__container lg:row-start-1 lg:row-end-3">
+          <!-- Hotel Card -->
+          <div class="Hotel bg-diningRoom-1 lg:h-full lg:bg-center">
+            <!-- Hotel Name -->
+            <h3 class="Hotel__name">
+              Skyline Heights Residences, Moscow
+            </h3>
+            <!-- Hotel Description -->
+            <p class="Hotel__description">
+              2 rooms, bathroom and kitchen.
+            </p>
+          </div>
+        </div>
+        <!-- Hotel Container - Rio de Janeiro -->
+        <div class="Hotel__container md:col-start-2 md:col-end-3 md:row-start-2 md:row-end-4 lg:col-start-auto lg:col-end-auto lg:row-start-auto lg:row-end-auto">
+          <!-- Hotel Card -->
+          <div class="Hotel bg-diningRoom-2 md:h-full">
+            <!-- Hotel Name -->
+            <h3 class="Hotel__name">
+              Samba Sands Retreat, Rio de Janeiro
+            </h3>
+            <!-- Hotel Description -->
+            <p class="Hotel__description">
+              3 double-rooms, 4 bathrooms, kitchen, bathtub and pool table.
+            </p>
+          </div>
+        </div>
+        <!-- Hotel Container - Cape Town -->
+        <div class="Hotel__container md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-2 lg:col-start-auto lg:col-end-auto lg:row-start-auto lg:row-end-auto">
+          <!-- Hotel Card -->
+          <div class="Hotel bg-livingRoom">
+            <!-- Hotel Name -->
+            <h3 class="Hotel__name">
+              Table Mountain Escapes, Cape Town
+            </h3>
+            <!-- Hotel Description -->
+            <p class="Hotel__description">
+              2 rooms, 2 bathrooms, kitchen, private pool and an amazing sea view
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQs Section -->
+    <section id="faqs" class="Section py-6">
+      <!-- Section Heading -->
+      <h1 class="Section-heading lg:pl-2 dark:text-primary-50">
+        FAQs
+      </h1>
+      <!-- Questions Container -->
+      <div class="flex flex-col gap-6 px-6 pt-4 md:px-4 xl:pt-7">
+        <!-- Question and Answer Container - Payment Methods -->
+        <div class="FAQ">
+          <!-- Question -->
+          <h4 class="FAQ__question">
+            Payment Methods
+          </h4>
+          <!-- Answer -->
+          <p class="FAQ__answer">
+            We accept VISA, MasterCard, American Express, PayPal and Binance
+          </p>
+        </div>
+        <!-- Question and Answer Container - Cancellation Policy -->
+        <div class="FAQ">
+          <!-- Question -->
+          <h4 class="FAQ__question">
+            Cancellation Policy
+          </h4>
+          <!-- Answer -->
+          <p class="FAQ__answer">
+            Understanding that plans can change, we have a cancellation policy in place. Kindly review our policy for details on reservation cancellations and any associated terms and conditions.
+          </p>
+        </div>
+        <!-- Question and Answer Container - Long Stays -->
+        <div class="FAQ">
+          <!-- Question -->
+          <h4 class="FAQ__question">
+            Long Stays
+          </h4>
+          <!-- Answer -->
+          <p class="FAQ__answer">
+            For inquiries about long-term stays or extended bookings, please reach out to our team for personalized assistance and special rates.
+          </p>
+        </div>
+        <!-- Question and Answer Container - Services -->
+        <div class="FAQ">
+          <!-- Question -->
+          <h4 class="FAQ__question">
+            Services
+          </h4>
+          <!-- Answer -->
+          <p class="FAQ__answer">
+            Our hotel offers a range of services to enhance your stay, including gym, recreation room, pool, football field, or bar.
+          </p>
+        </div>
+        <!-- Question and Answer Container - Restaurants -->
+        <div class="FAQ">
+          <!-- Question -->
+          <h4 class="FAQ__question">
+            Restaurants
+          </h4>
+          <!-- Answer -->
+          <p class="FAQ__answer">
+            Indulge in a culinary journey at our on-site restaurants, serving a variety of delectable dishes crafted by our talented chefs. Explore our diverse dining options and experience a delightful gastronomic adventure during your stay.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer id="about-us" class="flex flex-col gap-1.5 w-full h-auto p-4 mt-6 mb-16 bg-secondary md:grid md:grid-rows-3 md:justify-items-center md:justify-center md:gap-y-0 md:gap-x-4 md:w-auto md:h-56 md:py-6 md:mb-0 xl:h-60 dark:bg-black-100">
+    <!-- About Us -->
+    <h3 class="text-lg text-primary-50 mb-2 md:col-start-1 md:col-end-7 md:text-2xl md:mb-0 xl:text-[28px] dark:text-primary-100">
+      About Us
+    </h3>
+    <!-- Investors -->
+    <a href="#">
+      <p class="footer__element">
+        Investors
+      </p>
+    </a>
+    <!-- Jobs -->
+    <a href="#">
+      <p class="footer__element">
+        Jobs
+      </p>
+    </a>
+    <!-- Privacy Policy -->
+    <a href="#">
+      <p class="footer__element">
+        Privacy Policy
+      </p>
+    </a>
+    <!-- Terms & Conditions -->
+    <a href="#">
+      <p class="footer__element">
+        Terms & Conditions
+      </p>
+    </a>
+    <!-- Company's Name -->
+    <a href="#">
+      <p class="footer__element">
+        Hotel Heaven Inc
+      </p>
+    </a>
+    <!-- Work With Us -->
+    <a href="#">
+      <p class="footer__element">
+        Work With Us
+      </p>
+    </a>
+    <!-- Follow Us -->
+    <div class="flex flex-col gap-2 align-middle self-center md:gap-4 md:col-start-1 md:col-end-7 md:text-xl xl:text-2xl xl:gap-5">
+      <h4 class="text-center text-primary-50 dark:text-primary-100">
+        Follow Us
+      </h4>
+      <!-- Social media -->
+      <div class="flex gap-6">
+        <!-- Facebook -->
+        <img
+          class="footer__social-media"
+          src="../public/assets/icons/facebook.png"
+          alt="Faceboo Icon"
+        >
+        <!-- Instagram -->
+        <img
+          class="footer__social-media"
+          src="../public/assets/icons/instagram.png"
+          alt="Instagram Icon"
+        >
+        <!-- Twitter -->
+        <img
+          class="footer__social-media"
+          src="../public/assets/icons/twitter.png"
+          alt="Twitter Icon"
+        >
+      </div>
+    </div>
+  </footer>
+  <!-- Tab Bar -->
+  <nav class="fixed right-0 bottom-0 left-0 z-10 flex items-center justify-center gap-10 w-full h-16 bg-white border-t-2 border-t-primary-50 md:hidden dark:bg-gray-900">
+    <!-- Home -->
+    <a href="#home">
+      <svg width="30" height="30" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="Icons/Fill/Home">
+        <path id="Shape" d="M17.0159 3.03837C16.7669 2.75451 16.4034 2.58866 16.0189 2.58338C15.6344 2.57811 15.2662 2.73393 15.009 3.01084L3.00896 15.9275C2.65672 16.3067 2.5678 16.8511 2.78202 17.3171C2.99624 17.7831 3.47347 18.0833 4.00002 18.0833H6.66669V25.8333C6.66669 26.5466 7.26364 27.1249 8.00002 27.1249H13.3334V20.6666H18.6667V27.1249H24C24.7364 27.1249 25.3334 26.5466 25.3334 25.8333V18.0833H27.3334C27.8531 18.0833 28.3254 17.7907 28.5436 17.3337C28.7617 16.8768 28.6859 16.3387 28.3493 15.955L17.0159 3.03837Z" fill="#c8b1e4"/>
+        </g>
+      </svg>
+    </a>
+    <!-- Search -->
+    <a href="#trending">
+      <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.1" d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" fill="none"/>
+        <path d="M15 15L21 21" stroke="#c8b1e4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#c8b1e4" stroke-width="2"/>
+      </svg>
+    </a>
+    <!-- Recommendations -->
+    <a href="#recommendations">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="#c8b1e4" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z" stroke="#c8b1e4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <!-- Profile -->
+    <a href="">
+      <svg width="30" height="30" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="Icons/Fill/User">
+        <g id="Shape">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.78225 19.6464C7.4799 17.2799 10.4865 15.4999 15.4999 15.4999C20.5132 15.4999 23.5199 17.2799 25.2175 19.6464C26.8582 21.9336 27.1196 24.5552 27.1248 26.0058C27.13 27.4645 25.9071 28.4166 24.6533 28.4166H6.34642C5.09262 28.4166 3.86971 27.4645 3.87496 26.0058C3.88017 24.5552 4.1415 21.9336 5.78225 19.6464Z" fill="#c8b1e4"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 12.9166C18.3535 12.9166 20.6667 10.6034 20.6667 7.74992C20.6667 4.89645 18.3535 2.58325 15.5 2.58325C12.6465 2.58325 10.3333 4.89645 10.3333 7.74992C10.3333 10.6034 12.6465 12.9166 15.5 12.9166Z" fill="#c8b1e4"/>
+        </g>
+        </g>
+      </svg>
+    </a>
+  </nav>
+  <!-- JavaScript -->
+  <script>
+    // Dark Mode Button
+    const htmlElement = document.querySelector("html")
+    const toggleButton = document.querySelector("#toggle")
+    const toggleButtonDesktop = document.querySelector("#toggle-desktop")
+
+    toggleButton.addEventListener("click", () => toggleDarkMode() )
+    toggleButtonDesktop.addEventListener("click", () => toggleDarkMode() )
+
+    const toggleDarkMode = () => {
+      htmlElement.classList.contains("dark")?
+      htmlElement.classList.remove("dark") :
+      htmlElement.classList.add("dark")
+    }
+  </script>
+</body>
+</html>
