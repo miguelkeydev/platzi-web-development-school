@@ -1150,51 +1150,51 @@ video {
 }
 
 .bg-diningRoom-1 {
-  background-image: url('/public/assets/images/dining-room-1.jpg');
+  background-image: url('./public/assets/images/dining-room-1.jpg');
 }
 
 .bg-diningRoom-2 {
-  background-image: url('/public/assets/images/dining-room-2.jpg');
+  background-image: url('./public/assets/images/dining-room-2.jpg');
 }
 
 .bg-hotel-1 {
-  background-image: url('/public/assets/images/hotel-1.jpg');
+  background-image: url('./public/assets/images/hotel-1.jpg');
 }
 
 .bg-hotel-10 {
-  background-image: url('/public/assets/images/hotel-10.jpg');
+  background-image: url('./public/assets/images/hotel-10.jpg');
 }
 
 .bg-hotel-2 {
-  background-image: url('/public/assets/images/hotel-2.jpg');
+  background-image: url('./public/assets/images/hotel-2.jpg');
 }
 
 .bg-hotel-3 {
-  background-image: url('/public/assets/images/hotel-3.jpg');
+  background-image: url('./public/assets/images/hotel-3.jpg');
 }
 
 .bg-hotel-4 {
-  background-image: url('/public/assets/images/hotel-4.jpg');
+  background-image: url('./public/assets/images/hotel-4.jpg');
 }
 
 .bg-hotel-5 {
-  background-image: url('/public/assets/images/hotel-5.jpg');
+  background-image: url('./public/assets/images/hotel-5.jpg');
 }
 
 .bg-hotel-6 {
-  background-image: url('/public/assets/images/hotel-6.jpg');
+  background-image: url('./public/assets/images/hotel-6.jpg');
 }
 
 .bg-hotel-7 {
-  background-image: url('/public/assets/images/hotel-7.jpg');
+  background-image: url('./public/assets/images/hotel-7.jpg');
 }
 
 .bg-hotel-8 {
-  background-image: url('/public/assets/images/hotel-8.jpg');
+  background-image: url('./public/assets/images/hotel-8.jpg');
 }
 
 .bg-livingRoom {
-  background-image: url('/public/assets/images/living-room.jpg');
+  background-image: url('./public/assets/images/living-room.jpg');
 }
 
 .from-black-100 {
@@ -1622,8 +1622,8 @@ video {
     display: none;
   }
 
-  .md\:h-56 {
-    height: 14rem;
+  .md\:h-64 {
+    height: 16rem;
   }
 
   .md\:h-7 {
@@ -1640,18 +1640,6 @@ video {
 
   .md\:h-full {
     height: 100%;
-  }
-
-  .md\:h-60 {
-    height: 15rem;
-  }
-
-  .md\:h-6 {
-    height: 1.5rem;
-  }
-
-  .md\:h-64 {
-    height: 16rem;
   }
 
   .md\:w-1\/2 {
@@ -1977,11 +1965,6 @@ video {
     padding-right: 1.5rem;
   }
 
-  .lg\:py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
   .lg\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -2016,11 +1999,6 @@ video {
   .lg\:active\:bg-primary:active {
     --tw-bg-opacity: 1;
     background-color: rgb(83 43 136 / var(--tw-bg-opacity));
-  }
-
-  .lg\:active\:text-primary:active {
-    --tw-text-opacity: 1;
-    color: rgb(83 43 136 / var(--tw-text-opacity));
   }
 
   .lg\:active\:text-primary-50:active {
