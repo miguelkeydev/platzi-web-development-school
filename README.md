@@ -2,7 +2,7 @@
 Repository created to register my progress on [Web Development School](https://platzi.com/escuela/escuela-web/) from [Platzi💚](https://platzi.com)
 
 ## 🛠 Skills used so far
-Git, GitHub, HTML, PUG, CSS, SASS, Tailwind
+Git, GitHub, HTML, PUG, CSS, SASS, Tailwind, JavaScript
 
 ## 🧮 Projects created
 - Lamoure Jewelry & Accessories Store
@@ -17,4 +17,4 @@ Git, GitHub, HTML, PUG, CSS, SASS, Tailwind
 ### ☝👀 If you want to look at them
 [Here they are!](https://miguelkeydev.github.io/platzi-web-development-school/)
 
-### 💻 I'm currently taking [HTML & CSS to Depth Route](https://platzi.com/ruta/web-frontend/?school=_escuela_escuela-web_)
+### 💻 I'm currently taking [JavaScript to Depth Route]([https://platzi.com/ruta/web-frontend/?school=_escuela_escuela-web_](https://platzi.com/ruta/web-javascript/)https://platzi.com/ruta/web-javascript/)
