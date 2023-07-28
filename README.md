@@ -17,4 +17,4 @@ Git, GitHub, HTML, PUG, CSS, SASS, Tailwind, JavaScript
 ### ☝👀 If you want to look at them
 [Here they are!](https://miguelkeydev.github.io/platzi-web-development-school/)
 
-### 💻 I'm currently taking [JavaScript to Depth Route]([https://platzi.com/ruta/web-frontend/?school=_escuela_escuela-web_](https://platzi.com/ruta/web-javascript/)https://platzi.com/ruta/web-javascript/)
+### 💻 I'm currently taking [JavaScript to Depth Route](https://platzi.com/ruta/web-javascript/)
