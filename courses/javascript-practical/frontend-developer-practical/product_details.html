@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Adding Quicksand Font Family-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <!--Adding Styles-->
+  <link rel="stylesheet" href="./styles/general.css">
+  <link rel="stylesheet" href="./styles/header2.css">
+  <link rel="stylesheet" href="./styles/product_details.css">
+  <!--Adding Icon to Title-->
+  <link rel="shortcut icon" href="./images/lamoure-logos/logo-icon.png">
+  <title>Product Details</title>
+</head>
+<body>
+  <!--Header-->
+  <header class="header">
+    <!--Hamburguer Menu-->
+    <figure class="header__hamburguer">
+      <img src="./images/lamoure-icons/icon_menu.svg" alt="Hamburguer Menu Icon">
+    </figure>
+    <!--Logo-->
+    <figure class="header__logo">
+      <a href="./index.html">
+        <img src="./images/lamoure-logos/logo-icon.png" alt="Lamoure Logo">
+      </a>
+    </figure>
+    <!--Menu-->
+    <ul class="header__menu">
+      <!--All Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          All
+        </a>
+      </li>
+      <!--Bracelets Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Bracelets
+        </a>
+      </li>
+      <!--Necklaces Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Necklaces
+        </a>
+      </li>
+      <!--Rings Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Rings
+        </a>
+      </li>
+      <!--Quartzes Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Quartzes
+        </a>
+      </li>
+      <!--Others Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Others
+        </a>
+      </li>
+    </ul>
+    <!--Account-->
+    <div class="account header__account">
+      <a class="account__link header__link" href="./home2.html">
+        <span class="account__email">
+          camilaramos@gmail.com
+        </span>
+        <img class="account__arrow" src="./images/lamoure-icons/arrow-down.svg" alt="Arrow Down Icon">
+      </a>
+    </div>
+    <!--Shopping Cart-->
+    <figure class="header__shopping-cart">
+      <a href="./shopping_cart1.html">
+        <img src="./images/lamoure-icons/icon_shopping_cart_notification.svg" alt="Shopping Cart With Items Icon">
+      </a>
+    </figure>
+  </header>
+  <!--Main Container-->
+  <main class="product-detail">
+    <!--Product-->
+    <div class="product-detail__product">
+      <!--Product Image-->
+      <figure class="product-detail__fig">
+        <!--Product Image-->
+        <img class="product-detail__img" src="./images/lamoure-products/product_necklace3.jpg" alt="Black Quatrz Necklace">
+        <!--Close Icon-->
+        <a class="product-detail__close" href="./home1.html">
+          <img src="./images/lamoure-icons/icon_close.png" alt="Close Icon">
+        </a>
+      </figure>
+      <!--Product Current Image-->
+      <p class="current-img product-detail__current-img">
+        <span class="current-img__current">&#8226;</span> &#8226; &#8226;
+      </p>
+    </div>
+    <!--Details-->
+    <div class="product-detail__details">
+      <!--Product Price-->
+      <p class="product-detail__price">
+        COP 25.000
+      </p>
+      <!--Product Name-->
+      <p class="product-detail__name">
+        Black Quartz Necklace
+      </p>
+      <!--Product Description-->
+      <p class="product-detail__description">
+        This beautiful necklace with its elegant black quartz crystal, it exudes a sense of mystery and sophistication. It's said to promote grounding, spiritual transformation, and intuition, while providing balance and harmony. Perfect for those who seek to enhance their spiritual practice and embrace their inner power.
+      </p>
+      <!--Product Add to Cart-->
+      <div class="product-detail__add-to-cart">
+        <button class="primary-button product-detail__button">
+          <!--Add to Cart Icon-->
+          <img src="./images/lamoure-icons/icon_shopping_cart.svg" alt="Add to Cart Icon">
+          <!--Add to Cart Text-->
+          <span>
+            Add to cart
+          </span>
+        </button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

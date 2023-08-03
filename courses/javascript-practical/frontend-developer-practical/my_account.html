@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Adding Quicksand Font Family-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <!--Adding Styles-->
+  <link rel="stylesheet" href="./styles/general.css">
+  <link rel="stylesheet" href="./styles/header2.css">
+  <link rel="stylesheet" href="./styles/account.css">
+  <!--Adding Icon to Title-->
+  <link rel="shortcut icon" href="./images/lamoure-logos/logo-icon.png">
+  <title>My account</title>
+</head>
+<body>
+  <!--Header-->
+  <header class="header">
+    <!--Hamburguer Menu-->
+    <figure class="header__hamburguer">
+      <img src="./images/lamoure-icons/icon_menu.svg" alt="Hamburguer Menu Icon">
+    </figure>
+    <!--Logo-->
+    <figure class="header__logo">
+      <a href="./index.html">
+        <img src="./images/lamoure-logos/logo-icon.png" alt="Lamoure Logo">
+      </a>
+    </figure>
+    <!--Menu-->
+    <ul class="header__menu">
+      <!--All Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          All
+        </a>
+      </li>
+      <!--Bracelets Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Bracelets
+        </a>
+      </li>
+      <!--Necklaces Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Necklaces
+        </a>
+      </li>
+      <!--Rings Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Rings
+        </a>
+      </li>
+      <!--Quartzes Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Quartzes
+        </a>
+      </li>
+      <!--Others Option-->
+      <li class="header__option">
+        <a class="header__link" href="">
+          Others
+        </a>
+      </li>
+    </ul>
+    <!--Sign In-->
+    <div class="header__sign-in">
+      <a class="header__link" href="./login.html">
+        <span class="header__sign-in--color-golden">
+          Sign In
+        </span>
+      </a>
+    </div>
+    <!--Shopping Cart-->
+    <figure class="header__shopping-cart">
+      <a href="./shopping_cart1.html">
+        <img src="./images/lamoure-icons/icon_shopping_cart_notification.svg" alt="Shopping Cart With Items Icon">
+      </a>
+    </figure>
+  </header>
+  <!--Principal container-->
+  <main>
+    <!--Form container-->
+    <div class="form-container">
+      <!--Title-->
+      <h1 class="form-container__title">
+        My account
+      </h1>
+      <!--Account Form-->
+      <form class="form form-container__form" action="">
+        <div class="form__info">
+          <!--Name Label-->
+          <label class="form__label" for="name">
+            Name
+          </label>
+          <!--Name Value-->
+          <p class="form__value">
+            Camila Ramos
+          </p>
+          <!--Email Label-->
+          <label class="form__label" for="email">
+            Email address
+          </label>
+          <!--Email Value-->
+          <p class="form__value">
+            camilaramos@gmail.com
+          </p>
+          <!--Password Label-->
+          <label class="form__label" for="password">
+            Password
+          </label>
+          <!--Password Value-->
+          <p class="form__value">
+            ****************
+          </p>
+        </div>
+        <!--Edit Account-->
+        <button class="primary-button secondary-button form__button">
+          <a class="primary-button__link" href="./edit_account.html">
+            Edit
+          </a>
+        </button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

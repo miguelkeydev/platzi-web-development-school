@@ -1,0 +1,222 @@
+body {
+  padding-top: 8vh; /*Creating space for the header*/
+}
+
+.header {
+  position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  height: 8vh;
+  padding: 0 .6rem;
+  border-bottom: .3rem solid var(--dark-golden);
+
+  background-color: var(--background);
+}
+
+/*Hamburguer Menu, Logo, My Orders, and Shopping Cart*/
+.header__hamburguer, .header__logo, .header__orders, .header__shopping-cart {
+  display: flex;
+    align-items: center;
+
+  font-size: var(--fm);
+  
+  color: var(--white);
+}
+
+/*Menu, Sign In, and Account*/
+.header__menu, .header__sign-in, .header__account {
+  display: none;
+}
+
+/*Hamburguer Menu*/
+.header__hamburguer, .header__shopping-cart {
+  display: flex;
+    justify-content: center;
+
+  width: 5.2rem;
+  height: 5.2rem;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+  transition: .15s;
+}
+
+.header__hamburguer:active, .header__shopping-cart:active {
+  background-color: var(--dark-golden);
+}
+
+.header__hamburguer img {
+  height: 2.8vh;
+}
+
+.header__logo img {
+  height: 6vh;
+}
+
+.header__shopping-cart img {
+  height: 3.6vh;
+}
+
+/*Shopping Cart Link*/
+.header__shopping-cart a {
+  display: flex;
+    align-items: center;
+}
+
+@media (min-width: 1080px) {
+  .header {
+    display: grid;
+      grid-template-columns: auto 1fr 1fr auto;
+
+    padding: 0 3rem;
+  }
+
+  /*Hamburguer Menu*/
+  .header__hamburguer {
+    display: none;
+  }
+
+  /*Menu*/
+  .header__menu {
+    display: flex;
+      gap: 1.6rem;
+
+    font-size: var(--fl);
+
+    padding-left: 4rem;
+  }
+
+  /*Menu Option*/
+  .header__option {
+    padding: .4rem 1.2rem;
+
+    border-radius: 1rem;
+    list-style: none;
+  }
+
+  /*Menu Link*/
+  .header__link {
+    color: var(--very-light-pink);
+    text-decoration: none;
+
+    transition: .15s;
+  }
+
+  .header__link:hover {
+    color: var(--light-golden-hover);
+  }
+
+  .header__link:active {
+    color: var(--light-golden);
+  }
+
+  /*Sign In and Account*/
+  .header__sign-in, .header__account {
+    display: block;
+    text-align: end;
+
+    font-size: var(--fs);
+
+    padding-right: 2rem;
+  }
+
+  /*Account*/
+  .account {
+    position: relative;
+  }
+
+  /*Account Link*/
+  .account__link {
+    display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: .8rem;
+  }
+
+  /*Account Email*/
+  .account__email {
+    font-size: var(--fs);
+    font-weight: 300;
+
+    color: var(--white);
+  }
+
+  /*Account Arrow*/
+  .account__arrow {
+    width: .8rem;
+    margin-top: .2rem;
+  }
+  
+  /*Account Menu*/
+  .account__menu {
+    position: absolute;
+      top: 8vh;
+      right: 1.6rem;
+
+    width: 18.5rem;
+    height: auto;
+    padding: 3.5rem 3rem 0;
+    border: .1rem solid var(--very-light-pink);
+
+    background-color: var(--background);
+    border-radius: 1rem;
+  }
+
+  /*Account List*/
+  .account__list {
+    list-style: none;
+  }
+
+  /*Account Option*/
+  .account__option {
+    text-align: end;
+
+    font-size: var(--fl);
+
+    margin-bottom: 3.5rem;
+  }
+
+  /*Account Option Sign-Out Option*/
+  .account__option:last-child {
+    padding-top: 3rem;
+    border-top: .1rem solid var(--very-light-pink);
+  }
+
+  /*Account Link*/
+  .account__link {
+    text-decoration: none;
+
+    color: var(--white);
+  }
+
+  .account__option:hover .account__link {
+    color: var(--light-golden-hover);
+  }
+
+  .account__option:last-child .account__link {
+    color: var(--light-golden);
+  }
+
+  /*Sign In Text*/
+  .header__sign-in--color-golden {
+    color: var(--light-golden);
+
+    transition: .15s;
+  }
+
+  .header__sign-in--color-golden:hover {
+    color: var(--light-golden-hover);
+  }
+
+  /*Shopping Cart*/
+  .header__shopping-cart {
+    width: 5rem;
+  }
+}

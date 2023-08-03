@@ -1,0 +1,71 @@
+body {
+  padding-top: 8vh; /*Creating space for the header*/
+}
+
+.header {
+  position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  height: 8vh;
+  padding: 0 .6rem;
+  border-bottom: .3rem solid var(--dark-golden);
+
+  background-color: var(--background);
+}
+
+/*Hamburguer Menu, Logo, My Orders, and Shopping Cart*/
+.header__hamburguer, .header__logo, .header__orders, .header__shopping-cart {
+  display: flex;
+    align-items: center;
+
+  font-size: var(--fm);
+  
+  color: var(--white);
+}
+
+/*Menu and Sign In*/
+.header__menu, .header__sign-in {
+  display: none;
+}
+
+/*Hamburguer Menu*/
+.header__hamburguer, .header__shopping-cart {
+  display: flex;
+    justify-content: center;
+
+  width: 5.2rem;
+  height: 5.2rem;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+  transition: .15s;
+}
+
+.header__hamburguer:active, .header__shopping-cart:active {
+  background-color: var(--dark-golden);
+}
+
+.header__hamburguer img {
+  height: 2.8vh;
+}
+
+.header__logo img {
+  height: 6vh;
+}
+
+.header__shopping-cart img {
+  height: 3.6vh;
+}
+
+/*Shopping Cart Link*/
+.header__shopping-cart a {
+  display: flex;
+    align-items: center;
+}

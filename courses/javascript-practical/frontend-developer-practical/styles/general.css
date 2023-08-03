@@ -1,0 +1,52 @@
+:root {
+  --background: rgb(12, 12, 12);
+  --red-error: #dd5a5a;
+  --very-light-pink: #A7A7A7;
+  --text-input-field: #292823;
+  --dark-golden: #242321;
+  --light-golden: #D6B17A;
+  --light-golden-hover: #d8bd94;
+  --white: #FFF;
+  --black: #000;
+  --fxs: 1.2rem;
+  --fs: 1.4rem;
+  --fm: 1.6rem;
+  --fl: 1.8rem;
+  --fxl: 2rem;
+  --fxxl: 2.8rem;
+  --card-width-s: 16rem;
+  --card-width-m: 20rem;
+  --card-width-l: 24rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Quicksand';
+  background-color: var(--background);
+}
+
+::-webkit-scrollbar {
+  width: .8rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--dark-golden);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--light-golden);
+  border-radius: .8rem;
+}
+
+input {
+  font-family: 'Quicksand';
+}
