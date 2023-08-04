@@ -1,0 +1,25 @@
+.products-container {
+    gap: 32px;
+
+  // Sort By
+  .sort-by {
+    font-size: $font-m;
+
+    svg {
+      width: 12px;
+      height: 12px;
+      padding-top: 2px;
+    }
+  }
+
+  @import './home-cards-container';
+
+  // See More Button
+  .see-more {
+    font-size: $font-xxl;
+
+    padding: 10px 20px;
+
+    border-radius: $border-radius-m;
+  }
+}

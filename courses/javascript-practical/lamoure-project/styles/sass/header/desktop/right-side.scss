@@ -1,0 +1,48 @@
+.right-side {
+  // Account Container
+  &__account {
+    position: relative;
+    display: flex;
+      align-items: center;
+      gap: 6px;
+
+    font-size: $font-s;
+    text-align: end;
+
+    margin-right: 20px;
+
+    color: $color-white;
+
+    cursor: pointer;
+    transition: $transition-normal;
+
+    &:hover {
+      color: $color-light-golden;
+    }
+
+    &:active {
+      color: $color-light-gray;
+    }
+  }
+
+  // Shopping Cart 
+  &__shopping-cart {
+    display: flex;
+
+    width: 48px;
+    height: 48px;
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    &:hover {
+      background-color: $color-dark-golden;
+    }
+
+    &:active {
+      background-color: $color-light-gray;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.cards {
+    justify-content: space-between;
+  
+  padding: 0 12px;
+
+  // Card Image
+  &__product-image {
+    transition: $transition-slow;
+    
+    &:hover {
+      box-shadow: 1px 1px 10px $color-light-golden;
+
+      transform: scale(1.05);
+    }
+  }
+
+  // Card Tooltip
+  &__tooltip {
+    position: absolute;
+      top: -48px;
+      left: -28px;
+      z-index: 2;
+    display: flex;
+
+    font-size: $font-s;
+
+    padding: 12px;
+    border: none;
+
+    background-color: $color-dark-golden;
+    color: $color-light-golden;
+    border-radius: $border-radius-s;
+
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: $transition-slow;
+  }
+
+  // Card Shopping Cart
+  &__product-add-to-cart, &__product-added-to-cart {
+    position: relative;
+
+    &:hover .cards__tooltip {
+      opacity: .9;
+    }
+  }
+}

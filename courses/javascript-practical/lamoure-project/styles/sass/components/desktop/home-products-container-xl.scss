@@ -1,0 +1,15 @@
+.products-container {
+    gap: 28px;
+
+  // Sort by
+  .sort-by {
+    font-size: $font-l;
+  }
+
+  // Cards Container
+  .cards {
+      gap: 32px;
+    
+    padding: 0;
+  }
+}

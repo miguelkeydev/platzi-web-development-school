@@ -1,0 +1,42 @@
+.left-side {
+  height: 60%;
+
+  // Hamburger Menu
+  &__hamburger {
+    display: none;
+  }
+
+  // Menu
+  &__menu {
+    display: flex;
+      gap: 12px;
+
+    font-size: $font-l;
+
+    height: 100%;
+    padding-left: 40px;
+  }
+
+  // Menu option
+  &__option {
+    display: flex;
+      align-items: center;
+
+    height: 100%;
+    padding: 0 10px;
+    
+    color: $color-light-gray;
+    list-style: none;
+
+    cursor: pointer;
+    transition: $transition-normal;
+
+    &:hover {
+      color: $color-very-light-golden;
+    }
+
+    &:active {
+      color: $color-light-golden;
+    }
+  }
+}
