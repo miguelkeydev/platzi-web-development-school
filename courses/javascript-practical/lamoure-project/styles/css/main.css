@@ -27,6 +27,18 @@ input, button {
   font-family: "Quicksand";
 }
 
+li {
+  list-style: none;
+}
+
+.white {
+  fill: white;
+}
+
+.light-golden {
+  fill: #d6b17a;
+}
+
 main {
   display: grid;
   grid-template-rows: repeat(2, auto);
@@ -85,7 +97,7 @@ main .search-product__filter {
   padding: 6px 12px;
   border: none;
   background-color: transparent;
-  color: #a7a7a7;
+  color: #7a6f6f;
   border-radius: 12px;
 }
 main .search-product__filter:active {
@@ -113,7 +125,7 @@ main .products-container .sort-by {
   color: white;
 }
 main .products-container .sort-by__option {
-  color: #a7a7a7;
+  color: #7a6f6f;
 }
 main .products-container .cards {
   display: grid;
@@ -147,7 +159,7 @@ main .products-container .cards__product-price {
 }
 main .products-container .cards__product-name {
   font-size: 14px;
-  color: #a7a7a7;
+  color: #7a6f6f;
 }
 main .products-container .cards__product-add-to-cart, main .products-container .cards__product-added-to-cart {
   display: flex;

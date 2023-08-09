@@ -27,6 +27,18 @@ input, button {
   font-family: "Quicksand";
 }
 
+li {
+  list-style: none;
+}
+
+.white {
+  fill: white;
+}
+
+.light-golden {
+  fill: #d6b17a;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -54,7 +66,51 @@ header .left-side__hamburger, header .right-side__shopping-cart {
 header .left-side__hamburger:active, header .right-side__shopping-cart:active {
   background-color: #242321;
 }
-header .left-side__menu {
+header .left-side .mobile-menu {
+  position: absolute;
+  top: 8vh;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6vh 10vw;
+  height: 92vh;
+  background-color: rgb(12, 12, 12);
+}
+header .left-side .mobile-menu ul {
+  display: grid;
+  gap: 5vh;
+}
+header .left-side .mobile-menu li {
+  font-size: 16px;
+  font-weight: bold;
+  width: fit-content;
+  color: white;
+}
+header .left-side .mobile-menu li:active {
+  color: #d6b17a;
+}
+header .left-side .mobile-menu li:first-child:active {
+  color: white;
+}
+header .left-side .mobile-menu__account {
+  padding-top: 7vh;
+  border-top: 1px solid #242321;
+}
+header .left-side .mobile-menu__info {
+  display: grid;
+  gap: 10px;
+  font-size: 14px;
+  color: #7a6f6f;
+}
+header .left-side .mobile-menu__info--golden {
+  color: #d6b17a;
+}
+header .left-side .mobile-menu--inactive {
+  display: none;
+}
+header .left-side__desktop-menu {
   display: none;
 }
 header .logo {
@@ -71,6 +127,9 @@ header .right-side {
   justify-content: end;
 }
 header .right-side__account {
+  display: none;
+}
+header .right-side__account-menu {
   display: none;
 }
 
@@ -114,34 +173,36 @@ header .right-side__account {
   header .left-side__hamburger, header .right-side__shopping-cart {
     display: none;
   }
-  header .left-side__menu {
+  header .left-side .mobile-menu {
+    display: none;
+  }
+  header .left-side .desktop-menu {
     display: flex;
     gap: 12px;
     font-size: 18px;
     height: 100%;
     padding-left: 40px;
   }
-  header .left-side__option {
+  header .left-side .desktop-menu__option {
     display: flex;
     align-items: center;
     height: 100%;
     padding: 0 10px;
-    color: #a7a7a7;
+    color: #7a6f6f;
     list-style: none;
     cursor: pointer;
     transition: 0.15s;
   }
-  header .left-side__option:hover {
+  header .left-side .desktop-menu__option:hover {
     color: #d8bd94;
   }
-  header .left-side__option:active {
+  header .left-side .desktop-menu__option:active {
     color: #d6b17a;
   }
   header .right-side__account {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 6px;
     font-size: 14px;
     text-align: end;
     margin-right: 20px;
@@ -153,7 +214,52 @@ header .right-side__account {
     color: #d6b17a;
   }
   header .right-side__account:active {
-    color: #a7a7a7;
+    color: #7a6f6f;
+  }
+  header .right-side__account .right-side__email {
+    padding-right: 6px;
+  }
+  header .right-side__account-menu {
+    display: block;
+    position: absolute;
+    top: 9.9vh;
+    right: 100px;
+    width: 200px;
+    height: auto;
+    padding: 28px 30px 0;
+    border: 1px solid #7a6f6f;
+    background-color: rgb(12, 12, 12);
+    border-radius: 12px;
+  }
+  header .right-side__account-menu li {
+    font-size: 18px;
+    text-align: end;
+    padding: 8px 0;
+    margin-bottom: 20px;
+    color: white;
+    cursor: pointer;
+    transition: 0.15s;
+  }
+  header .right-side__account-menu li:last-child {
+    padding-top: 30px;
+    margin-bottom: 28px;
+    border-top: 1px solid #7a6f6f;
+    color: #d6b17a;
+  }
+  header .right-side__account-menu li:last-child:hover {
+    color: white;
+  }
+  header .right-side__account-menu li:last-child:active {
+    color: #242321;
+  }
+  header .right-side__account-menu li:hover {
+    color: #d6b17a;
+  }
+  header .right-side__account-menu li:active {
+    color: #242321;
+  }
+  header .right-side__account-menu--inactive {
+    display: none;
   }
   header .right-side__shopping-cart {
     display: flex;
@@ -168,7 +274,7 @@ header .right-side__account {
     background-color: #242321;
   }
   header .right-side__shopping-cart:active {
-    background-color: #a7a7a7;
+    background-color: #7a6f6f;
   }
 }
 @media (min-width: 1536px) {

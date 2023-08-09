@@ -4,7 +4,6 @@
     position: relative;
     display: flex;
       align-items: center;
-      gap: 6px;
 
     font-size: $font-s;
     text-align: end;
@@ -23,7 +22,14 @@
     &:active {
       color: $color-light-gray;
     }
+
+    .right-side__email {
+      padding-right: 6px;
+    }
   }
+
+  // Account Menu
+  @import './account-menu';
 
   // Shopping Cart 
   &__shopping-cart {

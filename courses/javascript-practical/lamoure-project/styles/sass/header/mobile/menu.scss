@@ -1,0 +1,61 @@
+.mobile-menu {
+  position: absolute;
+    top: 8vh;
+    right: 0;
+    left: 0;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  padding: 6vh 10vw;
+
+  height: 92vh;
+
+  background-color: $color-background;
+
+  
+  ul {
+    display: grid;
+      gap: 5vh;
+  }
+
+  li {
+    font-size: $font-m;
+    font-weight: bold;
+
+    width: fit-content;
+
+    color: $color-white;
+
+    &:active {
+      color: $color-light-golden;
+    }
+
+    &:first-child:active {
+      color: $color-white;
+    }
+  }
+
+  // Account
+  &__account {
+    padding-top: 7vh;
+    border-top: 1px solid $color-dark-golden;
+  }
+
+  // Info
+  &__info {
+    display: grid;
+      gap: 10px;
+
+    font-size: $font-s;
+
+    color: $color-light-gray;
+
+    &--golden {
+      color: $color-light-golden;
+    }
+  }
+
+  &--inactive {
+    display: none;
+  }
+}

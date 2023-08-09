@@ -16,6 +16,7 @@ main {
   @import './components/mobile/home-products-container';
 }
 
+// Tablet Screen
 @media (min-width: 678px) {
   body {
     padding-top: 12vh;
@@ -31,6 +32,7 @@ main {
   }
 }
 
+// Desktop Screen
 @media (min-width: 1024px) {
   body {
     padding-top: 10vh;
@@ -48,6 +50,7 @@ main {
   }
 }
 
+// Large Desktop Screen
 @media (min-width: 1536px) {
   main {
       gap: 32px;

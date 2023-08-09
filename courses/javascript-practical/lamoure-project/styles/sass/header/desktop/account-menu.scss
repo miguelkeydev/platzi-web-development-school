@@ -1,0 +1,56 @@
+&__account-menu {
+  display: block;
+  position: absolute;
+    top: 9.9vh;
+    right: 100px;
+
+  width: 200px;
+  height: auto;
+  padding: 28px 30px 0;
+  border: 1px solid $color-light-gray;
+
+  background-color: $color-background;
+  border-radius: $border-radius-m;
+
+  li {
+    font-size: $font-l;
+    text-align: end;
+
+    padding: 8px 0;
+    margin-bottom: 20px;
+
+    color: $color-white;
+
+    cursor: pointer;
+    transition: $transition-normal;
+
+    &:last-child {
+      padding-top: 30px;
+      margin-bottom: 28px;
+      border-top: 1px solid $color-light-gray;
+
+      color: $color-light-golden;
+
+      &:hover {
+        color: $color-white;
+      }
+
+      &:active {
+        color: $color-dark-golden;
+      }
+    }
+
+    &:hover {
+      color: $color-light-golden;
+    }
+
+    &:active {
+      color: $color-dark-golden;
+    }
+  }
+
+  // Inactive Modifier
+  &--inactive {
+    display: none;
+  }
+}

@@ -35,7 +35,11 @@ header {
       }
     }
 
-    &__menu {
+    // Mobile Menu
+    @import './header/mobile/menu';
+
+    // Desktop Menu
+    &__desktop-menu {
       display: none;
     }
   }
@@ -65,17 +69,25 @@ header {
     &__account {
       display: none;
     }
+
+    // Account Menu
+    &__account-menu {
+      display: none;
+    }
   }
 }
 
+// Tablet Screen
 @media (min-width: 678px) {
   @import './header/tablet/header-tablet';
 }
 
+// Desktop Screen
 @media (min-width: 1024px) {
   @import './header/desktop/header-desktop';
 }
 
+// Large Desktop Screen
 @media (min-width: 1536px) {
   @import './header/desktop/header-desktop-xl';
 }

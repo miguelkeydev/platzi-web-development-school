@@ -1,6 +1,6 @@
 $color-background: rgb(12, 12, 12);
 $color-error-red: #dd5a5a;
-$color-light-gray: #a7a7a7;
+$color-light-gray: #7a6f6f;
 $color-text-input-field: #292823;
 $color-dark-golden: #242321;
 $color-light-golden: #d6b17a;
@@ -57,4 +57,18 @@ body {
 
 input, button {
   font-family: 'Quicksand';
+}
+
+li {
+  list-style: none;
+}
+
+
+// Color Modifiers
+.white {
+  fill: $color-white;
+}
+
+.light-golden {
+  fill: $color-light-golden;
 }

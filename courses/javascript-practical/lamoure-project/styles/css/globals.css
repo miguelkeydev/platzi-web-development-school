@@ -27,4 +27,16 @@ input, button {
   font-family: "Quicksand";
 }
 
+li {
+  list-style: none;
+}
+
+.white {
+  fill: white;
+}
+
+.light-golden {
+  fill: #d6b17a;
+}
+
 /*# sourceMappingURL=globals.css.map */
