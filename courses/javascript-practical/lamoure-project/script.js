@@ -11,6 +11,7 @@ const accountArrow = document.querySelector('#account-arrow');
 const accountMenu = document.querySelector('.right-side__account-menu');
 
 const mainContainer = document.querySelector('main');
+const productDetailContainer = document.querySelector('.product-detail');
 
 const cardsContainer = document.querySelector('.cards');
 const productList = [];
@@ -125,6 +126,7 @@ accountEmail.addEventListener('click', toggleAccountMenu);
 
 // Closing any menus when clicking outside of it
 mainContainer.addEventListener('click', closeMenus);
+productDetailContainer.addEventListener('click', closeMenus);
 
 // Adding Products to productList
 productList.push({

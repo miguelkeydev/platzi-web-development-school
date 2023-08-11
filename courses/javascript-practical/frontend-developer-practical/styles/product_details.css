@@ -168,7 +168,9 @@
 
   /*Product Name*/
   .product-detail__name {
-    padding-top: .8rem;font-size: var(--fl);
+    padding-top: .8rem;
+    
+    font-size: var(--fl);
   }
   
   /*Product Description*/
