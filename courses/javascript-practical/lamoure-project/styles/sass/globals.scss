@@ -1,6 +1,6 @@
 $color-background: rgb(12, 12, 12);
 $color-error-red: #dd5a5a;
-$color-light-gray: #7a6f6f;
+$color-light-gray: #a7a7a7;
 $color-text-input-field: #292823;
 $color-dark-golden: #242321;
 $color-light-golden: #d6b17a;
@@ -71,4 +71,23 @@ li {
 
 .light-golden {
   fill: $color-light-golden;
+}
+
+// Primary Button
+.primary-button {
+  font-weight: bold;
+  
+  border: none;
+
+  background-color: $color-light-golden;
+  color: $color-black;
+  border-radius: $border-radius-m;
+
+  transition: $transition-normal;
+
+  &:active {
+    background-color: $color-very-light-golden;
+
+    transform: scale(.97);
+  }
 }

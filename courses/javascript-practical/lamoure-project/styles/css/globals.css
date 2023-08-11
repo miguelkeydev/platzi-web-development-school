@@ -39,4 +39,17 @@ li {
   fill: #d6b17a;
 }
 
+.primary-button {
+  font-weight: bold;
+  border: none;
+  background-color: #d6b17a;
+  color: black;
+  border-radius: 12px;
+  transition: 0.15s;
+}
+.primary-button:active {
+  background-color: #d8bd94;
+  transform: scale(0.97);
+}
+
 /*# sourceMappingURL=globals.css.map */

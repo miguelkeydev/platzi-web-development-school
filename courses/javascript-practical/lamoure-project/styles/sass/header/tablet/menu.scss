@@ -1,0 +1,14 @@
+.mobile-menu {
+    top: 12vh;
+  
+  height: 88vh;
+
+  li {
+    font-size: $font-xl;
+  }
+
+  // Info Container
+  &__info {
+    font-size: $font-l;
+  }
+}

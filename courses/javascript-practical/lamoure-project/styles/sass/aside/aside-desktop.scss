@@ -1,0 +1,69 @@
+.shopping-cart {
+    right: 4px;
+
+  width: 35vw;
+  max-width: 500px;
+  height: 80vh;
+  padding: 32px 0;
+
+  border-radius: $border-radius-l;
+  box-shadow: 0 0 4px $color-light-golden;
+
+  // Products Container
+  &__products-container {
+      gap: 12px;
+
+    width: 90%;
+  }
+
+  // Product
+  &__product {
+      gap: 12px;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-dark-golden;
+    }
+  }
+
+  // Product Name
+  &__product-name {
+    font-size: $font-m;
+  }
+
+  // Product Price
+  &__product-price {
+    font-size: $font-l;
+  }
+
+  // Info Container
+  &__info {
+    width: 90%;
+  }
+
+  // Total Container
+  &__total {
+    font-size: $font-l;
+
+    padding: 24px;
+  }
+
+  // Checkout Button
+  &__checkout-button {
+    font-size: $font-xl;
+    
+    height: 56px;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}

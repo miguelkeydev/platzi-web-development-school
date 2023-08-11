@@ -20,23 +20,7 @@
   }
 
   // Filters Option
-  &__filter {
-    border: 1px solid transparent;
-    
-    transition: $transition-normal;
-    
-    &:hover {
-      color: $color-light-golden;
-    }
-
-    &:active {
-      border: 1px solid $color-light-golden;
-      
-      background-color: transparent;
-    }
-
-    &--selected {
-      border: 1px solid $color-light-golden;
-    }
+  &__filters-container {
+    display: none;
   }
 }

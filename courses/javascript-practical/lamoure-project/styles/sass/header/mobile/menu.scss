@@ -26,13 +26,15 @@
 
     color: $color-white;
 
+    transition: $transition-normal;
+
     &:active {
       color: $color-light-golden;
     }
+  }
 
-    &:first-child:active {
-      color: $color-white;
-    }
+  .mobile-menu--no-color:active {
+    color: $color-white;
   }
 
   // Account
@@ -41,7 +43,7 @@
     border-top: 1px solid $color-dark-golden;
   }
 
-  // Info
+  // Info Container
   &__info {
     display: grid;
       gap: 10px;
@@ -58,4 +60,8 @@
   &--inactive {
     display: none;
   }
+}
+
+@media (min-width: 768px) {
+  @import '../tablet/menu';
 }

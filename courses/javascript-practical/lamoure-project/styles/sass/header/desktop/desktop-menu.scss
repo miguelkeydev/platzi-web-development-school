@@ -27,6 +27,8 @@
 
     &:active {
       color: $color-light-golden;
+
+      transform: scale(.95);
     }
   }
 }

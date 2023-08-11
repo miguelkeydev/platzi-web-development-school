@@ -39,12 +39,25 @@ li {
   fill: #d6b17a;
 }
 
+.primary-button {
+  font-weight: bold;
+  border: none;
+  background-color: #d6b17a;
+  color: black;
+  border-radius: 12px;
+  transition: 0.15s;
+}
+.primary-button:active {
+  background-color: #d8bd94;
+  transform: scale(0.97);
+}
+
 header {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  z-index: 5;
+  z-index: 1;
   display: grid;
   grid-template-columns: 30% 40% 30%;
   align-items: center;
@@ -87,11 +100,12 @@ header .left-side .mobile-menu li {
   font-weight: bold;
   width: fit-content;
   color: white;
+  transition: 0.15s;
 }
 header .left-side .mobile-menu li:active {
   color: #d6b17a;
 }
-header .left-side .mobile-menu li:first-child:active {
+header .left-side .mobile-menu .mobile-menu--no-color:active {
   color: white;
 }
 header .left-side .mobile-menu__account {
@@ -102,13 +116,25 @@ header .left-side .mobile-menu__info {
   display: grid;
   gap: 10px;
   font-size: 14px;
-  color: #7a6f6f;
+  color: #a7a7a7;
 }
 header .left-side .mobile-menu__info--golden {
   color: #d6b17a;
 }
 header .left-side .mobile-menu--inactive {
   display: none;
+}
+@media (min-width: 768px) {
+  header .left-side .mobile-menu {
+    top: 12vh;
+    height: 88vh;
+  }
+  header .left-side .mobile-menu li {
+    font-size: 20px;
+  }
+  header .left-side .mobile-menu__info {
+    font-size: 18px;
+  }
 }
 header .left-side__desktop-menu {
   display: none;
@@ -188,7 +214,7 @@ header .right-side__account-menu {
     align-items: center;
     height: 100%;
     padding: 0 10px;
-    color: #7a6f6f;
+    color: #a7a7a7;
     list-style: none;
     cursor: pointer;
     transition: 0.15s;
@@ -198,6 +224,7 @@ header .right-side__account-menu {
   }
   header .left-side .desktop-menu__option:active {
     color: #d6b17a;
+    transform: scale(0.95);
   }
   header .right-side__account {
     position: relative;
@@ -214,7 +241,7 @@ header .right-side__account-menu {
     color: #d6b17a;
   }
   header .right-side__account:active {
-    color: #7a6f6f;
+    color: #a7a7a7;
   }
   header .right-side__account .right-side__email {
     padding-right: 6px;
@@ -227,7 +254,7 @@ header .right-side__account-menu {
     width: 200px;
     height: auto;
     padding: 28px 30px 0;
-    border: 1px solid #7a6f6f;
+    border: 1px solid #a7a7a7;
     background-color: rgb(12, 12, 12);
     border-radius: 12px;
   }
@@ -243,7 +270,7 @@ header .right-side__account-menu {
   header .right-side__account-menu li:last-child {
     padding-top: 30px;
     margin-bottom: 28px;
-    border-top: 1px solid #7a6f6f;
+    border-top: 1px solid #a7a7a7;
     color: #d6b17a;
   }
   header .right-side__account-menu li:last-child:hover {
@@ -274,7 +301,7 @@ header .right-side__account-menu {
     background-color: #242321;
   }
   header .right-side__shopping-cart:active {
-    background-color: #7a6f6f;
+    background-color: #a7a7a7;
   }
 }
 @media (min-width: 1536px) {
