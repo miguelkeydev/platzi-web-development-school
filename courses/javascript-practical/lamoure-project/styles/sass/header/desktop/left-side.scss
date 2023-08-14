@@ -1,0 +1,16 @@
+.left-side {
+  height: 60%;
+
+  // Hamburger Menu
+  &__hamburger {
+    display: none;
+  }
+
+  // Mobile Menu
+  .mobile-menu {
+    display: none;
+  }
+
+  // Desktop Menu
+  @import './desktop-menu';
+}

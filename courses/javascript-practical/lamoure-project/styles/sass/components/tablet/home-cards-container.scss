@@ -1,0 +1,37 @@
+.cards {
+    grid-template-columns: repeat(auto-fill, minmax(140px, $size-card-m));
+    gap: 32px 20px;
+
+  // Product Image
+  &__product-image {
+    height: $size-card-m;
+  }
+
+  &__product-info {
+    padding-top: 10px;
+  }
+
+  // Product Price
+  &__product-price {
+    font-size: $font-xl;
+  }
+
+  // Product Name
+  &__product-name {
+    font-size: $font-l;
+  }
+
+  // Product Shopping Cart
+  &__product-add-to-cart {
+    svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  &__product-added-to-cart {
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

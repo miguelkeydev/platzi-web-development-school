@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand";
+  padding-top: 8vh;
+  background-color: rgb(12, 12, 12);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(12, 12, 12);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6b17a;
+  border-radius: 8px;
+}
+
+input, button {
+  font-family: "Quicksand";
+}
+
+li {
+  list-style: none;
+}
+
+.white {
+  fill: white;
+}
+
+.light-golden {
+  fill: #d6b17a;
+}
+
+.primary-button {
+  font-weight: bold;
+  border: none;
+  background-color: #d6b17a;
+  color: black;
+  border-radius: 12px;
+  transition: 0.15s;
+}
+.primary-button:active {
+  background-color: #d8bd94;
+  transform: scale(0.97);
+}
+
+/*# sourceMappingURL=globals.css.map */

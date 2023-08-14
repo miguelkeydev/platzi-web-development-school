@@ -1,0 +1,93 @@
+@import './globals';
+
+header {
+  position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+  display: grid;
+    grid-template-columns: 30% 40% 30%;
+    align-items: center;
+    justify-content: space-between;
+
+  height: 8vh;
+  padding: 0 8px;
+  border-bottom: 3px solid $color-dark-golden;
+
+  background-color: $color-background;
+
+  .left-side {
+    &__hamburger {
+      display: flex;
+        align-items: center;
+        justify-content: center;
+
+      width: 50px;
+      height: 50px;
+
+      border-radius: $border-radius-round;
+
+      transition: $transition-normal;
+
+      &:active {
+        background-color: $color-dark-golden;
+      }
+    }
+
+    // Mobile Menu
+    @import './header/mobile/menu';
+
+    // Desktop Menu
+    &__desktop-menu {
+      display: none;
+    }
+  }
+
+  .logo {
+    display: flex;
+      align-items: center;
+      justify-content: center;
+    
+    height: 6vh;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .right-side {
+    display: flex;
+      justify-content: end;
+
+    // Shopping Cart
+    &__shopping-cart {
+      @extend .left-side__hamburger;
+    }
+
+    // Account Container
+    &__account {
+      display: none;
+    }
+
+    // Account Menu
+    &__account-menu {
+      display: none;
+    }
+  }
+}
+
+// Tablet Screen
+@media (min-width: 678px) {
+  @import './header/tablet/header-tablet';
+}
+
+// Desktop Screen
+@media (min-width: 1024px) {
+  @import './header/desktop/header-desktop';
+}
+
+// Large Desktop Screen
+@media (min-width: 1536px) {
+  @import './header/desktop/header-desktop-xl';
+}

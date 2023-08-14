@@ -1,0 +1,66 @@
+@import './globals';
+@import './asides/shopping-cart/aside-shopping-cart';
+@import './asides/product-details/aside-product-details';
+
+main {
+  display: grid;
+    grid-template-rows: repeat(2, auto);
+    place-items: center;
+
+    width: 100vw;
+    height: 92vh;
+    padding-bottom: 24px;
+
+    overflow-x: hidden;
+
+  @import './components/mobile/home-search-product';
+  
+  @import './components/mobile/home-products-container';
+}
+
+// Tablet Screen
+@media (min-width: 678px) {
+  body {
+    padding-top: 12vh;
+  }
+
+  main {
+    height: 88vh;
+    padding-top: 40px;
+    
+    @import './components/tablet/home-search-product';
+
+    @import './components/tablet/home-products-container';
+  }
+}
+
+// Desktop Screen
+@media (min-width: 1024px) {
+  body {
+    padding-top: 10vh;
+  }
+  
+  main {
+      gap: 20px;
+    
+    height: 90vh;
+    padding: 20px 40px;
+
+    @import './components/desktop/home-search-product';
+    
+    @import './components/desktop/home-products-container';
+  }
+}
+
+// Large Desktop Screen
+@media (min-width: 1536px) {
+  main {
+      gap: 32px;
+
+    padding: 28px 8%;
+
+    @import './components/desktop/home-search-product-xl';
+
+    @import './components/desktop/home-products-container-xl';
+  }
+}

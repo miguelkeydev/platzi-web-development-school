@@ -1,0 +1,84 @@
+.product-detail {
+    grid-template-rows: none;
+    grid-template-columns: auto 1fr;
+
+  height: 90vh;
+  padding: 80px;
+
+  // Product Container
+  &__product {
+    width: fit-content;
+    height: 60vh;
+  }
+
+  // Product Image
+  &__fig {
+    height: 100%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  // Product Close
+  &__close {
+      top: 32px;
+      right: 32px;
+
+    width: 56px;
+    height: 56px;
+
+    cursor: pointer;
+  }
+
+  // Carousel
+  &__carousel {
+    font-size: 48px;
+  }
+
+  // Details Container
+  &__details-container {
+      justify-self: end;
+    
+    width: 85%;
+    height: 90%;
+  }
+
+  // Price
+  &__price {
+    font-size: $font-xxxxl;
+  }
+
+  // Name
+  &__name {
+    font-size: $font-xxxl;
+  }
+
+  // Description
+  &__description {
+    font-size: $font-xxl;
+  }
+
+  // Add to Cart Button
+  &__add-to-cart {
+    height: 10vh;
+    margin-top: 5vh;
+    
+    button {
+        gap: 20px;
+
+      font-size: $font-xxxl;
+
+      cursor: pointer;
+
+      &:hover {
+        opacity: .85;
+      }
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

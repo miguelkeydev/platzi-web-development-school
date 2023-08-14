@@ -1,0 +1,16 @@
+.products-container {
+    gap: 20px;
+
+  // Sort By
+  .sort-by__option {
+    cursor: pointer;
+  }
+
+  // Cards Container
+  @import './home-cards-container';
+  
+  // See More
+  .see-more:hover {
+    opacity: .75;
+  }
+}

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Adding Quicksand Font Family-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <!--Adding Styles-->
+  <link rel="stylesheet" href="./styles/css/globals.css">
+  <link rel="stylesheet" href="./styles/css/header.css">
+  <link rel="stylesheet" href="./styles/css/main.css">
+  <!--Adding Icon to Title-->
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dziyyutwr/image/upload/v1692050084/Lamoure/logo-icon_bekhgf.png">
+  <title>Lamoure Store - Jewelry and Accessories</title>
+</head>
+<body>
+  <!--Header-->
+  <header>
+    <!-- Left Side -->
+    <div class="left-side">
+      <!-- Hamburguer Menu -->
+      <figure class="left-side__hamburger">
+        <!-- Icon -->
+        <svg idth="28" height="24" viewBox="0 0 25 21" fill="none">
+          <path id="hamburger-menu" class="white" d="M1 0.730769C0.447715 0.730769 0 1.17848 0 1.73077C0 2.28305 0.447715 2.73077 1 2.73077V0.730769ZM24 2.73077C24.5523 2.73077 25 2.28305 25 1.73077C25 1.17848 24.5523 0.730769 24 0.730769V2.73077ZM1 9.5C0.447715 9.5 0 9.94772 0 10.5C0 11.0523 0.447715 11.5 1 11.5V9.5ZM12.5 11.5C13.0523 11.5 13.5 11.0523 13.5 10.5C13.5 9.94772 13.0523 9.5 12.5 9.5V11.5ZM1 18.2692C0.447715 18.2692 0 18.7169 0 19.2692C0 19.8215 0.447715 20.2692 1 20.2692V18.2692ZM24 20.2692C24.5523 20.2692 25 19.8215 25 19.2692C25 18.7169 24.5523 18.2692 24 18.2692V20.2692ZM1 2.73077H24V0.730769H1V2.73077ZM1 11.5H12.5V9.5H1V11.5ZM1 20.2692H24V18.2692H1V20.2692Z"/>
+        </svg>
+      </figure>
+      <!-- Mobile Menu -->
+      <div class="left-side__mobile-menu mobile-menu mobile-menu--inactive">
+        <!--Product Options-->
+        <ul>
+          <!--Categories-->
+          <li class="mobile-menu--no-color">
+              CATEGORIES
+          </li>
+          <!--All-->
+          <li>
+            All
+          </li>
+          <!--Bracelets-->
+          <li>
+            Bracelets
+          </li>
+          <!--Necklaces-->
+          <li>
+            Necklaces
+          </li>
+          <!--Rings-->
+          <li>
+            Rings
+          </li>
+          <!--Quartzes-->
+          <li>
+            Quartzes
+          </li>
+          <!--Others-->
+          <li>
+            Others
+          </li>
+        </ul>
+        <!--My Account Options-->
+        <ul class="mobile-menu__account">
+          <!--My orders-->
+          <li>
+            My orders
+          </li>
+          <!--My account-->
+          <li>
+            My account
+          </li>
+        </ul>
+        <!--My Account Info-->
+        <div class="mobile-menu__info">
+          <p>camilaramos@gmail.com</p>
+          <p class="mobile-menu__info--golden">Sign Out</p>
+        </div>
+      </div>
+      <!-- Desktop Menu-->
+      <ul class="left-side__desktop-menu desktop-menu">
+        <!-- All Option -->
+        <li class="desktop-menu__option">
+          All
+        </li>
+        <!-- Bracelets Option -->
+        <li class="desktop-menu__option">
+          Bracelets
+        </li>
+        <!-- Necklaces Option -->
+        <li class="desktop-menu__option">
+          Necklaces
+        </li>
+        <!-- Rings Option -->
+        <li class="desktop-menu__option">
+          Rings
+        </li>
+        <!-- Quartzes Option -->
+        <li class="desktop-menu__option">
+          Quartzes
+        </li>
+        <!-- Others Option -->
+        <li class="desktop-menu__option">
+          Others
+        </li>
+      </ul>
+    </div>
+    <!-- Logo/Middle Side -->
+    <figure class="logo">
+      <img
+        src="https://res.cloudinary.com/dziyyutwr/image/upload/v1692050084/Lamoure/logo-icon_bekhgf.png"
+        alt="Lamoure Logo Icon"
+      >
+    </figure>
+    <!-- Right Side -->
+    <div class="right-side">
+      <!--Account-->
+      <div class="right-side__account">
+        <!-- Email Address -->
+        <span class="right-side__email">
+          camilaramos@gmail.com
+        </span>
+        <!-- Arrow Icon -->
+        <svg width="10" height="10" viewBox="0 0 256 256">
+          <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+            <path id="account-arrow" class="white" d="M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10;  fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          </g>
+        </svg>
+      </div>
+      <!--Account Menu-->
+      <div class="right-side__account-menu right-side__account-menu--inactive">
+        <ul>
+          <li>
+            My orders
+          </li>
+          <li>
+            My account
+          </li>
+          <li>
+            Sign out
+          </li>
+        </ul>
+      </div>
+      <!--Shopping Cart-->
+      <figure class="right-side__shopping-cart">
+        <!-- Icon -->
+        <svg id="shopping-cart" width="36" height="32" viewBox="0 0 30 27" fill="none">
+          <path id="shopping-cart-icon" d="M4 2C3.44772 2 3 2.44772 3 3C3 3.55228 3.44772 4 4 4V2ZM6.22222 3L7.2026 2.80288C7.10872 2.33593 6.69852 2 6.22222 2V3ZM5.68629 5.40762C5.79515 5.94907 6.32233 6.29975 6.86378 6.19089C7.40523 6.08202 7.75591 5.55484 7.64705 5.01339L5.68629 5.40762ZM8.44444 13.0525C7.89216 13.0525 7.44444 13.5002 7.44444 14.0525C7.44444 14.6048 7.89216 15.0525 8.44444 15.0525V13.0525ZM19.5556 14.0525V15.0525C19.9336 15.0525 20.2793 14.8394 20.449 14.5016L19.5556 14.0525ZM24 5.21051L24.8935 5.65961C25.0493 5.34962 25.0333 4.98101 24.8512 4.68568C24.6691 4.39035 24.347 4.21051 24 4.21051V5.21051ZM6.66667 4.21051C6.11438 4.21051 5.66667 4.65822 5.66667 5.21051C5.66667 5.76279 6.11438 6.21051 6.66667 6.21051V4.21051ZM7.46406 14.2496C7.57293 14.7911 8.10011 15.1418 8.64156 15.0329C9.18301 14.924 9.53369 14.3969 9.42482 13.8554L7.46406 14.2496ZM7.64705 5.01339C7.53818 4.47194 7.011 4.12126 6.46955 4.23012C5.9281 4.33899 5.57742 4.86617 5.68629 5.40762L7.64705 5.01339ZM9.14968 14.7615C9.54123 14.372 9.54291 13.7388 9.15342 13.3473C8.76393 12.9557 8.13076 12.9541 7.73921 13.3436L9.14968 14.7615ZM5.89667 16.5869L5.19143 15.8779L5.89667 16.5869ZM19.5556 19.4735C20.1078 19.4735 20.5556 19.0258 20.5556 18.4735C20.5556 17.9213 20.1078 17.4735 19.5556 17.4735V19.4735ZM19.5556 18.4735H18.5556C18.5556 18.7397 18.6616 18.9948 18.8503 19.1825L19.5556 18.4735ZM21.7778 20.684L21.0725 21.393C21.2599 21.5794 21.5135 21.684 21.7778 21.684V20.684ZM10.6667 20.684L9.80179 20.1821C9.71328 20.3345 9.66667 20.5077 9.66667 20.684H10.6667ZM10.6667 22.8945H9.66667C9.66667 23.0709 9.71328 23.244 9.80179 23.3965L10.6667 22.8945ZM4 4H6.22222V2H4V4ZM5.24184 3.19712L5.68629 5.40762L7.64705 5.01339L7.2026 2.80288L5.24184 3.19712ZM8.44444 15.0525H19.5556V13.0525H8.44444V15.0525ZM20.449 14.5016L24.8935 5.65961L23.1065 4.7614L18.6621 13.6034L20.449 14.5016ZM24 4.21051H6.66667V6.21051H24V4.21051ZM9.42482 13.8554L7.64705 5.01339L5.68629 5.40762L7.46406 14.2496L9.42482 13.8554ZM7.73921 13.3436L5.19143 15.8779L6.6019 17.2958L9.14968 14.7615L7.73921 13.3436ZM5.19143 15.8779C3.85112 17.2111 4.81103 19.4735 6.68222 19.4735V17.4735C6.64208 17.4735 6.62553 17.4635 6.61734 17.4578C6.60473 17.4489 6.58938 17.4322 6.57888 17.407C6.56837 17.3817 6.56775 17.3602 6.57003 17.3471C6.57136 17.3395 6.57483 17.3228 6.6019 17.2958L5.19143 15.8779ZM6.68222 19.4735H19.5556V17.4735H6.68222V19.4735ZM20.5556 18.4735C20.5556 17.81 21.0978 17.263 21.7778 17.263V15.263C20.0032 15.263 18.5556 16.6954 18.5556 18.4735H20.5556ZM21.7778 17.263C22.4578 17.263 23 17.81 23 18.4735H25C25 16.6954 23.5524 15.263 21.7778 15.263V17.263ZM23 18.4735C23 19.1371 22.4578 19.684 21.7778 19.684V21.684C23.5524 21.684 25 20.2516 25 18.4735H23ZM22.483 19.9751L20.2608 17.7646L18.8503 19.1825L21.0725 21.393L22.483 19.9751ZM11.5315 21.186C11.8068 20.7119 12.3711 20.4771 12.9088 20.6204L13.4239 18.6878C12.0185 18.3133 10.5324 18.9233 9.80179 20.1821L11.5315 21.186ZM12.9088 20.6204C13.4456 20.7635 13.8134 21.2451 13.8134 21.7893H15.8134C15.8134 20.3325 14.8301 19.0627 13.4239 18.6878L12.9088 20.6204ZM13.8134 21.7893C13.8134 22.3335 13.4456 22.8151 12.9088 22.9582L13.4239 24.8907C14.8301 24.5159 15.8134 23.2461 15.8134 21.7893H13.8134ZM12.9088 22.9582C12.3711 23.1015 11.8068 22.8667 11.5315 22.3926L9.80179 23.3965C10.5324 24.6553 12.0185 25.2653 13.4239 24.8907L12.9088 22.9582ZM11.6667 22.8945V20.684H9.66667V22.8945H11.6667Z" fill="white"/>
+          <circle cx="23.5" cy="5" r="5" fill="#d6aa69"/>
+        </svg>
+      </figure>
+    </div>
+  </header>
+  <!-- Shopping Cart Aside -->
+  <aside class="shopping-cart shopping-cart--inactive">
+    <!-- Products Container -->
+    <div class="shopping-cart__products-container">
+      <!-- Product - Yellow Quartz Necklace -->
+      <div class="shopping-cart__product">
+        <!-- Product Image-->
+        <figure class="shopping-cart__product-img">
+          <img
+            class="product__img"
+            src="https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_necklace3_fotydm.jpg"
+            alt="Yellow Quartz Necklace"
+          >
+        </figure>
+        <!-- Product Name-->
+        <span class="shopping-cart__product-name">
+          Yellow Quartz Necklace
+        </span>
+        <!-- Product Price-->
+        <span class="shopping-cart__product-price">
+          COP 25.000
+        </span>
+        <!-- Product Removed-->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#a7a7a7"/>
+        </svg>
+      </div>
+      <!-- Product - Silver Earrings -->
+      <div class="shopping-cart__product">
+        <!-- Product Image-->
+        <figure class="shopping-cart__product-img">
+          <img
+            class="product__img"
+            src="https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_earrings4_eybpce.jpg"
+            alt="Silver Earrings"
+          >
+        </figure>
+        <!-- Product Name-->
+        <span class="shopping-cart__product-name">
+          Silver Earrings
+        </span>
+        <!-- Product Price-->
+        <span class="shopping-cart__product-price">
+          COP 15.000
+        </span>
+        <!-- Product Removed-->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#a7a7a7"/>
+        </svg>
+      </div>
+      <!-- Product - Sky Blue Quartz Ring -->
+      <div class="shopping-cart__product">
+        <!-- Product Image-->
+        <figure class="shopping-cart__product-img">
+          <img
+            class="product__img"
+            src="https://res.cloudinary.com/dziyyutwr/image/upload/v1692051114/Lamoure/product_ring2_drnvzu.png"
+            alt="Sky Blue Quartz Ring"
+          >
+        </figure>
+        <!-- Product Name-->
+        <span class="shopping-cart__product-name">
+          Sky Blue Quartz Ring
+        </span>
+        <!-- Product Price-->
+        <span class="shopping-cart__product-price">
+          COP 10.000
+        </span>
+        <!-- Product Removed-->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#a7a7a7"/>
+        </svg>
+      </div>
+      <!-- Product - Cyan Earrings -->
+      <div class="shopping-cart__product">
+        <!-- Product Image-->
+        <figure class="shopping-cart__product-img">
+          <img
+            class="product__img"
+            src="https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_earrings7_tqrxc2.jpg"
+            alt="Cyan Earrings"
+          >
+        </figure>
+        <!-- Product Name-->
+        <span class="shopping-cart__product-name">
+          Cyan Earrings
+        </span>
+        <!-- Product Price-->
+        <span class="shopping-cart__product-price">
+          COP 15.000
+        </span>
+        <!-- Product Removed-->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#a7a7a7"/>
+        </svg>
+      </div>
+      <!-- Product - Golden Tree Necklace -->
+      <div class="shopping-cart__product">
+        <!-- Product Image-->
+        <figure class="shopping-cart__product-img">
+          <img
+            class="product__img"
+            src="https://res.cloudinary.com/dziyyutwr/image/upload/v1692051113/Lamoure/product_necklace5_ybmr2x.png"
+            alt="Golden Tree Necklace"
+          >
+        </figure>
+        <!-- Product Name-->
+        <span class="shopping-cart__product-name">
+         Golden Tree Necklace
+        </span>
+        <!-- Product Price-->
+        <span class="shopping-cart__product-price">
+          COP 25.000
+        </span>
+        <!-- Product Removed-->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#a7a7a7"/>
+        </svg>
+      </div>
+      <!-- Product - Pink Necklace -->
+      <div class="shopping-cart__product">
+        <!-- Product Image-->
+        <figure class="shopping-cart__product-img">
+          <img
+            class="product__img"
+            src="https://res.cloudinary.com/dziyyutwr/image/upload/v1692051113/Lamoure/product_necklace4_lf8mwe.png"
+            alt="Pink Necklace"
+          >
+        </figure>
+        <!-- Product Name-->
+        <span class="shopping-cart__product-name">
+          Pink Necklace
+        </span>
+        <!-- Product Price-->
+        <span class="shopping-cart__product-price">
+          COP 25.000
+        </span>
+        <!-- Product Removed-->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#a7a7a7"/>
+        </svg>
+      </div>
+      <!-- Product - Silver Shell Earrings -->
+      <div class="shopping-cart__product">
+        <!-- Product Image-->
+        <figure class="shopping-cart__product-img">
+          <img
+            class="product__img"
+            src="https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_earrings4_eybpce.jpg"
+            alt="Silver Shell Earrings"
+          >
+        </figure>
+        <!-- Product Name-->
+        <span class="shopping-cart__product-name">
+          Silver Shell Earrings
+        </span>
+        <!-- Product Price-->
+        <span class="shopping-cart__product-price">
+          COP 15.000
+        </span>
+        <!-- Product Removed-->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#a7a7a7"/>
+        </svg>
+      </div>
+    </div>
+    <!-- Info Container -->
+    <div class="shopping-cart__info">
+      <!-- Total -->
+      <div class="shopping-cart__total">
+        <span>
+          Total
+        </span>
+        <span class="shopping-cart__total-amount">
+          COP 130.000
+        </span>
+      </div>
+      <!-- Checkout -->
+      <button class="primary-button shopping-cart__checkout-button">
+        Checkout
+      </button>
+    </div>
+  </aside>
+  <!--Main Container-->
+  <aside class="product-detail product-detail--inactive">
+    <!--Product-->
+    <div class="product-detail__product">
+      <!--Product Image-->
+      <figure class="product-detail__fig">
+        <!--Product Image-->
+        <img
+          src="https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_necklace3_fotydm.jpg"
+          alt="Black Quatrz Necklace"
+        >
+      </figure>
+      <!--Close Icon-->
+      <svg class="product-detail__close" width="28" height="28" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#a7a7a7"/></svg>
+      <!--Product Current Image-->
+      <p class="product-detail__carousel">
+        <span>&#8226;</span> &#8226; &#8226;
+      </p>
+    </div>
+    <!-- Details Container-->
+    <div class="product-detail__details-container">
+      <!--Product Price-->
+      <p class="product-detail__price">
+        COP 25.000
+      </p>
+      <!--Product Name-->
+      <p class="product-detail__name">
+        Black Quartz Necklace
+      </p>
+      <!--Product Description-->
+      <p class="product-detail__description">
+        This beautiful necklace with its elegant black quartz crystal, it exudes a sense of mystery and sophistication. It's said to promote grounding, spiritual transformation, and intuition, while providing balance and harmony. Perfect for those who seek to enhance their spiritual practice and embrace their inner power.
+      </p>
+      <!--Product Add to Cart-->
+      <div class="product-detail__add-to-cart">
+        <button class="primary-button">
+          <!--Add to Cart Icon-->
+          <svg width="30" height="27" viewBox="0 0 30 27" fill="none">
+            <path d="M4 2C3.44772 2 3 2.44772 3 3C3 3.55228 3.44772 4 4 4V2ZM6.22222 3L7.2026 2.80288C7.10872 2.33593 6.69852 2 6.22222 2V3ZM5.68629 5.40762C5.79515 5.94907 6.32233 6.29975 6.86378 6.19089C7.40523 6.08202 7.75591 5.55484 7.64705 5.01339L5.68629 5.40762ZM8.44444 13.0525C7.89216 13.0525 7.44444 13.5002 7.44444 14.0525C7.44444 14.6048 7.89216 15.0525 8.44444 15.0525V13.0525ZM19.5556 14.0525V15.0525C19.9336 15.0525 20.2793 14.8394 20.449 14.5016L19.5556 14.0525ZM24 5.21051L24.8935 5.65961C25.0493 5.34962 25.0333 4.98101 24.8512 4.68568C24.6691 4.39035 24.347 4.21051 24 4.21051V5.21051ZM6.66667 4.21051C6.11438 4.21051 5.66667 4.65822 5.66667 5.21051C5.66667 5.76279 6.11438 6.21051 6.66667 6.21051V4.21051ZM7.46406 14.2496C7.57293 14.7911 8.10011 15.1418 8.64156 15.0329C9.18301 14.924 9.53369 14.3969 9.42482 13.8554L7.46406 14.2496ZM7.64705 5.01339C7.53818 4.47194 7.011 4.12126 6.46955 4.23012C5.9281 4.33899 5.57742 4.86617 5.68629 5.40762L7.64705 5.01339ZM9.14968 14.7615C9.54123 14.372 9.54291 13.7388 9.15342 13.3473C8.76393 12.9557 8.13076 12.9541 7.73921 13.3436L9.14968 14.7615ZM5.89667 16.5869L5.19143 15.8779L5.89667 16.5869ZM19.5556 19.4735C20.1078 19.4735 20.5556 19.0258 20.5556 18.4735C20.5556 17.9213 20.1078 17.4735 19.5556 17.4735V19.4735ZM19.5556 18.4735H18.5556C18.5556 18.7397 18.6616 18.9948 18.8503 19.1825L19.5556 18.4735ZM21.7778 20.684L21.0725 21.393C21.2599 21.5794 21.5135 21.684 21.7778 21.684V20.684ZM10.6667 20.684L9.80179 20.1821C9.71328 20.3345 9.66667 20.5077 9.66667 20.684H10.6667ZM10.6667 22.8945H9.66667C9.66667 23.0709 9.71328 23.244 9.80179 23.3965L10.6667 22.8945ZM4 4H6.22222V2H4V4ZM5.24184 3.19712L5.68629 5.40762L7.64705 5.01339L7.2026 2.80288L5.24184 3.19712ZM8.44444 15.0525H19.5556V13.0525H8.44444V15.0525ZM20.449 14.5016L24.8935 5.65961L23.1065 4.7614L18.6621 13.6034L20.449 14.5016ZM24 4.21051H6.66667V6.21051H24V4.21051ZM9.42482 13.8554L7.64705 5.01339L5.68629 5.40762L7.46406 14.2496L9.42482 13.8554ZM7.73921 13.3436L5.19143 15.8779L6.6019 17.2958L9.14968 14.7615L7.73921 13.3436ZM5.19143 15.8779C3.85112 17.2111 4.81103 19.4735 6.68222 19.4735V17.4735C6.64208 17.4735 6.62553 17.4635 6.61734 17.4578C6.60473 17.4489 6.58938 17.4322 6.57888 17.407C6.56837 17.3817 6.56775 17.3602 6.57003 17.3471C6.57136 17.3395 6.57483 17.3228 6.6019 17.2958L5.19143 15.8779ZM6.68222 19.4735H19.5556V17.4735H6.68222V19.4735ZM20.5556 18.4735C20.5556 17.81 21.0978 17.263 21.7778 17.263V15.263C20.0032 15.263 18.5556 16.6954 18.5556 18.4735H20.5556ZM21.7778 17.263C22.4578 17.263 23 17.81 23 18.4735H25C25 16.6954 23.5524 15.263 21.7778 15.263V17.263ZM23 18.4735C23 19.1371 22.4578 19.684 21.7778 19.684V21.684C23.5524 21.684 25 20.2516 25 18.4735H23ZM22.483 19.9751L20.2608 17.7646L18.8503 19.1825L21.0725 21.393L22.483 19.9751ZM11.5315 21.186C11.8068 20.7119 12.3711 20.4771 12.9088 20.6204L13.4239 18.6878C12.0185 18.3133 10.5324 18.9233 9.80179 20.1821L11.5315 21.186ZM12.9088 20.6204C13.4456 20.7635 13.8134 21.2451 13.8134 21.7893H15.8134C15.8134 20.3325 14.8301 19.0627 13.4239 18.6878L12.9088 20.6204ZM13.8134 21.7893C13.8134 22.3335 13.4456 22.8151 12.9088 22.9582L13.4239 24.8907C14.8301 24.5159 15.8134 23.2461 15.8134 21.7893H13.8134ZM12.9088 22.9582C12.3711 23.1015 11.8068 22.8667 11.5315 22.3926L9.80179 23.3965C10.5324 24.6553 12.0185 25.2653 13.4239 24.8907L12.9088 22.9582ZM11.6667 22.8945V20.684H9.66667V22.8945H11.6667Z" fill="#242321"/>
+          </svg>
+          <!--Add to Cart Text-->
+          <span>
+            Add to Cart
+          </span>
+        </button>
+      </div>
+    </div>
+  </aside>
+  <!--Main Container-->
+  <main>
+    <!--Search Product Container-->
+    <div class="search-product">
+      <div class="search-product__search">
+        <figure class="search-product__magnifying-glass">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.1" d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" fill="none"/>
+            <path d="M15 15L21 21" stroke="#d6b17a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#d6b17a" stroke-width="2"/>
+            </svg>
+        </figure>
+        <input class="search-product__input" type="text" autocomplete="off" placeholder="Search product">
+      </div>
+      <div class="search-product__filters-container">
+        <button class="search-product__filter search-product__filter--selected">
+          All
+        </button>
+        <button class="search-product__filter">
+          Bracelets
+        </button>
+        <button class="search-product__filter">
+          Necklaces
+        </button>
+        <button class="search-product__filter">
+          Rings
+        </button>
+        <button class="search-product__filter">
+          Quartzes
+        </button>
+        <button class="search-product__filter">
+          Others
+        </button>
+      </div>
+    </div>
+    <!-- Products Container-->
+    <div class="products-container">
+      <!-- Sort By -->
+      <div class="sort-by products-container__sort-by">
+        <span>
+          Sort by: 
+          <!-- Sort By Option -->
+          <span class="sort-by__option">
+            Most recent
+          </span>
+          <!-- Arrow Icon -->
+          <svg width="10" height="10" viewBox="0 0 256 256">
+            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+              <path d="M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #a7a7a7; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            </g>
+          </svg>
+        </span>
+      </div>
+      <!-- Cards Container -->
+      <div class="cards">
+        <!-- Products added in JavaScript -->
+      </div>
+      <!-- See More -->
+      <button class="see-more">
+        See more
+      </button>
+    </div>
+  </main>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

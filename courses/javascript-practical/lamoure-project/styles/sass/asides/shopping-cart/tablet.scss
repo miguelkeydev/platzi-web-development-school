@@ -1,0 +1,52 @@
+.shopping-cart {
+    grid-template-rows: 75% 1fr;
+
+  height: 88vh;
+
+  // Products Container
+  &__products-container {
+      gap: 20px;
+
+    width: 80%;
+  }
+
+  // Product
+  &__product {
+      grid-template-columns: 20% 1fr repeat(2, auto);
+      gap: 24px;
+  }
+
+  // Product Name
+  &__product-name {
+    font-size: $font-l;
+  }
+
+  // Product Price
+  &__product-price {
+    font-size: $font-xl;
+  }
+
+  // Info Container
+  &__info {
+    width: 80%;
+  }
+
+  // Total Container
+  &__total {
+    font-size: $font-xl;
+
+    padding: 26px 24px;
+  }
+
+  // Checkout Button
+  &__checkout-button {
+    font-size: $font-xxl;
+    
+    height: 76px;
+  }
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}

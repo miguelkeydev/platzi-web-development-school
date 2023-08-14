@@ -1,0 +1,31 @@
+.search-product {
+    gap: 30px;
+  
+  // Search Container
+  &__search {
+    max-width: 900px;
+  }
+
+  // Magnifying Glass
+  &__magnifying-glass {
+      top: 18px;
+      left: 18px;
+
+    svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  // Input
+  &__input {
+    font-size: $font-xl;
+    
+    height: 60px;
+    padding-left: 56px;
+
+    &::placeholder {
+      font-size: $font-xl;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.search-product {
+  display: grid;
+    place-items: center;
+
+  padding: 20px;
+  
+  // Search Container
+  &__search {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  // Magnifying Glass Container
+  &__magnifying-glass {
+      top: 14px;
+      left: 14px;
+      
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  // Search Input
+  &__input {
+    font-size: $font-l;
+
+    height: 52px;
+    padding-left: 50px;
+  }
+  
+  // Filters Container
+  &__filters-container {
+      gap: 10px;
+
+    padding-left: 0;
+  }
+
+  // Filter Element
+  &__filter {
+    font-size: $font-l;
+
+    padding: 8px 16px;
+  }
+}
