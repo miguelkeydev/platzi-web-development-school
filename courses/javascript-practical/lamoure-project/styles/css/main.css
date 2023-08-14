@@ -289,6 +289,9 @@ li {
   padding: 0 6vw;
   color: #242321;
 }
+.product-detail--inactive {
+  display: none;
+}
 
 @media (min-width: 768px) {
   .product-detail {

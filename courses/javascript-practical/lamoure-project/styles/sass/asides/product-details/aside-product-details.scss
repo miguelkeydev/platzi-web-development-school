@@ -103,6 +103,10 @@
       color: $color-dark-golden;
     }
   }
+
+  &--inactive {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {

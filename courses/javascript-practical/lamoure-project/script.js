@@ -10,8 +10,9 @@ const accountEmail = document.querySelector('.right-side__account');
 const accountArrow = document.querySelector('#account-arrow');
 const accountMenu = document.querySelector('.right-side__account-menu');
 
-const mainContainer = document.querySelector('main');
 const productDetailContainer = document.querySelector('.product-detail');
+const productDetailCloseIcon = document.querySelector('.product-detail__close');
+const mainContainer = document.querySelector('main');
 
 const cardsContainer = document.querySelector('.cards');
 const productList = [];
@@ -38,10 +39,19 @@ function toggleMobileMenu() {
 function toggleShoppingCartMenu() {
   shoppingCartMenu.classList.toggle('shopping-cart--inactive');
   mobileMenu.classList.add('mobile-menu--inactive');
+  productDetailContainer.classList.add('product-detail--inactive');
 }
 
 function toggleAccountMenu() {
   accountMenu.classList.toggle('right-side__account-menu--inactive');
+}
+
+function openProductDetail() {
+  productDetailContainer.classList.remove('product-detail--inactive');
+}
+
+function closeProductDetail() {
+  productDetailContainer.classList.add('product-detail--inactive');
 }
 
 function closeMenus() {
@@ -60,6 +70,7 @@ function renderProducts(array) {
     productImage.classList.add('cards__product-image');
     productImage.setAttribute('src', product.image);
     productImage.setAttribute('alt', product.imageDescription);
+    productImage.addEventListener('click', openProductDetail);
   
     const productInfoContainer = document.createElement('div');
     productInfoContainer.classList.add('cards__product-info');
@@ -124,13 +135,16 @@ accountEmail.addEventListener('mouseout', arrowColor);
 // Making 'accountMenu' visible or hidden whenever 'accountEmail' is clicked
 accountEmail.addEventListener('click', toggleAccountMenu);
 
+// Closing 'productDetailContainer' when clicking the close icon
+productDetailCloseIcon.addEventListener('click', closeProductDetail);
+
 // Closing any menus when clicking outside of it
 mainContainer.addEventListener('click', closeMenus);
 productDetailContainer.addEventListener('click', closeMenus);
 
 // Adding Products to productList
 productList.push({
-  image: "https://i.imgur.com/h53gV8q.jpg",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050084/Lamoure/product_earrings1_yy9bou.jpg",
   imageDescription: 'Earrings: Blue eyes with large eyelashes and with three pearls hanging on each of them',
   price: 15000,
   name: "Eye Earrings",
@@ -138,7 +152,7 @@ productList.push({
 })
 
 productList.push({
-  image: "https://i.imgur.com/UIJrVq6.jpg",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050084/Lamoure/product_earrings2_tx3e3g.jpg",
   imageDescription: 'Earrings: Golden sea starts with one pearl hanging on each of them',
   price: 15000,
   name: "Sea Star Earrings",
@@ -146,7 +160,7 @@ productList.push({
 })
 
 productList.push({
-  image: "https://i.imgur.com/5qpjjgJ.jpg",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050084/Lamoure/product_earrings3_jrqqbf.jpg",
   imageDescription: 'Earrings: Golden Shells',
   price: 15000,
   name: "Shell Earrings",
@@ -154,7 +168,7 @@ productList.push({
 })
 
 productList.push({
-  image: "https://i.imgur.com/k0jnJtR.jpg",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_necklace3_fotydm.jpg",
   imageDescription: 'Necklace: Black Quartz',
   price: 25000,
   name: "Black Quartz Necklace",
@@ -162,7 +176,7 @@ productList.push({
 })
 
 productList.push({
-  image: "https://i.imgur.com/esyH89M.jpg",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_earrings4_eybpce.jpg",
   imageDescription: 'Earrings: Silver vertical rectangles with a hole in the middle',
   price: 15000,
   name: "Silver Earrings",
@@ -170,7 +184,7 @@ productList.push({
 })
 
 productList.push({
-  image: "https://i.imgur.com/En8fJH2.jpg",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_earrings5_tbmzlt.jpg",
   imageDescription: 'Earrings: Yellow circles with three smaller yellow circles above forming a triangle',
   price: 15000,
   name: "Yellow Earrings",
@@ -178,15 +192,15 @@ productList.push({
 })
 
 productList.push({
-  image: "https://i.imgur.com/U5MXgGz.jpg",
-  imageDescription: 'Earrings: Pink circles with a circled hol ine the middle and a smaller pink circle above',
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_earrings6_je9tzi.jpg",
+  imageDescription: 'Earrings: Pink circles with a circled hole in the middle and a smaller pink circle above',
   price: 15000,
   name: "Pink Earrings",
   isInCart: true
 })
 
 productList.push({
-  image: "https://i.imgur.com/AIblU5z.jpg",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_necklace2_tzetzr.jpg",
   imageDescription: 'Necklace: Yellow Quartz',
   price: 25000,
   name: "Yellow Quartz Necklace",
@@ -194,7 +208,7 @@ productList.push({
 })
 
 productList.push({
-  image: "https://i.imgur.com/ATJat1c.jpg",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050084/Lamoure/product_bracelet1_pjvdqq.jpg",
   imageDescription: 'Bracelet: Owl',
   price: 10000,
   name: "Owl Bracelet",
@@ -202,7 +216,7 @@ productList.push({
 })
 
 productList.push({
-  image: "https://i.imgur.com/M9BOXk5.jpg",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050084/Lamoure/product_bracelet2_jvlbxl.jpg",
   imageDescription: 'Bargain: x3 Bracelet; Hand, Wing, and Coin',
   price: 20000,
   name: "x3 Bracelet",
@@ -210,7 +224,7 @@ productList.push({
 })
 
 productList.push({
-  image: "https://i.imgur.com/27BAUWB.jpgg",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_earrings7_tqrxc2.jpg",
   imageDescription: 'Earrings: Cyan circles with three smaller cyan circles above forming a triangle',
   price: 15000,
   name: "Cyan Earrings",
@@ -218,7 +232,7 @@ productList.push({
 })
 
 productList.push({
-  image: "https://i.imgur.com/gCizD2d.jpg",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_earrings8_ajpoag.jpg",
   imageDescription: 'Earrings: Golden Dandelions',
   price: 15000,
   name: "Dandelion Earrings",
@@ -226,7 +240,7 @@ productList.push({
 })
 
 productList.push({
-  image: "https://i.imgur.com/n6fguMw.jpg",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_earrings9_a4fdag.jpg",
   imageDescription: 'Earrings: Small circles with three black circles on the bottom',
   price: 15000,
   name: "Black Earrings",
@@ -234,7 +248,7 @@ productList.push({
 })
 
 productList.push({
-  image: "https://i.imgur.com/bqWCr3r.jpg",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_earrings10_ipn62k.jpg",
   imageDescription: 'Earrings: Crystal Earrings',
   price: 15000,
   name: "Crystal Earrings",
@@ -242,7 +256,7 @@ productList.push({
 })
 
 productList.push({
-  image: "https://i.imgur.com/HMWvY35.jpg",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050085/Lamoure/product_necklace1_ajsp7k.jpg",
   imageDescription: 'Necklace: White Quartz',
   price: 25000,
   name: "White Quartz Necklace",
@@ -250,7 +264,7 @@ productList.push({
 })
 
 productList.push({
-  image: "https://i.imgur.com/jemQDWm.png",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692050441/Lamoure/product_ring3_u22mq6.png",
   imageDescription: 'Ring: Pink Quartz',
   price: 12000,
   name: "Pink Quartz Ring",
