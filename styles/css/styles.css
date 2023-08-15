@@ -30,6 +30,10 @@ a {
   border-radius: 8px;
 }
 
+.inactive {
+  display: none;
+}
+
 body {
   background-image: url("https://res.cloudinary.com/dziyyutwr/image/upload/v1692066465/Platzi%20Portfolio/wpp_phone_oqcq2z.jpg");
 }

@@ -62,6 +62,7 @@ function insertProject(projectsList) {
 
     projectTechnologyHTMLContainer.appendChild(projectTechnologyHTML);
     projectTechnologyCSSContainer.appendChild(projectTechnologyCSS);
+
     // Only when the project uses SASS
     if (project.sass.used === true) {
       // Creating the Elements
@@ -83,6 +84,20 @@ function insertProject(projectsList) {
       // Layout
       projectTechnologiesContainer.appendChild(projectTechnologyTailwindContainer);
       projectTechnologyTailwindContainer.appendChild(projectTechnologyTailwind);
+    }
+    // Only when the project uses JavaScript
+    if (project.javascript.used === true) {
+      // Creating the Elements
+      const projectTechnologyJSContainer = document.createElement('figure');
+      const projectTechnologyJS = document.createElement('img');
+      projectTechnologyJS.setAttribute('src', project.javascript.icon);
+      projectTechnologyJS.setAttribute('alt', project.javascript.description);
+      // Layout
+      projectTechnologiesContainer.appendChild(projectTechnologyJSContainer);
+      projectTechnologyJSContainer.appendChild(projectTechnologyJS);
+      // Hiding HTML and CSS Icons
+      projectTechnologyHTMLContainer.classList.add('inactive');
+      projectTechnologyCSSContainer.classList.add('inactive');
     }
   }
 }
@@ -301,6 +316,36 @@ projectsList.push({
   },
   javascript: {
     used: false
+  }
+})
+// JavaScript Basic - Lamoure
+projectsList.push({
+  link: "./courses/javascript-practical/lamoure-project",
+  date: "15/08/23",
+  logo: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692049906/Platzi%20Portfolio/logo-icon_gbdekb.png",
+  logoDescription: "Lamoure Logo",
+  title: "Lamoure",
+  description: "JavaScript Basic",
+  html: {
+    icon: "./assets/icons/html_logo.svg",
+    description: "HTML Logo"
+  },
+  css: {
+    icon: "./assets/icons/css_logo.svg",
+    description: "CSS Logo"
+  },
+  sass: {
+    used: true,
+    icon: "./assets/icons/sass_logo.svg",
+    description: "SASS Logo"
+  },
+  tailwind: {
+    used: false
+  },
+  javascript: {
+    used: true,
+    icon: "./assets/icons/javascript_logo.svg",
+    description: "JavaScript Logo"
   }
 })
 
