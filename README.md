@@ -13,6 +13,7 @@ Git, GitHub, HTML, PUG, CSS, SASS, Tailwind, JavaScript
 - Eco Store Landing Page
 - Messi's Best Moments
 - Hotel Heaven
+- Lamoure Jewelry & Accessories Store using JavaScript
 
 ### ☝👀 If you want to look at them
 [Here they are!](https://miguelkeydev.github.io/platzi-web-development-school/)
