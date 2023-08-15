@@ -1,0 +1,29 @@
+body {
+  background-image: url('https://res.cloudinary.com/dziyyutwr/image/upload/v1692066465/Platzi%20Portfolio/wpp_phone_oqcq2z.jpg');
+}
+
+main {
+  display: grid;
+    gap: 3vh;
+
+  width: 100%;
+  padding: 2vh 3vw;
+
+  .heading {
+    font-family: $font-bruno;
+    font-size: $font-size-3xl;
+    text-align: center;
+
+    color: $color-light;
+    text-shadow: 0 0 1.2rem black;
+  }
+
+  .projects-container {
+    display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 160px));
+      justify-items: center;
+      justify-content: space-around;
+  }
+
+  @import './project-card';
+}

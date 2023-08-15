@@ -1,2 +1,14 @@
-@import "./globals/globals";
-@import "./content";
+@import './globals';
+@import './components/content';
+
+@media (min-width: 768px) {
+  @import './responsive/tablet';
+}
+
+@media (min-width: 1024px) {
+  @import './responsive/desktop';
+}
+
+@media (min-width: 1610px) {
+  @import './responsive/desktop-xl';
+}
