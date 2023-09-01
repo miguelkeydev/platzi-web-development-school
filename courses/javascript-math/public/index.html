@@ -17,7 +17,7 @@
     <h1 class="text-4xl text-center font-bold uppercase text-black Shadow-white">Mathematics Workshop</h1>
   </header>
   <main class="items-center w-full h-full p-4 pt-0 overflow-auto">
-    <!-- Activities Container -->
+    <!-- Activities Choices Container -->
     <div>
       <!-- Activities Navbar -->
       <div id="activities-navbar-container" class="relative hidden w-full h-10 px-2 overflow-x-auto Scrollbar-hide">
@@ -28,55 +28,103 @@
       <div id="cards-container" class="grid grid-cols-2 justify-center gap-x-4 w-full h-full">
       </div>
     </div>
-    <!-- Geometry Activity -->
-    <div id="geometry-container" class="hidden flex flex-col items-center w-10/12 p-2 mt-10 mx-auto rounded-lg bg-secondary text-primary-900">
-      <h1 class="Activity-title">Basic geometry formulas</h1>
-      <!-- Figure Navbar -->
-      <div id="figures-choice" class="grid justify-items-center gap-2">
-        <h2 class="Activity-subtitle">Choose a figure</h2>
-        <!-- Figures Options -->
-        <div id="figures-options" class="flex flex-wrap justify-around gap-y-4">
+    <!-- Activities Container -->
+    <div class="grid place-items-center mt-8">
+      <!-- Geometry Activity -->
+      <div id="geometry-container" class="hidden Activity-container">
+        <h1 class="Activity-title">Basic geometry formulas</h1>
+        <!-- Figure Navbar -->
+        <div id="figures-choice" class="grid justify-items-center gap-2">
+          <h2 class="Activity-subtitle">Choose a figure</h2>
+          <!-- Figures Options -->
+          <div id="figures-options" class="flex flex-wrap justify-around gap-y-4">
+          </div>
+        </div>
+        <!-- Rectangle Calculation -->
+        <div id="rectangle-container" class="hidden Activity-container__geometry">
+          <form class="Activity-form">
+            <!-- Base -->
+            <input id="rectangle-base" type="number" max="99" autocomplete="off" placeholder="Base" class="Activity-input">
+            <!-- Height -->
+            <input id="rectangle-height" type="number" max="99" autocomplete="off" placeholder="Height" class="Activity-input">
+            <!-- Submit -->
+            <input id="rectangle-submit" type="submit" class="Activity-submit">
+          </form>
+          <p id="rectangle-output" class="Activity-output"></p>
+        </div>
+        <!-- Triangle Calculation -->
+        <div id="triangle-container" class="hidden Activity-container__geometry">
+          <form class="Activity-form">
+            <!-- Base -->
+            <input id="triangle-base" type="number" autocomplete="off" placeholder="Base" class="Activity-input">
+            <!-- Side 1 -->
+            <input id="triangle-side1" type="number" autocomplete="off" placeholder="Side 1" class="Activity-input">
+            <!-- Side 2 -->
+            <input id="triangle-side2" type="number" autocomplete="off" placeholder="Side 2" class="Activity-input">
+            <!-- Submit -->
+            <input id="triangle-submit" type="submit" class="Activity-submit">
+          </form>
+          <p id="triangle-output" class="Activity-output"></p>
+        </div>
+        <!-- Circle Calculation -->
+        <div id="circle-container" class="hidden Activity-container__geometry">
+          <form class="Activity-form">
+            <!-- Radius -->
+            <input id="circle-radius" type="number" autocomplete="off" placeholder="Radius" class="Activity-input">
+            <!-- Submit -->
+            <input id="circle-submit" type="submit" class="Activity-submit">
+          </form>
+          <p id="circle-output" class="Activity-output"></p>
         </div>
       </div>
-      <!-- Rectangle Calculation -->
-      <div id="rectangle-container" class="hidden Activity-container">
-        <form class="Activity-form">
-          <!-- Base -->
-          <input id="rectangle-base" type="number" max="99" placeholder="Base" class="Activity-input">
-          <!-- Height -->
-          <input id="rectangle-height" type="number" max="99" placeholder="Height" class="Activity-input">
+      <!-- Percentages Activity -->
+      <div id="percentages-container" class="hidden Activity-container gap-2">
+        <h1 class="Activity-title">Calculate a discount!</h1>
+        <!-- Discount Calculation -->
+        <form class="Activity-form gap-1 w-4/5">
+          <!-- Price -->
+          <label for="price">Type a product price</label>
+          <input id="price" type="number" autocomplete="off" placeholder="$199" class="Activity-input placeholder:opacity-50">
+          <!-- Discount -->
+          <label for="discount">Type the discount rate</label>
+          <input id="discount" type="number" autocomplete="off" placeholder="20%" class="Activity-input placeholder:opacity-50">
           <!-- Submit -->
-          <input id="rectangle-submit" type="submit" class="Activity-submit">
+          <input id="submit" type="submit" class="Activity-submit mt-2">
         </form>
-        <p id="rectangle-output" class="Activity-output"></p>
+        <!-- Output -->
+        <p id="discount-output" class="Activity-output"></p>
+        <!-- Discount Calculation with a Coupon -->
+        <form class="Activity-form gap-1 w-4/5 border-t-[1px] border-primary-900 pt-3">
+          <h2 class="Activity-subtitle w-full font-bold">Discount using a coupon</h2>
+          <!-- Price -->
+          <label for="coupon-price">Type a product price</label>
+          <input id="coupon-price" type="number" autocomplete="off" placeholder="$199" class="Activity-input placeholder:opacity-50">
+          <!-- Coupon -->
+          <label for="coupon-discount" class="text-center leading-4">Type a coupon to get a discount up to 95%</label>
+          <span class="text-xs">Hint: JavaScript release year</span>
+          <input id="coupon-discount" type="number" autocomplete="off" placeholder="0000" class="Activity-input placeholder:opacity-50">
+          <!-- Submit -->
+          <input id="coupon-submit" type="submit" class="Activity-submit mt-2">
+        </form>
+          <!-- Output -->
+          <p id="coupon-output" class="Activity-output"></p>
       </div>
-      <!-- Triangle Calculation -->
-      <div id="triangle-container" class="hidden Activity-container">
-        <form class="Activity-form">
-          <!-- Base -->
-          <input id="triangle-base" type="number" placeholder="Base" class="Activity-input">
-          <!-- Side 1 -->
-          <input id="triangle-side1" type="number" placeholder="Side 1" class="Activity-input">
-          <!-- Side 2 -->
-          <input id="triangle-side2" type="number" placeholder="Side 2" class="Activity-input">
-          <!-- Submit -->
-          <input id="triangle-submit" type="submit" class="Activity-submit">
-        </form>
-        <p id="triangle-output" class="Activity-output"></p>
+      <!-- Averages Activity -->
+      <div id="averages-container" class="hidden Activity-container">
+
       </div>
-      <!-- Circle Calculation -->
-      <div id="circle-container" class="hidden Activity-container">
-        <form class="Activity-form">
-          <!-- Radius -->
-          <input id="circle-radius" type="number" placeholder="Radius" class="Activity-input">
-          <!-- Submit -->
-          <input id="circle-submit" type="submit" class="Activity-submit">
-        </form>
-        <p id="circle-output" class="Activity-output"></p>
+      <!-- Salaries Activity -->
+      <div id="salaries-container" class="hidden Activity-container">
+
+      </div>
+      <!-- CDT Activity -->
+      <div id="cdt-container" class="hidden Activity-container">
+
       </div>
     </div>
   </main>
   <script src="./javascript/main.js"></script>
   <script src="./javascript/geometry.js"></script>
+  <script src="./javascript/percentages.js"></script>
 </body>
 </html>

@@ -55,7 +55,7 @@ function hideCardsContainer(activity) {
       // Adding "focused" border to the compatible navbar element
       optionsList[i].classList.add('Navbar-element-border');
       // Making Geometry Container appear
-      geometryContainer.classList.remove('hidden')
+      activitiesContainers[i].classList.remove('hidden')
     }
     // Moving the scrollbar according to the navbar element
     if (activity[0] === 'cdt') {
@@ -178,11 +178,17 @@ const cdtCard = document.getElementById("cdt-card");
 const cardsList = [geometryCard, percentagesCard, averagesCard, salariesCard, cdtCard];
 
 const geometryContainer = document.getElementById('geometry-container');
+const percentagesContainer = document.getElementById('percentages-container');
+const averagesContainer = document.getElementById('averages-container');
+const salariesContainer = document.getElementById('salaries-container');
+const cdtContainer = document.getElementById('cdt-container');
+const activitiesContainers = [geometryContainer, percentagesContainer, averagesContainer, salariesContainer, cdtContainer]
 
 // Adding event listeners to every activity card element
 cardsList.forEach(card => card.addEventListener('click', () => {
   hideCardsContainer(card.id.split('-'));
 }));
+// Adding event listeners to every activity option element of the navbar
 optionsList.forEach(option => option.addEventListener('click', () => {
   navbarBehavior(option);
 }));
