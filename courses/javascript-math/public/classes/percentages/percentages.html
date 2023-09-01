@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2861/2861731.png">
+  <title>Percentages</title>
+</head>
+<body class="h-screen bg-gradient-to-b from-white to-slate-400 p-8">
+  <main class="grid place-items-center w-full">
+    <!-- Calculate Discount with Coupon -->
+    <div class="grid place-items-center gap-4">
+      <h1 class="text-3xl font-bold uppercase text-center">Let's make a discount calculation</h1>
+      <form class="flex flex-col items-center font-semibold">
+        <!-- Product -->
+        <label for="product">
+          Type a product
+        </label>
+        <input id="product" type="text" name="product" placeholder="Intel i9 7900K" required class="Discount-input">
+        <br>
+        <!-- Price -->
+        <label for="product-price">
+          Type its price
+        </label>
+        <input id="product-price" type="number" name="price" placeholder="799" required class="Discount-input">
+        <br>
+        <!-- Discount Coupon -->
+        <label for="product-coupon">
+          Discount Coupon
+        </label>
+        <input id="product-coupon" type="text" name="discount" maxlength="4" placeholder="XXXX" required class="Discount-input">
+        <br>
+        <input id="discount-button" type="submit" class="w-1/2 p-3 bg-gray-600 text-white rounded-lg">
+      </form>
+      <p id="price-message" class="text-lg font-semibold text-center"></p>
+    </div>
+  </main>
+  <script src="./percentages.js"></script>
+</body>
+</html>

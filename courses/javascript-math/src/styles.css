@@ -1,3 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+@layer components {
+  .Shadow-white {
+    text-shadow: 2px 2px 4px #93B1A6;
+  }
+
+  .Scrollbar-hide::-webkit-scrollbar {
+    height: 1px;
+    opacity: 0;
+  }
+
+  .Navbar-element {
+    @apply flex justify-center h-full w-16 py-1 px-2 bg-gradient-to-r from-primary-900 to-primary-800 rounded-md active:shadow-lg active:shadow-secondary active:scale-95 border-red-500;
+  }
+
+  .Navbar-element-border {
+    @apply border border-tertiary border-solid border-2;
+  }
+
+  .Activity-card {
+    @apply grid justify-items-center gap-2 w-[90%] min-h-[205px] p-2 pt-4 m-2 bg-gradient-to-b from-primary-900 to-primary-800 rounded-lg transition active:shadow-lg active:shadow-secondary active:scale-95;
+  }
+
+  .Activity-paragraph {
+    @apply uppercase text-lg text-center font-semibold leading-5 text-black;
+  }
+
+  .Figure-container {
+    @apply grid place-items-center w-2/5 p-1 rounded-2xl bg-tertiary transition active:shadow-md active:shadow-primary-900 active:scale-95;
+  }
+
+  .Activity-title {
+    @apply uppercase font-bold text-xl;
+  }
+
+  .Activity-subtitle {
+    @apply font-semibold text-center leading-5 w-2/3;
+  }
+
+  .Activity-close {
+    @apply absolute left-1;
+  }
+
+  .Activity-form {
+    @apply grid justify-items-center gap-2 w-full;
+  }
+
+  .Activity-input {
+    @apply w-1/2 py-1 px-3 border-2 border-primary-800 bg-tertiary rounded-md appearance-none focus:outline-none placeholder:text-primary-900 focus-within:ring-1;
+  }
+
+  .Activity-submit {
+    @apply w-1/2 py-0.5 border-2 border-tertiary bg-primary-800 rounded-md text-tertiary;
+  }
+
+  .Activity-output {
+    @apply text-center leading-5;
+  }
+
+  .Activity-container {
+    @apply relative grid justify-items-center gap-4 pl-2 mt-4;
+  }
+}

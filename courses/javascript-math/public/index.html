@@ -3,32 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500;10..48,600;10..48,700&display=swap" rel="stylesheet">
   <!-- Styles -->
   <link rel="stylesheet" href="../public/styles.css">
   <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2861/2861731.png">
-  <title>Math Course - JavaScript</title>
+  <title>Mathematics Workshop - JavaScript</title>
 </head>
-<body class="bg-gradient-to-br from-green-200 to-green-600">
-  <main class="grid auto-rows-min justify-center font-mono text-center gap-6 w-full h-screen p-10 uppercase">
-    <!-- Heading -->
-    <h1 class="text-3xl font-bold">Math Workshop with JavaScript</h1>
-    <!-- Description -->
-    <p class="text-lg">Learning how to work with math using JavaScript code</p>
-    <!-- Classes Container -->
-    <div class="flex flex-wrap w-full h-full">
-      <a href="./classes/formulas/formulas.html">
-        <!-- Basic Formulas -->
-        <div class="flex flex-col gap-2 items-center w-1/2 max-w-lg p-3 border-2 border-solid border-green-950 bg-emerald-500 rounded-lg">
-          <!-- Formulas Image -->
-          <img
-            class="w-5/6 rounded-md"
-            src="https://res.cloudinary.com/dziyyutwr/image/upload/v1692196272/Math/formulas_1_kxv1nf.png"
-            alt="Formulas Image"
-          >
-          <p class="text-lg font-semibold text-emerald-950">Basic Formulas</p>
+<body class="font-Bricolage w-full min-h-screen h-fit bg-gradient-to-tr from-primary-900 to-secondary">
+  <header class="grid place-items-center h-[15vh]">
+    <h1 class="text-4xl text-center font-bold uppercase text-black Shadow-white">Mathematics Workshop</h1>
+  </header>
+  <main class="items-center w-full h-full p-4 pt-0 overflow-auto">
+    <!-- Activities Container -->
+    <div>
+      <!-- Activities Navbar -->
+      <div id="activities-navbar-container" class="relative hidden w-full h-10 px-2 overflow-x-auto Scrollbar-hide">
+        <div id="activities-navbar" class="flex h-full w-fit gap-4">
         </div>
-      </a>
+      </div>
+      <!-- Activities Cards Container -->
+      <div id="cards-container" class="grid grid-cols-2 justify-center gap-x-4 w-full h-full">
+      </div>
+    </div>
+    <!-- Geometry Activity -->
+    <div id="geometry-container" class="hidden flex flex-col items-center w-10/12 p-2 mt-10 mx-auto rounded-lg bg-secondary text-primary-900">
+      <h1 class="Activity-title">Basic geometry formulas</h1>
+      <!-- Figure Navbar -->
+      <div id="figures-choice" class="grid justify-items-center gap-2">
+        <h2 class="Activity-subtitle">Choose a figure</h2>
+        <!-- Figures Options -->
+        <div id="figures-options" class="flex flex-wrap justify-around gap-y-4">
+        </div>
+      </div>
+      <!-- Rectangle Calculation -->
+      <div id="rectangle-container" class="hidden Activity-container">
+        <form class="Activity-form">
+          <!-- Base -->
+          <input id="rectangle-base" type="number" max="99" placeholder="Base" class="Activity-input">
+          <!-- Height -->
+          <input id="rectangle-height" type="number" max="99" placeholder="Height" class="Activity-input">
+          <!-- Submit -->
+          <input id="rectangle-submit" type="submit" class="Activity-submit">
+        </form>
+        <p id="rectangle-output" class="Activity-output"></p>
+      </div>
+      <!-- Triangle Calculation -->
+      <div id="triangle-container" class="hidden Activity-container">
+        <form class="Activity-form">
+          <!-- Base -->
+          <input id="triangle-base" type="number" placeholder="Base" class="Activity-input">
+          <!-- Side 1 -->
+          <input id="triangle-side1" type="number" placeholder="Side 1" class="Activity-input">
+          <!-- Side 2 -->
+          <input id="triangle-side2" type="number" placeholder="Side 2" class="Activity-input">
+          <!-- Submit -->
+          <input id="triangle-submit" type="submit" class="Activity-submit">
+        </form>
+        <p id="triangle-output" class="Activity-output"></p>
+      </div>
+      <!-- Circle Calculation -->
+      <div id="circle-container" class="hidden Activity-container">
+        <form class="Activity-form">
+          <!-- Radius -->
+          <input id="circle-radius" type="number" placeholder="Radius" class="Activity-input">
+          <!-- Submit -->
+          <input id="circle-submit" type="submit" class="Activity-submit">
+        </form>
+        <p id="circle-output" class="Activity-output"></p>
+      </div>
     </div>
   </main>
+  <script src="./javascript/main.js"></script>
+  <script src="./javascript/geometry.js"></script>
 </body>
 </html>
