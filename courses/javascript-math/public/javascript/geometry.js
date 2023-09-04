@@ -1,22 +1,6 @@
 const figuresOptionsContainer = document.getElementById('figures-options');
 const figuresElements = [];
 
-// Creating HTML elements for the figures
-function createFiguresElements(array) {
-  for (element of array) {
-    // Creating HTML Elements
-    const figureContainer = document.createElement('div');
-    figureContainer.classList.add('Figure-container');
-    figureContainer.setAttribute('id', element.id);
-    const figureImage = document.createElement('img');
-    figureImage.setAttribute('src', element.image);
-    figureImage.setAttribute('alt', element.imageAlt);
-    // HTML Layout
-    figureContainer.appendChild(figureImage);
-    figuresOptionsContainer.appendChild(figureContainer);
-  }
-}
-
 // Creating HTML Elements for Figures Containers
 function createFiguresContainersElements(arrayContainers, arrayElements) {
   let i = 0;
@@ -134,29 +118,32 @@ function circleCalculation(radius, message) {
   }
 }
 
-// Adding Figures
+// Adding Figures Cards
 // Rectangle Figure
 figuresElements.push({
-  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693446327/Math/rectangle_ravk0h.png",
+  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693609233/Math/rectangle_ntaxsd.png",
   imageAlt: "Rectangle Figure",
-  id: "rectangle-figure"
+  id: "rectangle-figure",
+  name: ""
 })
 
 // Triangle Figure
 figuresElements.push({
   image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693446327/Math/triangle_pnasp2.png",
   imageAlt: "Triangle Figure",
-  id: "triangle-figure"
+  id: "triangle-figure",
+  name: ""
 })
 
 // Circle Figure
 figuresElements.push({
   image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693447968/Math/circle_yauo9n.png",
   imageAlt: "Circle Figure",
-  id: "circle-figure"
+  id: "circle-figure",
+  name: ""
 })
 
-createFiguresElements(figuresElements);
+createCardElements(figuresElements, figuresOptionsContainer);
 
 const figuresOptions = document.getElementById('figures-choice');
 const rectangleFigure = document.getElementById('rectangle-figure');

@@ -12,11 +12,11 @@
   <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2861/2861731.png">
   <title>Mathematics Workshop - JavaScript</title>
 </head>
-<body class="font-Bricolage w-full min-h-screen h-fit bg-gradient-to-tr from-primary-900 to-secondary">
+<body id="body" class="font-Bricolage w-full min-h-screen h-fit bg-gradient-to-tr from-primary-900 to-secondary">
   <header class="grid place-items-center h-[15vh]">
     <h1 class="text-4xl text-center font-bold uppercase text-black Shadow-white">Mathematics Workshop</h1>
   </header>
-  <main class="items-center w-full h-full p-4 pt-0 overflow-auto">
+  <main id="mainzaso" class="items-center w-full h-full p-4 pt-0 overflow-auto">
     <!-- Activities Choices Container -->
     <div>
       <!-- Activities Navbar -->
@@ -29,7 +29,7 @@
       </div>
     </div>
     <!-- Activities Container -->
-    <div class="grid place-items-center mt-8">
+    <div id="activities-container" class="grid place-items-center mt-8">
       <!-- Geometry Activity -->
       <div id="geometry-container" class="hidden Activity-container">
         <h1 class="Activity-title">Basic geometry formulas</h1>
@@ -110,21 +110,48 @@
           <p id="coupon-output" class="Activity-output"></p>
       </div>
       <!-- Averages Activity -->
-      <div id="averages-container" class="hidden Activity-container">
-
+      <div id="averages-container" class="hidden Activity-container gap-2">
+        <h1 class="Activity-title">Types of averages</h1>
+        <!-- Random List -->
+        <div id="random-list-container" class="flex flex-col items-center gap-4 mt-1">
+          <p id="averages-instructions" class="text-center leading-4 w-5/6">Click the button below to generate a list of 25 random numbers between 1 and 20</p>
+          <button id="generate-list" class="py-1 px-2 border-2 border-tertiary bg-primary-900 text-tertiary rounded-md">Generate</button>
+          <!-- Random List -->
+          <div class="grid place-items-center gap-1">
+            <h2 id="random-list-heading" class="Activity-subtitle hidden">Random List</h2>
+            <p id="random-list" class="Activity-paragraph__averages hidden">
+            </p>
+          </div>
+          <!-- Averages Container -->
+          <div id="averages-options-container" class="hidden flex-wrap justify-around gap-y-4">
+            <h3 class="text-sm text-center leading-4 w-full">Choose what do you want to get from the previous list</h3>
+          </div>
+          <!-- Result -->
+          <div id="averages-result-container" class="relative flex items-center justify-center gap-1 w-full hidden">
+            <!-- Return to Options -->
+            <img
+              id="averages-return"
+              class="w-8 p-2"
+              src="https://res.cloudinary.com/dziyyutwr/image/upload/v1693489975/Math/close-icon_ejx6qw.png"
+              alt="Return Icon">
+            <!-- Averages Result -->
+            <p id="averages-result-message" class="Activity-paragraph__averages"></p>
+          </div>
+        </div>
       </div>
       <!-- Salaries Activity -->
       <div id="salaries-container" class="hidden Activity-container">
-
+        <h1>SAL</h1>
       </div>
       <!-- CDT Activity -->
       <div id="cdt-container" class="hidden Activity-container">
-
+        <h1>CDT</h1>
       </div>
     </div>
   </main>
   <script src="./javascript/main.js"></script>
   <script src="./javascript/geometry.js"></script>
   <script src="./javascript/percentages.js"></script>
+  <script src="./javascript/averages.js"></script>
 </body>
 </html>

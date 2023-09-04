@@ -5,6 +5,29 @@ const activitiesNavbarElements = [];
 const cardsContainer = document.getElementById("cards-container");
 const cardsElements = [];
 
+function randomNumber(minimum, maximum) {
+  return Math.floor(Math.random() * (maximum - minimum) + minimum);
+}
+
+// Creating HTML card container elements
+function createCardElements(array, containerToAppend) {
+  for (element of array) {
+    // Creating HTML Elements
+    const container = document.createElement('div');
+    container.classList.add('Card-container');
+    container.setAttribute('id', element.id);
+    const figureImage = document.createElement('img');
+    figureImage.setAttribute('src', element.image);
+    figureImage.setAttribute('alt', element.imageAlt);
+    const figureName = document.createElement('p');
+    figureName.classList.add('text-center', 'leading-4');
+    figureName.innerText = element.name;
+    // HTML Layout
+    container.append(figureImage, figureName);
+    containerToAppend.appendChild(container);
+  }
+}
+
 // Creating Navbar Elements
 function createActivityNavbarElements() {
   for (element of activitiesNavbarElements) {
@@ -55,7 +78,7 @@ function hideCardsContainer(activity) {
       // Adding "focused" border to the compatible navbar element
       optionsList[i].classList.add('Navbar-element-border');
       // Making Geometry Container appear
-      activitiesContainers[i].classList.remove('hidden')
+      activitiesContainers[i].classList.remove('hidden');
     }
     // Moving the scrollbar according to the navbar element
     if (activity[0] === 'cdt') {
@@ -75,12 +98,27 @@ function navbarBehavior(element) {
     // Showing cards container and hiding navbar
     cardsContainer.classList.remove('hidden');
     activitiesNavbarContainer.classList.add('hidden');
+    activitiesContainers.forEach(container => {
+      container.classList.add('hidden');
+    })
   } else { // Removing "focused" border for every element
     optionsList.forEach(option => {
       option.classList.remove('Navbar-element-border');
     })
     // Adding "focused" border to the selected element
     element.classList.add('Navbar-element-border');
+    // Hiding all activities containers
+    activitiesContainers.forEach(container => {
+      container.classList.add('hidden');
+    })
+    // Matching the selected option with its activity container
+    const option = element.id.split('-')[0];
+    for (let i = 0; i < activitiesContainers.length; i++) {
+      const activityContainer = activitiesContainers[i].id.split('-')[0];
+      if (option === activityContainer) {
+        activitiesContainers[i].classList.remove('hidden');
+      }
+    }
   }
   // Moving the scrollbar according to the navbar element
   if (element.id.split('-')[0] === 'cdt') {

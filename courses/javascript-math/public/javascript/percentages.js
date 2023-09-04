@@ -8,10 +8,6 @@ const couponDiscount = document.getElementById('coupon-discount');
 const couponSubmit = document.getElementById('coupon-submit');
 const couponOutput = document.getElementById('coupon-output');
 
-function randomNumber(minimum, maximum) {
-  return Math.floor(Math.random() * (maximum - minimum) + minimum);
-}
-
 function calculateDiscount(price, discount, message) {
   event.preventDefault();
   let discountAmount;
@@ -30,7 +26,7 @@ function calculateDiscount(price, discount, message) {
     discount = randomNumber(1, 96);
     discountAmount = ((price * discount) / 100).toFixed(2);
     finalPrice = (price - discountAmount).toFixed(2);
-    return message.innerText = `You got a ${discount}% discount which deducted $${discountAmount} The final price is $${finalPrice}`
+    return message.innerText = `You got a ${discount}% discount which deducted $${discountAmount}. The final price is $${finalPrice}`
   } // If there's a normal discount
     else {
     discountAmount = ((price * discount) / 100).toFixed(2);

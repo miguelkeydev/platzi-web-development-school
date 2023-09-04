@@ -4,6 +4,7 @@ module.exports = {
     "./public/index.html",
     "./public/classes/**",
     "./public/salaries-project/**",
+    "./public/javascript/**",
     "./src/**/*.{html,js}",
     "./src/styles.css"
   ],
