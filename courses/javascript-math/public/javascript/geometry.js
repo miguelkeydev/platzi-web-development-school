@@ -46,7 +46,7 @@ function closeFiguresContainer(figuresContainers, inputs) {
 }
 
 function rectangleCalculation(base, height, message) {
-  event.preventDefault()
+  event.preventDefault();
   // Validating if the required information has been given correctly
   if (base > -1 && base < 1 || height > -1 && height < 1) {
     return message.innerText = "You didn't fill out the form!";

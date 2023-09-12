@@ -54,7 +54,6 @@ function medianFormula(array) {
   let median;
   
   array.sort((a, b) => a - b);
-  console.log(array);
 
   const isOdd = array.length % 2 !== 0 ? true : false;
 

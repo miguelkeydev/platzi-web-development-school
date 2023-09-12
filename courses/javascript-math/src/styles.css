@@ -19,16 +19,36 @@
     opacity: 0;
   }
 
+  .Clicked--light {
+    @apply transition active:shadow-lg active:shadow-secondary active:scale-95;
+  }
+
+  .Clicked--dark {
+    @apply transition active:shadow-md active:shadow-primary-900 active:scale-95 active:opacity-70;
+  }
+
+  .Grid-center {
+    @apply relative grid place-items-center gap-2 w-full;
+  }
+
+  .Flex-center {
+    @apply relative flex flex-col items-center justify-center gap-2 w-full;
+  }
+
   .Navbar-element {
-    @apply flex justify-center h-full w-16 py-1 px-2 bg-gradient-to-r from-primary-900 to-primary-800 rounded-md active:shadow-lg active:shadow-secondary active:scale-95 border-red-500;
+    @apply flex justify-center h-full w-16 py-1 px-2 bg-gradient-to-r from-primary-900 to-primary-800 rounded-md Clicked--light;
   }
 
   .Navbar-element-border {
-    @apply border border-tertiary border-solid border-2;
+    @apply border-tertiary border-solid border-2;
+  }
+
+  .Close-button {
+    @apply absolute top-0 left-2 w-6 p-1;
   }
 
   .Activity-card {
-    @apply grid justify-items-center gap-2 w-[90%] min-h-[205px] p-2 pt-4 m-2 bg-gradient-to-b from-primary-900 to-primary-800 rounded-lg transition active:shadow-lg active:shadow-secondary active:scale-95;
+    @apply grid justify-items-center gap-2 w-[90%] min-h-[205px] p-2 pt-4 m-2 bg-gradient-to-b from-primary-900 to-primary-800 rounded-lg Clicked--light;
   }
 
   .Activity-paragraph {
@@ -36,7 +56,7 @@
   }
 
   .Card-container {
-    @apply grid place-items-center gap-2 w-2/5 p-2 rounded-xl bg-tertiary transition active:shadow-md active:shadow-primary-900 active:scale-95;
+    @apply grid place-items-center gap-2 w-2/5 p-2 rounded-xl bg-tertiary Clicked--dark;
   }
 
   .Activity-title {
@@ -56,7 +76,7 @@
   }
 
   .Activity-input {
-    @apply w-1/2 py-1 px-3 border-2 border-primary-800 bg-tertiary rounded-md appearance-none focus:outline-none placeholder:text-primary-900 focus-within:ring-1;
+    @apply w-1/2 py-1 px-3 border-2 border-primary-800 bg-tertiary rounded-md appearance-none focus:outline-none placeholder:text-primary-900 placeholder:opacity-75 focus-within:ring-1;
   }
 
   .Activity-submit {
@@ -77,5 +97,21 @@
 
   .Activity-paragraph__averages {
     @apply text-lg text-center leading-5 w-fit p-2 rounded-md bg-tertiary;
+  }
+
+  .Activity-salaries__option {
+    @apply w-4/6 py-1 px-2 rounded-md bg-tertiary Clicked--dark;
+  }
+
+  .Activity-table {
+    @apply w-full border-collapse rounded-sm overflow-hidden;
+  }
+
+  .Activity-table-cell {
+    @apply text-center p-2 border-2 border-primary-800;
+  }
+
+  .Activity-button {
+    @apply text-sm font-semibold uppercase w-full h-full p-1 border-2 rounded-md border-primary-900 text-primary-900 bg-tertiary transition;
   }
 }

@@ -9,22 +9,29 @@ function randomNumber(minimum, maximum) {
   return Math.floor(Math.random() * (maximum - minimum) + minimum);
 }
 
-// Creating HTML card container elements
-function createCardElements(array, containerToAppend) {
+function hideShowContainers(toHide, toShow) {
+  toHide.classList.add('hidden');
+  toShow.classList.remove('hidden');
+}
+
+// Creating HTML Card container elements
+function createCardElements(array, container, cards) {
   for (element of array) {
     // Creating HTML Elements
-    const container = document.createElement('div');
-    container.classList.add('Card-container');
-    container.setAttribute('id', element.id);
-    const figureImage = document.createElement('img');
-    figureImage.setAttribute('src', element.image);
-    figureImage.setAttribute('alt', element.imageAlt);
-    const figureName = document.createElement('p');
-    figureName.classList.add('text-center', 'leading-4');
-    figureName.innerText = element.name;
+    const cardContainer = document.createElement('div');
+    cardContainer.classList.add('Card-container');
+    cardContainer.setAttribute('id', element.id);
+    const image = document.createElement('img');
+    image.setAttribute('src', element.image);
+    image.setAttribute('alt', element.imageAlt);
+    const name = document.createElement('p');
+    name.classList.add('text-center', 'leading-4', 'font-semibold');
+    name.innerText = element.name;
     // HTML Layout
-    container.append(figureImage, figureName);
-    containerToAppend.appendChild(container);
+    cardContainer.append(image, name);
+    container.appendChild(cardContainer);
+    // Adding Card element to cards
+    cards.push(cardContainer);
   }
 }
 
@@ -186,7 +193,7 @@ cardsElements.push({
   id: "salaries-card",
   image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693262883/Math/salaries_ntvo6n.png",
   imageAlt: "Average Image",
-  name: "Salaries"
+  name: "Salaries Analysis "
 })
 // CDT Simulator Card
 cardsElements.push({

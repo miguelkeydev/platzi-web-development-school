@@ -11,6 +11,24 @@ function personSalaryMedian(id) {
   return salariesMedian;
 }
 
+function medianFormula(array) {
+  let medianPosition;
+  let median;
+  
+  array.sort((a, b) => a - b);
+
+  const isOdd = array.length % 2 !== 0 ? true : false;
+
+  if (isOdd) {
+    medianPosition = Math.floor(array.length / 2);
+    median = array[medianPosition];
+  } else {
+    medianPosition = [Math.floor((array.length / 2) - 1), Math.floor(array.length / 2)];
+    median = (array[medianPosition[0]] + array[medianPosition[1]]) / 2;
+  }
+  return median;
+}
+
 function personSalaryProjections(id) {
   const person = findPerson(id).name;
   const jobs = findPerson(id).jobs;
@@ -24,7 +42,7 @@ function personSalaryProjections(id) {
     salaryIncreases.push(perecentageIncrease);
   }
 
-  const salaryIncreasesMedian = PlatziMath.medianFormula(salaryIncreases);
+  const salaryIncreasesMedian = medianFormula(salaryIncreases);
 
   const lastSalary = jobs[jobs.length - 1].salary;
   const salaryIncrease = lastSalary * salaryIncreasesMedian
