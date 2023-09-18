@@ -15,6 +15,7 @@ module.exports = {
         primary: {
           900: "#183D3D",
           800: "#265252",
+          50: "#5c83744f",
         },
         secondary: "#5C8374",
         tertiary: "#93B1A6"

@@ -1,4 +1,28 @@
+// --------------------------- Functions ---------------------------
+function createFiguresChoiceContainer(containerToAppend) {
+  // --------- HTML Elements ---------
+  // Figures Choice Container
+  const figuresChoiceContainer = document.createElement('div');
+  figuresChoiceContainer.setAttribute('id', 'figures-choice-two');
+  figuresChoiceContainer.classList.add('Grid-center');
+  // Figures Choice Subtitle
+  const figuresChoiceSubtitle = document.createElement('h2');
+  figuresChoiceSubtitle.classList.add('Activity-subtitle');
+  figuresChoiceSubtitle.innerText = `Choose a Figure`;
+  // Figures Options Container
+  const figuresOptionsContainer = document.createElement('div');
+  figuresOptionsContainer.setAttribute('id', 'figures-options');
+  figuresOptionsContainer.classList.add('flex', 'flex-wrap', 'justify-around', 'gap-y-4')
+
+  // --------- HTML Layout ---------
+  // Figures Choice Container into Geometry Activity
+  containerToAppend.appendChild(figuresChoiceContainer);
+}
+
+// Creating the "Figures Choice" container
+createFiguresChoiceContainer();
 const figuresOptionsContainer = document.getElementById('figures-options');
+console.log(figuresOptionsContainer);
 const figuresElements = [];
 
 // Creating HTML Elements for Figures Containers

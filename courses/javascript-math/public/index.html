@@ -3,36 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Fonts -->
+  <!-- Bricolage Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500;10..48,600;10..48,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&display=swap" rel="stylesheet">
   <!-- Styles -->
   <link rel="stylesheet" href="../public/styles.css">
+  <!-- Tab Icon -->
   <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2861/2861731.png">
   <title>Mathematics Workshop - JavaScript</title>
 </head>
-<body id="body" class="font-Bricolage w-full min-h-screen h-fit bg-gradient-to-tr from-primary-900 to-secondary">
-  <header class="grid place-items-center h-[15vh]">
+<body class="font-Bricolage w-full min-h-screen bg-gradient-to-tr from-primary-900 to-secondary">
+  <header class="Grid-center py-4">
     <h1 class="text-4xl text-center font-bold uppercase text-black Shadow-white">Mathematics Workshop</h1>
   </header>
-  <main class="items-center w-full h-full p-4 pt-0 overflow-auto">
-    <!-- Activities Choices Container -->
-    <div>
-      <!-- Activities Navbar -->
-      <div id="activities-navbar-container" class="relative hidden w-full h-10 px-2 overflow-x-auto Scrollbar-hide">
-        <nav id="activities-navbar" class="flex h-full w-fit gap-4">
-        </nav>
-      </div>
-      <!-- Activities Cards Container -->
-      <div id="cards-container" class="grid grid-cols-2 justify-center gap-x-4 w-full h-full">
-      </div>
-    </div>
+  <main id="main-container" class="w-full h-full p-4 py-2">
     <!-- Activities Container -->
-    <section id="activities-container" class="grid place-items-center mt-8">
+    <section id="activities-container" class="Grid-center mt-5">
       <!-- Geometry Activity -->
       <section id="geometry-container" class="hidden Activity-container">
-        <h1 class="Activity-title">Basic geometry formulas</h1>
+        <h1 class="Activity-heading">Basic geometry formulas</h1>
         <!-- Figure Options -->
         <div id="figures-choice" class="grid justify-items-center gap-2">
           <h2 class="Activity-subtitle">Choose a figure</h2>
@@ -42,7 +32,7 @@
         </div>
         <!-- Rectangle Calculation -->
         <div id="rectangle-container" class="hidden Activity-container__geometry">
-          <form class="Activity-form">
+          <form class="Grid-center">
             <!-- Base -->
             <input id="rectangle-base" type="number" max="99" autocomplete="off" placeholder="Base" class="Activity-input">
             <!-- Height -->
@@ -54,7 +44,7 @@
         </div>
         <!-- Triangle Calculation -->
         <div id="triangle-container" class="hidden Activity-container__geometry">
-          <form class="Activity-form">
+          <form class="Grid-center">
             <!-- Base -->
             <input id="triangle-base" type="number" autocomplete="off" placeholder="Base" class="Activity-input">
             <!-- Side 1 -->
@@ -68,7 +58,7 @@
         </div>
         <!-- Circle Calculation -->
         <div id="circle-container" class="hidden Activity-container__geometry">
-          <form class="Activity-form">
+          <form class="Grid-center">
             <!-- Radius -->
             <input id="circle-radius" type="number" autocomplete="off" placeholder="Radius" class="Activity-input">
             <!-- Submit -->
@@ -79,9 +69,9 @@
       </section>
       <!-- Percentages Activity -->
       <section id="percentages-container" class="hidden Activity-container gap-2">
-        <h1 class="Activity-title">Calculate a discount!</h1>
+        <h1 class="Activity-heading">Calculate a discount!</h1>
         <!-- Discount Calculation -->
-        <form class="Activity-form gap-1 w-4/5">
+        <form class="Grid-center gap-1 w-4/5">
           <!-- Price -->
           <label for="price">Type a product price</label>
           <input id="price" type="number" autocomplete="off" placeholder="$199" class="Activity-input placeholder:opacity-50">
@@ -94,7 +84,7 @@
         <!-- Output -->
         <p id="discount-output" class="Activity-output"></p>
         <!-- Discount Calculation with a Coupon -->
-        <form class="Activity-form gap-1 w-4/5 border-t-[1px] border-primary-900 pt-3">
+        <form class="Grid-center gap-1 w-4/5 border-t-[1px] border-primary-900 pt-3">
           <h2 class="Activity-subtitle w-full font-bold">Discount using a coupon</h2>
           <!-- Price -->
           <label for="coupon-price">Type a product price</label>
@@ -111,7 +101,7 @@
       </section>
       <!-- Averages Activity -->
       <section id="averages-container" class="hidden Activity-container gap-2">
-        <h1 class="Activity-title">Types of averages</h1>
+        <h1 class="Activity-heading">Types of averages</h1>
         <!-- Random List -->
         <div id="random-list-container" class="flex flex-col items-center gap-4 mt-1">
           <p id="averages-instructions" class="text-center leading-4 w-5/6">Click the button below to generate a list of 25 random numbers between 1 and 20</p>
@@ -133,7 +123,8 @@
               id="averages-return"
               class="w-8 p-2"
               src="https://res.cloudinary.com/dziyyutwr/image/upload/v1693489975/Math/close-icon_ejx6qw.png"
-              alt="Return Icon">
+              alt="Return Icon"
+            >
             <!-- Averages Result -->
             <p id="averages-result-message" class="Activity-paragraph__averages"></p>
           </div>
@@ -141,7 +132,7 @@
       </section>
       <!-- Salaries Activity -->
       <section id="salaries-container" class="hidden Activity-container gap-1">
-        <h1 class="Activity-title">Salaries Analysis</h1>
+        <h1 class="Activity-heading">Salaries Analysis</h1>
         <p id="salaries-info" class="text-center leading-4 p-2 rounded-md bg-tertiary">Here's a database with information from several people and their annual employers and salaries.<br><a href="./javascript/salaries-data.js" download class="text-sm font-semibold">(Click here to download the database)</a></p>
         <!-- Analysis Options Container -->
         <div id="analysis-options-container" class="Grid-center py-1">
@@ -152,15 +143,43 @@
       </section>
       <!-- CDT Activity -->
       <div id="cdt-container" class="hidden Activity-container">
-        <h1>CDT</h1>
+        <h1 class="Activity-heading">CDT Calculator</h1>
+        <form id="cdt-form-container" class="Grid-center">
+          <!-- Amount to Invest -->
+          <div id="amount-to-invest-container" class="Grid-center">
+            <label for="amount-to-invest" class="font-semibold">Amount to Invest</label>
+            <input id="amount-to-invest-input" type="number" placeholder="$20000" class="Activity-input">
+            <input id="amount-to-invest-submit" type="submit" class="Activity-submit">
+            <!-- Invalid Amount -->
+            <p id="invalid-amount-to-invest" class="Activity-output"></p>
+          </div>
+          <!-- Term To Invest -->
+          <div id="term-container" class="hidden Grid-center">
+            <!-- Close Term to Invest -->
+            <img
+              id="close-term-container"
+              class="Activity-close top-0"
+              src="https://res.cloudinary.com/dziyyutwr/image/upload/v1693489975/Math/close-icon_ejx6qw.png"
+              alt="Close Icon"
+            >
+            <h2 class="Activity-subtitle w-3/4">Select the term for which you want to invest</h2>
+            <!-- Options -->
+            <div id="term-options-container" class="Flex-center flex-row flex-wrap gap-1 p-0.5"></div>
+            <input id="term-submit" type="submit" class="Activity-submit">
+            <p id="term-customized" class="text-xs underline">Customized term</p>
+            <p id="term-invalid" class="Activity-output"></p>
+          </div>
+        </form>
       </div>
     </section>
   </main>
+  <script src="./javascript/global-functions.js"></script>
   <script src="./javascript/main.js"></script>
   <script src="./javascript/geometry.js"></script>
   <script src="./javascript/percentages.js"></script>
   <script src="./javascript/averages.js"></script>
   <script src="./javascript/salaries-data.js"></script>
   <script src="./javascript/salaries.js"></script>
+  <script src="./javascript/cdt.js"></script>
 </body>
 </html>
