@@ -26,51 +26,51 @@ function createActivitiesChoices(containerToAppend) {
   activitiesNavbarContainer.appendChild(activitiesNavbar);
 }
 
-function addActivitiesNavbarOptionsInfo(array) {
+function addActivitiesNavbarOptionsInfo(elementsInfoArray) {
   // Geometry Option
-  array.push({
-    id: "geometry-option",
+  elementsInfoArray.push({
+    id: "geometry",
     image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692995052/Math/geometry_b5mawp.png",
-    imageAlt: "Geometry Image"
+    imageAlt: "Geometry"
   });
   // Percentages Option
-  array.push({
-    id: "percentages-option",
+  elementsInfoArray.push({
+    id: "percentages",
     image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692995980/Math/percentages_easmud.png",
-    imageAlt: "Percentages Image"
+    imageAlt: "Percentages"
   });
   // Types of Average Option
-  array.push({
-    id: "averages-option",
+  elementsInfoArray.push({
+    id: "averages",
     image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693262956/Math/statistics_odfqwt.png",
-    imageAlt: "Averages Image"
+    imageAlt: "Averages"
   });
   // Salaries Option
-  array.push({
-    id: "salaries-option",
+  elementsInfoArray.push({
+    id: "salaries",
     image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693262883/Math/salaries_ntvo6n.png",
-    imageAlt: "Salaries Image"
+    imageAlt: "Salaries"
   });
   // CDT Calculator Option
-  array.push({
-    id: "cdt-option",
+  elementsInfoArray.push({
+    id: "cdt",
     image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693263368/Math/cdt_r4c4nf.png",
-    imageAlt: "CDT Image"
+    imageAlt: "CDT"
   });
 }
 
-function createActivitiesNavbarOptions(array, containerToAppend, optionsArray) {
-  for (element of array) {
+function createActivitiesNavbarOptions(elementsInfoArray, containerToAppend, navbarOptionsArray) {
+  for (element of elementsInfoArray) {
     // --------- HTML Elements ---------
     // Navbar Option
     const navbarOption = document.createElement('div');
     navbarOption.classList.add('Navbar-element');
-    navbarOption.setAttribute('id', element.id);
+    navbarOption.setAttribute('id', `${element.id}-option`);
     // Navbar Option Image
     const navbarOptionImage = document.createElement('img');
     navbarOptionImage.classList.add('h-full');
     navbarOptionImage.setAttribute('src', element.image);
-    navbarOptionImage.setAttribute('alt', element.imageAlt);
+    navbarOptionImage.setAttribute('alt', `${element.imageAlt} Image`);
     // --------- HTML Layout ---------
     // Navbar Option into Navbar
     containerToAppend.appendChild(navbarOption);
@@ -78,60 +78,60 @@ function createActivitiesNavbarOptions(array, containerToAppend, optionsArray) {
     navbarOption.appendChild(navbarOptionImage);
 
     // Storing every Navbar Option in an array
-    optionsArray.push(navbarOption);
+    navbarOptionsArray.push(navbarOption);
   }
 }
 
-function addActivitiesCardsOptionsInfo(array) {
+function addActivitiesCardsOptionsInfo(elementsInfoArray) {
   // Geometry Card
-  array.push({
-    id: "geometry-card",
+  elementsInfoArray.push({
+    id: "geometry",
     image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692995052/Math/geometry_b5mawp.png",
-    imageAlt: "Geometry Image",
+    imageAlt: "Geometry",
     name: "Geometry"
   });
   // Percentages Card
-  array.push({
-    id: "percentages-card",
+  elementsInfoArray.push({
+    id: "percentages",
     image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692995980/Math/percentages_easmud.png",
-    imageAlt: "Percentages Image",
+    imageAlt: "Percentages",
     name: "Percentages"
   });
   // Types of Average Card
-  array.push({
-    id: "averages-card",
+  elementsInfoArray.push({
+    id: "averages",
     image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693262956/Math/statistics_odfqwt.png",
-    imageAlt: "Average Image",
+    imageAlt: "Average",
     name: "Types of Average"
   });
   // Salaries Project Card
-  array.push({
-    id: "salaries-card",
+  elementsInfoArray.push({
+    id: "salaries",
     image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693262883/Math/salaries_ntvo6n.png",
-    imageAlt: "Average Image",
+    imageAlt: "Average",
     name: "Salaries Analysis "
   });
   // CDT Calculator Card
-  array.push({
-    id: "cdt-card",
+  elementsInfoArray.push({
+    id: "cdt",
     image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693263368/Math/cdt_r4c4nf.png",
-    imageAlt: "CDT Image",
+    imageAlt: "CDT",
     name: "CDT Calculator"
   });
 }
 
-function createActivitiesCardsOptions(array, containerToAppend, optionsArray) {
-  for (element of array) {
+function createActivitiesCardsOptions(elementsInfoArray, containerToAppend, activitiesCardsOptionsArray) {
+  for (element of elementsInfoArray) {
     // --------- HTML Elements ---------
     // Activity Card Container
     const activityCard = document.createElement('div');
     activityCard.classList.add('Activity-card');
-    activityCard.setAttribute('id', element.id);
+    activityCard.setAttribute('id', `${element.id}-card`);
     // Activity Card Image
     const activityImage = document.createElement('img');
     activityImage.classList.add('w-5/6');
     activityImage.setAttribute('src', element.image);
-    activityImage.setAttribute('alt', element.imageAlt);
+    activityImage.setAttribute('alt', `${element.imageAlt} Image`);
     // Activity Card Name
     const activityName = document.createElement('p');
     activityName.classList.add('Activity-card__paragraph');
@@ -143,44 +143,44 @@ function createActivitiesCardsOptions(array, containerToAppend, optionsArray) {
     // Activity Card Image and Name into Activity Card Container
     activityCard.append(activityImage, activityName);
     // Storing every Activity Card in an array
-    optionsArray.push(activityCard);
+    activitiesCardsOptionsArray.push(activityCard);
   }
 }
 
-function addActivitiesContainersInfo(array) {
+function addActivitiesContainersInfo(elementsInfoArray) {
   // Geometry Container
-  array.push({
-    id: "geometry-container-two",
+  elementsInfoArray.push({
+    id: "geometry",
     heading: "Basic geometry formulas"
   });
   // Percentages Container
-  array.push({
-    id: "percentages-container-two",
+  elementsInfoArray.push({
+    id: "percentages",
     heading: "Calculate a discount"
   });
   // Averages Container
-  array.push({
-    id: "averages-container-two",
+  elementsInfoArray.push({
+    id: "averages",
     heading: "Types of averages"
   });
   // Salaries Container
-  array.push({
-    id: "salaries-container-two",
+  elementsInfoArray.push({
+    id: "salaries",
     heading: "Salaries analysis"
   });
   // Percentages Container
-  array.push({
-    id: "cdt-container-two",
+  elementsInfoArray.push({
+    id: "cdt",
     heading: "CDT Calculator"
   });
 }
 
-function createActivitiesContainers(array, containerToAppend, containersArray) {
-  for (element of array) {
+function createActivitiesContainers(elementsInfoArray, containerToAppend, activitiesContainersArray) {
+  for (element of elementsInfoArray) {
     // --------- HTML Elements --------
     // Activity Container
     const activityContainer = document.createElement('section');
-    activityContainer.setAttribute('id', element.id);
+    activityContainer.setAttribute('id', `${element.id}-activity`);
     activityContainer.classList.add('hidden', 'Activity-container');
     // Activity Heading
     const activityHeading = document.createElement('h1');
@@ -193,7 +193,7 @@ function createActivitiesContainers(array, containerToAppend, containersArray) {
     // Activity Heading into Activity Container
     activityContainer.appendChild(activityHeading);
     // Storing every Activity Container in an array
-    containersArray.push(activityContainer);
+    activitiesContainersArray.push(activityContainer);
   }
 }
 
@@ -213,6 +213,7 @@ function addEventsToActivitiesCardsOptions(cardsArray, navbarOptionsArray) {
           navbarOptionsArray[i].classList.add('Navbar-element-border');
           // Making the Activity Container appear
           activitiesContainers[i].classList.remove('hidden');
+          activitiesContainersElements[i].classList.remove('hidden');
 
           // Moving the scrollbar according to the activity clicked
           if (activityCard === 'cdt') {

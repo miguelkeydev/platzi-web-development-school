@@ -1,252 +1,392 @@
 // --------------------------- Functions ---------------------------
 function createFiguresChoiceContainer(containerToAppend) {
   // --------- HTML Elements ---------
-  // Figures Choice Container
+  // Figures Choice container
   const figuresChoiceContainer = document.createElement('div');
-  figuresChoiceContainer.setAttribute('id', 'figures-choice-two');
+  figuresChoiceContainer.setAttribute('id', 'figures-choice');
   figuresChoiceContainer.classList.add('Grid-center');
-  // Figures Choice Subtitle
+  // Figures Choice subtitle
   const figuresChoiceSubtitle = document.createElement('h2');
   figuresChoiceSubtitle.classList.add('Activity-subtitle');
   figuresChoiceSubtitle.innerText = `Choose a Figure`;
-  // Figures Options Container
+  // Figures Options container
   const figuresOptionsContainer = document.createElement('div');
   figuresOptionsContainer.setAttribute('id', 'figures-options');
   figuresOptionsContainer.classList.add('flex', 'flex-wrap', 'justify-around', 'gap-y-4')
 
   // --------- HTML Layout ---------
-  // Figures Choice Container into Geometry Activity
+  // Figures Choice container into Geometry Activity container
   containerToAppend.appendChild(figuresChoiceContainer);
+  // Figures Choice subtitle and Figures Options container into Figures Choice container
+  figuresChoiceContainer.append(figuresChoiceSubtitle, figuresOptionsContainer)
 }
 
-// Creating the "Figures Choice" container
-createFiguresChoiceContainer();
-const figuresOptionsContainer = document.getElementById('figures-options');
-console.log(figuresOptionsContainer);
-const figuresElements = [];
+function addFiguresOptionsInfo(elementsInfoArray) {
+  // Rectangle Figure Option
+  elementsInfoArray.push({
+    id: "rectangle-figure",
+    image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693609233/Math/rectangle_ntaxsd.png",
+    imageAlt: "Rectangle Figure",
+    name: ""
+  });
+  // Triangle Figure Option
+  elementsInfoArray.push({
+    id: "triangle-figure",
+    image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693446327/Math/triangle_pnasp2.png",
+    imageAlt: "Triangle Figure",
+    name: ""
+  });
+  // Circle Figure Option
+  elementsInfoArray.push({
+    id: "circle-figure",
+    image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693447968/Math/circle_yauo9n.png",
+    imageAlt: "Circle Figure",
+    name: ""
+  });
+}
 
-// Creating HTML Elements for Figures Containers
-function createFiguresContainersElements(arrayContainers, arrayElements) {
-  let i = 0;
-  for (element of arrayElements) {
-    // Creating HTML Elements
-    const close = document.createElement('img');
-    close.classList.add('Activity-close', 'close-container');
-    close.setAttribute('src', 'https://res.cloudinary.com/dziyyutwr/image/upload/v1693489975/Math/close-icon_ejx6qw.png');
-    close.setAttribute('alt', 'Close Icon');
-    const heading = document.createElement('h3');
-    heading.classList.add('Activity-subtitle');
-    heading.innerText = element.heading;
-    // HTML Layout 
-    arrayContainers[i].prepend(close, heading)
-    i++;
+function createFiguresActivities(elementsInfoArray, arrayToAppend, figuresActivitiesArray, figuresFormsArray, outputsArray) {
+  // Creating Geometry Activities container
+  const geometryActivitiesContainer = document.createElement('div');
+  geometryActivitiesContainer.setAttribute('id', 'geometry-activities');
+  geometryActivitiesContainer.classList.add('Grid-center');
+
+  // Geometry Activities container into Geometry Activity
+  arrayToAppend.appendChild(geometryActivitiesContainer);
+
+  for (element of elementsInfoArray) {
+    // --------- HTML Elements ---------
+    // Figure Activity container
+    const figureActivityContainer = document.createElement('div');
+    figureActivityContainer.setAttribute('id', `${element}-activity`);
+    figureActivityContainer.classList.add('hidden', 'Activity-container__geometry');
+    // Figure Activity heading
+    const figureActivityHeading = document.createElement('h2');
+    figureActivityHeading.classList.add('Activity-subtitle');
+    figureActivityHeading.innerText = `Type the measurements of a ${element} in cm`;
+    // Figure Activity form
+    const figureActivityForm = document.createElement('form');
+    figureActivityForm.setAttribute('id', `${element}-form`);
+    figureActivityForm.setAttribute('autocomplete', 'off');
+    figureActivityForm.classList.add('Grid-center');
+    // Figure Activity output
+    const figureActivityOutput = document.createElement('p');
+    figureActivityOutput.setAttribute('id', `${element}-output`);
+    figureActivityOutput.classList.add('Activity-output');
+    // Figure Activity close button
+    const figureActivityClose = document.createElement('img');
+    figureActivityClose.classList.add('Close-button', 'figures-activities-close');
+    figureActivityClose.setAttribute('src', 'https://res.cloudinary.com/dziyyutwr/image/upload/v1693489975/Math/close-icon_ejx6qw.png');
+    figureActivityClose.setAttribute('alt', 'Close Icon');
+
+    // --------- HTML Layout ---------
+    // Figure Activity container into Geometry Activity container
+    geometryActivitiesContainer.appendChild(figureActivityContainer);
+    // Heading, Form, Ouput, and Close Button into Figure Activity container
+    figureActivityContainer.append(figureActivityHeading, figureActivityForm, figureActivityOutput, figureActivityClose);
+
+    // Storing every Figure Activity, Figure Form, and Output in an array
+    figuresActivitiesArray.push(figureActivityContainer);
+    figuresFormsArray.push(figureActivityForm);
+    outputsArray.push(figureActivityOutput);
   }
 }
 
-// Hiding Figures Options Container when clicking on any option
-function hideFiguresOptions(selectedOption) {
-  figuresOptions.classList.add('hidden');
-  // Searching for the compatible activity container
-  for (let i = 0; i < figuresContainers.length; i++) {
-    const figureContainer = figuresContainers[i].id.split('-');
-    // Showing compatible container
-    if (selectedOption[0] === figureContainer[0]) {
-      figuresContainers[i].classList.remove('hidden');
-    }
-  }
+function addEventsToFiguresOptions(figureOptionsArray, containerToHide, containerToShowArray) {
+  figureOptionsArray.forEach(figureOption => {
+    figureOption.addEventListener('click', () => {
+      // Hiding the "Figure Options" container
+      containerToHide.classList.add('hidden');
+
+      // Searching and Showing the compatible activity container
+      for (let i = 0; i < containerToShowArray.length; i++) {
+        if (figureOption.id.split('-')[0] === containerToShowArray[i].id.split('-')[0]) {
+          containerToShowArray[i].classList.remove('hidden');
+        }
+      }
+    });
+  });
 }
 
-// Closing Figure Container when clicking on Close Icon
-function closeFiguresContainer(figuresContainers, inputs) {
-  for (container of figuresContainers) {
-    container.classList.add('hidden');
-    figuresOptions.classList.remove('hidden');
-  }
-  // Resetting Calculations Information
-  for (input of inputs) {
-    input.value = undefined;
-    input.innerHTML = "";
-  }
+function createRectangleFormInputs() {
+  // --------- HTML Elements ---------
+  // Base Input
+  const baseInput = document.createElement('input');
+  baseInput.setAttribute('id', 'rectangle-base');
+  baseInput.setAttribute('type', 'number');
+  baseInput.setAttribute('placeholder', 'Base');
+  baseInput.classList.add('Activity-input');
+  // Height Input
+  const heightInput = document.createElement('input');
+  heightInput.setAttribute('id', 'rectangle-height');
+  heightInput.setAttribute('type', 'number');
+  heightInput.setAttribute('placeholder', 'Height');
+  heightInput.classList.add('Activity-input');
+  // Submit Button
+  const submitButton = document.createElement('input');
+  submitButton.setAttribute('id', 'rectangle-submit');
+  submitButton.setAttribute('type', 'submit');
+  submitButton.classList.add('Activity-submit');
+
+  // --------- HTML Layout ---------
+  figuresActivitiesForms[0].append(baseInput, heightInput, submitButton);
+
+  // Adding the Inputs and to an array
+  figuresActivitiesInputs.push(baseInput, heightInput);
 }
 
-function rectangleCalculation(base, height, message) {
-  event.preventDefault();
+function addEventsToRectangleSubmit(submitButton, base, height, output) {
+  submitButton.addEventListener('click', () => {
+    event.preventDefault();
+    rectangleCalculation(base.value, height.value, output);
+  });
+}
+
+function rectangleCalculation(base, height, output) {
   // Validating if the required information has been given correctly
-  if (base > -1 && base < 1 || height > -1 && height < 1) {
-    return message.innerText = "You didn't fill out the form!";
-  } else if (base < 0 || height < 0) {
-    return message.innerText = "You typed negative numbers!";
-  } else if (base > 99 || height > 99) {
-    return message.innerText = "You can't type larger measurements than 99!";
-  } else {
-    const perimeter = (base * 2) + (height * 2);
-    const area = base * height;
-    message.innerHTML = `The rectangle perimeter is ${perimeter} cm and its area is ${area} cm&sup2;`;
+  switch (true) {
+    case base === `` || height === ``:
+      return output.innerText = `You didn't fill out the form!`;
+    
+    case base < 0 || height < 0:
+      return output.innerText = "You typed negative numbers!";
+    
+    case base > 99 || height > 99:
+      return output.innerText = `You can't type larger measurements than 99`;
+    
+    default:
+      const perimeter = (base * 2) + (height * 2);
+      const area = base * height;
+      return output.innerHTML = `The rectangle perimeter is ${perimeter.toFixed(1)} cm and its area is ${area.toFixed(1)} cm&sup2;`;
   }
 }
 
-function triangleCalculation(base, side1, side2, message) {
-  event.preventDefault()
+function createTriangleFormInputs() {
+  // --------- HTML Elements ---------
+  // Base Input
+  const baseInput = document.createElement('input');
+  baseInput.setAttribute('id', 'triangle-base');
+  baseInput.setAttribute('type', 'number');
+  baseInput.setAttribute('placeholder', 'Base');
+  baseInput.classList.add('Activity-input');
+  // Side 1
+  const side1Input = document.createElement('input');
+  side1Input.setAttribute('id', 'triangle-side1');
+  side1Input.setAttribute('type', 'number');
+  side1Input.setAttribute('placeholder', 'Side 1');
+  side1Input.classList.add('Activity-input');
+  // Side 2
+  const side2Input = document.createElement('input');
+  side2Input.setAttribute('id', 'triangle-side2');
+  side2Input.setAttribute('type', 'number');
+  side2Input.setAttribute('placeholder', 'Side 2');
+  side2Input.classList.add('Activity-input');
+  // Submit Button
+  const submitButton = document.createElement('input');
+  submitButton.setAttribute('id', 'triangle-submit');
+  submitButton.setAttribute('type', 'submit');
+  submitButton.classList.add('Activity-submit');
+
+  // --------- HTML Layout ---------
+  figuresActivitiesForms[1].append(baseInput, side1Input, side2Input, submitButton);
+
+  // Adding the Inputs to an array
+  figuresActivitiesInputs.push(baseInput, side1Input, side2Input);
+}
+
+function addEventsToTriangleSubmit(submitButton, base, side1, side2, output) {
+  submitButton.addEventListener('click', () => {
+    event.preventDefault();
+    triangleCalculation(Number(base.value), Number(side1.value), Number(side2.value), output);
+  });
+}
+
+function triangleCalculation(base, side1, side2, output) {
   // Validating if the required information has been given correctly
-  if (base > -1 && base < 1 || side1 > -1 && side1 < 1 || side2 > -1 && side2 < 1) {
-    return message.innerText = "You didn't fill out the form!";
-  } else if (base < 0 || side1 < 0 || side2 < 0) {
-    return message.innerText = "You typed negative numbers!";
-  } else if (base > 99 || side1 > 99 || side2 > 99) {
-    return message.innerText = "You can't type larger measurements than 99!";
-  } else {
-    const perimeter = base + side1 + side2;
-    let height;
-    let triangleType;
+  switch (true) {
+    case base === 0 || side1 === 0 || side2 === 0:
+      return output.innerText = `You didn't fill out the form!`;
 
-    // Validating if it's an Equilateral, Isosceles, or Scalene Triangle to get its Height
-    if (base === side1 && base === side2) {
-      // Equilateral Triangle
-      height = (Math.sqrt(3) / 2) * base;
-      triangleType = "Equilateral";
-    } else if (base !== side1 && side1 === side2) {
-      // Isosceles Triangle
-      height = Math.sqrt((side1 ** 2) - ((base ** 2) / 4));
-      triangleType = "Isosceles";
-    } else if (base !== side1 && base !== side2) {
-      // Scalene Triangle
-      const semiPerimeter = perimeter / 2;
-      height = (2 / base) * Math.sqrt(semiPerimeter * (semiPerimeter - base) * (semiPerimeter - side1) * (semiPerimeter - side2));
-      triangleType = "Scalene";
-    }
+    case base < 0 || side1 < 0 || side2 < 0:
+      return output.innerText = `You typed negative numbers!`;
+    
+    case base > 99 || side1 > 99 || side2 > 99:
+      return output.innerText = `You can't type larger measurements than 99`;
+    
+    // Doing the calculation
+    default:
+      const perimeter = base + side1 + side2;
+      let height;
+      let triangleType;
 
-    // Validating if the Triangle exists
-    if (height === 0 || isNaN(height)) {
-      return message.innerText = "The triangle you typed doesn't exist";
-    }
+      // Validating if it's an Equilateral, Isosceles, or Scalene Triangle to get its Height
+      switch (true) {
+        // Equilateral Triangle
+        case base === side1 && base === side2:
+          height = (Math.sqrt(3) / 2) * base;
+          triangleType = "Equilateral";
+          break;
+        // Isosceles Triangle
+        case base !== side1 && side1 === side2:
+          height = Math.sqrt((side1 ** 2) - ((base ** 2) / 4));
+          triangleType = "Isosceles";
+          break;
+        // Scalene Triangle
+        case base !== side1 && base !== side2:
+          const semiPerimeter = perimeter / 2;
+          height = (2 / base) * Math.sqrt(semiPerimeter * (semiPerimeter - base) * (semiPerimeter - side1) * (semiPerimeter - side2));
+          triangleType = "Scalene";
+          break;
+      }
 
-    const area = (base * height) / 2;
-    message.innerHTML = `Your ${triangleType} Triangle has a Perimeter of ${perimeter} cm, a Height of ${height.toFixed(1)} cm, and an Area of ${area.toFixed(1)} cm&sup2;`;
+      // Validating if the Triangle exists
+      if (height === 0 || isNaN(height)) {
+        return output.innerText = "The triangle you typed doesn't exist";
+      }
+    
+      const area = (base * height) / 2;
+      return output.innerHTML = `Your ${triangleType} Triangle has a Perimeter of ${perimeter.toFixed(1)} cm, a Height of ${height.toFixed(1)} cm, and an Area of ${area.toFixed(1)} cm&sup2;`;
   }
 }
 
-function circleCalculation(radius, message) {
-  event.preventDefault()
+function createcircleFormInputs() {
+  // --------- HTML Elements ---------
+  // Radius Input
+  const radiusInput = document.createElement('input');
+  radiusInput.setAttribute('id', 'circle-radius');
+  radiusInput.setAttribute('type', 'number');
+  radiusInput.setAttribute('placeholder', 'Radius');
+  radiusInput.classList.add('Activity-input');
+  // Submit Button
+  const submitButton = document.createElement('input');
+  submitButton.setAttribute('id', 'circle-submit');
+  submitButton.setAttribute('type', 'submit');
+  submitButton.classList.add('Activity-submit');
+
+  // --------- HTML Layout ---------
+  figuresActivitiesForms[2].append(radiusInput, submitButton);
+
+  // Adding the Inputs to an array
+  figuresActivitiesInputs.push(radiusInput);
+}
+
+function addEventsToCircleSubmit(submitButton, radius, output) {
+  submitButton.addEventListener('click', () => {
+    event.preventDefault();
+    circleCalculation(Number(radius.value), output);
+  });
+}
+
+function circleCalculation(radius, output) {
   // Validating if the required information has been given correctly
-  if (radius > -1 && radius < 1) {
-    return message.innerText = "You didn't fill out the form!";
-  } else if (radius < 0) {
-    return message.innerText = "You typed negative numbers!";
-  } else if (radius > 99) {
-    return message.innerText = "You can't type larger measurements than 99!";
-  } else {
+  switch (true) {
+    case radius === 0:
+      return output.innerText = "You didn't fill out the form!";
+    
+    case radius < 0:
+      return output.innerText = "You typed negative numbers!";
+    
+    case radius > 99:
+      return output.innerText = "You can't type larger measurements than 99";
+    
+    default:
     const diameter = radius * 2;
     const circumference = diameter * Math.PI;
     const area = (radius ** 2) * Math.PI;
-    message.innerHTML = `The diameter of your circle is ${diameter} cm, its circumference is ${circumference.toFixed(1)} cm, and its area is ${area.toFixed(1)} cm&sup2;`;
+
+    return output.innerHTML = `The diameter of your circle is ${diameter} cm, its circumference is ${circumference.toFixed(1)} cm, and its area is ${area.toFixed(1)} cm&sup2;`;
   }
 }
 
-// Adding Figures Cards
-// Rectangle Figure
-figuresElements.push({
-  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693609233/Math/rectangle_ntaxsd.png",
-  imageAlt: "Rectangle Figure",
-  id: "rectangle-figure",
-  name: ""
-})
+// Could be used for several Close Buttons
+function addEventsToCloseFiguresActivities(closeButtonsArray, containerToHideArray, containerToShow, activitiesInputs, activitiesOutputs) {
+  closeButtonsArray.forEach(closeButton => {
+    closeButton.addEventListener('click', () => {
+      // Hiding every Figure Activity container
+      containerToHideArray.forEach(figureActivity => figureActivity.classList.add('hidden'));
 
-// Triangle Figure
-figuresElements.push({
-  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693446327/Math/triangle_pnasp2.png",
-  imageAlt: "Triangle Figure",
-  id: "triangle-figure",
-  name: ""
-})
+      // Showing the Figures Options container
+      containerToShow.classList.remove('hidden');
+    
+      // Resetting Calculations Information
+      for (input of activitiesInputs) {
+        input.value = ``;
+      }
 
-// Circle Figure
-figuresElements.push({
-  image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693447968/Math/circle_yauo9n.png",
-  imageAlt: "Circle Figure",
-  id: "circle-figure",
-  name: ""
-})
+      // Resetting Calculations Outputs
+      for (output of activitiesOutputs) {
+        output.innerText = ``;
+      }
+    });
+  });
+}
 
-createCardElements(figuresElements, figuresOptionsContainer);
+// ------------------------- Procedure -------------------------
+const geometryActivityContainer = activitiesContainersElements[0];
 
-const figuresOptions = document.getElementById('figures-choice');
-const rectangleFigure = document.getElementById('rectangle-figure');
-const triangleFigure = document.getElementById('triangle-figure');
-const circleFigure = document.getElementById('circle-figure');
-const figuresList = [rectangleFigure, triangleFigure, circleFigure];
+// --------------- Figures Choice ---------------
+// Creating the "Figures Choice" container
+createFiguresChoiceContainer(geometryActivityContainer);
+const figuresChoiceContainer = document.getElementById('figures-choice');
+const figuresOptionsContainer = document.getElementById('figures-options');
+// Adding the Figures Options information
+const figuresOptionsInfo = [];
+addFiguresOptionsInfo(figuresOptionsInfo);
+// Creating and Storing the Figures Options Cards
+const figuresOptionsElements = [];
+createCardElements(figuresOptionsInfo, figuresOptionsContainer, figuresOptionsElements);
 
-const rectangleContainer = document.getElementById('rectangle-container');
-const triangleContainer = document.getElementById('triangle-container');
-const circleContainer = document.getElementById('circle-container');
-const figuresContainers = [rectangleContainer, triangleContainer, circleContainer];
+// --------------- Figures Containers ---------------
+// Adding the Figures containers information
+const figuresActivitiesInfo = ['rectangle', 'triangle', 'circle'];
+// Creating and Storing the Figures Containers, Figures Forms and Outputs
+const figuresActivitiesElements = [];
+const figuresActivitiesForms = [];
+const figuresActivitiesOutputs = [];
+createFiguresActivities(figuresActivitiesInfo, geometryActivityContainer, figuresActivitiesElements, figuresActivitiesForms, figuresActivitiesOutputs);
 
-const figuresContainerElements = [];
-// Adding Elements for Figures Containers
-// Rectangle Container
-figuresContainerElements.push({
-  id: "rectangle-container",
-  heading: "Type the measurements of a Rectangle in cm"
-});
-// Triangle Container
-figuresContainerElements.push({
-  id: "triangle-container",
-  heading: "Type the measurements of a Triangle in cm"
-});
-// Circle Container
-figuresContainerElements.push({
-  id: "circle-container",
-  heading: "Type the measurements of a Circle in cm"
-});
+// Figures Activities Inputs
+const figuresActivitiesInputs = [];
 
-// Event Listener to make each figure activity appear
-figuresList.forEach(figure => {
-  figure.addEventListener('click', () => {
-    hideFiguresOptions(figure.id.split('-'))
-  })
-});
+// Adding eventListeners to every Figure Option
+addEventsToFiguresOptions(figuresOptionsElements, figuresChoiceContainer, figuresActivitiesElements);
 
-createFiguresContainersElements(figuresContainers, figuresContainerElements);
+// Adding eventListeners to every Close Button
+const figuresActivitiesCloseButtons = document.querySelectorAll('.figures-activities-close');
+addEventsToCloseFiguresActivities(figuresActivitiesCloseButtons, figuresActivitiesElements, figuresChoiceContainer, figuresActivitiesInputs, figuresActivitiesOutputs);
 
-// Rectangle Elements
+// --------------- Rectangle Activity ---------------
+createRectangleFormInputs();
+
+// Form Elements
 const rectangleBase = document.getElementById('rectangle-base');
 const rectangleHeight = document.getElementById('rectangle-height');
 const rectangleSubmit = document.getElementById('rectangle-submit');
 const rectangleOutput = document.getElementById('rectangle-output');
 
-// Rectangle Event for Calculation
-rectangleSubmit.addEventListener('click', () => {
-  rectangleCalculation(rectangleBase.value, rectangleHeight.value, rectangleOutput);
-});
+// Adding eventListeners to Submit Button
+addEventsToRectangleSubmit(rectangleSubmit, rectangleBase, rectangleHeight, rectangleOutput);
 
-// Triangle Elements
+// --------------- Triangle Activity ---------------
+createTriangleFormInputs();
+
+// Form Elements
 const triangleBase = document.getElementById('triangle-base');
 const triangleSide1 = document.getElementById('triangle-side1');
 const triangleSide2 = document.getElementById('triangle-side2');
 const triangleSubmit = document.getElementById('triangle-submit');
 const triangleOutput = document.getElementById('triangle-output');
 
-// Triangle Event for Calculation
-triangleSubmit.addEventListener('click', () => {
-  triangleCalculation(Number(triangleBase.value), Number(triangleSide1.value), Number(triangleSide2.value), triangleOutput);
-});
+// Adding eventListeners to Submit Button
+addEventsToTriangleSubmit(triangleSubmit, triangleBase, triangleSide1, triangleSide2, triangleOutput);
 
-// Circle Elements
+// --------------- Circle Activity ---------------
+createcircleFormInputs();
+
+// Form Elements
 const circleRadius = document.getElementById('circle-radius');
 const circleSubmit = document.getElementById('circle-submit');
 const circleOutput = document.getElementById('circle-output');
 
-// Circle Event for Calculation
-circleSubmit.addEventListener('click', () => {
-  circleCalculation(Number(circleRadius.value), circleOutput);
-});
-
-// Activities Inputs
-const calculationsInputs = [rectangleBase, rectangleHeight, rectangleOutput, triangleBase, triangleSide1, triangleSide2, triangleOutput, circleRadius, circleOutput];
-
-// Closing Figure Containers when clicking on Close Icon
-const closeCalculation = document.querySelectorAll('.close-container');
-closeCalculation.forEach(element => {
-  element.addEventListener('click', () => {
-    closeFiguresContainer(figuresContainers, calculationsInputs);
-  });
-});
+// Adding eventListeners to Submit Button
+addEventsToCircleSubmit(circleSubmit, circleRadius, circleOutput);

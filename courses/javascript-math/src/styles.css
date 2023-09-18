@@ -59,6 +59,26 @@
     @apply font-semibold text-center leading-5 w-2/3;
   }
 
+  .Activity-container__geometry {
+    @apply relative Grid-center gap-4 pl-2;
+  }
+
+  .Activity-output {
+    @apply text-center leading-5;
+  }
+
+  .Close-button {
+    @apply absolute left-1;
+  }
+
+  .Activity-input {
+    @apply w-1/2 py-1 px-3 border-2 border-primary-800 bg-tertiary rounded-md appearance-none focus:outline-none placeholder:text-primary-900 placeholder:opacity-75 focus-within:ring-1;
+  }
+
+  .Activity-submit {
+    @apply w-1/2 py-0.5 border-2 border-tertiary bg-primary-800 rounded-md text-tertiary transition active:scale-95;
+  }
+
 
 
 
@@ -76,26 +96,6 @@
 
   .Card-container {
     @apply grid place-items-center gap-2 w-2/5 p-2 rounded-xl bg-tertiary Clicked--dark;
-  }
-
-  .Activity-close {
-    @apply absolute left-1;
-  }
-
-  .Activity-input {
-    @apply w-1/2 py-1 px-3 border-2 border-primary-800 bg-tertiary rounded-md appearance-none focus:outline-none placeholder:text-primary-900 placeholder:opacity-75 focus-within:ring-1;
-  }
-
-  .Activity-submit {
-    @apply w-1/2 py-0.5 border-2 border-tertiary bg-primary-800 rounded-md text-tertiary transition active:scale-95;
-  }
-
-  .Activity-output {
-    @apply text-center leading-5;
-  }
-
-  .Activity-container__geometry {
-    @apply relative grid justify-items-center gap-4 pl-2 mt-4;
   }
 
   .Activity-paragraph__averages {
