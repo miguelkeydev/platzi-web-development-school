@@ -1315,6 +1315,14 @@ input[type="number"]::-webkit-inner-spin-button,
   border-top-width: 1px;
 }
 
+.border-t {
+  border-top-width: 1px;
+}
+
+.border-t-2 {
+  border-top-width: 2px;
+}
+
 .border-solid {
   border-style: solid;
 }
