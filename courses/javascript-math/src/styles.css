@@ -18,6 +18,14 @@
     @apply relative flex flex-col items-center justify-center gap-2 w-full;
   }
 
+  .Flex-wrap {
+    @apply flex flex-wrap justify-around gap-y-4 w-full;
+  }
+
+  .Clicked__dark {
+    @apply transition active:shadow-md active:shadow-primary-900 active:scale-95 active:opacity-70;
+  }
+
   .Shadow-white {
     text-shadow: 2px 2px 4px #93B1A6;
   }
@@ -59,6 +67,10 @@
     @apply font-semibold text-center leading-5 w-2/3;
   }
 
+  .Activity-paragraph__averages {
+    @apply text-lg text-center leading-5 w-fit p-2 rounded-md bg-tertiary;
+  }
+
   .Activity-container__geometry {
     @apply relative Grid-center gap-4 pl-2;
   }
@@ -68,7 +80,7 @@
   }
 
   .Close-button {
-    @apply absolute left-1;
+    @apply absolute top-0 left-2 z-10 w-8 p-2 transition active:scale-90;
   }
 
   .Activity-input {
@@ -76,7 +88,7 @@
   }
 
   .Activity-submit {
-    @apply w-1/2 py-0.5 border-2 border-tertiary bg-primary-800 rounded-md text-tertiary transition active:scale-95;
+    @apply w-1/2 py-0.5 border-2 border-tertiary bg-primary-800 rounded-md text-tertiary Clicked__dark;
   }
 
 
@@ -86,24 +98,16 @@
     @apply bg-gradient-to-r from-emerald-200 to-emerald-100;
   }
 
-  .Clicked--dark {
-    @apply transition active:shadow-md active:shadow-primary-900 active:scale-95 active:opacity-70;
-  }
-
   .Close-button {
     @apply absolute top-0 left-2 z-10 w-6 p-1;
   }
 
   .Card-container {
-    @apply grid place-items-center gap-2 w-2/5 p-2 rounded-xl bg-tertiary Clicked--dark;
-  }
-
-  .Activity-paragraph__averages {
-    @apply text-lg text-center leading-5 w-fit p-2 rounded-md bg-tertiary;
+    @apply grid place-items-center gap-2 w-2/5 p-2 rounded-xl bg-tertiary Clicked__dark;
   }
 
   .Activity-salaries__option {
-    @apply w-4/6 py-1 px-2 rounded-md bg-tertiary Clicked--dark;
+    @apply w-4/6 py-1 px-2 rounded-md bg-tertiary Clicked__dark;
   }
 
   .Activity-table {
@@ -119,7 +123,7 @@
   }
 
   .Activity-label__cdt {
-    @apply Flex-center gap-0 w-[32%] py-1 rounded-lg border-2 border-primary-900 bg-tertiary Clicked--dark;
+    @apply Flex-center gap-0 w-[32%] py-1 rounded-lg border-2 border-primary-900 bg-tertiary Clicked__dark;
   }
 
   .Rate-fee__element-container {

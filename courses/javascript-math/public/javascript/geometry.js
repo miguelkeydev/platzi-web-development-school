@@ -12,7 +12,7 @@ function createFiguresChoiceContainer(containerToAppend) {
   // Figures Options container
   const figuresOptionsContainer = document.createElement('div');
   figuresOptionsContainer.setAttribute('id', 'figures-options');
-  figuresOptionsContainer.classList.add('flex', 'flex-wrap', 'justify-around', 'gap-y-4')
+  figuresOptionsContainer.classList.add('Flex-wrap')
 
   // --------- HTML Layout ---------
   // Figures Choice container into Geometry Activity container

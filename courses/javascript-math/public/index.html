@@ -22,70 +22,13 @@
     <section id="activities-container" class="Grid-center mt-5">
       <!-- Geometry Activity -->
       <section id="geometry-container" class="hidden Activity-container">
-        <h1 class="Activity-heading">Basic geometry formulas</h1>
       </section>
       <!-- Percentages Activity -->
       <section id="percentages-container" class="hidden Activity-container gap-2">
-        <h1 class="Activity-heading">Calculate a discount!</h1>
-        <!-- Discount Calculation -->
-        <form class="Grid-center gap-1 w-4/5">
-          <!-- Price -->
-          <label for="price">Type a product price</label>
-          <input id="price" type="number" autocomplete="off" placeholder="$199" class="Activity-input placeholder:opacity-50">
-          <!-- Discount -->
-          <label for="discount">Type the discount rate</label>
-          <input id="discount" type="number" autocomplete="off" placeholder="20%" class="Activity-input placeholder:opacity-50">
-          <!-- Submit -->
-          <input id="submit" type="submit" class="Activity-submit mt-2">
-        </form>
-        <!-- Output -->
-        <!-- <p id="discount-output" class="Activity-output"></p> -->
-        <!-- Discount Calculation with a Coupon -->
-        <form class="Grid-center gap-1 w-4/5 border-t-[1px] border-primary-900 pt-3">
-          <h2 class="Activity-subtitle w-full font-bold">Discount using a coupon</h2>
-          <!-- Price -->
-          <label for="coupon-price">Type a product price</label>
-          <input id="coupon-price" type="number" autocomplete="off" placeholder="$199" class="Activity-input placeholder:opacity-50">
-          <!-- Coupon -->
-          <label for="coupon-discount" class="text-center leading-4">Type a coupon to get a discount up to 95%</label>
-          <span class="text-xs">Hint: JavaScript release year</span>
-          <input id="coupon-discount" type="number" autocomplete="off" placeholder="0000" class="Activity-input placeholder:opacity-50">
-          <!-- Submit -->
-          <input id="coupon-submit" type="submit" class="Activity-submit mt-2">
-        </form>
-          <!-- Output -->
-          <p id="coupon-output" class="Activity-output"></p>
       </section>
       <!-- Averages Activity -->
       <section id="averages-container" class="hidden Activity-container gap-2">
         <h1 class="Activity-heading">Types of averages</h1>
-        <!-- Random List -->
-        <div id="random-list-container" class="flex flex-col items-center gap-4 mt-1">
-          <p id="averages-instructions" class="text-center leading-4 w-5/6">Click the button below to generate a list of 25 random numbers between 1 and 20</p>
-          <button id="generate-list" class="py-1 px-2 border-2 border-tertiary bg-primary-900 text-tertiary rounded-md">Generate</button>
-          <!-- Random List -->
-          <div class="grid place-items-center gap-1">
-            <h2 id="random-list-heading" class="Activity-subtitle hidden">Random List</h2>
-            <p id="random-list" class="Activity-paragraph__averages hidden">
-            </p>
-          </div>
-          <!-- Averages Container -->
-          <div id="averages-options-container" class="hidden flex-wrap justify-around gap-y-4">
-            <h3 class="text-sm text-center leading-4 w-full">Choose what do you want to get from the previous list</h3>
-          </div>
-          <!-- Result -->
-          <div id="averages-result-container" class="relative flex items-center justify-center gap-1 w-full hidden">
-            <!-- Return to Options -->
-            <img
-              id="averages-return"
-              class="w-8 p-2"
-              src="https://res.cloudinary.com/dziyyutwr/image/upload/v1693489975/Math/close-icon_ejx6qw.png"
-              alt="Return Icon"
-            >
-            <!-- Averages Result -->
-            <p id="averages-result-message" class="Activity-paragraph__averages"></p>
-          </div>
-        </div>
       </section>
       <!-- Salaries Activity -->
       <section id="salaries-container" class="hidden Activity-container gap-1">
