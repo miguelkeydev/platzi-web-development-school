@@ -107,6 +107,10 @@
     @apply text-sm font-semibold uppercase w-full h-full p-1 border-2 rounded-md border-primary-900 text-primary-900 bg-tertiary transition;
   }
 
+  .Activity-label__cdt {
+    @apply Flex-center gap-0 w-[32%] py-1 rounded-lg border-2 border-primary-900 bg-tertiary Clicked__dark;
+  }
+
   .Close-button {
     @apply absolute top-0 left-2 z-10 w-8 p-2 transition active:scale-90;
   }
@@ -116,10 +120,6 @@
 
   .Checked-term {
     @apply bg-gradient-to-r from-emerald-200 to-emerald-100;
-  }
-
-  .Activity-label__cdt {
-    @apply Flex-center gap-0 w-[32%] py-1 rounded-lg border-2 border-primary-900 bg-tertiary Clicked__dark;
   }
 
   .Rate-fee__element-container {
