@@ -108,7 +108,7 @@ function addEventsToFiguresOptions(figureOptionsArray, containerToHide, containe
   });
 }
 
-function createRectangleFormInputs() {
+function createRectangleFormInputs(formToAppend, inputsArray) {
   // --------- HTML Elements ---------
   // Base Input
   const baseInput = document.createElement('input');
@@ -129,10 +129,10 @@ function createRectangleFormInputs() {
   submitButton.classList.add('Activity-submit');
 
   // --------- HTML Layout ---------
-  figuresActivitiesForms[0].append(baseInput, heightInput, submitButton);
+  formToAppend.append(baseInput, heightInput, submitButton);
 
   // Adding the Inputs and to an array
-  figuresActivitiesInputs.push(baseInput, heightInput);
+  inputsArray.push(baseInput, heightInput);
 }
 
 function addEventsToRectangleSubmit(submitButton, base, height, output) {
@@ -161,7 +161,7 @@ function rectangleCalculation(base, height, output) {
   }
 }
 
-function createTriangleFormInputs() {
+function createTriangleFormInputs(formToAppend, inputsArray) {
   // --------- HTML Elements ---------
   // Base Input
   const baseInput = document.createElement('input');
@@ -188,10 +188,10 @@ function createTriangleFormInputs() {
   submitButton.classList.add('Activity-submit');
 
   // --------- HTML Layout ---------
-  figuresActivitiesForms[1].append(baseInput, side1Input, side2Input, submitButton);
+  formToAppend.append(baseInput, side1Input, side2Input, submitButton);
 
   // Adding the Inputs to an array
-  figuresActivitiesInputs.push(baseInput, side1Input, side2Input);
+  inputsArray.push(baseInput, side1Input, side2Input);
 }
 
 function addEventsToTriangleSubmit(submitButton, base, side1, side2, output) {
@@ -249,7 +249,7 @@ function triangleCalculation(base, side1, side2, output) {
   }
 }
 
-function createcircleFormInputs() {
+function createcircleFormInputs(formToAppend, inputsArray) {
   // --------- HTML Elements ---------
   // Radius Input
   const radiusInput = document.createElement('input');
@@ -264,10 +264,10 @@ function createcircleFormInputs() {
   submitButton.classList.add('Activity-submit');
 
   // --------- HTML Layout ---------
-  figuresActivitiesForms[2].append(radiusInput, submitButton);
+  formToAppend.append(radiusInput, submitButton);
 
   // Adding the Inputs to an array
-  figuresActivitiesInputs.push(radiusInput);
+  inputsArray.push(radiusInput);
 }
 
 function addEventsToCircleSubmit(submitButton, radius, output) {
@@ -298,25 +298,24 @@ function circleCalculation(radius, output) {
   }
 }
 
-// Could be used for several Close Buttons
-function addEventsToCloseFiguresActivities(closeButtonsArray, containerToHideArray, containerToShow, activitiesInputs, activitiesOutputs) {
+function addEventsToCloseFiguresActivitiesButtons(closeButtonsArray, containerToHideArray, containerToShow, activitiesInputs, activitiesOutputs) {
+  // Hiding and Showing the desired containers
+  addEventsToCloseButtons(closeButtonsArray, containerToHideArray, containerToShow);
+
+  // Resetting previous forms information
   closeButtonsArray.forEach(closeButton => {
     closeButton.addEventListener('click', () => {
-      // Hiding every Figure Activity container
-      containerToHideArray.forEach(figureActivity => figureActivity.classList.add('hidden'));
-
-      // Showing the Figures Options container
-      containerToShow.classList.remove('hidden');
-    
-      // Resetting Calculations Information
-      for (input of activitiesInputs) {
-        input.value = ``;
-      }
-
-      // Resetting Calculations Outputs
-      for (output of activitiesOutputs) {
-        output.innerText = ``;
-      }
+      setTimeout(() => {
+        // Resetting Calculations Information
+        for (input of activitiesInputs) {
+          input.value = ``;
+        }
+  
+        // Resetting Calculations Outputs
+        for (output of activitiesOutputs) {
+          output.innerText = ``;
+        }
+      }, 75);
     });
   });
 }
@@ -348,15 +347,8 @@ createFiguresActivities(figuresActivitiesInfo, geometryActivityContainer, figure
 // Figures Activities Inputs
 const figuresActivitiesInputs = [];
 
-// Adding eventListeners to every Figure Option
-addEventsToFiguresOptions(figuresOptionsElements, figuresChoiceContainer, figuresActivitiesElements);
-
-// Adding eventListeners to every Close Button
-const figuresActivitiesCloseButtons = document.querySelectorAll('.figures-activities-close');
-addEventsToCloseFiguresActivities(figuresActivitiesCloseButtons, figuresActivitiesElements, figuresChoiceContainer, figuresActivitiesInputs, figuresActivitiesOutputs);
-
 // --------------- Rectangle Activity ---------------
-createRectangleFormInputs();
+createRectangleFormInputs(figuresActivitiesForms[0], figuresActivitiesInputs);
 
 // Form Elements
 const rectangleBase = document.getElementById('rectangle-base');
@@ -368,7 +360,7 @@ const rectangleOutput = document.getElementById('rectangle-output');
 addEventsToRectangleSubmit(rectangleSubmit, rectangleBase, rectangleHeight, rectangleOutput);
 
 // --------------- Triangle Activity ---------------
-createTriangleFormInputs();
+createTriangleFormInputs(figuresActivitiesForms[1], figuresActivitiesInputs);
 
 // Form Elements
 const triangleBase = document.getElementById('triangle-base');
@@ -381,7 +373,7 @@ const triangleOutput = document.getElementById('triangle-output');
 addEventsToTriangleSubmit(triangleSubmit, triangleBase, triangleSide1, triangleSide2, triangleOutput);
 
 // --------------- Circle Activity ---------------
-createcircleFormInputs();
+createcircleFormInputs(figuresActivitiesForms[2], figuresActivitiesInputs);
 
 // Form Elements
 const circleRadius = document.getElementById('circle-radius');
@@ -390,3 +382,10 @@ const circleOutput = document.getElementById('circle-output');
 
 // Adding eventListeners to Submit Button
 addEventsToCircleSubmit(circleSubmit, circleRadius, circleOutput);
+
+// Adding eventListeners to every Figure Option
+addEventsToFiguresOptions(figuresOptionsElements, figuresChoiceContainer, figuresActivitiesElements);
+
+// Adding eventListeners to every Close Button
+const closeFiguresActivitiesButtons = document.querySelectorAll('.figures-activities-close');
+addEventsToCloseFiguresActivitiesButtons(closeFiguresActivitiesButtons, figuresActivitiesElements, figuresChoiceContainer, figuresActivitiesInputs, figuresActivitiesOutputs);

@@ -173,45 +173,45 @@ function formulas(averageOption, output) {
   }
 }
 
-function averageFormula(array) {
-  const sumValues = array.reduce((a, b) => a + b);
-  return (sumValues / array.length).toFixed(1);
+function averageFormula(arrayToCalculate) {
+  const sumValues = arrayToCalculate.reduce((a, b) => a + b);
+  return (sumValues / arrayToCalculate.length).toFixed(1);
 }
 
-function medianFormula(array) {
+function medianFormula(arrayToCalculate) {
   let medianPosition;
   let median;
   
-  array.sort((a, b) => a - b);
+  arrayToCalculate.sort((a, b) => a - b);
 
-  const isOdd = array.length % 2 !== 0 ? true : false;
+  const isOdd = arrayToCalculate.length % 2 !== 0 ? true : false;
 
   if (isOdd) {
-    medianPosition = Math.floor(array.length / 2);
-    median = array[medianPosition];
+    medianPosition = Math.floor(arrayToCalculate.length / 2);
+    median = arrayToCalculate[medianPosition];
   } else {
-    medianPosition = [Math.floor((array.length / 2) - 1), Math.floor(array.length / 2)];
-    median = (array[medianPosition[0]] + array[medianPosition[1]]) / 2;
+    medianPosition = [Math.floor((arrayToCalculate.length / 2) - 1), Math.floor(arrayToCalculate.length / 2)];
+    median = (arrayToCalculate[medianPosition[0]] + arrayToCalculate[medianPosition[1]]) / 2;
   }
   return median;
 }
 
-function quadraticMeanFormula(array) {
-  const quadraticValues = array.map(a => a * a);
+function quadraticMeanFormula(arrayToCalculate) {
+  const quadraticValues = arrayToCalculate.map(a => a * a);
   const quadraticValuesSum = quadraticValues.reduce((a, b) => a + b);
   
-  const quadraticValuesSumDivided = quadraticValuesSum / array.length;
+  const quadraticValuesSumDivided = quadraticValuesSum / arrayToCalculate.length;
 
   const quadraticMean = Math.sqrt(quadraticValuesSumDivided).toFixed(1);
   
   return quadraticMean;
 }
 
-function modaFormula(array) {
+function modaFormula(arrayToCalculate) {
   let arrayRepeatedElements = {};
 
-  for (let i = 0; i < array.length; i++) {
-    const element = array[i];
+  for (let i = 0; i < arrayToCalculate.length; i++) {
+    const element = arrayToCalculate[i];
 
     if (arrayRepeatedElements[element]) {
       arrayRepeatedElements[element] += 1;
@@ -235,9 +235,11 @@ function closeAveragesResult() {
   // Showing the New List button 
   generateRandomListButton.classList.remove('hidden');
 }
+
 // ------------------------- Procedure -------------------------
 const averagesActivityContainer = activitiesContainersElements[2];
 
+// --------------- Random List ---------------
 // Creating Random List Container
 createRandomListContainer(averagesActivityContainer);
 

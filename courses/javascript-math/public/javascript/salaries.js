@@ -1,240 +1,264 @@
-function addSalariesOptionsCards(array) {
+// --------------------------- Functions ---------------------------
+function createAnalysisOptionsContainer(containerToAppend) {
+  // --------- HTML Elements ---------
+  // Analysis Options Parent Container
+  const analysisOptionsParentContainer = document.createElement('div');
+  analysisOptionsParentContainer.setAttribute('id', 'analysis-options-parent-container');
+  analysisOptionsParentContainer.classList.add('Grid-center');
+  // Heading
+  const analysisOptionsHeading = document.createElement('h2');
+  analysisOptionsHeading.classList.add('Activity-subtitle', 'w-full');
+  analysisOptionsHeading.innerText = `Choose how do you want to analyze the information`;
+  // Analysis Options  Container
+  const analysisOptionsContainer = document.createElement('div');
+  analysisOptionsContainer.setAttribute('id', 'analysis-options-container');
+  analysisOptionsContainer.classList.add('Flex-wrap');
+  
+  // --------- HTML Layout ---------
+  // Analysis Options Parent Container into Salaries Activity
+  containerToAppend.appendChild(analysisOptionsParentContainer);
+  // Analysis Options Heading and Container into Analysis Options Parent Container
+  analysisOptionsParentContainer.append(analysisOptionsHeading, analysisOptionsContainer);
+}
+
+function createSalariesInfoParagraph(containerToAppend) {
+  // --------- HTML Elements ---------
+  // Salaries Info Paragraph
+  const salariesInfoParagraph = document.createElement('p');
+  salariesInfoParagraph.setAttribute('id', 'salaries-info');
+  salariesInfoParagraph.classList.add('text-center', 'leading-4', 'p-2', 'rounded-md', 'bg-tertiary');
+  salariesInfoParagraph.innerText = `Here's a database with information from several people and their jobs and annual salaries`;
+  // Salaries Info Download
+  const salariesInfoDownload = document.createElement('a');
+  salariesInfoDownload.setAttribute('href', './javascript/salaries-data.js');
+  salariesInfoDownload.setAttribute('download', '');
+  salariesInfoDownload.classList.add('block', 'text-sm', 'font-semibold');
+  salariesInfoDownload.innerText = `(Click here to download the database)`;
+  
+  // --------- HTML Layout ---------
+  // Salaries Info into Salaries Activity
+  containerToAppend.prepend(salariesInfoParagraph);
+  // Salaries Info Download into Salaries Info
+  salariesInfoParagraph.appendChild(salariesInfoDownload);
+}
+
+function addAnalysisOptionsInfo(elementsInfoArray) {
   // By Person
-  array.push({
-    id: "salaries-person",
+  elementsInfoArray.push({
+    id: "analysis-person",
     image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693844284/Math/person_fzuyo4.png",
     imageAlt: "Person Drawing",
     name: "By person"
   });
   // By Company
-  array.push({
-    id: "salaries-company",
+  elementsInfoArray.push({
+    id: "analysis-company",
     image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693844284/Math/company_ilyg69.png",
     imageAlt: "Company Drawing",
     name: "By Company"
   });
   // Others
-  array.push({
-    id: "salaries-others",
+  elementsInfoArray.push({
+    id: "analysis-others",
     image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693844284/Math/others_xsmczg.png",
-    imageAlt: "Other Options Image",
+    imageAlt: "Other Options Icon",
     name: "Others"
   });
 }
 
-function addActivitiesContainers(array) {
+function addAnalysisContainersInfo(elementsInfoArray) {
   // By Person
-  array.push({
-    id: "person-analysis",
-    closeId: "close-person-analysis",
+  elementsInfoArray.push({
+    id: "person-analysis-container",
     subtitle: "By person",
-    optionsId: "person-options",
-    infoContainerId: "person-information",
-    closeInfoId: "close-person-information",
-    subtitleInfo: "Working Information",
+    optionsId: "person-options-container",
+    activityContainerId: "person-activity-container",
+    activitySubtitle: "Working Information",
     tableContainerId: "person-table-container",
-    talbeContainerInfoId: "person-name"
-  })
+    talbeSubtitleId: "person-name"
+  });
   // By Company
-  array.push({
-    id: "company-analysis",
-    closeId: "close-company-analysis",
+  elementsInfoArray.push({
+    id: "company-analysis-container",
     subtitle: "By company",
-    optionsId: "company-options",
-    infoContainerId: "company-information",
-    closeInfoId: "close-company-information",
-    subtitleInfo: "Salaries Information",
+    optionsId: "company-options-container",
+    activityContainerId: "company-activity-container",
+    activitySubtitle: "Salaries Information",
     tableContainerId: "company-table-container",
-    talbeContainerInfoId: "company-name"
-  })
+    talbeSubtitleId: "company-name"
+  });
   // Others
-  array.push({
-    id: "others-analysis",
-    closeId: "close-others-analysis",
+  elementsInfoArray.push({
+    id: "others-analysis-container",
     subtitle: "Others",
-    optionsId: "others-options",
-    infoContainerId: "others-information",
-    closeInfoId: "close-others-information",
-    subtitleInfo: "",
+    optionsId: "others-options-container",
+    activityContainerId: "others-activity-container",
+    activitySubtitle: "",
     tableContainerId: "others-table-container",
-    talbeContainerInfoId: "others-name"
-  })
+    talbeSubtitleId: "others-name"
+  });
 }
 
-function createActivitiesContainers(array, container, elementsList, closeButtons, optionsContainers, activitiesInfoContainers, closeActivityInfoButtons, activitiesTableContainers, activitiesTableSubtitles) {
-  for (element of array) {
-    // HTML Elements
-    // Activity Container
-    const activityContainer = document.createElement('div');
-    activityContainer.setAttribute('id', element.id);
-    activityContainer.classList.add('hidden', 'Grid-center');
-    const closeActivityContainerButton = document.createElement('img');
-    closeActivityContainerButton.setAttribute('id', element.closeId);
-    closeActivityContainerButton.setAttribute('src', "https://res.cloudinary.com/dziyyutwr/image/upload/v1693489975/Math/close-icon_ejx6qw.png");
-    closeActivityContainerButton.setAttribute('alt', 'Close icon');
-    closeActivityContainerButton.classList.add('Close-button');
-    const subtitle = document.createElement('h2');
-    subtitle.classList.add('Activity-subtitle');
-    subtitle.innerText = element.subtitle;
-    // Options Container
-    const optionsContainer = document.createElement('div');
-    optionsContainer.setAttribute('id', element.optionsId);
-    optionsContainer.classList.add('Grid-center');
-    // Activity Info Container
-    const activityInfoContainer = document.createElement('div');
-    activityInfoContainer.setAttribute('id', element.infoContainerId)
-    activityInfoContainer.classList.add('hidden', 'Grid-center', 'gap-3');
-    const closeActivityInfoContainerButton = document.createElement('img');
-    closeActivityInfoContainerButton.setAttribute('id', element.closeInfoId);
-    closeActivityInfoContainerButton.setAttribute('src', "https://res.cloudinary.com/dziyyutwr/image/upload/v1693489975/Math/close-icon_ejx6qw.png");
-    closeActivityInfoContainerButton.setAttribute('alt', 'Close icon');
-    closeActivityInfoContainerButton.classList.add('Close-button');
-    const infoSubtitle = document.createElement('h2');
-    infoSubtitle.classList.add('Activity-subtitle');
-    infoSubtitle.innerText = element.subtitleInfo;
-    // Activity Info Table Container
-    const tableContainer = document.createElement('div');
-    tableContainer.setAttribute('id', element.tableContainerId);
-    tableContainer.classList.add('Flex-center', 'p-2', 'rounded-md', 'bg-tertiary', 'overflow-auto', 'Scrollbar-hide');
-    const tableContainerSubtitle = document.createElement('h2');
-    tableContainerSubtitle.setAttribute('id', element.talbeContainerInfoId);
-    tableContainerSubtitle.classList.add('Activity-subtitle');
+function createActivitiesContainers(elementsInfoArray, containerToAppend, analysisContainers, analysisOptionsContainers, analysisActivitiesContainers, analysisActivitiesTableContainers, analysisActivitiesTableSubtitles) {
+  // Creating the Analysis Activities Container
+  const analysisActivitiesContainer = document.createElement('div');
+  analysisActivitiesContainer.setAttribute('id', 'analysis-activities-container');
+  analysisActivitiesContainer.classList.add('Grid-center');
+  // Adding the Analysis Activities Container into the Salaries Activity Container
+  containerToAppend.appendChild(analysisActivitiesContainer);
 
-    // HTML Layout
-    container.append(activityContainer);
-    activityContainer.append(closeActivityContainerButton, subtitle, optionsContainer, activityInfoContainer);
-    activityInfoContainer.append(closeActivityInfoContainerButton, infoSubtitle, tableContainer);
-    tableContainer.appendChild(tableContainerSubtitle);
+  for (element of elementsInfoArray) {
+    // --------- HTML Elements ---------
+    // Analysis Container
+    const analysisContainer = document.createElement('div');
+    analysisContainer.setAttribute('id', element.id);
+    analysisContainer.classList.add('hidden', 'Grid-center');
+    // Analysis Subtitle
+    const analysisSubtitle = document.createElement('h2');
+    analysisSubtitle.classList.add('Activity-subtitle');
+    analysisSubtitle.innerText = element.subtitle;
+    // Analysis Options Container
+    const analysisOptionsContainer = document.createElement('div');
+    analysisOptionsContainer.setAttribute('id', element.optionsId);
+    analysisOptionsContainer.classList.add('Grid-center');
+    // Analysis Activity Container
+    const analysisActivityContainer = document.createElement('div');
+    analysisActivityContainer.setAttribute('id', element.activityContainerId)
+    analysisActivityContainer.classList.add('hidden', 'Grid-center', 'gap-3');
+    // Close Analysis Container button
+    const closeAnalysisContainerButton = document.createElement('img');
+    closeAnalysisContainerButton.setAttribute('src', "https://res.cloudinary.com/dziyyutwr/image/upload/v1693489975/Math/close-icon_ejx6qw.png");
+    closeAnalysisContainerButton.setAttribute('alt', 'Close Icon');
+    closeAnalysisContainerButton.classList.add('Close-button', 'close-analysis-container');
+    // Analysis Activity Subtitle
+    const analysisActivitySubtitle = document.createElement('h2');
+    analysisActivitySubtitle.classList.add('Activity-subtitle');
+    analysisActivitySubtitle.innerText = element.activitySubtitle;
+    // Analysis Activity Table Container
+    const analysisActivityTableContainer = document.createElement('div');
+    analysisActivityTableContainer.setAttribute('id', element.tableContainerId);
+    analysisActivityTableContainer.classList.add('Flex-center', 'p-2', 'rounded-md', 'bg-tertiary', 'overflow-auto', 'Scrollbar-hide');
+    // Table Container Subtitle
+    const analysisActivityTableSubtitle = document.createElement('h2');
+    analysisActivityTableSubtitle.setAttribute('id', element.talbeSubtitleId);
+    analysisActivityTableSubtitle.classList.add('Activity-subtitle');
+    // Close Analysis Activity Container button
+    const closeAnalysisActivityContainerButton = document.createElement('img');
+    closeAnalysisActivityContainerButton.setAttribute('src', "https://res.cloudinary.com/dziyyutwr/image/upload/v1693489975/Math/close-icon_ejx6qw.png");
+    closeAnalysisActivityContainerButton.setAttribute('alt', 'Close Icon');
+    closeAnalysisActivityContainerButton.classList.add('Close-button', 'close-analysis-activity-container');
 
-    // Elements Arrays
-    elementsList.push(activityContainer);
-    closeButtons.push(closeActivityContainerButton);
-    optionsContainers.push(optionsContainer);
-    activitiesInfoContainers.push(activityInfoContainer);
-    closeActivityInfoButtons.push(closeActivityInfoContainerButton);
-    activitiesTableContainers.push(tableContainer);
-    activitiesTableSubtitles.push(tableContainerSubtitle);
+  // --------- HTML Layout ---------
+    analysisActivitiesContainer.append(analysisContainer);
+    analysisContainer.append(analysisSubtitle, analysisOptionsContainer, analysisActivityContainer,closeAnalysisContainerButton);
+    analysisActivityContainer.append(analysisActivitySubtitle, analysisActivityTableContainer, closeAnalysisActivityContainerButton);
+    analysisActivityTableContainer.appendChild(analysisActivityTableSubtitle);
+
+    // Storing the Elements in Arrays
+    analysisContainers.push(analysisContainer);
+    analysisOptionsContainers.push(analysisOptionsContainer);
+    analysisActivitiesContainers.push(analysisActivityContainer);
+    analysisActivitiesTableContainers.push(analysisActivityTableContainer);
+    analysisActivitiesTableSubtitles.push(analysisActivityTableSubtitle);
   }
 }
 
-function addEventsToOptionsContainers(optionsCards, activitiesContainers) {
-  // Setting the same eventListener for each Option Card
-  for (let i = 0; i < optionsCards.length; i++) {
-    optionsCards[i].addEventListener('click', () => {
+function addEventsToAnalysisOptions(analysisOptions, analysisOptionsParentContainer, analysisContainers) {
+  for (let i = 0; i < analysisOptions.length; i++) {
+    analysisOptions[i].addEventListener('click', () => {
       // Timeout to allow Clicked styles appear
       setTimeout(() => {
-        // Hiding Salaries Information and Analysis Options Container
-        // Showing the corresponding Activity Container
-        salariesInfo.classList.add('hidden');
-        hideShowContainers(analysisOptionsContainer, activitiesContainers[i]);
+        // Hiding Analysis Options Container and Showing the corresponding Activity Container
+        hideShowContainers(analysisOptionsParentContainer, analysisContainers[i]);
       }, 100);
-    })
+    });
   };
 }
 
-function addEventsToCloseActivitiesContainers(closeButtonsList, activitiesContainers) {
-  for (let i = 0; i < closeButtonsList.length; i++) {
-    // Setting the same eventListener for each Close Button
-    closeButtonsList[i].addEventListener('click', () => {
-      // Showing Salaries Information and Analysis Options Container
-      // Hiding the corresponding Activity Container
-      salariesInfo.classList.remove('hidden');
-      hideShowContainers(activitiesContainers[i], analysisOptionsContainer);
-    });
-  }
-}
-
-function addEventsToCloseActivitiesInfoContainers(closeButtonsList, activitiesInfoContainers, activitiesOptions, activitiesForms) {
-  for (let i = 0; i < closeButtonsList.length; i++) {
-    // Setting the same eventListener for each Close Button
-    closeButtonsList[i].addEventListener('click', () => {
-      // Deleting previous table
-      activitiesTableContainers[i].removeChild(activitiesTableContainers[i].lastChild);
-      // Showing Information Container and Showing Options Container
-      hideShowContainers(activitiesInfoContainers[i], activitiesOptionsContainers[i]);
-      // Showing Person options if the user chose the Random Person Option
-      if (activitiesForms[i].classList.contains('hidden')) {
-        // Showing Person options
-        activitiesOptions[i].forEach(option => option.classList.remove('hidden'));
-        // Showing Close Activity Button
-        closeSalariesActivitiesContainers[i].classList.remove('hidden');
+function restructuringSalariesInformation(salaries) {
+  salaries.forEach(person => {
+    person.jobs.forEach(job => {
+      if (!companies[job.company]) {
+        companies[job.company] = {};
+      } 
+      
+      if (!companies[job.company][job.year]) {
+        companies[job.company][job.year] = [];
       }
-    });
-  }
+  
+      companies[job.company][job.year].push(job.salary);
+    })
+  })
 }
 
-function addPersonOptions(array) {
+function addPersonAnalysisOptionsInfo(elementsInfoArray) {
   // Enter ID
-  array.push({
-    id: "enter-id-option",
+  elementsInfoArray.push({
+    id: "enter-id-person-option",
     text: "Enter ID"
   });
   // Random Person
-  array.push({
+  elementsInfoArray.push({
     id: "random-person-option",
     text: "Random person"
   });
 }
 
-function addCompanyOptions(array) {
+function addCompanyAnalysisOptionsInfo(elementsInfoArray) {
   // Enter Company
-  array.push({
+  elementsInfoArray.push({
     id: "enter-company-option",
     text: "Enter Company"
   });
   // Random Company
-  array.push({
+  elementsInfoArray.push({
     id: "random-company-option",
     text: "Random company"
   });
 }
 
-function addOthersOptions(array) {
+function addOthersAnalysisOptionsInfo(elementsInfoArray) {
   // General Median
-  array.push({
+  elementsInfoArray.push({
     id: "general-median",
     text: "General Median"
   });
   // Top 20% Salaries
-  array.push({
+  elementsInfoArray.push({
     id: "top-20",
     text: "Top 20% Median"
   });
   // Lowest 20% Salaries
-  array.push({
+  elementsInfoArray.push({
     id: "lowest-20",
     text: "Lowest 20% Median"
   });
 }
 
-function createOptions(array, container, optionsList) {
-  for (element of array) {
-    // Creating HTML Elements
+function createAnalysisOptions(elementsInfoArray, containerToAppend, analysisOptionsArray, allAnalysisOptionsArray) {
+  for (element of elementsInfoArray) {
+    // --------- HTML Elements ---------
     const option = document.createElement('div');
     option.setAttribute('id', element.id);
-    option.classList.add('Activity-salaries__option');
+    option.classList.add('Activity-analysis-option');
     option.innerText = element.text;
 
-    // HTML Layout
-    container.appendChild(option);
+  // --------- HTML Layout ---------
+    containerToAppend.appendChild(option);
 
     // Elements Array
-    optionsList.push(option);
+    analysisOptionsArray.push(option);
+    allAnalysisOptionsArray.push(option);
   }
 }
 
-function createEnterInfoForm(formId, closeFormId, inputId, inputText, inputType, submitId, inputHint, invalidInfo, invalidText, container) {
-  // HTML Elements
+function createEnterInfoForm(formId, inputId, inputText, inputType, inputPlaceholder, submitId, inputHint, invalidId, invalidText, containerToAppend, analysisOptionsForms) {
+  // --------- HTML Elements ---------
   // Form
   const form = document.createElement('form');
   form.setAttribute('id', formId);
+  form.setAttribute('autocomplete', 'off');
   form.classList.add('hidden', 'Grid-center');
-  // Close Form
-  const close = document.createElement('img');
-  close.setAttribute('id', closeFormId);
-  close.setAttribute('src', "https://res.cloudinary.com/dziyyutwr/image/upload/v1693489975/Math/close-icon_ejx6qw.png");
-  close.setAttribute('alt', 'Close icon');
-  close.classList.add('Close-button');
   // Label
   const label = document.createElement('label');
   label.setAttribute('for', inputId);
@@ -244,8 +268,7 @@ function createEnterInfoForm(formId, closeFormId, inputId, inputText, inputType,
   const input = document.createElement('input');
   input.setAttribute('id', inputId);
   input.setAttribute('type', inputType);
-  input.setAttribute('placeholder', 'XXXXXXX');
-  input.setAttribute('autocomplete', 'off');
+  input.setAttribute('placeholder', inputPlaceholder);
   input.classList.add('Activity-input');
   // Submit
   const submit = document.createElement('input');
@@ -257,63 +280,40 @@ function createEnterInfoForm(formId, closeFormId, inputId, inputText, inputType,
   hint.classList.add('text-sm');
   hint.innerText = inputHint;
   // Invalid ID
-  const invalidId = document.createElement('p');
-  invalidId.setAttribute('id', invalidInfo);
-  invalidId.classList.add('hidden', 'font-semibold');
-  invalidId.innerText = invalidText;
+  const invalidInfo = document.createElement('p');
+  invalidInfo.setAttribute('id', invalidId);
+  invalidInfo.classList.add('hidden', 'font-semibold');
+  invalidInfo.innerText = invalidText;
+  // Close Form
+  const close = document.createElement('img');
+  close.setAttribute('src', "https://res.cloudinary.com/dziyyutwr/image/upload/v1693489975/Math/close-icon_ejx6qw.png");
+  close.setAttribute('alt', 'Close Icon');
+  close.classList.add('Close-button', 'close-form');
 
-  // HTML Layout
-  container.appendChild(form);
-  form.append(close, label, input, submit, hint, invalidId);
+  // --------- HTML Layout ---------
+  containerToAppend.appendChild(form);
+  form.append(label, input, submit, hint, invalidInfo, close);
 
-  return [form, close, label, input, submit, invalidId];
+  // Storin Options Forms in an array
+  analysisOptionsForms.push(form);
 }
 
-function addEventsToEnterInfoOption(formElements, optionsToHide, closeButtonToHide, submitEventsFunction) {
-  const enterInfoForm = formElements[0];
-  const closeForm = formElements[1];
-  const inputForm = formElements[3];
-  const submitForm = formElements[4];
-  const invalidId = formElements[5];
-
+function addEventsToEnterInfoOption(optionsToHide, closeButtonToHide, enterInfoForm) {
   // Timeout to allow Clicked styles appear
   setTimeout(() => {
-    // Hiding Options
+    // Hiding the Options
     optionsToHide.forEach(option => option.classList.add('hidden'));
-    // Hiding Close Activity Button
-    closeButtonToHide.classList.add('hidden');
-    // Showing Form
-    enterInfoForm.classList.remove('hidden');
+    // Hiding Close Activity Button and Showing the Form
+    hideShowContainers(closeButtonToHide, enterInfoForm);
   }, 100);
-
-  // Adding Events to Close Enter Info Form
-  addEventsToCloseEnterInfoForm(closeForm, optionsToHide, closeButtonToHide, enterInfoForm, inputForm, invalidId);
-
-  // Adding eventsListeners to Submit Enter Info Form
-  submitEventsFunction(submitForm, inputForm, invalidId);
 }
 
-function addEventsToCloseEnterInfoForm(closeForm, optionsToShow, closeButtonToShow, enterInfoForm, inputForm, invalidId) {
-  closeForm.addEventListener('click', () => {
-    // Showing options
-    optionsToShow.forEach(option => option.classList.remove('hidden'));
-    // Showing Close Activity Button
-    closeButtonToShow.classList.remove('hidden');
-    // Hiding Enter ID Form
-    enterInfoForm.classList.add('hidden');
-    // Resetting Form Values
-    inputForm.value = "";
-    invalidId.classList.add('hidden');
-  })
-}
+function addEventsToSubmitEnterInfoForm(submitForm, formType, inputForm, invalidId) {
+  submitForm.addEventListener('click', () => {
+    event.preventDefault();
 
-function addEventsToSubmitEnterIdForm(submitForm, inputForm, invalidId) {
-  // Avoiding running the function if it has been alredy executed
-  if (eventListenersEnterIdSubmit > 0) {
-    return
-  } else {
-    submitForm.addEventListener('click', () => {
-      event.preventDefault();
+    // Validating the type of the form
+    if (formType === 'enter-id') {
       // Taking the ID typed
       const id = Number(inputForm.value);
 
@@ -321,6 +321,7 @@ function addEventsToSubmitEnterIdForm(submitForm, inputForm, invalidId) {
       setTimeout(() => {
         // Validating if the ID is correct
         if (id < 1042671 || id > 1042690) {
+          // Showing the Invalid output
           invalidId.classList.remove('hidden');
         } else {
           // Resseting Form values
@@ -330,21 +331,10 @@ function addEventsToSubmitEnterIdForm(submitForm, inputForm, invalidId) {
           createSalariesInfo(id);
         }
       }, 200);
-    });
-    eventListenersEnterIdSubmit = 1;
-  }
-}
-
-function addEventsToSubmitEnterCompanyForm(submitForm, inputForm, invalidId) {
-  // Avoiding running the function if it has been alredy executed
-  if (eventListenersEnterCompanySubmit > 0) {
-    return
-  } else {
-    submitForm.addEventListener('click', () => {
-      event.preventDefault();
+    } else {
       // Taking the Company typed
       const company = inputForm.value;
-
+  
       // Timeout to allow Clicked styles appear
       setTimeout(() => {
         if (!companies[company]) {
@@ -353,43 +343,68 @@ function addEventsToSubmitEnterCompanyForm(submitForm, inputForm, invalidId) {
           // Resseting Form values
           inputForm.value = "";
           invalidId.classList.add('hidden');
-          // Taking the ccompany information to display it
+          // Taking the company information to display it
           createSalariesInfo(company);
         }
       }, 200)
+    }
+  });
+}
+
+function addEventsToCloseEnterInfoFormButtons(closeButtonsArray, containerToHideArray, containerToShowArray, closeButtonsToShowArray) {
+  // Hiding the Form and Showing the Analysis Options
+  addEventsToCloseButtons(closeButtonsArray, containerToHideArray, containerToShowArray);
+
+  // Showing the correspoding "Close Analysis Container" button
+  closeButtonsArray.forEach(closeButton => {
+    closeButton.addEventListener('click', () => {
+      setTimeout(() => {
+        closeButtonsToShowArray.forEach(closeButtonToShow => {
+          if (closeButtonToShow.classList.contains('hidden')) {
+            closeButtonToShow.classList.remove('hidden');
+          }
+        });
+      }, 75);
     });
-    eventListenersEnterCompanySubmit = 1;
-  }
+  });
 }
 
 function addEventsToRandomEntityOption(closeButtonToHide, randomEntity) {
   // Timeout to allow Clicked styles appear
   setTimeout(() => {
-    // Hiding Close Activity Button
+    // Hiding Close Analysis Container Button
     closeButtonToHide.classList.add('hidden');
+
     // Taking the information to display it
     createSalariesInfo(randomEntity);
   }, 100);
 }
 
-function addEventsToOtherOptions(closeButtonToHide, subtitle, optionInfo) {
+function addEventsToOthersAnalysisOptions(closeButtonToHide, subtitle, optionFunction) {
   // Timeout to allow Clicked styles appear
   setTimeout(() => {
     // Hiding "Other options" container and making the "Calculation Result" appear
-    hideShowContainers(activitiesOptionsContainers[2], activitiesInfoContainers[2]);
+    hideShowContainers(analysisOptionsContainersElements[2], analysisActivitiesContainersElements[2]);
+
     // Hiding the "Close Button" of the Others Activity Container and Table Container
     closeButtonToHide.classList.add('hidden');
-    // Moving Others Activity Information "Close Button" and adding eventListener to show Others Activity Container "Close Button"
-    closeActivitiesInfoContainers[2].classList.add('top-[-28px]');
-    closeActivitiesInfoContainers[2].addEventListener('click', () => closeButtonToHide.classList.remove('hidden'));
+
+    // Moving Others Activity Information "Close Button" 
+    closeAnalysisActivitiesContainersButtons[2].classList.add('top-[-28px]');
+
+    // Adding eventListener to show Others Activities Container "Close Button"
+    closeAnalysisActivitiesContainersButtons[2].addEventListener('click', () => closeButtonToHide.classList.remove('hidden'));
+
     // Assigning Option Subtitle
-    activitiesTableSubtitles[2].innerText = subtitle;
+    analysisActivitiesTableSubtitlesElements[2].innerText = subtitle;
+
     // Creating Result Paragraph
     const resultOption = document.createElement('p');
     resultOption.classList.add('text-xl', 'font-bold');
-    resultOption.innerText = optionInfo();
+    resultOption.innerText = optionFunction();
+
     // Adding Result Paragraph
-    activitiesTableContainers[2].appendChild(resultOption);
+    analysisActivitiesTableContainersElements[2].appendChild(resultOption);
   }, 100);
 }
 
@@ -397,48 +412,67 @@ function createSalariesInfo(identifier) {
   let tableType;
   let entity;
   let companyName;
+
   // Assigning the given information
-  if (typeof identifier === "number") {
+  switch (true) {
     // Assigning the Person info according to the given ID
-    entity = findPerson(identifier);
-    tableType = 'person';
-  } else if (identifier === "random-person") {
+    case typeof identifier === "number":
+      entity = findPerson(identifier);
+      tableType = 'person';
+      break;
+    
     // Assigning the Person info of a random Person
-    entity = findPerson(randomNumber(1042671, 1042691));
-    tableType = 'person';
-  } else if (typeof identifier === "string" && identifier !== "random-company") {
+    case identifier === "random-person":
+      entity = findPerson(randomNumber(1042671, 1042691));
+      tableType = 'person';
+      break;
+
     // Assigning the Company info according to the given Company
-    companyName = identifier;
-    entity = findCompany(identifier);
-    tableType = 'company';
-    // Assigning the Company Name to Company
-    company = companyName;
-  } else {
+    case typeof identifier === "string" && identifier !== "random-company":
+      companyName = identifier;
+      entity = findCompany(identifier);
+      tableType = 'company';
+      break;
+
     // Assigning the Company info of a random Company
-    const companiesNames = Object.keys(companies);
-    companyName = companiesNames[randomNumber(0, (companiesNames.length - 1))];
-    entity = findCompany(companyName)
-    tableType = 'company';
-    // Assigning the Company Name to Company
-    company = companyName;
+    default:
+      const companiesNames = Object.keys(companies);
+      companyName = companiesNames[randomNumber(0, (companiesNames.length - 1))];
+      entity = findCompany(companyName)
+      tableType = 'company';
+      // Assigning the Company Name to Company
+      company = companyName;
+      break;
   }
 
-  // Creating table in case the given information is a Person or a company
-  if (tableType === "person") {
-    personSalaries = entity.jobs.map(job => job.salary);
-    // Hiding "Person Options" container and making "Person Information" container appear
-    hideShowContainers(activitiesOptionsContainers[0], activitiesInfoContainers[0]);
-    // Assigning person name
-    activitiesTableSubtitles[0].innerText = entity.name;
-    // Creating Person Jobs Information table
-    createPersonTable(entity);
-  } else {
-    // Hiding "Company Options" container and making "Company Information" container appear
-    hideShowContainers(activitiesOptionsContainers[1], activitiesInfoContainers[1]);
-    // Assigning Company name
-    activitiesTableSubtitles[1].innerText = companyName + ' Salaries';
-    // Creating Company Salaries Information table
-    createCompanyTable(entity);
+  // Creating the table 
+  switch (true) {
+    // In case the selection was a Person
+    case tableType === "person":
+      // Storing the Person salaries
+      personSalaries = entity.jobs.map(job => job.salary);
+
+      // Hiding "Person Options" container and making "Person Information" container appear
+      hideShowContainers(analysisOptionsContainersElements[0], analysisActivitiesContainersElements[0]);
+
+      // Assigning the Person name
+      analysisActivitiesTableSubtitlesElements[0].innerText = entity.name;
+
+      // Creating Person Jobs Information table
+      createPersonTable(entity);
+      break;
+  
+    // In case the selection was a Company
+    default:
+      // Hiding "Company Options" container and making "Company Information" container appear
+      hideShowContainers(analysisOptionsContainersElements[1], analysisActivitiesContainersElements[1]);
+
+      // Assigning Company name
+      analysisActivitiesTableSubtitlesElements[1].innerText = companyName + ' Salaries';
+
+      // Creating Company Salaries Information table
+      createCompanyTable(entity);
+      break;
   }
 }
 
@@ -451,39 +485,51 @@ function findCompany(companyName) {
 }
 
 function createPersonTable(person) {
-  // Creating the table
+  // --------- HTML Elements ---------
+  // Table
   const table = document.createElement('table');
   table.setAttribute('id', 'person-table');
   table.classList.add('Activity-table');
+  // Row for Headings
   const rowHeading = document.createElement('tr');
   rowHeading.classList.add('bg-secondary');
+  // Year Heading
   const yearHeading = document.createElement('th');
   yearHeading.classList.add('Activity-table-cell');
   yearHeading.innerText = "Year";
+  // Company Heading
   const companyHeading = document.createElement('th');
   companyHeading.classList.add('Activity-table-cell');
   companyHeading.innerText = "Company";
+  // Salary Heading
   const salaryHeading = document.createElement('th');
   salaryHeading.classList.add('Activity-table-cell');
   salaryHeading.innerText = "Salary";
-  // HTML Layout
-  activitiesTableContainers[0].append(table);
+  
+  // --------- HTML Layout ---------
+  analysisActivitiesTableContainersElements[0].append(table);
   table.appendChild(rowHeading);
   rowHeading.append(yearHeading, companyHeading, salaryHeading);
 
   // Creating the table information
   for (job of person.jobs) {
+    // --------- HTML Elements ---------
+    // A new row for the table
     const tableRow = document.createElement('tr');
+    // Year for the row
     const year = document.createElement('td');
     year.classList.add('Activity-table-cell');
     year.innerText = job.year;
+    // Company for the row
     const company = document.createElement('td');
     company.classList.add('Activity-table-cell');
     company.innerText = job.company;
+    // Salary for the row
     const salary = document.createElement('td');
     salary.classList.add('Activity-table-cell');
     salary.innerText = "$" + job.salary;
-    // HTML Layout
+    
+    // --------- HTML Layout ---------
     tableRow.append(year, company, salary);
     table.appendChild(tableRow);
   }
@@ -527,7 +573,7 @@ function createCompanyTable(company) {
   annualMediansHeading.classList.add('Activity-table-cell', 'text-lg');
   annualMediansHeading.innerText = 'Median';
   // HTML Layout
-  activitiesTableContainers[1].append(table, mediansTableSubtitle, mediansTable);
+  analysisActivitiesTableContainersElements[1].append(table, mediansTableSubtitle, mediansTable);
   mediansTable.append(rowYearsMedians, rowAnnualMedians);
   rowYearsMedians.appendChild(yearMediansHeading);
   rowAnnualMedians.appendChild(annualMediansHeading);
@@ -562,97 +608,108 @@ function createCompanyTable(company) {
       yearRow.appendChild(salary);
     }
   }
+}
 
-  // Adding eventListeners to Close Company Info Button to delete the annual medians table and its subtitle
-  if (eventListenersCloseCompanyInformation > 0) {
-    return
-  } else {
-    closeActivitiesInfoContainers[1].addEventListener('click', () => {
-      // Deleting Subtitle
-      activitiesTableContainers[1].removeChild(activitiesTableContainers[1].childNodes[1]);
-      // Deleting Table
-      activitiesTableContainers[1].removeChild(activitiesTableContainers[1].childNodes[2]);
-      eventListenersCloseCompanyInformation = 1;
-    })
+function addEventsToCloseAnalysisActivitiesContainersButtons(closeButtonsArray, containerToHideArray, containerToShowArray, closeButtonsToShowArray) {
+  // Hiding the Analysis Activities Containers and Showing the Analysis Options Containers
+  addEventsToCloseButtons(closeButtonsArray, containerToHideArray, containerToShowArray);
+
+  for (let i = 0; i < closeButtonsArray.length; i++) {
+    closeButtonsArray[i].addEventListener('click', () => {
+      setTimeout(() => {
+        // Deleting previous table
+        analysisActivitiesTableContainersElements[i].removeChild(analysisActivitiesTableContainersElements[i].lastChild);
+
+        // Showing the Close Analysis Container button only if the Random Option was chosen
+        if (analysisOptionsFormsElements[i].classList.contains('hidden')) {
+          closeButtonsToShowArray[i].classList.remove('hidden');
+        }
+      }, 75);
+    });
   }
 }
 
-function addPersonCalculationOptions(array) {
+function addPersonCalculationOptions(elementsInfoArray) {
   // Salary Median
-  array.push({
+  elementsInfoArray.push({
     id: "person-median",
     name: 'salary median',
     result: "person-median-result"
   });
   // Salary Projections
-  array.push({
+  elementsInfoArray.push({
     id: "person-projections",
     name: 'salary projections',
     result: "person-projections-result"
   });
 }
 
-function addCompanyCalculationOptions(array) {
+function addCompanyCalculationOptions(elementsInfoArray) {
   // Salaries Projections Median
-  array.push({
+  elementsInfoArray.push({
     id: 'company-projections-median',
     name: 'Company projections median',
     result: 'company-projections-median'
   });
   // Salaries Projections Range
-  array.push({
+  elementsInfoArray.push({
     id: 'company-projections-range',
     name: 'Company projections range',
     result: 'company-projections-range'
   });
 }
 
-function createCalculationOptions(id, array, container, optionsList, optionsResultsList) {
-  // Creating Calculation Options Container
+function createCalculationOptions(calculationOptionsId, elementsInfoArray, containerToAppend, calculationOptionsArray, calculationOptionsResultsArray) {
+  
+  // --------- HTML Elements ---------
+  // Calculation Options Container
   const optionsContainer = document.createElement('div');
-  optionsContainer.setAttribute('id', id);
+  optionsContainer.setAttribute('id', calculationOptionsId);
   optionsContainer.classList.add('Grid-center', 'grid-cols-2');
 
-  // HTML Layout
-  container.appendChild(optionsContainer);
+  // --------- HTML Layout ---------
+  containerToAppend.appendChild(optionsContainer);
   
-  for (element of array) {
-    // Creating HTML Elements
+  for (element of elementsInfoArray) {
+    // --------- HTML Elements ---------
+    // Calculation Option
     const calculationOption = document.createElement('button');
     calculationOption.setAttribute('id', element.id);
-    calculationOption.classList.add('Activity-button', 'Clicked--dark', 'min-h-[48px]');
+    calculationOption.classList.add('Activity-button', 'Clicked__dark', 'min-h-[48px]');
+    // Calculation Name
     const calculationName = document.createElement('p');
     calculationName.innerText = element.name;
+    // Calculation Result
     const calculationResult = document.createElement('p');
     calculationResult.setAttribute('id', element.result);
+    calculationResult.classList.add('text-lg');
 
-    // HTML Layout
+    // --------- HTML Layout ---------
     optionsContainer.appendChild(calculationOption);
     calculationOption.append(calculationName, calculationResult);
 
     // Elements Array
-    optionsList.push(calculationOption);
-    optionsResultsList.push(calculationResult);
+    calculationOptionsArray.push(calculationOption);
+    calculationOptionsResultsArray.push(calculationResult);
   }
 }
 
-function calculationButton(button, buttonResult, calculation, elementToCalculate, closeButtons) {
+function addEventsToCalculationButtons(calculationButton, calculationButtonResult, calculationFunction, elementToCalculate, closeButtonsArray) {
   // Removing Clicked styles
   setTimeout(() => {
-    button.classList.remove('Clicked--dark');
+    calculationButton.classList.remove('Clicked__dark');
   }, 500);
 
-  // Calculation Result
-  buttonResult.classList.add('text-lg');
-  buttonResult.innerHTML = `$${calculation(elementToCalculate)}`;
+  // Making the Calculation and showing it in the Button Result
+  calculationButtonResult.innerHTML = `$${calculationFunction(elementToCalculate)}`;
 
-  // Adding eventListeners to "closeButtons" to reset the "Calculation Buttons" values
-  closeButtons.forEach(closeButton => closeButton.addEventListener('click', () => resetCalculationButton(button, buttonResult)));
-}
-
-function resetCalculationButton(button, buttonResult) {
-  buttonResult.innerHTML = "";
-  button.classList.add('Clicked--dark');
+  // Adding eventListeners to "closeButtonsArray" to reset the "Calculation Buttons" values
+  closeButtonsArray.forEach(closeButton => closeButton.addEventListener('click', () => {
+    setTimeout(() => {
+      calculationButton.classList.add('Clicked__dark');
+      calculationButtonResult.innerHTML = "";
+    }, 75);
+  }));
 }
 
 function salaryProjections(array) {
@@ -783,168 +840,188 @@ function lowest20Median() {
   return `$${medianFormula(top20PeopleMedians)}`;
 }
 
-function restructuringSalariesInformation(salaries) {
-  salaries.forEach(person => {
-    person.jobs.forEach(job => {
-      if (!companies[job.company]) {
-        companies[job.company] = {};
-      } 
-      
-      if (!companies[job.company][job.year]) {
-        companies[job.company][job.year] = [];
-      }
-  
-      companies[job.company][job.year].push(job.salary);
-    })
-  })
+function addEventsToCloseCompanyActivityContainerButton(closeButton, companyTableContainer) {
+  closeButton.addEventListener('click', () => {
+    setTimeout(() => {
+      // Deleting Subtitle
+      companyTableContainer.removeChild(companyTableContainer.childNodes[1]);
+      // Deleting Table
+      companyTableContainer.removeChild(companyTableContainer.lastChild);
+    }, 75);
+  });
 }
 
-// -------------- Salaries Options Elements -------------- 
-const salariesInfo = document.getElementById('salaries-info');
+// ------------------------- Procedure -------------------------
+const salariesActivityContainer = activitiesContainersElements[3];
+
+// -------------- Analysis Options -------------- 
+// Creating the Analysis Options container
+createAnalysisOptionsContainer(salariesActivityContainer);
+
+// Analysis Options elements
+const analysisOptionsParentContainer = document.getElementById('analysis-options-parent-container');
 const analysisOptionsContainer = document.getElementById('analysis-options-container');
-const analysisOptions = document.getElementById('analysis-options');
-const analysisOptionsList = [];
-const analysisOptionsCards = [];
 
-// Adding Salaries Options Cards
-addSalariesOptionsCards(analysisOptionsList);
+// Creating the Salaries Info Paragraph
+createSalariesInfoParagraph(analysisOptionsParentContainer);
 
-// Creating Card elements for "By person", "By company" and "Others" type of analysis
-createCardElements(analysisOptionsList, analysisOptions, analysisOptionsCards);
+// Adding Analysis Options information
+const analysisOptionsInfo = [];
+addAnalysisOptionsInfo(analysisOptionsInfo);
+
+// Creating Analysis Options elements 
+const analysisOptionsElements = [];
+createCardElements(analysisOptionsInfo, analysisOptionsContainer, analysisOptionsElements);
 
 // -------------- Activities Containers -------------- 
-const salariesActivitiesList = [];
-const salariesActivitiesContainers = [];
-const closeSalariesActivitiesContainers = [];
-const activitiesOptionsContainers = [];
-const activitiesOptions = [];
-const activitiesForms = [];
-const activitiesInfoContainers = [];
-const closeActivitiesInfoContainers = [];
-const activitiesTableContainers = [];
-const activitiesTableSubtitles = [];
-
 // Adding Activities Containers
-addActivitiesContainers(salariesActivitiesList);
+const analysisContainersInfo = [];
+addAnalysisContainersInfo(analysisContainersInfo);
 
-// Creating Activities containers for "By person", "By company" and "Others" type of analysis
-createActivitiesContainers(salariesActivitiesList, salariesContainer, salariesActivitiesContainers, closeSalariesActivitiesContainers, activitiesOptionsContainers, activitiesInfoContainers, closeActivitiesInfoContainers, activitiesTableContainers, activitiesTableSubtitles);
-// Adding eventListeners to every Salary Option Container to display their activities
-addEventsToOptionsContainers(analysisOptionsCards, salariesActivitiesContainers);
+// Creating and Storing Analysis Containers, Analysis Options Containers, Analysis Activities Containers, Analysis Activities Table Containers, and Analysis Activities Subtitles for every Analysis
+const analysisContainersElements = [];
+const analysisOptionsContainersElements = [];
+const analysisOptionsFormsElements = [];
+const analysisActivitiesContainersElements = [];
+const analysisActivitiesTableContainersElements = [];
+const analysisActivitiesTableSubtitlesElements = [];
+createActivitiesContainers(analysisContainersInfo, salariesActivityContainer, analysisContainersElements, analysisOptionsContainersElements, analysisActivitiesContainersElements, analysisActivitiesTableContainersElements, analysisActivitiesTableSubtitlesElements);
 
-// Adding eventListeners to every Close Button to hide their Activity Container
-addEventsToCloseActivitiesContainers(closeSalariesActivitiesContainers, salariesActivitiesContainers);
+// Saving all the Options of every Analysis Option
+const analysisOptionsContainersOptionsElements = [];
 
-// Adding eventListeners to every Close Button to hide their Activity Information Container
-addEventsToCloseActivitiesInfoContainers(closeActivitiesInfoContainers, activitiesInfoContainers, activitiesOptions, activitiesForms);
+// Adding eventListeners to every Analysis Option
+addEventsToAnalysisOptions(analysisOptionsElements, analysisOptionsParentContainer, analysisContainersElements);
 
-// ------------ Analysis by Person Activity Container ------------ 
-let personSalaries;
-const personOptionsList = [];
-const personOptions = [];
-activitiesOptions.push(personOptions);
+// ------------ Analysis by Person Activity Container ------------
+let personSalaries; 
 
-// Adding Person Analysis Options
-addPersonOptions(personOptionsList);
+// Adding Person Analysis Options information
+const personAnalysisOptionsInfo = [];
+addPersonAnalysisOptionsInfo(personAnalysisOptionsInfo);
 
-// Creating Person Analysis Options
-createOptions(personOptionsList, activitiesOptionsContainers[0], personOptions);
+// Creating and Storing Person Analysis Options elements
+const personAnalysisOptionsElements = [];
+createAnalysisOptions(personAnalysisOptionsInfo, analysisOptionsContainersElements[0], personAnalysisOptionsElements, analysisOptionsContainersOptionsElements);
 
 // Enter ID Option
-// Creating a Form to receive the Person ID and saving its elements in an array
-const enterIdFormElements = createEnterInfoForm("enter-id", "close-enter-id", "enter-id-input", "Enter an ID", "number", "enter-id-submit", "(1042671 - 1042690)", "enter-id-invalid", "Invalid ID", activitiesOptionsContainers[0]);
-const enterIDForm = document.getElementById('enter-id');
-activitiesForms.push(enterIDForm);
-let eventListenersEnterIdSubmit = 0;
+// Creating the "Enter ID" person option form
+createEnterInfoForm("enter-id-form", "enter-id-input", "Enter an ID", "number", "XXXXXXX", "enter-id-submit", "(1042671 - 1042690)", "enter-id-invalid", "Invalid ID", analysisOptionsContainersElements[0], analysisOptionsFormsElements);
+
+// Enter ID Form Elements
+const enterIdForm = document.getElementById('enter-id-form');
+const enterIdInput = document.getElementById('enter-id-input');
+const enterIdSubmit = document.getElementById('enter-id-submit');
+const enterIdInvalid = document.getElementById('enter-id-invalid');
 
 // Adding eventListeners to Enter ID Option
-personOptions[0].addEventListener('click', () => addEventsToEnterInfoOption(enterIdFormElements, personOptions, closeSalariesActivitiesContainers[0], addEventsToSubmitEnterIdForm));
+personAnalysisOptionsElements[0].addEventListener('click', () => addEventsToEnterInfoOption(personAnalysisOptionsElements, closeAnalysisContainerButtons[0], enterIdForm));
+
+// Adding eventsListeners to Submit Enter ID Form
+addEventsToSubmitEnterInfoForm(enterIdSubmit, 'enter-id', enterIdInput, enterIdInvalid);
 
 // Random Person Option
 // Adding eventListeners to Random Person Option
-personOptions[1].addEventListener('click', () => addEventsToRandomEntityOption(closeSalariesActivitiesContainers[0], 'random-person'));
+personAnalysisOptionsElements[1].addEventListener('click', () => addEventsToRandomEntityOption(closeAnalysisContainerButtons[0], 'random-person'));
 
 // Person Calculation Options
-const calculationPersonOptionsList = [];
-const calculationPersonOptions = [];
-const calculationPersonOptionsResults = [];
+// Adding the Person Calculation Options information
+const personCalculationOptionsInfo = [];
+addPersonCalculationOptions(personCalculationOptionsInfo);
 
-// Adding Person Calculation Options
-addPersonCalculationOptions(calculationPersonOptionsList);
-
-// Creating Person Calculation Options
-createCalculationOptions('person-calculation-options', calculationPersonOptionsList, activitiesInfoContainers[0], calculationPersonOptions, calculationPersonOptionsResults);
+// Creating and Storing the Person Calculation Options and Results
+const personCalculationOptionsElements = [];
+const personCalculationOptionsResultsElements = [];
+createCalculationOptions('person-calculation-options', personCalculationOptionsInfo, analysisActivitiesContainersElements[0], personCalculationOptionsElements, personCalculationOptionsResultsElements);
 
 // Adding eventListeners to Person Median Button
-calculationPersonOptions[0].addEventListener('click', () => calculationButton(calculationPersonOptions[0], calculationPersonOptionsResults[0], medianFormula, personSalaries, closeActivitiesInfoContainers));
+personCalculationOptionsElements[0].addEventListener('click', () => addEventsToCalculationButtons(personCalculationOptionsElements[0], personCalculationOptionsResultsElements[0], medianFormula, personSalaries, closeAnalysisActivitiesContainersButtons));
 
 // Adding eventListeners to Person Projections Button
-calculationPersonOptions[1].addEventListener('click', () => calculationButton(calculationPersonOptions[1], calculationPersonOptionsResults[1], salaryProjections, personSalaries, closeActivitiesInfoContainers));
+personCalculationOptionsElements[1].addEventListener('click', () => addEventsToCalculationButtons(personCalculationOptionsElements[1], personCalculationOptionsResultsElements[1], salaryProjections, personSalaries, closeAnalysisActivitiesContainersButtons));
 
 // ------------ Analysis by Company Activity Container ------------ 
 const companies = {};
 let company;
-const companyOptionsList = [];
-const companyOptions = [];
-activitiesOptions.push(companyOptions);
 
 // Restructuring "Salaries" object into "Companies"
 restructuringSalariesInformation(salaries);
 
 // Adding Company Options
-addCompanyOptions(companyOptionsList);
+const companyAnalysisOptionsInfo = [];
+addCompanyAnalysisOptionsInfo(companyAnalysisOptionsInfo);
 
 // Creating Company Options
-createOptions(companyOptionsList, activitiesOptionsContainers[1], companyOptions);
+const companyAnalysisOptionsElements = [];
+createAnalysisOptions(companyAnalysisOptionsInfo, analysisOptionsContainersElements[1], companyAnalysisOptionsElements, analysisOptionsContainersOptionsElements);
 
 // Enter Company Option
 // Creating a Form to receive the Company and saving its elements in an array
-const enterCompanyFormElements = createEnterInfoForm("enter-company", "close-enter-company", "enter-company-input", "Type the Company", "text", "enter-company-submit", "", "enter-company-invalid", "Company doesn't exist", activitiesOptionsContainers[1]);
-const enterCompanyForm = document.getElementById('enter-company');
-activitiesForms.push(enterCompanyForm);
-let eventListenersEnterCompanySubmit = 0;
-let eventListenersCloseCompanyInformation = 0;
+createEnterInfoForm("enter-company-form", "enter-company-input", "Type the Company", "text", "Company name", "enter-company-submit", "", "enter-company-invalid", "Company doesn't exist", analysisOptionsContainersElements[1], analysisOptionsFormsElements);
+
+// Enter Company Form Elements
+const enterCompanyForm = document.getElementById('enter-company-form');
+const enterCompanyInput = document.getElementById('enter-company-input');
+const enterCompanySubmit = document.getElementById('enter-company-submit');
+const enterCompanyInvalid = document.getElementById('enter-company-invalid');
 
 // Adding eventListeners to Enter Company Option
-companyOptions[0].addEventListener('click', () => addEventsToEnterInfoOption(enterCompanyFormElements, companyOptions, closeSalariesActivitiesContainers[1], addEventsToSubmitEnterCompanyForm));
+companyAnalysisOptionsElements[0].addEventListener('click', () => addEventsToEnterInfoOption(companyAnalysisOptionsElements, closeAnalysisContainerButtons[1], enterCompanyForm));
 
+// Adding eventsListeners to Submit Enter Company Form
+addEventsToSubmitEnterInfoForm(enterCompanySubmit, "enter-company", enterCompanyInput, enterCompanyInvalid);
+
+// Random Company Option
 // Adding eventListeners to Random Company Option
-companyOptions[1].addEventListener('click', () => addEventsToRandomEntityOption(closeSalariesActivitiesContainers[1], 'random-company'));
+companyAnalysisOptionsElements[1].addEventListener('click', () => addEventsToRandomEntityOption(closeAnalysisContainerButtons[1], 'random-company'));
 
 // Company Calculation Options
-const calculationCompanyOptionsList = [];
-const calculationCompanyOptions = [];
-const calculationCompanyOptionsResults = [];
+// Adding Company Calculation Options information
+const companyCalculationOptionsInfo = [];
+addCompanyCalculationOptions(companyCalculationOptionsInfo);
 
-// Adding Company Calculation Options
-addCompanyCalculationOptions(calculationCompanyOptionsList);
-
-// Creating Company Calculation Options
-createCalculationOptions('company-calculation-options', calculationCompanyOptionsList, activitiesInfoContainers[1], calculationCompanyOptions, calculationCompanyOptionsResults);
+// Creating and Storing the Company Calculation Options and Results
+const companyCalculationOptionsElements = [];
+const companyCalculationOptionsResultsElements = [];
+createCalculationOptions('company-calculation-options', companyCalculationOptionsInfo, analysisActivitiesContainersElements[1], companyCalculationOptionsElements, companyCalculationOptionsResultsElements);
 
 // Adding eventListeners to Company Projections Median Button
-calculationCompanyOptions[0].addEventListener('click', () => calculationButton(calculationCompanyOptions[0], calculationCompanyOptionsResults[0], companySalaryProjections, company, closeActivitiesInfoContainers));
+companyCalculationOptionsElements[0].addEventListener('click', () => addEventsToCalculationButtons(companyCalculationOptionsElements[0], companyCalculationOptionsResultsElements[0], companySalaryProjections, company, closeAnalysisActivitiesContainersButtons));
 
 // Adding eventListeners to Company Projections Range Button
-calculationCompanyOptions[1].addEventListener('click', () => calculationButton(calculationCompanyOptions[1], calculationCompanyOptionsResults[1], rangeSalariesProjections, company, closeActivitiesInfoContainers));
+companyCalculationOptionsElements[1].addEventListener('click', () => addEventsToCalculationButtons(companyCalculationOptionsElements[1], companyCalculationOptionsResultsElements[1], rangeSalariesProjections, company, closeAnalysisActivitiesContainersButtons));
 
 // ------------ Others Analysis Activity Container ------------ 
-const othersOptionsList = [];
-const othersOptions = [];
-activitiesOptions.push(othersOptions);
-
 // Adding Others Analysis Options
-addOthersOptions(othersOptionsList);
+const othersAnalysisOptionsInfo = [];
+addOthersAnalysisOptionsInfo(othersAnalysisOptionsInfo);
 
 // Creating Others Analysis Options
-createOptions(othersOptionsList, activitiesOptionsContainers[2], othersOptions);
+const othersAnalysisOptionsElements = [];
+createAnalysisOptions(othersAnalysisOptionsInfo, analysisOptionsContainersElements[2], othersAnalysisOptionsElements, analysisOptionsContainersOptionsElements);
 
 // General Median Option
 // Adding eventListeners to General Median Option
-othersOptions[0].addEventListener('click', () => addEventsToOtherOptions(closeSalariesActivitiesContainers[2], 'General Salaries Median', generalMedian));
+othersAnalysisOptionsElements[0].addEventListener('click', () => addEventsToOthersAnalysisOptions(closeAnalysisContainerButtons[2], 'General Salaries Median', generalMedian));
 
 // Adding eventListeners to Top 20% Median Option
-othersOptions[1].addEventListener('click', () => addEventsToOtherOptions(closeSalariesActivitiesContainers[2], 'Top 20% Salaries Median', top20Median));
+othersAnalysisOptionsElements[1].addEventListener('click', () => addEventsToOthersAnalysisOptions(closeAnalysisContainerButtons[2], 'Top 20% Salaries Median', top20Median));
 
 // Adding eventListeners to Lowest 20% Median Option
-othersOptions[2].addEventListener('click', () => addEventsToOtherOptions(closeSalariesActivitiesContainers[2], 'Lowest 20% Salaries Median', lowest20Median));
+othersAnalysisOptionsElements[2].addEventListener('click', () => addEventsToOthersAnalysisOptions(closeAnalysisContainerButtons[2], 'Lowest 20% Salaries Median', lowest20Median));
+
+// ----------------------- Close Buttons -----------------------
+// Adding eventListeners to every Close Analysis Container Button
+const closeAnalysisContainerButtons = document.querySelectorAll('.close-analysis-container');
+addEventsToCloseButtons(closeAnalysisContainerButtons, analysisContainersElements, analysisOptionsParentContainer);
+
+// Adding eventListeners to every Close Enter Information Form Button
+const closeEnterInfoFormButtons = document.querySelectorAll('.close-form');
+addEventsToCloseEnterInfoFormButtons(closeEnterInfoFormButtons, analysisOptionsFormsElements, analysisOptionsContainersOptionsElements, closeAnalysisContainerButtons);
+
+// Adding eventListeners to every Close Analysis Activity Container Button
+const closeAnalysisActivitiesContainersButtons = document.querySelectorAll('.close-analysis-activity-container');
+addEventsToCloseAnalysisActivitiesContainersButtons(closeAnalysisActivitiesContainersButtons, analysisActivitiesContainersElements, analysisOptionsContainersElements, closeAnalysisContainerButtons);
+
+// Adding eventListeners to Close Company Activity Container Button to delete the annual medians table and its subtitle
+addEventsToCloseCompanyActivityContainerButton(closeAnalysisActivitiesContainersButtons[1], analysisActivitiesTableContainersElements[1]);

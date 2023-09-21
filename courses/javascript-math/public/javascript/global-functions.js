@@ -41,3 +41,32 @@ function createCardElements(cardsInfoArray, containerToAppend, cardsArray) {
     cardsArray.push(cardContainer);
   }
 }
+
+// Could be used for several Close Buttons
+function addEventsToCloseButtons(closeButtonsArray, containerToHideArray, containerToShowArray) {
+  closeButtonsArray.forEach(closeButton => {
+    closeButton.addEventListener('click', () => {
+      setTimeout(() => {
+        // Hiding the shown container
+        containerToHideArray.forEach(containerToHide => {
+          if (!containerToHide.classList.contains('hidden')) {
+            containerToHide.classList.add('hidden');
+          }
+        });
+  
+        // Validating if "containerToShowArray" is an array or not
+        if(Array.isArray(containerToShowArray)) {
+          // Showing the corresponding container
+          containerToShowArray.forEach(containerToShow => {
+            if (containerToShow.classList.contains('hidden')) {
+              containerToShow.classList.remove('hidden');
+            }
+          });
+        } else {
+          // Showing the desired container
+          containerToShowArray.classList.remove('hidden');
+        }
+      }, 75);
+    });
+  });
+}
