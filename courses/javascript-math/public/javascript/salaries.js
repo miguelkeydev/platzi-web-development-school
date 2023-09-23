@@ -26,13 +26,13 @@ function createSalariesInfoParagraph(containerToAppend) {
   // Salaries Info Paragraph
   const salariesInfoParagraph = document.createElement('p');
   salariesInfoParagraph.setAttribute('id', 'salaries-info');
-  salariesInfoParagraph.classList.add('text-center', 'leading-4', 'p-2', 'rounded-md', 'bg-tertiary');
+  salariesInfoParagraph.classList.add('text-center', 'leading-4', 'p-2', 'rounded-md', 'bg-tertiary', 'md:text-3xl', 'md:leading-8', 'md:p-3');
   salariesInfoParagraph.innerText = `Here's a database with information from several people and their jobs and annual salaries`;
   // Salaries Info Download
   const salariesInfoDownload = document.createElement('a');
   salariesInfoDownload.setAttribute('href', './javascript/salaries-data.js');
   salariesInfoDownload.setAttribute('download', '');
-  salariesInfoDownload.classList.add('block', 'text-sm', 'font-semibold');
+  salariesInfoDownload.classList.add('block', 'text-sm', 'font-semibold', 'md:text-2xl');
   salariesInfoDownload.innerText = `(Click here to download the database)`;
   
   // --------- HTML Layout ---------
@@ -112,7 +112,7 @@ function createActivitiesContainers(elementsInfoArray, containerToAppend, analys
     // Analysis Container
     const analysisContainer = document.createElement('div');
     analysisContainer.setAttribute('id', element.id);
-    analysisContainer.classList.add('hidden', 'Grid-center');
+    analysisContainer.classList.add('hidden', 'Grid-center', 'md:gap-4');
     // Analysis Subtitle
     const analysisSubtitle = document.createElement('h2');
     analysisSubtitle.classList.add('Activity-subtitle');
@@ -124,7 +124,7 @@ function createActivitiesContainers(elementsInfoArray, containerToAppend, analys
     // Analysis Activity Container
     const analysisActivityContainer = document.createElement('div');
     analysisActivityContainer.setAttribute('id', element.activityContainerId)
-    analysisActivityContainer.classList.add('hidden', 'Grid-center', 'gap-3');
+    analysisActivityContainer.classList.add('hidden', 'Grid-center', 'gap-3', 'md:gap-8');
     // Close Analysis Container button
     const closeAnalysisContainerButton = document.createElement('img');
     closeAnalysisContainerButton.setAttribute('src', "https://res.cloudinary.com/dziyyutwr/image/upload/v1693489975/Math/close-icon_ejx6qw.png");
@@ -137,7 +137,7 @@ function createActivitiesContainers(elementsInfoArray, containerToAppend, analys
     // Analysis Activity Table Container
     const analysisActivityTableContainer = document.createElement('div');
     analysisActivityTableContainer.setAttribute('id', element.tableContainerId);
-    analysisActivityTableContainer.classList.add('Flex-center', 'p-2', 'rounded-md', 'bg-tertiary', 'overflow-auto', 'Scrollbar-hide');
+    analysisActivityTableContainer.classList.add('Flex-center', 'p-2', 'rounded-md', 'bg-tertiary', 'overflow-auto', 'Scrollbar-hide', 'md:gap-5', 'md:p-4', 'md:rounded-xl');
     // Table Container Subtitle
     const analysisActivityTableSubtitle = document.createElement('h2');
     analysisActivityTableSubtitle.setAttribute('id', element.talbeSubtitleId);
@@ -252,7 +252,7 @@ function createAnalysisOptions(elementsInfoArray, containerToAppend, analysisOpt
   }
 }
 
-function createEnterInfoForm(formId, inputId, inputText, inputType, inputPlaceholder, submitId, inputHint, invalidId, invalidText, containerToAppend, analysisOptionsForms) {
+function createEnterInfoForm(formId, inputId, inputText, inputType, inputPlaceholder, submitId, inputHint, invalidId, invalidText, containerToAppend, analysisOptionsForms, analysisOptionsFormsInputs) {
   // --------- HTML Elements ---------
   // Form
   const form = document.createElement('form');
@@ -277,12 +277,12 @@ function createEnterInfoForm(formId, inputId, inputText, inputType, inputPlaceho
   submit.classList.add('Activity-submit');
   // Hint
   const hint = document.createElement('p');
-  hint.classList.add('text-sm');
+  hint.classList.add('text-sm', 'md:text-2xl');
   hint.innerText = inputHint;
   // Invalid ID
   const invalidInfo = document.createElement('p');
   invalidInfo.setAttribute('id', invalidId);
-  invalidInfo.classList.add('hidden', 'font-semibold');
+  invalidInfo.classList.add('hidden', 'font-semibold', 'md:text-3xl');
   invalidInfo.innerText = invalidText;
   // Close Form
   const close = document.createElement('img');
@@ -294,8 +294,9 @@ function createEnterInfoForm(formId, inputId, inputText, inputType, inputPlaceho
   containerToAppend.appendChild(form);
   form.append(label, input, submit, hint, invalidInfo, close);
 
-  // Storin Options Forms in an array
+  // Storing Options Forms and Inputs in an array
   analysisOptionsForms.push(form);
+  analysisOptionsFormsInputs.push(input);
 }
 
 function addEventsToEnterInfoOption(optionsToHide, closeButtonToHide, enterInfoForm) {
@@ -324,8 +325,8 @@ function addEventsToSubmitEnterInfoForm(submitForm, formType, inputForm, invalid
           // Showing the Invalid output
           invalidId.classList.remove('hidden');
         } else {
-          // Resseting Form values
-          inputForm.value = "";
+          // Resetting Form values
+          inputForm.value = ``;
           invalidId.classList.add('hidden');
           // Taking the person information to display it
           createSalariesInfo(id);
@@ -340,7 +341,7 @@ function addEventsToSubmitEnterInfoForm(submitForm, formType, inputForm, invalid
         if (!companies[company]) {
           invalidId.classList.remove('hidden');
         } else {
-          // Resseting Form values
+          // Resetting Form values
           inputForm.value = "";
           invalidId.classList.add('hidden');
           // Taking the company information to display it
@@ -351,18 +352,23 @@ function addEventsToSubmitEnterInfoForm(submitForm, formType, inputForm, invalid
   });
 }
 
-function addEventsToCloseEnterInfoFormButtons(closeButtonsArray, containerToHideArray, containerToShowArray, closeButtonsToShowArray) {
+function addEventsToCloseEnterInfoFormButtons(closeButtonsArray, inputsToReset, containerToHideArray, containerToShowArray, closeButtonsToShowArray) {
   // Hiding the Form and Showing the Analysis Options
   addEventsToCloseButtons(closeButtonsArray, containerToHideArray, containerToShowArray);
 
-  // Showing the correspoding "Close Analysis Container" button
   closeButtonsArray.forEach(closeButton => {
     closeButton.addEventListener('click', () => {
       setTimeout(() => {
+        // Showing the correspoding "Close Analysis Container" button
         closeButtonsToShowArray.forEach(closeButtonToShow => {
           if (closeButtonToShow.classList.contains('hidden')) {
             closeButtonToShow.classList.remove('hidden');
           }
+          
+          // Resetting the Forms Inputs
+          inputsToReset.forEach(inputToReset => {
+            inputToReset.value = ``;
+          });
         });
       }, 75);
     });
@@ -393,14 +399,18 @@ function addEventsToOthersAnalysisOptions(closeButtonToHide, subtitle, optionFun
     closeAnalysisActivitiesContainersButtons[2].classList.add('top-[-28px]');
 
     // Adding eventListener to show Others Activities Container "Close Button"
-    closeAnalysisActivitiesContainersButtons[2].addEventListener('click', () => closeButtonToHide.classList.remove('hidden'));
+    closeAnalysisActivitiesContainersButtons[2].addEventListener('click', () => {
+      setTimeout(() => {
+        closeButtonToHide.classList.remove('hidden');
+      }, 75);
+    });
 
     // Assigning Option Subtitle
     analysisActivitiesTableSubtitlesElements[2].innerText = subtitle;
 
     // Creating Result Paragraph
     const resultOption = document.createElement('p');
-    resultOption.classList.add('text-xl', 'font-bold');
+    resultOption.classList.add('text-xl', 'font-bold', 'md:text-4xl');
     resultOption.innerText = optionFunction();
 
     // Adding Result Paragraph
@@ -544,13 +554,13 @@ function createCompanyTable(company) {
   table.setAttribute('id', 'company-table');
   table.classList.add('self-start', 'Activity-table');
   const rowHeading = document.createElement('tr');
-  rowHeading.classList.add('bg-secondary');
+  rowHeading.classList.add('bg-secondary', 'text-lg', 'md:text-3xl');
   const yearHeading = document.createElement('th');
-  yearHeading.classList.add('Activity-table-cell', 'text-lg');
+  yearHeading.classList.add('Activity-table-cell');
   yearHeading.innerText = 'Year';
   const salariesHeading = document.createElement('th');
   salariesHeading.setAttribute('colspan', '10');
-  salariesHeading.classList.add('Activity-table-cell', 'text-lg');
+  salariesHeading.classList.add('Activity-table-cell');
   salariesHeading.innerText = 'Salaries';
   // HTML Layout
   table.appendChild(rowHeading);
@@ -565,11 +575,11 @@ function createCompanyTable(company) {
   mediansTable.classList.add('self-start', 'Activity-table');
   const rowYearsMedians = document.createElement('tr');
   const yearMediansHeading = document.createElement('th');
-  yearMediansHeading.classList.add('Activity-table-cell', 'text-lg', 'bg-secondary');
+  yearMediansHeading.classList.add('Activity-table-cell', 'text-lg', 'bg-secondary', 'md:text-3xl');
   yearMediansHeading.innerText = 'Year';
   const rowAnnualMedians = document.createElement('tr');
   const annualMediansHeading = document.createElement('th');
-  annualMediansHeading.classList.add('Activity-table-cell', 'text-lg', 'bg-secondary')
+  annualMediansHeading.classList.add('Activity-table-cell', 'text-lg', 'bg-secondary', 'md:text-3xl')
   annualMediansHeading.classList.add('Activity-table-cell', 'text-lg');
   annualMediansHeading.innerText = 'Median';
   // HTML Layout
@@ -682,7 +692,7 @@ function createCalculationOptions(calculationOptionsId, elementsInfoArray, conta
     // Calculation Result
     const calculationResult = document.createElement('p');
     calculationResult.setAttribute('id', element.result);
-    calculationResult.classList.add('text-lg');
+    calculationResult.classList.add('text-lg', 'md:text-4xl');
 
     // --------- HTML Layout ---------
     optionsContainer.appendChild(calculationOption);
@@ -882,6 +892,7 @@ addAnalysisContainersInfo(analysisContainersInfo);
 const analysisContainersElements = [];
 const analysisOptionsContainersElements = [];
 const analysisOptionsFormsElements = [];
+const analysisOptionsFormsInputsElements = [];
 const analysisActivitiesContainersElements = [];
 const analysisActivitiesTableContainersElements = [];
 const analysisActivitiesTableSubtitlesElements = [];
@@ -905,8 +916,8 @@ const personAnalysisOptionsElements = [];
 createAnalysisOptions(personAnalysisOptionsInfo, analysisOptionsContainersElements[0], personAnalysisOptionsElements, analysisOptionsContainersOptionsElements);
 
 // Enter ID Option
-// Creating the "Enter ID" person option form
-createEnterInfoForm("enter-id-form", "enter-id-input", "Enter an ID", "number", "XXXXXXX", "enter-id-submit", "(1042671 - 1042690)", "enter-id-invalid", "Invalid ID", analysisOptionsContainersElements[0], analysisOptionsFormsElements);
+// Creating and Storing the "Enter ID" person option form
+createEnterInfoForm("enter-id-form", "enter-id-input", "Enter an ID", "number", "XXXXXXX", "enter-id-submit", "(1042671 - 1042690)", "enter-id-invalid", "Invalid ID", analysisOptionsContainersElements[0], analysisOptionsFormsElements, analysisOptionsFormsInputsElements);
 
 // Enter ID Form Elements
 const enterIdForm = document.getElementById('enter-id-form');
@@ -957,7 +968,7 @@ createAnalysisOptions(companyAnalysisOptionsInfo, analysisOptionsContainersEleme
 
 // Enter Company Option
 // Creating a Form to receive the Company and saving its elements in an array
-createEnterInfoForm("enter-company-form", "enter-company-input", "Type the Company", "text", "Company name", "enter-company-submit", "", "enter-company-invalid", "Company doesn't exist", analysisOptionsContainersElements[1], analysisOptionsFormsElements);
+createEnterInfoForm("enter-company-form", "enter-company-input", "Type the Company", "text", "Company name", "enter-company-submit", "", "enter-company-invalid", "Company doesn't exist", analysisOptionsContainersElements[1], analysisOptionsFormsElements, analysisOptionsFormsInputsElements);
 
 // Enter Company Form Elements
 const enterCompanyForm = document.getElementById('enter-company-form');
@@ -1017,7 +1028,7 @@ addEventsToCloseButtons(closeAnalysisContainerButtons, analysisContainersElement
 
 // Adding eventListeners to every Close Enter Information Form Button
 const closeEnterInfoFormButtons = document.querySelectorAll('.close-form');
-addEventsToCloseEnterInfoFormButtons(closeEnterInfoFormButtons, analysisOptionsFormsElements, analysisOptionsContainersOptionsElements, closeAnalysisContainerButtons);
+addEventsToCloseEnterInfoFormButtons(closeEnterInfoFormButtons, analysisOptionsFormsInputsElements, analysisOptionsFormsElements, analysisOptionsContainersOptionsElements, closeAnalysisContainerButtons);
 
 // Adding eventListeners to every Close Analysis Activity Container Button
 const closeAnalysisActivitiesContainersButtons = document.querySelectorAll('.close-analysis-activity-container');

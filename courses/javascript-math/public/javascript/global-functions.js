@@ -29,7 +29,7 @@ function createCardElements(cardsInfoArray, containerToAppend, cardsArray) {
     image.setAttribute('alt', cardInfo.imageAlt);
     // Card Name
     const name = document.createElement('p');
-    name.classList.add('text-center', 'leading-4', 'font-semibold');
+    name.classList.add('text-center', 'leading-4', 'font-semibold', 'md:text-3xl', 'md:leading-8');
     name.innerText = cardInfo.name;
 
     // --------- HTML Layout ---------

@@ -13,12 +13,12 @@ function createRandomListContainer(containerToAppend) {
   // Random List Button
   const generateRandomListButton = document.createElement('button');
   generateRandomListButton.setAttribute('id', 'generate-random-list-button');
-  generateRandomListButton.classList.add('py-1', 'px-2', 'border-2', 'border-tertiary', 'bg-primary-800', 'text-tertiary', 'rounded-md', 'Clicked__dark');
+  generateRandomListButton.classList.add('py-1', 'px-2', 'border-2', 'border-tertiary', 'bg-primary-800', 'text-tertiary', 'rounded-md', 'Clicked__dark', 'md:text-3xl', 'md:py-3', 'md:px-4');
   generateRandomListButton.innerText = `Generate`;
   // Random List Container
   const randomListContainer = document.createElement('div');
   randomListContainer.setAttribute('id', 'random-list-container');
-  randomListContainer.classList.add('hidden', 'Grid-center', 'gap-0', 'w-10/12', 'py-2', 'rounded-lg', 'bg-tertiary');
+  randomListContainer.classList.add('hidden', 'Grid-center', 'gap-0', 'w-10/12', 'py-2', 'rounded-lg', 'bg-tertiary', 'md:py-4', 'md:px-2');
   // Random List Heading
   const randomListHeading = document.createElement('h2');
   randomListHeading.setAttribute('id', 'random-list-heading');
@@ -30,11 +30,8 @@ function createRandomListContainer(containerToAppend) {
   randomList.classList.add('Activity-subtitle', 'w-full');
 
   // --------- HTML Layout ---------
-  // Generate Random List container into Averages Activity container
   containerToAppend.appendChild(generateRandomListContainer);
-  // Random List Instructions, Button, and Container into Generate Random List container
   generateRandomListContainer.append(generateRandomListInstructions, generateRandomListButton, randomListContainer);
-  // Random List Heading and List into Random List Container
   randomListContainer.append(randomListHeading, randomList);
 }
 
@@ -46,7 +43,7 @@ function createAveragesOptionsContainer(containerToAppend) {
   averageOptionsContainer.classList.add('hidden', 'Flex-wrap');
   // Average Options Heading
   const averageOptionsHeading = document.createElement('h2');
-  averageOptionsHeading.classList.add('Activity-subtitle', 'text-sm', 'w-full')
+  averageOptionsHeading.classList.add('Activity-subtitle', 'text-sm', 'w-full', 'md:text-3xl')
   averageOptionsHeading.innerText = `Choose what do you want to get from the previous list`;
 
   // --------- HTML Layout ---------
@@ -78,12 +75,12 @@ function addAveragesOptionsInfo(elementsInfoArray) {
     id: "quadratic-mean-option",
     name: "Quadratic Mean"
   });
-  // Moda
+  // Mode
   elementsInfoArray.push({
     image: "https://res.cloudinary.com/dziyyutwr/image/upload/v1693610921/Math/moda_mgqiy0.png",
-    imageAlt: "Moda Drawing",
-    id: "moda-option",
-    name: "Moda"
+    imageAlt: "Mode Drawing",
+    id: "mode-option",
+    name: "Mode"
   });
 }
 
@@ -92,16 +89,16 @@ function createAveragesResultContainer(containerToAppend) {
   // Averages Result Container
   const averagesResultContainer = document.createElement('div');
   averagesResultContainer.setAttribute('id', 'averages-result-container');
-  averagesResultContainer.classList.add('hidden', 'Flex-center', 'flex-row', 'text-lg', 'text-center', 'leading-5', 'w-10/12', 'p-1', 'rounded-md', 'bg-tertiary');
+  averagesResultContainer.classList.add('hidden', 'relative', 'flex', 'flex-row', 'items-center', 'justify-end', 'text-lg', 'text-center', 'leading-5', 'w-10/12', 'py-2', 'pr-3', 'pl-0', 'rounded-md', 'bg-tertiary', 'md:text-4xl', 'md:leading-9', 'md:p-5', 'md:rounded-xl');
   // Return to Options Button
   const averagesReturnButton = document.createElement('img');
   averagesReturnButton.setAttribute('id', 'averages-return');
   averagesReturnButton.setAttribute('src', 'https://res.cloudinary.com/dziyyutwr/image/upload/v1693489975/Math/close-icon_ejx6qw.png');
   averagesReturnButton.setAttribute('alt', 'Close Icon');
-  averagesReturnButton.classList.add('w-8', 'p-2');
+  averagesReturnButton.classList.add('Close-button', 'top-[2px]', 'left-1', 'md:top-[14px]', 'md:left-3');
   // Averages Result
   const averagesResultOutput = document.createElement('p');
-  averagesResultOutput.setAttribute('id', 'averages-result-output');
+  averagesResultOutput.setAttribute('id', 'averages-result-output'); averagesResultOutput.classList.add('w-10/12');
 
   // --------- HTML Layout ---------
   // Averages Result Container into Averages Activity
@@ -132,11 +129,11 @@ function generateRandomList() {
 
   // Creating the Brackets for the List
   const openBracket = document.createElement('span');
-  openBracket.classList.add('text-2xl');
+  openBracket.classList.add('text-2xl', 'md:text-4xl');
   openBracket.innerText = `[ `;
   randomList.prepend(openBracket);
   const closedBracket = document.createElement('span');
-  closedBracket.classList.add('text-2xl');
+  closedBracket.classList.add('text-2xl', 'md:text-4xl');
   closedBracket.innerText = ` ]`;
   randomList.append(closedBracket);
 }
@@ -166,10 +163,10 @@ function formulas(averageOption, output) {
     // If the user chose Quadratic Mean
     case 'quadratic-mean-option':
       return output.innerText = `The quadratic mean is ${quadraticMeanFormula(randomNumbersArray)}`;
-    // If the user chose Moda
-    case 'moda-option':
-      const moda = modaFormula(randomNumbersArray);
-      return output.innerText = `The moda is ${moda[0]} and it appeared ${moda[1]} times`;
+    // If the user chose Mode
+    case 'mode-option':
+      const mode = modaFormula(randomNumbersArray);
+      return output.innerText = `The mode is ${mode[0]} and it appeared ${mode[1]} times`;
   }
 }
 
@@ -224,9 +221,9 @@ function modaFormula(arrayToCalculate) {
 
   const arrayOrganizedByRepetitions = arrayRepeatedElementsArrays.sort((a, b) => b[1] - a[1]);
 
-  const moda = [arrayOrganizedByRepetitions[0][0], arrayOrganizedByRepetitions[0][1]];
+  const mode = [arrayOrganizedByRepetitions[0][0], arrayOrganizedByRepetitions[0][1]];
   
-  return moda;
+  return mode;
 }
 
 function closeAveragesResult() {

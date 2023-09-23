@@ -4,10 +4,11 @@ function createDiscountForm(containerToAppend) {
   // Discount Form
   const discountForm = document.createElement('form');
   discountForm.setAttribute('autocomplete', 'off');
-  discountForm.classList.add('Grid-center', 'gap-1', 'w-4/5');
+  discountForm.classList.add('Grid-center', 'gap-1', 'w-4/5', 'md:gap-4');
   // Price Label
   const discountPriceLabel = document.createElement('label');
   discountPriceLabel.setAttribute('for', 'discount-price');
+  discountPriceLabel.classList.add('md:text-3xl');
   discountPriceLabel.innerText = `Type a price`;
   // Price Input
   const discountPriceInput = document.createElement('input');
@@ -18,6 +19,7 @@ function createDiscountForm(containerToAppend) {
   // Rate Label
   const discountRateLabel = document.createElement('label');
   discountRateLabel.setAttribute('for', 'discount-rate');
+  discountRateLabel.classList.add('md:text-3xl');
   discountRateLabel.innerText = `Type the discount rate`;
   // Rate Input
   const discountRateInput = document.createElement('input');
@@ -48,7 +50,7 @@ function createDiscountCouponForm(containerToAppend) {
   // Discount with Coupon Form
   const discountCouponForm = document.createElement('form');
   discountCouponForm.setAttribute('autocomplete', 'off');
-  discountCouponForm.classList.add('Grid-center', 'gap-1', 'w-4/5', 'border-t-2', 'border-primary-900', 'pt-3');
+  discountCouponForm.classList.add('Grid-center', 'gap-1', 'w-4/5', 'border-t-2', 'border-primary-900', 'pt-3', 'md:gap-4', 'md:pt-8');
   // Discount with Coupon Heading
   const discountCouponHeading = document.createElement('h2');
   discountCouponHeading.classList.add('Activity-subtitle', 'w-full', 'font-bold');
@@ -56,6 +58,7 @@ function createDiscountCouponForm(containerToAppend) {
   // Price Label
   const discountCouponPriceLabel = document.createElement('label');
   discountCouponPriceLabel.setAttribute('for', 'discount-coupon-price');
+  discountCouponPriceLabel.classList.add('md:text-3xl');
   discountCouponPriceLabel.innerText = `Type a price`;
   // Price Input
   const discountCouponPriceInput = document.createElement('input');
@@ -66,11 +69,11 @@ function createDiscountCouponForm(containerToAppend) {
   // Rate Label
   const discountCouponLabel = document.createElement('label');
   discountCouponLabel.setAttribute('for', 'discount-coupon');
-  discountCouponLabel.classList.add('text-center', 'leading-4');
+  discountCouponLabel.classList.add('text-center', 'leading-4', 'md:text-3xl');
   discountCouponLabel.innerText = `Type a coupon to get a discount up to 95%`;
   // Coupon Hint
   const discountCouponHint = document.createElement('p');
-  discountCouponHint.classList.add('text-xs');
+  discountCouponHint.classList.add('text-xs', 'md:text-2xl');
   discountCouponHint.innerText = `Hint: JavaScript release year`;
   // Rate Input
   const discountCouponInput = document.createElement('input');

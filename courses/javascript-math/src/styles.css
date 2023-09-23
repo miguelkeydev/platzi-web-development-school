@@ -11,19 +11,23 @@
 
 @layer components {
   .Grid-center {
-    @apply relative grid place-items-center gap-2 w-full;
+    @apply relative grid place-items-center gap-2 w-full md:gap-8;
   }
 
   .Flex-center {
-    @apply relative flex flex-col items-center justify-center gap-2 w-full;
+    @apply relative flex flex-col items-center justify-center gap-2 w-full md:gap-8;
   }
 
   .Flex-wrap {
-    @apply flex flex-wrap justify-around gap-y-4 w-full;
+    @apply flex flex-wrap justify-around gap-y-4 w-full md:gap-y-12;
   }
 
   .Clicked__dark {
-    @apply transition active:shadow-md active:shadow-primary-900 active:scale-95 active:opacity-70;
+    @apply transition active:shadow-md active:shadow-primary-900 active:scale-95 active:opacity-70 lg:hover:shadow-lg lg:hover:shadow-primary-900 lg:hover:scale-95 lg:active:scale-90 lg:active:shadow-2xl lg:active:shadow-primary-900 lg:cursor-pointer;
+  }
+
+  .Clicked__light {
+    @apply transition active:shadow-lg active:shadow-secondary active:scale-95 lg:hover:shadow-lg lg:hover:shadow-secondary lg:hover:scale-95 lg:active:scale-90 lg:active:shadow-2xl lg:active:shadow-secondary lg:cursor-pointer;
   }
 
   .Shadow-white {
@@ -35,40 +39,48 @@
     opacity: 0;
   }
 
-  .Clicked__light {
-    @apply transition active:shadow-lg active:shadow-secondary active:scale-95;
+  .Scrollbar-show::-webkit-scrollbar {
+    height: 8px;
+    
+    opacity: 1;
+  }
+
+  .Scrollbar-show::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    
+    background-color: #93B1A6;
   }
 
   .Navbar-element {
-    @apply Flex-center h-full w-16 py-1 px-2 bg-gradient-to-r from-primary-900 to-primary-800 rounded-md Clicked__light;
+    @apply Flex-center h-full w-16 py-1 px-2 bg-gradient-to-r from-primary-900 to-primary-800 rounded-md Clicked__light md:w-32 md:rounded-lg lg:w-[7.5rem] lg:active:border-4 lg:active:border-tertiary;
   }
 
   .Activity-card {
-    @apply Grid-center w-[90%] min-h-[200px] p-2 m-2 bg-gradient-to-b from-primary-900 to-primary-800 rounded-lg Clicked__light;
+    @apply Grid-center w-[90%] min-h-[12.5rem] p-2 m-2 bg-gradient-to-b from-primary-900 to-primary-800 rounded-lg Clicked__light md:gap-8 md:min-h-[25rem] md:p-6 md:rounded-xl lg:p-4 lg:min-h-[20rem] lg:active:border-4 lg:active:border-tertiary;
   }
 
   .Activity-card__paragraph {
-    @apply uppercase text-lg text-center font-semibold leading-5 text-black;
+    @apply uppercase text-lg text-center font-semibold leading-5 text-black md:text-[2.15rem] md:font-bold md:leading-9 lg:text-3xl lg:pointer-events-none;
   }
 
   .Activity-container {
-    @apply Grid-center w-[88%] p-2 rounded-lg bg-secondary text-primary-900;
+    @apply Grid-center w-[90%] p-2 rounded-lg bg-secondary text-primary-900 md:p-8 md:rounded-xl lg:w-4/5 lg:py-4 lg:gap-4;
   }
 
   .Activity-heading {
-    @apply uppercase font-bold text-xl;
+    @apply uppercase font-bold text-xl md:text-4xl lg:pointer-events-none;
   }
 
   .Navbar-element-border {
-    @apply border-2 border-solid border-tertiary;
+    @apply border-2 border-solid border-tertiary md:border-4;
   }
 
   .Activity-subtitle {
-    @apply font-semibold text-center leading-5 w-2/3;
+    @apply font-semibold text-center leading-5 w-2/3 md:text-3xl lg:pointer-events-none;
   }
 
   .Card-container {
-    @apply grid place-items-center gap-2 w-2/5 p-2 rounded-xl bg-tertiary Clicked__dark;
+    @apply grid place-items-center gap-2 w-2/5 p-2 rounded-xl bg-tertiary Clicked__dark md:gap-4 md:py-3 md:px-6 md:rounded-2xl lg:w-[30%];
   }
 
   .Activity-paragraph__averages {
@@ -76,53 +88,50 @@
   }
 
   .Activity-container__geometry {
-    @apply relative Grid-center gap-4 pl-2;
+    @apply relative Grid-center gap-4 md:gap-8;
   }
 
   .Activity-output {
-    @apply text-center leading-5;
+    @apply text-center leading-5 md:text-3xl;
   }
 
   .Activity-input {
-    @apply w-1/2 py-1 px-3 border-2 border-primary-800 bg-tertiary rounded-md appearance-none focus:outline-none placeholder:text-primary-900 placeholder:opacity-75 focus-within:ring-1;
+    @apply w-1/2 py-1 px-3 border-2 border-primary-800 bg-tertiary rounded-md appearance-none focus:outline-none placeholder:text-primary-900 placeholder:opacity-75 focus-within:ring-1 md:w-3/5 md:py-3 md:rounded-lg md:text-3xl;
   }
 
   .Activity-submit {
-    @apply w-1/2 py-0.5 border-2 border-tertiary bg-primary-800 rounded-md text-tertiary Clicked__dark;
+    @apply w-1/2 py-0.5 border-2 border-tertiary bg-primary-800 rounded-md text-tertiary Clicked__dark md:w-3/5 md:py-3 md:rounded-lg md:text-3xl;
   }
 
   .Activity-analysis-option {
-    @apply w-4/6 py-1 px-2 rounded-md bg-tertiary Clicked__dark;
+    @apply w-4/6 py-1 px-2 rounded-md bg-tertiary Clicked__dark md:text-3xl md:py-3 md:px-4 md:rounded-xl;
   }
 
   .Activity-table {
-    @apply w-full border-collapse rounded-sm overflow-hidden;
+    @apply w-full border-collapse rounded-sm overflow-hidden md:rounded-md;
   }
 
   .Activity-table-cell {
-    @apply text-center p-2 border-2 border-primary-800;
+    @apply text-center p-2 border-2 border-primary-800 md:text-3xl;
   }
 
   .Activity-button {
-    @apply text-sm font-semibold uppercase w-full h-full p-1 border-2 rounded-md border-primary-900 text-primary-900 bg-tertiary transition;
+    @apply justify-evenly text-sm font-semibold uppercase w-full h-full p-1 border-2 rounded-md border-primary-900 text-primary-900 bg-tertiary transition md:Flex-center md:gap-2 md:text-2xl md:text-[1.75rem] md:px-5 md:rounded-xl lg:py-3;
   }
 
   .Activity-label__cdt {
     @apply Flex-center gap-0 w-[32%] py-1 rounded-lg border-2 border-primary-900 bg-tertiary Clicked__dark;
   }
 
-  .Close-button {
-    @apply absolute top-0 left-2 z-10 w-8 p-2 transition active:scale-90;
-  }
-
-
-
-
   .Checked-term {
     @apply bg-gradient-to-r from-emerald-200 to-emerald-100;
   }
 
   .Rate-fee__element-container {
-    @apply flex justify-between text-xs;
+    @apply flex justify-between text-xs md:text-xl;
+  }
+
+  .Close-button {
+    @apply absolute top-0 left-2 z-10 w-8 p-2 transition active:scale-90 md:w-12 lg:hover:scale-90 lg:active:scale-75;
   }
 }

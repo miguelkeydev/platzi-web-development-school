@@ -1,5 +1,5 @@
 // --------------------------- Functions ---------------------------
-function createActivitiesChoices(containerToAppend) {
+function createActivitiesChoicesContainer(containerToAppend) {
   // --------- HTML Elements ---------
   // Activities Choices Container
   const activitiesChoicesContainer = document.createElement('section');
@@ -7,22 +7,19 @@ function createActivitiesChoices(containerToAppend) {
   // Activities Navbar Container
   const activitiesNavbarContainer = document.createElement('div');
   activitiesNavbarContainer.setAttribute('id', 'activities-navbar-container');
-  activitiesNavbarContainer.classList.add('hidden', 'w-full', 'h-10', 'px-2', 'overflow-x-auto', 'Scrollbar-hide');
+  activitiesNavbarContainer.classList.add('hidden', 'w-full', 'h-10', 'px-2', 'overflow-x-auto', 'Scrollbar-hide', 'md:h-20', 'md:px-[0rem]', 'lg:w-3/4', 'lg:h-18', 'lg:pb-2', 'lg:mx-auto', 'Scrollbar-show', 'xl:h-20');
   // Activities Navbar
   const activitiesNavbar = document.createElement('nav');
   activitiesNavbar.setAttribute('id', 'activites-navbar');
-  activitiesNavbar.classList.add('flex', 'gap-4', 'w-fit', 'h-full');
+  activitiesNavbar.classList.add('flex', 'gap-4', 'w-fit', 'h-full', 'md:gap-6', 'lg:gap-8', 'xl:gap-10');
   // Activities Cards Container
   const activitiesCardsContainer = document.createElement('div');
   activitiesCardsContainer.setAttribute('id', 'activities-cards-container');
-  activitiesCardsContainer.classList.add('grid', 'grid-cols-2', 'justify-center', 'gap-x-4', 'w-full', 'h-full');
+  activitiesCardsContainer.classList.add('Grid-center', 'grid-cols-2', 'gap-x-4', 'h-full', 'lg:grid-cols-3');
 
   // --------- HTML Layout ---------
-  // Activities Choices Container into Main Container
-  containerToAppend.prepend(activitiesChoicesContainer);
-  // Activities Navbar and Activities Cards containers into Activities Choices Container
+  containerToAppend.appendChild(activitiesChoicesContainer);
   activitiesChoicesContainer.append(activitiesNavbarContainer, activitiesCardsContainer);
-  // Activities Navbar into Activities Navbar Container
   activitiesNavbarContainer.appendChild(activitiesNavbar);
 }
 
@@ -176,6 +173,13 @@ function addActivitiesContainersInfo(elementsInfoArray) {
 }
 
 function createActivitiesContainers(elementsInfoArray, containerToAppend, activitiesContainersArray) {
+  // Creating the Activities container
+  const activitiesContainer = document.createElement('section');
+  activitiesContainer.setAttribute('id', 'activities-container');
+  activitiesContainer.classList.add('Grid-center', 'mt-8', 'md:mt-16', 'lg:mt-8');
+
+  containerToAppend.appendChild(activitiesContainer);
+
   for (element of elementsInfoArray) {
     // --------- HTML Elements --------
     // Activity Container
@@ -189,7 +193,7 @@ function createActivitiesContainers(elementsInfoArray, containerToAppend, activi
     
     // --------- HTML Layout ---------
     // Activiy Container into Activities Container
-    containerToAppend.appendChild(activityContainer);
+    activitiesContainer.appendChild(activityContainer);
     // Activity Heading into Activity Container
     activityContainer.appendChild(activityHeading);
     // Storing every Activity Container in an array
@@ -200,80 +204,86 @@ function createActivitiesContainers(elementsInfoArray, containerToAppend, activi
 function addEventsToActivitiesCardsOptions(cardsArray, navbarOptionsArray) {
   cardsArray.forEach(card => {
     card.addEventListener('click', () => {
-      // Hiding the "Activities Cards Container" and Showing the "Activities Navbar"
-      hideShowContainers(activitiesCardsContainer, activitiesNavbarContainer)
+      // Timeout so the "active" styles can appear
+      setTimeout(() => {
+        // Hiding the "Activities Cards Container" and Showing the "Activities Navbar"
+        hideShowContainers(activitiesCardsContainer, activitiesNavbarContainer)
 
-      // Storing the first part of the ID of the Card
-      const activityCard = card.id.split('-')[0];
-      // Searching the compatible navbar element and activity container
-      for (let i = 0; i < navbarOptionsArray.length; i++) {
-        const activityNavbarOption = navbarOptionsArray[i].id.split('-')[0];
-        if (activityCard === activityNavbarOption) {
-          // Adding "focused" border to the compatible navbar element
-          navbarOptionsArray[i].classList.add('Navbar-element-border');
-          // Making the Activity Container appear
-          activitiesContainers[i].classList.remove('hidden');
-          activitiesContainersElements[i].classList.remove('hidden');
+        // Storing the first part of the ID of the Card
+        const activityCard = card.id.split('-')[0];
+        // Searching the compatible navbar element and activity container
+        for (let i = 0; i < navbarOptionsArray.length; i++) {
+          const activityNavbarOption = navbarOptionsArray[i].id.split('-')[0];
+          if (activityCard === activityNavbarOption) {
+            // Adding "focused" border to the compatible navbar element
+            navbarOptionsArray[i].classList.add('Navbar-element-border');
+            // Making the Activity Container appear
+            activitiesContainersElements[i].classList.remove('hidden');
+            activitiesContainersElements[i].classList.remove('hidden');
 
-          // Moving the scrollbar according to the activity clicked
-          if (activityCard === 'cdt') {
-            activitiesNavbarContainer.scrollLeft = 100;
-          } else if (activityCard === 'geometry') {
-            activitiesNavbarContainer.scrollLeft = 0;
+            // Moving the scrollbar according to the activity clicked
+            if (activityCard === 'cdt') {
+              activitiesNavbarContainer.scrollLeft = 100;
+            } else if (activityCard === 'geometry') {
+              activitiesNavbarContainer.scrollLeft = 0;
+            }
           }
         }
-      }
+      }, 75);
     });
   });
 }
 
-function addEventsToActivitiesNavbarOptions(navbarOptionsArray, activitiesContainers) {
+function addEventsToActivitiesNavbarOptions(navbarOptionsArray, activitiesContainersElements) {
   navbarOptionsArray.forEach(navbarOption => {
     navbarOption.addEventListener('click', () => {
-      // Hiding Navbar when clicking on the already selected element
-      if (navbarOption.classList.contains('Navbar-element-border')) {
-        // Removing "focused" border
-        navbarOption.classList.remove('Navbar-element-border');
-        // Hiding the "Activities Navbar" and Showing the "Cards Container"
-        hideShowContainers(activitiesNavbarContainer, activitiesCardsContainer);
+      // Timeout so the "active" styles can appear
+      setTimeout(() => {
+        // Hiding Navbar when clicking on the already selected element
+        if (navbarOption.classList.contains('Navbar-element-border')) {
+          // Removing "focused" border
+          navbarOption.classList.remove('Navbar-element-border');
+          // Hiding the "Activities Navbar" and Showing the "Cards Container"
+          hideShowContainers(activitiesNavbarContainer, activitiesCardsContainer);
 
-        // Hiding the opened "Activity Container"
-        activitiesContainers.forEach(container => {
-          if (!container.classList.contains('hidden')) {
-            container.classList.add('hidden');
-          }
-        });
-      } else {
-        // Removing "focused" border if an option has it
-        activitiesNavbarOptionsElements.forEach(navbarOption => {
-          if (navbarOption.classList.contains('Navbar-element-border')) {
-            navbarOption.classList.remove('Navbar-element-border');
-          }
-        });
+          // Hiding the opened "Activity Container"
+          activitiesContainersElements.forEach(container => {
+            if (!container.classList.contains('hidden')) {
+              container.classList.add('hidden');
+            }
+          });
+        } else {
+          // Removing "focused" border if an option has it
+          activitiesNavbarOptionsElements.forEach(navbarOption => {
+            if (navbarOption.classList.contains('Navbar-element-border')) {
+              navbarOption.classList.remove('Navbar-element-border');
+            }
+          });
 
-        // Adding "focused" border to the selected element
-        navbarOption.classList.add('Navbar-element-border');
-        // Hiding opened "Activities Container"
-        activitiesContainers.forEach(container => {
-          if (!container.classList.contains('hidden')) {
-            container.classList.add('hidden');
-          }
-        });
+          // Adding "focused" border to the selected element
+          navbarOption.classList.add('Navbar-element-border');
+          // Hiding opened "Activities Container"
+          activitiesContainersElements.forEach(container => {
+            if (!container.classList.contains('hidden')) {
+              container.classList.add('hidden');
+            }
+          });
 
-        // Showing the corresponding "Activity Container"
-        for (let i = 0; i < activitiesContainers.length; i++) {
-          if (navbarOption.id.split('-')[0] === activitiesContainers[i].id.split('-')[0]) {
-            activitiesContainers[i].classList.remove('hidden');
+          // Showing the corresponding "Activity Container"
+          for (let i = 0; i < activitiesContainersElements.length; i++) {
+            if (navbarOption.id.split('-')[0] === activitiesContainersElements[i].id.split('-')[0]) {
+              activitiesContainersElements[i].classList.remove('hidden');
+            }
           }
         }
-      }
 
-      // Moving the scrollbar according to the navbar element
-      if (navbarOption.id.split('-')[0] === 'cdt') {
-        activitiesNavbarContainer.scrollLeft = 100;
-      } else if (navbarOption.id.split('-')[0] === 'geometry') {
-        activitiesNavbarContainer.scrollLeft = 0;
-      }
+        // Moving the scrollbar according to the navbar element
+        if (navbarOption.id.split('-')[0] === 'cdt') {
+          activitiesNavbarContainer.scrollLeft = 100;
+        } else if (navbarOption.id.split('-')[0] === 'geometry') {
+          activitiesNavbarContainer.scrollLeft = 0;
+        }
+      }, 75);
     });
   });
 }
@@ -283,7 +293,7 @@ const mainContainer = document.getElementById('main-container');
 
 // --------------- Activities Choices ---------------
 // Creating the "Activities Choices" container
-createActivitiesChoices(mainContainer);
+createActivitiesChoicesContainer(mainContainer);
 
 // Activities Navbar
 const activitiesNavbarContainer = document.getElementById('activities-navbar-container');
@@ -305,25 +315,15 @@ const activitiesCardsOptionsElements = [];
 createActivitiesCardsOptions(activitiesCardsOptionsInfo, activitiesCardsContainer, activitiesCardsOptionsElements);
 
 // --------------- Activities Containers ---------------
-const activitiesContainer = document.getElementById('activities-container');
-
 // Adding the Activities Containers information
 const activitiesContainersInfo = [];
 addActivitiesContainersInfo(activitiesContainersInfo);
 // Creating and Storing the Activities Containers
 const activitiesContainersElements = [];
-createActivitiesContainers(activitiesContainersInfo, activitiesContainer, activitiesContainersElements);
-
-
-const geometryContainer = document.getElementById('geometry-container');
-const percentagesContainer = document.getElementById('percentages-container');
-const averagesContainer = document.getElementById('averages-container');
-const salariesContainer = document.getElementById('salaries-container');
-const cdtContainer = document.getElementById('cdt-container');
-const activitiesContainers = [geometryContainer, percentagesContainer, averagesContainer, salariesContainer, cdtContainer]
+createActivitiesContainers(activitiesContainersInfo, mainContainer, activitiesContainersElements);
 
 // Adding an eventlistener to every Activity Card
 addEventsToActivitiesCardsOptions(activitiesCardsOptionsElements, activitiesNavbarOptionsElements);
 
 // Adding an eventlistener to every Activity Navbar Option
-addEventsToActivitiesNavbarOptions(activitiesNavbarOptionsElements, activitiesContainers);
+addEventsToActivitiesNavbarOptions(activitiesNavbarOptionsElements, activitiesContainersElements);

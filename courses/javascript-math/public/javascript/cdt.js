@@ -12,7 +12,7 @@ function createCdtForm(containerToAppend) {
   // Amount to Invest Label
   const amountToInvestLabel = document.createElement('label');
   amountToInvestLabel.setAttribute('for', 'amount-to-invest-input');
-  amountToInvestLabel.classList.add('font-semibold');
+  amountToInvestLabel.classList.add('font-semibold', 'md:text-3xl');
   amountToInvestLabel.innerText = `Amount to Invest`;
   // Amount to Invest Input
   const amountToInvest = document.createElement('input');
@@ -48,7 +48,7 @@ function createCdtForm(containerToAppend) {
   // Term to Invest Customized
   const termToInvestCustomized = document.createElement('p');
   termToInvestCustomized.setAttribute('id', 'term-customized');
-  termToInvestCustomized.classList.add('text-xs', 'underline');
+  termToInvestCustomized.classList.add('text-xs', 'underline', 'md:text-2xl', 'lg:cursor-pointer');
   termToInvestCustomized.innerText = `Customized term`;
   // Term to Invest Invalid
   const termToInvestInvalid = document.createElement('p');
@@ -169,10 +169,10 @@ function createTermToInvestOptions(elementsInfoArray, containerToAppend, options
     label.setAttribute('for', element.inputId);
     label.classList.add('Activity-label__cdt');
     const term = document.createElement('p');
-    term.classList.add('font-semibold', 'leading-4');
+    term.classList.add('font-semibold', 'leading-4', 'md:text-3xl');
     term.innerText = element.term;
     const rate = document.createElement('p');
-    rate.classList.add('text-xs', 'font-semibold', 'leading-4');
+    rate.classList.add('text-xs', 'font-semibold', 'leading-4', 'md:text-2xl');
     rate.innerText = element.rate;
     const input = document.createElement('input');
     input.setAttribute('id', element.inputId);
@@ -275,15 +275,15 @@ function createCustomizedTermToInvestForm() {
   // --------- HTML Elements ---------
   const form = document.createElement('form');
   form.setAttribute('id', 'customized-term-container');
-  form.classList.add('Grid-center', 'gap-1');
+  form.classList.add('Grid-center', 'gap-1', 'md:gap-4');
   // Months Label
   const monthsLabel = document.createElement('label');
   monthsLabel.setAttribute('for', 'customized-months');
-  monthsLabel.classList.add('Grid-center', 'gap-0', 'font-semibold', 'leading-4');
+  monthsLabel.classList.add('Grid-center', 'gap-0', 'font-semibold', 'leading-4', 'md:text-3xl');
   monthsLabel.innerText = `Months`;
   // Months Label Hint
   const monthsLabelHint = document.createElement('p');
-  monthsLabelHint.classList.add('text-xs');
+  monthsLabelHint.classList.add('text-xs', 'md:text-2xl');
   monthsLabelHint.innerText = `(1-24)`;
   // Months Input
   const monthsInput = document.createElement('input');
@@ -294,7 +294,7 @@ function createCustomizedTermToInvestForm() {
   // Rate Label
   const rateLabel = document.createElement('label');
   rateLabel.setAttribute('for', 'customized-rate');
-  rateLabel.classList.add('font-semibold');
+  rateLabel.classList.add('font-semibold', 'md:text-3xl');
   rateLabel.innerText = `Effective Rate`;
   // Rate Input
   const rateInput = document.createElement('input');
@@ -358,7 +358,6 @@ function addEventsToCustomizedTermSubmit(submitButton, output, validMonthsArray)
 }
 
 function createCDTInfo(termOption) {
-  console.log(termOption);
   // Declaring the CDT given information
   let cdtMonthsLabel
   let cdtRateValueLabel
@@ -381,42 +380,43 @@ function createCDTInfo(termOption) {
   // --------- HTML Elements ---------
   // CDT Container
   const cdtContainer = document.createElement('div');
-  cdtContainer.classList.add('Grid-center', 'gap-0', 'w-3/4', 'rounded-md', 'border-2', 'border-primary-800', 'my-2', 'bg-tertiary', 'overflow-hidden');
+  cdtContainer.classList.add('Grid-center', 'gap-0', 'w-3/4', 'rounded-md', 'border-2', 'border-primary-800', 'my-2', 'bg-tertiary', 'overflow-hidden', 'md:rounded-xl');
   // CDT Term
   const cdtTerm = document.createElement('p');
-  cdtTerm.classList.add('text-sm', 'text-center', 'w-full', 'py-0.5', 'bg-primary-800', 'text-tertiary');
+  cdtTerm.classList.add('text-sm', 'text-center', 'w-full', 'py-0.5', 'bg-primary-800', 'text-tertiary', 'md:text-3xl', 'md:py-2');
   cdtTerm.innerText = `${cdtMonthsLabel} Months`;
   // CDT Investment Container
   const cdtInvestmentContainer = document.createElement('div');
-  cdtInvestmentContainer.classList.add('Grid-center', 'gap-0', 'py-1');
+  cdtInvestmentContainer.classList.add('Grid-center', 'gap-0', 'py-1', 'gap-2', 'md:py-3');
   // CDT Investment Heading
   const cdtInvestmentHeading = document.createElement('h3');
-  cdtInvestmentHeading.classList.add('text-sm');
+  cdtInvestmentHeading.classList.add('text-sm', 'md:text-3xl');
   cdtInvestmentHeading.innerText = "Initial Investment";
   // CDT Investment Amount
   const cdtInvestmentAmount = document.createElement('p');
-  cdtInvestmentAmount.classList.add('text-lg', 'font-semibold', 'leading-4');
+  cdtInvestmentAmount.classList.add('text-lg', 'font-semibold', 'leading-4', 'md:text-[2.65rem]', 'md:leading-10');
   cdtInvestmentAmount.innerText = `$${amountToInvest}`;
   // CDT Profits Container
   const cdtProfitsContainer = document.createElement('div');
-  cdtProfitsContainer.classList.add('Grid-center', 'gap-0', 'py-1', 'border-t-[1px]', 'border-b-[1px]', 'border-secondary', 'bg-primary-50');
+  cdtProfitsContainer.classList.add('Grid-center', 'gap-0', 'py-1', 'border-t-[1px]', 'border-b-[1px]', 'border-secondary', 'bg-primary-50', 'gap-2', 'md:py-3');
   // CDT Profits Heading
   const cdtProfitsHeading = document.createElement('h2');
+  cdtProfitsHeading.classList.add('md:text-3xl');
   cdtProfitsHeading.innerText = "Possible Profits";
   // CDT Profits Amount
   const cdtProfitsAmount = document.createElement('p');
-  cdtProfitsAmount.classList.add('text-2xl', 'font-bold');
+  cdtProfitsAmount.classList.add('text-2xl', 'font-bold', 'md:text-5xl');
   cdtProfitsAmount.innerText = `$${cdtCalculation(amountToInvest, cdtMonthsLabel, cdtRateValueLabel)[0]}`;
   // CDT Rates and Fees Container
   const cdtRatesFeesContainer = document.createElement('div');
-  cdtRatesFeesContainer.classList.add('grid', 'gap-1', 'w-full', 'py-1', 'px-3');
+  cdtRatesFeesContainer.classList.add('grid', 'gap-1', 'w-full', 'py-1', 'px-3', 'md:gap-2', 'md:py-3', 'md:px-5');
   // CDT Rates and Fees Heading
   const cdtRatesFeesHeading = document.createElement('h4');
-  cdtRatesFeesHeading.classList.add('text-sm', 'font-semibold');
+  cdtRatesFeesHeading.classList.add('text-sm', 'font-semibold', 'md:text-2xl');
   cdtRatesFeesHeading.innerText = `Rates and Fees`;
   // CDT Rates and Fees Info Container
   const cdtRatesFeesInfoContainer = document.createElement('div');
-  cdtRatesFeesInfoContainer.classList.add('grid', 'gap-0.5');
+  cdtRatesFeesInfoContainer.classList.add('grid', 'gap-0.5', 'md:gap-2');
   // CDT Rates and Fees Info Effective Rate Container
   const cdtRatesFeesInfoEffectiveRateContainer = document.createElement('div');
   cdtRatesFeesInfoEffectiveRateContainer.classList.add('Rate-fee__element-container');
@@ -446,7 +446,7 @@ function createCDTInfo(termOption) {
   cdtRatesFeesInfoGracePeriodValue.innerText = `14 calendar days`;
   // Reset CDT Container
   const cdtResetContainer = document.createElement('div');
-  cdtResetContainer.classList.add('Grid-center', 'py-1', 'border-t-[1px]', 'border-secondary');
+  cdtResetContainer.classList.add('Grid-center', 'py-1', 'border-t-[1px]', 'border-secondary', 'md:py-2');
   // Reset CDT Button
   const cdtResetButton = document.createElement('button');
   cdtResetButton.setAttribute('id', 'reset-cdt')
