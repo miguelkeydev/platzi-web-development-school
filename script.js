@@ -1,6 +1,4 @@
-const projectsContainer = document.querySelector('.projects-container');
-const projectsList = [];
-
+// -------------------------- Functions --------------------------
 function insertProject(projectsList) {
   for (project of projectsList) {
     // Creating the Card Project HTML Structure
@@ -101,6 +99,9 @@ function insertProject(projectsList) {
     }
   }
 }
+// -------------------------- Procedure --------------------------
+const projectsContainer = document.querySelector('.projects-container');
+const projectsList = [];
 
 // Front End Developer - Practical Course - Lamoure
 projectsList.push({
@@ -111,11 +112,11 @@ projectsList.push({
   title: "LAMOURE",
   description: "JEWELRY & ACCESSORIES STORE",
   html: {
-    icon: "./assets/icons/html_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/html_logo_o2qv1y.svg",
     description: "HTML Logo"
   },
   css: {
-    icon: "./assets/icons/css_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/css_logo_cmap6p.svg",
     description: "CSS Logo"
   },
   sass: {
@@ -137,11 +138,11 @@ projectsList.push({
   title: "GOOGLE",
   description: "GOOGLE CLONE",
   html: {
-    icon: "./assets/icons/html_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/html_logo_o2qv1y.svg",
     description: "HTML Logo"
   },
   css: {
-    icon: "./assets/icons/css_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/css_logo_cmap6p.svg",
     description: "CSS Logo"
   },
   sass: {
@@ -163,11 +164,11 @@ projectsList.push({
   title: "WIKIPEDIA",
   description: "WIKIPEDIA CLONE",
   html: {
-    icon: "./assets/icons/html_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/html_logo_o2qv1y.svg",
     description: "HTML Logo"
   },
   css: {
-    icon: "./assets/icons/css_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/css_logo_cmap6p.svg",
     description: "CSS Logo"
   },
   sass: {
@@ -189,11 +190,11 @@ projectsList.push({
   title: "BATATA BIT",
   description: "CRYPTOCURRENCIES WEBPAGE",
   html: {
-    icon: "./assets/icons/html_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/html_logo_o2qv1y.svg",
     description: "HTML Logo"
   },
   css: {
-    icon: "./assets/icons/css_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/css_logo_cmap6p.svg",
     description: "CSS Logo"
   },
   sass: {
@@ -215,16 +216,16 @@ projectsList.push({
   title: "PRE PROCESSORS",
   description: "PREPROCESSORS BLOG",
   html: {
-    icon: "./assets/icons/html_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/html_logo_o2qv1y.svg",
     description: "HTML Logo"
   },
   css: {
-    icon: "./assets/icons/css_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/css_logo_cmap6p.svg",
     description: "CSS Logo"
   },
   sass: {
     used: true,
-    icon: "./assets/icons/sass_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653405/Platzi%20Portfolio/sass_logo_taah3u.svg",
     description: "SASS Logo"
   },
   tailwind: {
@@ -243,16 +244,16 @@ projectsList.push({
   title: "ECO STORE",
   description: "SASS BASICS",
   html: {
-    icon: "./assets/icons/html_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/html_logo_o2qv1y.svg",
     description: "HTML Logo"
   },
   css: {
-    icon: "./assets/icons/css_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/css_logo_cmap6p.svg",
     description: "CSS Logo"
   },
   sass: {
     used: true,
-    icon: "./assets/icons/sass_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653405/Platzi%20Portfolio/sass_logo_taah3u.svg",
     description: "SASS Logo"
   },
   tailwind: {
@@ -271,16 +272,16 @@ projectsList.push({
   title: "Messi's best moments",
   description: "grid basics",
   html: {
-    icon: "./assets/icons/html_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/html_logo_o2qv1y.svg",
     description: "HTML Logo"
   },
   css: {
-    icon: "./assets/icons/css_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/css_logo_cmap6p.svg",
     description: "CSS Logo"
   },
   sass: {
     used: true,
-    icon: "./assets/icons/sass_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653405/Platzi%20Portfolio/sass_logo_taah3u.svg",
     description: "SASS Logo"
   },
   tailwind: {
@@ -299,11 +300,11 @@ projectsList.push({
   title: "Hotel Heaven",
   description: "tailwind",
   html: {
-    icon: "./assets/icons/html_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/html_logo_o2qv1y.svg",
     description: "HTML Logo"
   },
   css: {
-    icon: "./assets/icons/css_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/css_logo_cmap6p.svg",
     description: "CSS Logo"
   },
   sass: {
@@ -311,7 +312,7 @@ projectsList.push({
   },
   tailwind: {
     used: true,
-    icon: "./assets/icons/tailwind_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/tailwind_logo_ld8fcr.svg",
     description: "Tailwind Logo"
   },
   javascript: {
@@ -327,16 +328,16 @@ projectsList.push({
   title: "Lamoure",
   description: "JavaScript Basic",
   html: {
-    icon: "./assets/icons/html_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/html_logo_o2qv1y.svg",
     description: "HTML Logo"
   },
   css: {
-    icon: "./assets/icons/css_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/css_logo_cmap6p.svg",
     description: "CSS Logo"
   },
   sass: {
     used: true,
-    icon: "./assets/icons/sass_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653405/Platzi%20Portfolio/sass_logo_taah3u.svg",
     description: "SASS Logo"
   },
   tailwind: {
@@ -344,7 +345,7 @@ projectsList.push({
   },
   javascript: {
     used: true,
-    icon: "./assets/icons/javascript_logo.svg",
+    icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/javascript_logo_hzrfct.svg",
     description: "JavaScript Logo"
   }
 })
