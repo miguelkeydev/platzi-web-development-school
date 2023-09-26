@@ -2,7 +2,7 @@
 function addProjectsInfo(projectsInfoArray) {
   // Front End Developer - Practical Course - Lamoure
   projectsInfoArray.push({
-    link: "../courses/frontend-developer-practical/index.html",
+    link: "./courses/frontend-developer-practical/index.html",
     date: "19/04/23",
     logo: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692049906/Platzi%20Portfolio/logo-icon_gbdekb.png",
     logoDescription: "Lamoure Logo",
@@ -30,7 +30,7 @@ function addProjectsInfo(projectsInfoArray) {
   });
   // HTML and CSS - Practical Course - Google Clone
   projectsInfoArray.push({
-    link: "../courses/html-css-practical/google-clon/pages/",
+    link: "./courses/html-css-practical/google-clon/pages/",
     date: "28/04/23",
     logo: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692134087/Platzi%20Portfolio/google_logo_k06tmo.svg",
     logoDescription: "Google Logo",
@@ -58,7 +58,7 @@ function addProjectsInfo(projectsInfoArray) {
   });
   // HTML and CSS - Practical Course - Wikipedia Clone
   projectsInfoArray.push({
-    link: "../courses/html-css-practical/wikipedia-clone/pages/index.html",
+    link: "./courses/html-css-practical/wikipedia-clone/pages/index.html",
     date: "05/05/23",
     logo: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692136539/Platzi%20Portfolio/Wikipedia_logo_wrj3a2.png",
     logoDescription: "Wikipedia Logo",
@@ -86,7 +86,7 @@ function addProjectsInfo(projectsInfoArray) {
   });
   // Responsive Design: Mobile First - Batata Bit
   projectsInfoArray.push({
-    link: "../courses/responsive-design/pages/index.html",
+    link: "./courses/responsive-design/pages/index.html",
     date: "11/05/23",
     logo: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692134317/Platzi%20Portfolio/batata_tdplhd.svg",
     logoDescription: "Batata Bit Project Logo",
@@ -114,7 +114,7 @@ function addProjectsInfo(projectsInfoArray) {
   });
   // CSS Preprocessors - Preprocessors Blog
   projectsInfoArray.push({
-    link: "../courses/preprocessors-css/preprocessors/html/index.html",
+    link: "./courses/preprocessors-css/preprocessors/html/index.html",
     date: "26/05/23",
     logo: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692134504/Platzi%20Portfolio/preprocessors_sfnhqk.png",
     logoDescription: "Preprocessors Project",
@@ -144,7 +144,7 @@ function addProjectsInfo(projectsInfoArray) {
   });
   // SASS Basics - Eco-Store
   projectsInfoArray.push({
-    link: "../courses/SASS-basics/html/index.html",
+    link: "./courses/SASS-basics/html/index.html",
     date: "05/06/23",
     logo: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692135825/Platzi%20Portfolio/ecostore-logo_gbdjao.png",
     logoDescription: "Eco Store Logo",
@@ -174,7 +174,7 @@ function addProjectsInfo(projectsInfoArray) {
   });
   // GRID Basics - Messi's Best Moments
   projectsInfoArray.push({
-    link: "../courses/GRID-basics/project/pages/index.html",
+    link: "./courses/GRID-basics/project/pages/index.html",
     date: "16/06/23",
     logo: "https://www.mundodeportivo.com/files/image_948_465/files/fp/uploads/2022/04/23/6263b76dc02f4.r_d.1257-1250-3450.jpeg",
     logoDescription: "Messi Holding his T-Shirt",
@@ -204,7 +204,7 @@ function addProjectsInfo(projectsInfoArray) {
   });
   // Tailwind Basics - Hotel Heaven
   projectsInfoArray.push({
-    link: "../courses/tailwind/src/index.html",
+    link: "./courses/tailwind/src/index.html",
     date: "13/07/23",
     logo: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692136317/Platzi%20Portfolio/hotel-heaven-logo_vaxxgm.png",
     logoDescription: "Hotel Heaven Logo",
@@ -234,7 +234,7 @@ function addProjectsInfo(projectsInfoArray) {
   });
   // JavaScript Basic - Lamoure
   projectsInfoArray.push({
-    link: "../courses/javascript-practical/lamoure-project",
+    link: "./courses/javascript-practical/lamoure-project",
     date: "15/08/23",
     logo: "https://res.cloudinary.com/dziyyutwr/image/upload/v1692049906/Platzi%20Portfolio/logo-icon_gbdekb.png",
     logoDescription: "Lamoure Logo",
@@ -262,7 +262,7 @@ function addProjectsInfo(projectsInfoArray) {
   });
   // JavaScript Practical - Math Workshop
   projectsInfoArray.push({
-    link: "../courses/javascript-math/public",
+    link: "./courses/javascript-math/public",
     date: "26/09/23",
     logo: "https://cdn-icons-png.flaticon.com/512/2861/2861731.png",
     logoDescription: "Math Image",
