@@ -56,11 +56,11 @@
   }
 
   .Activity-card {
-    @apply Grid-center w-[90%] min-h-[12.5rem] p-2 m-2 bg-gradient-to-b from-primary-900 to-primary-800 rounded-lg Clicked__light md:gap-8 md:min-h-[25rem] md:p-6 md:rounded-xl lg:p-4 lg:min-h-[20rem] lg:active:border-4 lg:active:border-tertiary;
+    @apply Grid-center w-[90%] min-h-[12.5rem] p-2 m-2 bg-gradient-to-b from-primary-900 to-primary-800 rounded-lg Clicked__light md:gap-8 md:min-h-[25rem] md:p-6 md:rounded-xl lg:p-4 lg:min-h-[20rem] lg:active:border-4 lg:active:border-tertiary 2xl:min-h-[24rem];
   }
 
   .Activity-card__paragraph {
-    @apply uppercase text-lg text-center font-semibold leading-5 text-black md:text-[2.15rem] md:font-bold md:leading-9 lg:text-3xl lg:pointer-events-none;
+    @apply uppercase text-lg text-center font-semibold leading-5 text-black md:text-[2.15rem] md:font-bold md:leading-9 lg:text-2xl lg:pointer-events-none xl:text-3xl;
   }
 
   .Activity-container {

@@ -11,23 +11,26 @@
   <!--Adding 'Bruno Ace' Font-->
   <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
   <!--Adding Styles-->
-  <link rel="stylesheet" href="./styles/css/styles.css">
+  <!-- <link rel="stylesheet" href="../styles/css/styles.css"> -->
+  <link rel="stylesheet" href="./styles.css">
   <!--Adding Icon to Title-->
   <link rel="shortcut icon" href="https://www.svgrepo.com/download/1699/web-development.svg">
   <title>Platzi Web Development Projects</title>
 </head>
-<body>
-  <!--Main Container-->
-  <main>
-    <h1 class="heading">
-      LOOK AT MY PROJECTS!
+<body class="font-Roboto p-3 bg-body bg-no-repeat bg-fixed bg-100 md:p-6 lg:p-8 xl:p-7 2xl:p-8">
+  <!-- Header -->
+  <header class="text-center uppercase w-full">
+    <h1 class="font-Bruno text-3xl font-bold text-white text-shadow md:text-4xl lg:text-5xl xl:text-6xl 3xl:text-7xl">
+      Look at my projects!
     </h1>
+  </header>
+  <!--Main Container-->
+  <main class="grid gap-5 w-full pt-5 md:pt-8 3xl:max-w-[103rem] 3xl:mx-auto">
     <!-- Projects Container-->
-    <div id="projects-container" class="projects-container">
-      <!-- Projects will be appended with JavaScript -->
+    <div id="projects-container" class="grid grid-cols-2 justify-items-center justify-around md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
     </div>
   </main>
   <!-- JavaScript -->
-  <script src="./script.js"></script>
+  <script src="./javascript/script.js"></script>
 </body>
 </html>

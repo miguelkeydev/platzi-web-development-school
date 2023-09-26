@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+}
+
+@layer components {
+  .flex-center {
+    display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .card-color {
+    background: linear-gradient(180deg, #000 25%, #494949 60%, #c6c6c6 100%);
+  }
+
+  .text-shadow {
+    text-shadow: 0 0 1.2rem black;
+  }
+
+  .project-card {
+    @apply relative flex-center flex-col justify-between font-Bruno w-40 min-h-[16rem] p-2.5 m-2.5 rounded-xl card-color text-gray-300 overflow-hidden transition active:m-0 active:shadow-2xl active:shadow-white active:scale-x-110 active:scale-y-105 md:w-48 md:min-h-[18rem] md:p-4 md:m-4 xl:w-52 lg:hover:m-2 lg:hover:shadow-2xl lg:hover:shadow-white lg:hover:scale-x-[1.05] lg:hover:scale-y-[1.02] xl:min-h-[20rem] 2xl:w-56 2xl:min-h-[22rem] 3xl:w-64 3xl:min-h-[26rem];
+  }
+}

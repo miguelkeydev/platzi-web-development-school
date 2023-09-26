@@ -7,7 +7,7 @@ function createActivitiesChoicesContainer(containerToAppend) {
   // Activities Navbar Container
   const activitiesNavbarContainer = document.createElement('div');
   activitiesNavbarContainer.setAttribute('id', 'activities-navbar-container');
-  activitiesNavbarContainer.classList.add('hidden', 'w-full', 'h-10', 'px-2', 'overflow-x-auto', 'Scrollbar-hide', 'md:h-20', 'md:px-[0rem]', 'lg:w-3/4', 'lg:h-18', 'lg:pb-2', 'lg:mx-auto', 'Scrollbar-show', 'xl:h-20');
+  activitiesNavbarContainer.classList.add('hidden', 'w-full', 'h-10', 'px-2', 'overflow-x-auto', 'Scrollbar-hide', 'md:h-20', 'md:px-[0rem]', 'lg:w-3/4', 'lg:h-18', 'lg:pb-2', 'lg:mx-auto', 'lg:Scrollbar-show', 'xl:h-20');
   // Activities Navbar
   const activitiesNavbar = document.createElement('nav');
   activitiesNavbar.setAttribute('id', 'activites-navbar');

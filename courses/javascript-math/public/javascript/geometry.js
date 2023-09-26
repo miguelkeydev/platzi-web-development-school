@@ -18,7 +18,7 @@ function createFiguresChoiceContainer(containerToAppend) {
   // Figures Choice container into Geometry Activity container
   containerToAppend.appendChild(figuresChoiceContainer);
   // Figures Choice subtitle and Figures Options container into Figures Choice container
-  figuresChoiceContainer.append(figuresChoiceSubtitle, figuresOptionsContainer)
+  figuresChoiceContainer.append(figuresChoiceSubtitle, figuresOptionsContainer);
 }
 
 function addFiguresOptionsInfo(elementsInfoArray) {
