@@ -1,0 +1,115 @@
+&__type-username {
+  @include container;
+
+  padding: 1rem 0;
+
+  label {
+    text-transform: uppercase;
+  }
+
+  input {
+    font-size: 1.2rem;
+
+    width: 70%;
+    padding: .3rem .8rem;
+    border: 3px solid $color-tertiary;
+    
+    background-color: rgba($color-tertiary, .7);
+    color: $color-primary;
+    border-radius: .4rem;
+
+    &::placeholder {
+      color: $color-cuaternary;
+    }
+
+    &:focus {
+      outline-color: $color-tertiary;
+      outline-width: 3px;
+    }
+  }
+
+  .info__submit-username {
+    font-family: cursive;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    border: 2px solid $color-cuaternary;
+    
+    background-color: $color-tertiary;
+    color: $color-primary;
+
+    transition: .15s;
+
+    &:active {
+      background-color: rgba($color-tertiary, .8);
+      
+      transform: scale(.95);
+    }
+  }
+
+  .username-warn {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  &__type-username {
+      gap: 3vh;
+    
+    padding: 2rem 0;
+  }
+
+  label {
+    font-size: 3.6rem;
+  }
+
+  input {
+    font-size: 2.6rem;
+
+    padding: .7rem 1.4rem;
+  }
+
+  .username-warn {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  &__type-username {
+      gap: 4vh;
+  }
+
+  label {
+    font-size: 4.8rem;
+  }
+
+  input {
+    font-size: 3rem;
+
+    padding: 1rem 2rem;
+  }
+
+  .username-warn {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 1820px) {
+  &__type-username {
+    width: 70%;
+  }
+
+  label {
+    font-size: 6rem;
+  }
+
+  input {
+    font-size: 4.4rem;
+
+    padding: 1.6rem 3.2rem;
+  }
+
+  .username-warn {
+    font-size: 4rem;
+  }
+}

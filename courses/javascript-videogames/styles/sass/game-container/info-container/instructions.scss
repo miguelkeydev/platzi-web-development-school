@@ -1,0 +1,33 @@
+&__instructions {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  &__instructions {
+    display: flex;
+
+    font-size: large;
+    text-transform: uppercase;
+    text-align: center;
+
+    width: 90%;
+    padding: 1rem 1.5rem;
+    border: .3rem groove $color-primary;
+    border-radius: 1rem;
+
+    background: linear-gradient(86deg, rgba(174,210,255,1) 0%, rgb(178, 201, 226) 70%);
+    color: $color-primary;
+  } 
+}
+
+@media (min-width: 1280px) {
+  &__instructions {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1820px) {
+  &__instructions {
+    font-size: 2.5rem;
+  } 
+}

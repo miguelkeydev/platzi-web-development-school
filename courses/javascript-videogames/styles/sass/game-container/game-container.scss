@@ -1,0 +1,42 @@
+.game-container {
+  display: grid;
+    justify-items: center;
+    align-content: space-between;
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 1vh 0;
+
+  @import './canvas';
+
+  @import './info-container/info-container';
+
+  @import './info-container/buttons';
+
+  @import './info-container/messages';
+
+  @import './info-container/instructions';
+}
+
+@media (min-width: 1024px) {
+  .game-container {
+    display: grid;
+      grid-template-columns: 60% 1fr;
+      place-items: center;
+
+    padding: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .game-container {
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width: 1820px) {
+  .game-container {
+    padding: 2rem 0;
+  }
+}

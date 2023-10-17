@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://res.cloudinary.com/dziyyutwr/image/upload/v1696553817/videogames/videogame_icon_ketvsq.png">
+  <link rel="stylesheet" href="./styles/css/styles.css">
+  <title>Video Game Project</title>
+</head>
+<body>
+  <main>
+    <div class="home-screen">
+      <div class="home-screen__logo">
+        <img src="https://res.cloudinary.com/dziyyutwr/image/upload/v1696553817/videogames/videogame_icon_ketvsq.png" alt="Video game icon">
+      </div>
+      <div class="options home-screen__options">
+        <button class="options__play-option">
+          <img
+            src="https://res.cloudinary.com/dziyyutwr/image/upload/v1696965913/videogames/play-circle-svgrepo-com_cxedi7.svg"
+            alt="Play icon"
+          >
+          <span>play</span>
+        </button>
+        <button class="options__instructions-option">
+          <img
+            src="https://res.cloudinary.com/dziyyutwr/image/upload/v1696965913/videogames/instructions-instructions-manual-svgrepo-com_ndjxpq.svg"
+            alt="Instructions icon"
+          >
+          <span>instructions</span>
+        </button>
+        <button class="options__customization-option">
+          <img
+            src="https://res.cloudinary.com/dziyyutwr/image/upload/v1696965913/videogames/custom-apps-svgrepo-com_ffimv5.svg"
+            alt="Customization icon"
+          >
+          <span>customization</span>
+        </button>
+        <button class="options__leaderboard-option">
+          <img
+            src="https://res.cloudinary.com/dziyyutwr/image/upload/v1696966846/videogames/leaderboard-podium-2-svgrepo-com_zr3mdj.svg"
+            alt="Leaderboard icon"
+          >
+          <span>leaderboard</span>
+        </button>
+      </div>
+      <div class="info home-screen__info hidden">
+        <form class="info__type-username hidden">
+          <label for="username">Type your name</label>
+          <input id="username" type="text" placeholder="Username" maxlength="12" autocomplete="off">
+          <input class="info__submit-username" type="submit">
+          <p class="username-warn"></p>
+        </form>
+        <div class="info__instructions hidden">
+          <h2>Instructions</h2>
+          <ul>
+            <li>Move using the arrow buttons or keys to reach the door to advance to the next level.</li>
+            <li>There are ten levels and each one is more difficult than the previous one.</li>
+            <li>Try to win the game in the shortest time possible so as to enter the leaderboard.</li>
+          </ul>
+        </div>
+        <div class="customization info__customization hidden">
+          <h2>Customization</h2>
+          <div class="customization__options">
+            <button id="customization-original">
+              <span>Original</span>
+              <span>💀 💣 🎁 💥</span>
+            </button>
+            <button id="customization-monkey">
+              <span>Monkey</span>
+              <span>🐒 🌳 🍌 🙊</span>
+            </button>
+            <button id="customization-developer">
+              <span>Developer</span>
+              <span>🤓 👾 💻 👨‍💻</span>
+            </button>
+            <button id="customization-scientist">
+              <span>Scientist</span>
+              <span>👩‍🔬 🦠 💉 🧟‍♂️</span>
+            </button>
+          </div>
+        </div>
+        <div class="leaderboard info__leaderboard hidden">
+          <h2>&#127941;Best mark times&#127941;</h2>
+          <div class="leaderboard__mark-times hidden"></div>
+          <p class="leaderboard__no-records hidden">
+            No previous records
+          </p>
+        </div>
+        <button id="return-home" class="home-button hidden">
+          <img src="https://res.cloudinary.com/dziyyutwr/image/upload/v1696990298/videogames/home-svgrepo-com_cq3z5i.svg" alt="Home icon">
+        </button>
+      </div>
+    </div>
+    <div class="game-container">
+      <div class="game-container__canvas">
+        <p id="level"></p>
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="game-container__info-container">
+        <div class="game-container__buttons">
+          <button id="button-up">
+            <img
+              src="https://res.cloudinary.com/dziyyutwr/image/upload/v1696541550/videogames/up-arrow_txhxpi.svg"
+              alt="Up Arrow"
+            >
+          </button>
+          <div class="game-container__buttons--sides">
+            <button id="button-left">
+              <img
+                src="https://res.cloudinary.com/dziyyutwr/image/upload/v1696541550/videogames/left-arrow_jvwxrh.svg"
+                alt="Left Arrow"
+              >
+            </button>
+            <button id="button-right">
+              <img
+                src="https://res.cloudinary.com/dziyyutwr/image/upload/v1696541550/videogames/right-arrow_b2f2il.svg"
+                alt="Right Arrow"
+              >
+            </button>
+          </div>
+          <button id="button-down">
+            <img
+              src="https://res.cloudinary.com/dziyyutwr/image/upload/v1696541550/videogames/down-arrow_x3ys1k.svg"
+              alt="Down Arrow"
+            >
+          </button>
+        </div>
+        <div class="game-container__messages">
+          <p id="player-lives">&#129293;Lives:</p>
+          <p id="time-spent">&#9200;Time: 0:0:0</p>
+          <p id="record-time">&#127942;Record:</p>
+        </div>
+      </div>
+    </div>
+    <div id="lose-screen" class="final-screen hidden">
+      <p class="final-screen__emoji">
+        👎
+      </p>
+      <p>You lost all your lives</p>
+      <button id="try-again">Try again</button>
+      <button id="go-home" class="home-button">
+        <img src="https://res.cloudinary.com/dziyyutwr/image/upload/v1696990298/videogames/home-svgrepo-com_cq3z5i.svg" alt="Home icon">
+      </button>
+    </div>
+    <div id="win-screen" class="final-screen hidden">
+      <p class="final-screen__emoji">
+        &#127942;
+      </p>
+      <div class="final-screen__messages">
+        <p>You won the game!</span></p>
+        <p class="final-screen__record"></p>
+      </div>
+      <button id="try-again">Play again</button>
+      <button id="go-home" class="home-button">
+        <img src="https://res.cloudinary.com/dziyyutwr/image/upload/v1696990298/videogames/home-svgrepo-com_cq3z5i.svg" alt="Home icon">
+      </button>
+    </div>
+  </main>
+  <!-- JavaScript -->
+  <script src="./javascript/maps.js"></script>
+  <script src="./javascript/options.js"></script>
+  <script src="./javascript/main.js"></script>
+</body>
+</html>
