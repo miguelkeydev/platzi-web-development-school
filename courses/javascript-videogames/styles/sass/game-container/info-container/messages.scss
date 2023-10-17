@@ -1,0 +1,50 @@
+&__messages {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  width: 70%;
+  padding: .5rem 0;
+  margin: 0 auto;
+  border: .3rem groove $color-tertiary;
+  border-radius: 1rem;
+
+  background-color: $color-primary;
+  color: $color-cuaternary;
+}
+
+@media (min-width: 768px) {
+  &__messages {
+      gap: .75rem;
+
+    font-size: 2rem;
+
+    width: fit-content;
+    height: fit-content;
+    padding: 2.5rem 1rem;
+
+    p {
+      display: block;
+
+      width: fit-content;
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  &__messages {
+    font-size: 2.6rem;
+  } 
+}
+
+@media (min-width: 1820px) {
+  &__messages {
+    font-size: 4rem;
+  }
+}

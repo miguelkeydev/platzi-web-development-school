@@ -1,0 +1,1079 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: cursive;
+  background: linear-gradient(180deg, rgb(39, 0, 93) 0%, #9400ff 75%);
+  color: white;
+}
+
+main {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+main .home-screen {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(174, 210, 255, 0.75);
+  backdrop-filter: blur(5px);
+}
+main .home-screen__logo {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: fit-content;
+  padding: 8vh 0;
+}
+main .home-screen__logo img {
+  width: 50%;
+}
+main .home-screen .options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+  width: 100%;
+}
+main .home-screen .options button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: cursive;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 75%;
+  padding: 1rem 0;
+  border: 0.18rem solid #27005D;
+  background-color: #AED2FF;
+  color: #27005D;
+  border-radius: 2rem;
+  transition: 0.15s;
+}
+main .home-screen .options button:active {
+  background-color: rgba(39, 0, 93, 0.5);
+  box-shadow: 0 0 0.5rem #9400ff;
+  transform: scale(1.1);
+}
+main .home-screen .options button img {
+  width: 2rem;
+}
+@media (min-width: 768px) {
+  main .home-screen .options button {
+    gap: 2rem;
+    font-size: 2.6rem;
+    padding: 1.2rem 0;
+    border-width: 0.35rem;
+    border-radius: 2.8rem;
+  }
+  main .home-screen .options button:active {
+    transform: scale(1.15);
+  }
+  main .home-screen .options button img {
+    width: 3.6rem;
+  }
+}
+@media (min-width: 1024px) {
+  main .home-screen .options {
+    display: grid;
+    grid-template-areas: "play play" "instructions customization" "leaderboard leaderboard";
+    place-items: center;
+    gap: 3vh 0.5vw;
+    width: 80%;
+    margin: 0 auto;
+  }
+  main .home-screen .options button {
+    gap: 1.5vw;
+    font-size: 2rem;
+    width: 100%;
+    padding: 0.8rem 0;
+  }
+  main .home-screen .options button:first-child {
+    grid-area: play;
+  }
+  main .home-screen .options button:nth-child(2) {
+    grid-area: instructions;
+  }
+  main .home-screen .options button:nth-child(3) {
+    grid-area: customization;
+  }
+  main .home-screen .options button:last-child {
+    grid-area: leaderboard;
+  }
+  main .home-screen .options button:hover {
+    background-color: rgba(39, 0, 93, 0.2);
+    box-shadow: 0 0 0.2rem #9400ff;
+    transform: scale(1.05);
+  }
+  main .home-screen .options button:active {
+    background-color: rgba(39, 0, 93, 0.5);
+    box-shadow: 0 0 0.5rem #9400ff;
+    transform: scale(1.1);
+  }
+}
+@media (min-width: 1280px) {
+  main .home-screen .options {
+    width: 70%;
+  }
+}
+@media (min-width: 1536px) {
+  main .home-screen .options {
+    width: 60%;
+  }
+  main .home-screen .options button {
+    font-size: 2.4rem;
+    padding: 1.4rem 0;
+  }
+}
+@media (min-width: 1820px) {
+  main .home-screen .options button {
+    font-size: 3rem;
+    padding: 1.8rem 0;
+  }
+}
+main .home-screen .info {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+}
+main .home-screen .info__type-username {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  width: 90%;
+  border: 0.3rem solid #AED2FF;
+  background-color: rgba(39, 0, 93, 0.9);
+  color: #bddbfc;
+  border-radius: 0.8rem;
+  padding: 1rem 0;
+}
+main .home-screen .info__type-username h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+main .home-screen .info__type-username label {
+  text-transform: uppercase;
+}
+main .home-screen .info__type-username input {
+  font-size: 1.2rem;
+  width: 70%;
+  padding: 0.3rem 0.8rem;
+  border: 3px solid #AED2FF;
+  background-color: rgba(174, 210, 255, 0.7);
+  color: #27005D;
+  border-radius: 0.4rem;
+}
+main .home-screen .info__type-username input::placeholder {
+  color: #bddbfc;
+}
+main .home-screen .info__type-username input:focus {
+  outline-color: #AED2FF;
+  outline-width: 3px;
+}
+main .home-screen .info__type-username .info__submit-username {
+  font-family: cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid #bddbfc;
+  background-color: #AED2FF;
+  color: #27005D;
+  transition: 0.15s;
+}
+main .home-screen .info__type-username .info__submit-username:active {
+  background-color: rgba(174, 210, 255, 0.8);
+  transform: scale(0.95);
+}
+main .home-screen .info__type-username .username-warn {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  main .home-screen .info__type-username {
+    gap: 3vh;
+    padding: 2rem 0;
+  }
+  main .home-screen .info label {
+    font-size: 3.6rem;
+  }
+  main .home-screen .info input {
+    font-size: 2.6rem;
+    padding: 0.7rem 1.4rem;
+  }
+  main .home-screen .info .username-warn {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  main .home-screen .info__type-username {
+    gap: 4vh;
+  }
+  main .home-screen .info label {
+    font-size: 4.8rem;
+  }
+  main .home-screen .info input {
+    font-size: 3rem;
+    padding: 1rem 2rem;
+  }
+  main .home-screen .info .username-warn {
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 1820px) {
+  main .home-screen .info__type-username {
+    width: 70%;
+  }
+  main .home-screen .info label {
+    font-size: 6rem;
+  }
+  main .home-screen .info input {
+    font-size: 4.4rem;
+    padding: 1.6rem 3.2rem;
+  }
+  main .home-screen .info .username-warn {
+    font-size: 4rem;
+  }
+}
+main .home-screen .info__instructions {
+  padding: 1.6rem 0;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  width: 90%;
+  border: 0.3rem solid #AED2FF;
+  background-color: rgba(39, 0, 93, 0.9);
+  color: #bddbfc;
+  border-radius: 0.8rem;
+}
+main .home-screen .info__instructions h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+main .home-screen .info__instructions ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  line-height: 1.75rem;
+  padding: 0 0.5rem 0 2rem;
+}
+@media (min-width: 768px) {
+  main .home-screen .info__instructions {
+    gap: 2.5vh;
+    padding: 3vh 0;
+  }
+  main .home-screen .info__instructions h2 {
+    font-size: 3.6rem;
+  }
+  main .home-screen .info__instructions ul {
+    gap: 4vh;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    padding: 0 1.8rem 0 3.6rem;
+  }
+}
+@media (min-width: 1280px) {
+  main .home-screen .info__instructions {
+    gap: 4vh;
+    padding: 4vh 0;
+  }
+  main .home-screen .info__instructions h2 {
+    font-size: 4.4rem;
+  }
+  main .home-screen .info__instructions ul {
+    gap: 5vh;
+    font-size: 3rem;
+    line-height: 3.6rem;
+  }
+}
+@media (min-width: 1820px) {
+  main .home-screen .info__instructions h2 {
+    font-size: 6rem;
+  }
+  main .home-screen .info__instructions ul {
+    font-size: 4rem;
+    line-height: 4.8rem;
+    padding: 0 3.2rem 0 6.4rem;
+  }
+}
+main .home-screen .info .customization {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  width: 90%;
+  border: 0.3rem solid #AED2FF;
+  background-color: rgba(39, 0, 93, 0.9);
+  color: #bddbfc;
+  border-radius: 0.8rem;
+  font-size: 1.3rem;
+  padding: 0.8rem;
+}
+main .home-screen .info .customization h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+main .home-screen .info .customization__options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+}
+main .home-screen .info .customization__options button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: cursive;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 0.6rem 0;
+  border: 0.18rem solid #27005D;
+  background-color: #AED2FF;
+  color: #27005D;
+  border-radius: 1rem;
+  transition: 0.15s;
+}
+main .home-screen .info .customization__options button:active {
+  background-color: rgba(189, 219, 252, 0.7);
+  box-shadow: 0 0 0.5rem #9400ff;
+  transform: scale(1.1);
+}
+@media (min-width: 768px) {
+  main .home-screen .info .customization {
+    font-size: 2.8rem;
+    padding: 3vh 3vw;
+  }
+  main .home-screen .info .customization__options {
+    gap: 0.8rem;
+  }
+  main .home-screen .info .customization button {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+}
+@media (min-width: 1024px) {
+  main .home-screen .info .customization button:hover {
+    background-color: rgba(189, 219, 252, 0.9);
+    box-shadow: 0 0 0.5rem #9400ff;
+    transform: scale(1.03);
+  }
+  main .home-screen .info .customization button:active {
+    background-color: rgba(189, 219, 252, 0.7);
+    box-shadow: 0 0 0.5rem #9400ff;
+    transform: scale(1.1);
+  }
+}
+@media (min-width: 1280px) {
+  main .home-screen .info .customization {
+    gap: 5vh;
+    font-size: 3.6rem;
+    padding: 5vh 4vw;
+  }
+  main .home-screen .info .customization__options {
+    gap: 1.6rem;
+  }
+  main .home-screen .info .customization button {
+    gap: 1rem;
+    font-size: 2.8rem;
+    padding: 1.6rem 0;
+  }
+}
+@media (min-width: 1820px) {
+  main .home-screen .info .customization {
+    font-size: 6rem;
+  }
+  main .home-screen .info .customization button {
+    font-size: 4rem;
+  }
+}
+main .home-screen .info .leaderboard {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  width: 90%;
+  border: 0.3rem solid #AED2FF;
+  background-color: rgba(39, 0, 93, 0.9);
+  color: #bddbfc;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+  width: 95%;
+  padding: 1rem 0;
+}
+main .home-screen .info .leaderboard h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+main .home-screen .info .leaderboard h2 {
+  font-size: 1.6rem;
+}
+main .home-screen .info .leaderboard .leaderboard__no-records {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+main .home-screen .info .leaderboard__mark-times {
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  width: 100%;
+  padding: 0 1rem;
+}
+main .home-screen .info .leaderboard__mark-times .leaderboard__player-mark-time--1 {
+  font-size: 1.5rem;
+  width: 100%;
+}
+main .home-screen .info .leaderboard__mark-times .leaderboard__player-mark-time--2 {
+  font-size: 1.4rem;
+  width: 97.5%;
+}
+main .home-screen .info .leaderboard__mark-times .leaderboard__player-mark-time--3 {
+  font-size: 1.3rem;
+  width: 95%;
+}
+main .home-screen .info .leaderboard__player-mark-time {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  width: 90%;
+  padding: 0.2rem 0.35rem;
+  background-color: #AED2FF;
+  color: #27005D;
+  border-radius: 0.5rem;
+}
+main .home-screen .info .leaderboard__player-mark-time :first-child {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.9rem;
+  min-width: 2.5rem;
+  color: #9400ff;
+}
+main .home-screen .info .leaderboard__player-mark-time :nth-child(2) {
+  padding-left: 0.25rem;
+}
+main .home-screen .info .leaderboard__player-mark-time :last-child {
+  text-align: center;
+  width: 100%;
+  padding: 0.15rem 0.5rem;
+  background-color: #9400ff;
+  color: #AED2FF;
+  border-radius: 0.5rem;
+}
+@media (min-width: 768px) {
+  main .home-screen .info .leaderboard {
+    font-size: 2.2rem;
+    padding: 1vh 0;
+    margin-bottom: -20px;
+  }
+  main .home-screen .info .leaderboard h2 {
+    font-size: 3.2rem;
+  }
+  main .home-screen .info .leaderboard .leaderboard__no-records {
+    font-size: 2.4rem;
+  }
+  main .home-screen .info .leaderboard__mark-times {
+    padding: 0 5vw;
+  }
+  main .home-screen .info .leaderboard__mark-times .leaderboard__player-mark-time--1 {
+    font-size: 3.2rem;
+  }
+  main .home-screen .info .leaderboard__mark-times .leaderboard__player-mark-time--2 {
+    font-size: 2.8rem;
+  }
+  main .home-screen .info .leaderboard__mark-times .leaderboard__player-mark-time--3 {
+    font-size: 2.4rem;
+  }
+  main .home-screen .info .leaderboard__player-mark-time {
+    padding: 0.4rem 0.6rem;
+  }
+  main .home-screen .info .leaderboard__player-mark-time :first-child {
+    font-size: 3rem;
+    line-height: 3.4rem;
+    padding: 0 2vw 0 1vw;
+    color: #9400ff;
+  }
+}
+@media (min-width: 1024px) {
+  main .home-screen .info .leaderboard {
+    gap: 0.5vh;
+    font-size: 1.5rem;
+    margin-bottom: -10px;
+  }
+  main .home-screen .info .leaderboard h2 {
+    font-size: 2.8rem;
+  }
+  main .home-screen .info .leaderboard .leaderboard__no-records {
+    font-size: 2rem;
+  }
+  main .home-screen .info .leaderboard__mark-times {
+    grid-template-areas: "first first" "second second" "third third" "fourth fourth" "fifth sixth" "seventh eighth" "nineth tenth";
+    gap: 1vh;
+  }
+  main .home-screen .info .leaderboard__mark-times .leaderboard__player-mark-time--1 {
+    grid-area: first;
+    font-size: 2rem;
+    width: 85%;
+  }
+  main .home-screen .info .leaderboard__mark-times .leaderboard__player-mark-time--2 {
+    grid-area: second;
+    font-size: 1.7rem;
+    width: 75%;
+  }
+  main .home-screen .info .leaderboard__mark-times .leaderboard__player-mark-time--3 {
+    grid-area: third;
+    font-size: 1.6rem;
+    width: 70%;
+  }
+  main .home-screen .info .leaderboard__mark-times div:nth-child(4) {
+    grid-area: fourth;
+  }
+  main .home-screen .info .leaderboard__mark-times div:nth-child(5) {
+    grid-area: fifth;
+    justify-self: end;
+  }
+  main .home-screen .info .leaderboard__mark-times div:nth-child(6) {
+    grid-area: sixth;
+    justify-self: start;
+  }
+  main .home-screen .info .leaderboard__mark-times div:nth-child(7) {
+    grid-area: seventh;
+    justify-self: end;
+  }
+  main .home-screen .info .leaderboard__mark-times div:nth-child(8) {
+    grid-area: eighth;
+    justify-self: start;
+  }
+  main .home-screen .info .leaderboard__mark-times div:nth-child(9) {
+    grid-area: nineth;
+    justify-self: end;
+  }
+  main .home-screen .info .leaderboard__mark-times div:last-child {
+    grid-area: tenth;
+    justify-self: start;
+  }
+  main .home-screen .info .leaderboard__player-mark-time {
+    width: 65%;
+    padding: 0.3rem;
+  }
+  main .home-screen .info .leaderboard__player-mark-time :first-child {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    padding: 0 1vw;
+    color: #9400ff;
+  }
+}
+@media (min-width: 1280px) {
+  main .home-screen .info .leaderboard {
+    font-size: 2rem;
+    padding: 0 0 2vh 0;
+    margin-bottom: -24px;
+  }
+  main .home-screen .info .leaderboard h2 {
+    font-size: 3.6rem;
+  }
+  main .home-screen .info .leaderboard .leaderboard__no-records {
+    font-size: 2.8rem;
+  }
+  main .home-screen .info .leaderboard .leaderboard__player-mark-time--1 {
+    font-size: 2.6rem;
+  }
+  main .home-screen .info .leaderboard .leaderboard__player-mark-time--2 {
+    font-size: 2.4rem;
+  }
+  main .home-screen .info .leaderboard .leaderboard__player-mark-time--3 {
+    font-size: 2.2rem;
+  }
+  main .home-screen .info .leaderboard__player-mark-time {
+    padding: 0.5rem;
+  }
+  main .home-screen .info .leaderboard__player-mark-time :first-child {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    padding: 0 1vw;
+    color: #9400ff;
+  }
+}
+@media (min-width: 1536px) {
+  main .home-screen .info .leaderboard {
+    gap: 2vh;
+    font-size: 2.4rem;
+    padding: 1vh 0 2vh 0;
+  }
+  main .home-screen .info .leaderboard h2 {
+    font-size: 4rem;
+  }
+  main .home-screen .info .leaderboard .leaderboard__no-records {
+    font-size: 3.2rem;
+  }
+  main .home-screen .info .leaderboard .leaderboard__player-mark-time--1 {
+    font-size: 3rem;
+  }
+  main .home-screen .info .leaderboard .leaderboard__player-mark-time--2 {
+    font-size: 2.6rem;
+  }
+  main .home-screen .info .leaderboard .leaderboard__player-mark-time--3 {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 1820px) {
+  main .home-screen .info .leaderboard {
+    font-size: 2.8rem;
+    padding: 2vh 0;
+  }
+  main .home-screen .info .leaderboard h2 {
+    font-size: 5.2rem;
+  }
+  main .home-screen .info .leaderboard .leaderboard__no-records {
+    font-size: 4rem;
+  }
+  main .home-screen .info .leaderboard .leaderboard__player-mark-time--1 {
+    font-size: 4rem;
+  }
+  main .home-screen .info .leaderboard .leaderboard__player-mark-time--2 {
+    font-size: 3.6rem;
+  }
+  main .home-screen .info .leaderboard .leaderboard__player-mark-time--3 {
+    font-size: 3.2rem;
+  }
+}
+@media (min-width: 768px) {
+  main .home-screen__logo {
+    padding: 3rem 0;
+  }
+}
+@media (min-width: 1024px) {
+  main .home-screen__logo {
+    width: 50%;
+    padding: 0;
+  }
+}
+@media (min-width: 1280px) {
+  main .home-screen__logo {
+    width: 65%;
+  }
+}
+@media (min-width: 1536px) {
+  main .home-screen__logo {
+    width: 55%;
+    padding: 2vh 0;
+  }
+}
+main .game-container {
+  display: grid;
+  justify-items: center;
+  align-content: space-between;
+  width: 100%;
+  min-height: 100vh;
+  padding: 1vh 0;
+}
+main .game-container__canvas {
+  display: grid;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #AED2FF;
+}
+main .game-container__canvas #canvas {
+  border: 5px dotted #27005D;
+  border-radius: 0.5rem;
+  background: linear-gradient(86deg, rgb(174, 210, 255) 0%, rgb(228, 241, 255) 95%);
+}
+@media (min-width: 768px) {
+  main .game-container__canvas {
+    font-size: 1.8rem;
+  }
+  main .game-container__canvas #canvas {
+    border-width: 0.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  main .game-container__canvas {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 1820px) {
+  main .game-container__canvas {
+    font-size: 3.2rem;
+  }
+}
+main .game-container__info-container {
+  display: grid;
+  gap: 2vh;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  main .game-container__info-container {
+    grid-template-columns: 50% 1fr;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  main .game-container__info-container {
+    grid-template-columns: none;
+    justify-content: start;
+  }
+  main .game-container__info-container .game-container__messages {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 1280px) {
+  main .game-container__info-container .game-container__messages {
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 1536px) {
+  main .game-container__info-container .game-container__messages {
+    font-size: 3.4rem;
+  }
+}
+@media (min-width: 1820px) {
+  main .game-container__info-container .game-container__messages {
+    font-size: 4.4rem;
+  }
+}
+main .game-container__buttons {
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+main .game-container__buttons--sides {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  max-width: 270px;
+}
+main .game-container__buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border: 5px solid #27005D;
+  border-radius: 8px;
+  background: linear-gradient(86deg, rgb(174, 210, 255) 0%, rgb(228, 241, 255) 50%);
+  transition: 0.15s;
+}
+main .game-container__buttons button:active {
+  background: #9400ff;
+}
+@media (min-width: 768px) {
+  main .game-container__buttons {
+    gap: 1vh;
+  }
+  main .game-container__buttons--sides {
+    gap: 2rem;
+    width: 90%;
+    max-width: none;
+  }
+  main .game-container__buttons button img {
+    width: 6.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  main .game-container__buttons {
+    display: none;
+  }
+}
+main .game-container__messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 70%;
+  padding: 0.5rem 0;
+  margin: 0 auto;
+  border: 0.3rem groove #AED2FF;
+  border-radius: 1rem;
+  background-color: #27005D;
+  color: #bddbfc;
+}
+@media (min-width: 768px) {
+  main .game-container__messages {
+    gap: 0.75rem;
+    font-size: 2rem;
+    width: fit-content;
+    height: fit-content;
+    padding: 2.5rem 1rem;
+  }
+  main .game-container__messages p {
+    display: block;
+    width: fit-content;
+    margin: 0;
+  }
+}
+@media (min-width: 1280px) {
+  main .game-container__messages {
+    font-size: 2.6rem;
+  }
+}
+@media (min-width: 1820px) {
+  main .game-container__messages {
+    font-size: 4rem;
+  }
+}
+main .game-container__instructions {
+  display: none;
+}
+@media (min-width: 1024px) {
+  main .game-container__instructions {
+    display: flex;
+    font-size: large;
+    text-transform: uppercase;
+    text-align: center;
+    width: 90%;
+    padding: 1rem 1.5rem;
+    border: 0.3rem groove #27005D;
+    border-radius: 1rem;
+    background: linear-gradient(86deg, rgb(174, 210, 255) 0%, rgb(178, 201, 226) 70%);
+    color: #27005D;
+  }
+}
+@media (min-width: 1280px) {
+  main .game-container__instructions {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1820px) {
+  main .game-container__instructions {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  main .game-container {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    place-items: center;
+    padding: 0;
+  }
+}
+@media (min-width: 1280px) {
+  main .game-container {
+    padding: 1rem 0;
+  }
+}
+@media (min-width: 1820px) {
+  main .game-container {
+    padding: 2rem 0;
+  }
+}
+main .final-screen {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(174, 210, 255, 0.75);
+  backdrop-filter: blur(5px);
+  gap: 2rem;
+  padding-top: 2rem;
+}
+main .final-screen__emoji {
+  font-size: 7.4rem;
+  line-height: 9rem;
+}
+main .final-screen :nth-child(2) {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 3rem;
+  color: #27005D;
+}
+main .final-screen__messages p:nth-child(2) {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  width: fit-content;
+  max-width: 95%;
+  padding: 0.5rem;
+  margin: 1rem auto 0;
+  background-color: rgba(174, 210, 255, 0.8);
+  border-radius: 0.5rem;
+}
+main .final-screen :nth-child(3) {
+  font-family: cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border: 5px solid #27005D;
+  background-color: #AED2FF;
+  color: #27005D;
+  border-radius: 0.5rem;
+  transition: 0.15s;
+}
+main .final-screen :nth-child(3):active {
+  background-color: rgba(148, 0, 255, 0.25);
+  transform: scale(0.9);
+}
+@media (min-width: 768px) {
+  main .final-screen {
+    gap: 4vh;
+    padding-top: 4vh;
+  }
+  main .final-screen__emoji {
+    font-size: 14rem;
+    line-height: 16rem;
+  }
+  main .final-screen :nth-child(2) {
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+  }
+  main .final-screen__messages p:nth-child(2) {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    padding: 1vh 2vw;
+    margin: 2vh auto 0;
+    border-radius: 1.2rem;
+  }
+  main .final-screen :nth-child(3) {
+    font-size: 4.4rem;
+  }
+}
+@media (min-width: 1024px) {
+  main .final-screen {
+    gap: 2vh;
+    padding: 0;
+  }
+  main .final-screen__emoji {
+    font-size: 8rem;
+    line-height: 10rem;
+  }
+  main .final-screen__messages p:nth-child(2) {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin: 0 auto;
+  }
+  main .final-screen :nth-child(3) {
+    font-size: 3.2rem;
+    margin-bottom: -28px;
+  }
+}
+@media (min-width: 1280px) {
+  main .final-screen {
+    padding-top: 2vh;
+  }
+  main .final-screen__emoji {
+    font-size: 10rem;
+    line-height: 12rem;
+  }
+  main .final-screen :nth-child(2) {
+    font-size: 4.8rem;
+    line-height: 6.4rem;
+  }
+  main .final-screen__messages p:nth-child(2) {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+  }
+  main .final-screen :nth-child(3) {
+    font-size: 4rem;
+    margin-bottom: -28px;
+  }
+}
+@media (min-width: 1536px) {
+  main .final-screen {
+    gap: 3vh;
+  }
+  main .final-screen :nth-child(2) {
+    line-height: 8.2rem;
+  }
+}
+@media (min-width: 1920px) {
+  main .final-screen__emoji {
+    font-size: 14rem;
+    line-height: 18rem;
+  }
+  main .final-screen :nth-child(2) {
+    font-size: 7rem;
+    line-height: 9rem;
+    color: #27005D;
+  }
+  main .final-screen__messages p:nth-child(2) {
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+    padding: 1.6rem;
+    border-radius: 1rem;
+  }
+  main .final-screen :nth-child(3) {
+    font-size: 4.8rem;
+  }
+}
+
+.home-button {
+  border: 0.18rem solid #27005D;
+  margin-top: 1vh;
+  background-color: #bddbfc;
+  border-radius: 0.5rem;
+  transition: 0.15s;
+}
+.home-button:active {
+  background-color: rgba(148, 0, 255, 0.2);
+  transform: scale(1.25);
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .home-button {
+    border-width: 0.35rem;
+    margin-top: 3vh;
+    border-radius: 1rem;
+  }
+  .home-button img {
+    width: 6rem;
+  }
+}
+@media (min-width: 1024px) {
+  .home-button img {
+    width: 4rem;
+  }
+  .home-button:hover {
+    background-color: rgba(148, 0, 255, 0.1);
+    transform: scale(1.1);
+  }
+  .home-button:active {
+    background-color: rgba(148, 0, 255, 0.5);
+    transform: scale(1.25);
+  }
+}
+@media (min-width: 1280px) {
+  .home-button img {
+    width: 6rem;
+  }
+}
+@media (min-width: 1536px) {
+  .home-button img {
+    width: 7rem;
+  }
+}
+@media (min-width: 1820px) {
+  .home-button img {
+    width: 8rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

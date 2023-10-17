@@ -1,0 +1,333 @@
+.leaderboard {
+  @include container;
+  
+  font-size: 1.2rem;
+  
+  width: 95%;
+  padding: 1rem 0;
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .leaderboard__no-records {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__mark-times {
+    display: grid;
+      place-items: center;
+      gap: .5rem;
+      
+    font-weight: bold;
+
+    width: 100%;
+    padding: 0 1rem;
+
+    .leaderboard__player-mark-time--1 {
+      font-size: 1.5rem;
+
+      width: 100%;
+    }
+
+    .leaderboard__player-mark-time--2 {
+      font-size: 1.4rem;
+
+      width: 97.5%;
+    }
+
+    .leaderboard__player-mark-time--3 {
+      font-size: 1.3rem;
+
+      width: 95%;
+    }
+  }
+
+  &__player-mark-time {
+    display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+
+    width: 90%;
+    padding: .2rem .35rem;
+
+    background-color: $color-tertiary;
+    color: $color-primary;
+    border-radius: .5rem;
+
+    :first-child {
+      font-size: 2rem;
+      text-align: center;
+      line-height: 1.9rem;
+
+      min-width: 2.5rem;
+
+      color: $color-secondary;
+    }
+
+    :nth-child(2) {
+      padding-left: .25rem;
+    }
+
+    :last-child {
+      text-align: center;
+      
+      width: 100%;
+      padding: .15rem .5rem;
+
+      background-color: $color-secondary;
+      color: $color-tertiary;
+      border-radius: .5rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .leaderboard {
+    font-size: 2.2rem;
+    
+    padding: 1vh 0;
+    margin-bottom: -20px;
+
+    h2 {
+      font-size: 3.2rem;
+    }
+
+    .leaderboard__no-records {
+      font-size: 2.4rem;
+    }
+
+    &__mark-times {
+      padding: 0 5vw;
+
+      .leaderboard__player-mark-time--1 {
+        font-size: 3.2rem;
+      }
+  
+      .leaderboard__player-mark-time--2 {
+        font-size: 2.8rem;
+      }
+  
+      .leaderboard__player-mark-time--3 {
+        font-size: 2.4rem;
+      }
+    }
+
+    &__player-mark-time {
+      padding: .4rem .6rem;
+
+      :first-child {
+        font-size: 3rem;
+        line-height: 3.4rem;
+  
+        padding: 0 2vw 0 1vw;
+  
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .leaderboard {
+      gap: .5vh;
+    
+    font-size: 1.5rem;
+
+    margin-bottom: -10px;
+
+    h2 {
+      font-size: 2.8rem;
+    }
+
+    .leaderboard__no-records {
+      font-size: 2rem;
+    }
+    
+    &__mark-times {
+        grid-template-areas: 
+        "first first"
+        "second second"
+        "third third"
+        "fourth fourth"
+        "fifth sixth"
+        "seventh eighth"
+        "nineth tenth";
+        gap: 1vh;
+
+      .leaderboard__player-mark-time--1 {
+          grid-area: first;
+
+        font-size: 2rem;
+
+        width: 85%;
+      }
+  
+      .leaderboard__player-mark-time--2 {
+          grid-area: second;
+
+        font-size: 1.7rem;
+
+        width: 75%;
+      }
+  
+      .leaderboard__player-mark-time--3 {
+          grid-area: third;
+
+        font-size: 1.6rem;
+
+        width: 70%;
+      }
+
+      div:nth-child(4) {
+          grid-area: fourth;
+      }
+
+      div:nth-child(5) {
+          grid-area: fifth;
+          justify-self: end;
+      }
+
+      div:nth-child(6) {
+          grid-area: sixth;
+          justify-self: start;
+      }
+
+      div:nth-child(7) {
+          grid-area: seventh;
+          justify-self: end;
+      }
+
+      div:nth-child(8) {
+          grid-area: eighth;
+          justify-self: start;
+      }
+
+      div:nth-child(9) {
+          grid-area: nineth;
+          justify-self: end;
+      }
+
+      div:last-child {
+          grid-area: tenth;
+          justify-self: start;
+      }
+    }
+
+    &__player-mark-time {
+      width: 65%;
+      padding: .3rem;
+      
+      :first-child {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+  
+        padding: 0 1vw;
+  
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .leaderboard {
+    font-size: 2rem;
+
+    padding: 0 0 2vh 0;
+    margin-bottom: -24px;
+
+    h2 {
+      font-size: 3.6rem;
+    }
+
+    .leaderboard__no-records {
+      font-size: 2.8rem;
+    }
+
+    .leaderboard__player-mark-time--1 {
+      font-size: 2.6rem;
+    }
+
+    .leaderboard__player-mark-time--2 {
+      font-size: 2.4rem;
+    }
+
+    .leaderboard__player-mark-time--3 {
+      font-size: 2.2rem;
+    }
+
+    &__player-mark-time {
+      padding: .5rem;
+      
+      :first-child {
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+  
+        padding: 0 1vw;
+  
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+@media (min-width: 1536px) {
+  .leaderboard {
+      gap: 2vh;
+
+    font-size: 2.4rem;
+
+    padding: 1vh 0 2vh 0;
+
+    h2 {
+      font-size: 4rem;
+    }
+
+    .leaderboard__no-records {
+      font-size: 3.2rem;
+    }
+
+    .leaderboard__player-mark-time--1 {
+      font-size: 3rem;
+    }
+
+    .leaderboard__player-mark-time--2 {
+      font-size: 2.6rem;
+    }
+
+    .leaderboard__player-mark-time--3 {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+@media (min-width: 1820px) {
+  .leaderboard {
+    font-size: 2.8rem;
+
+    padding: 2vh 0;
+
+    h2 {
+      font-size: 5.2rem;
+    }
+
+    .leaderboard__no-records {
+      font-size: 4rem;
+    }
+
+    .leaderboard__player-mark-time--1 {
+      font-size: 4rem;
+    }
+
+    .leaderboard__player-mark-time--2 {
+      font-size: 3.6rem;
+    }
+
+    .leaderboard__player-mark-time--3 {
+      font-size: 3.2rem;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.home-screen {
+  @include containerOnTop;
+
+  &__logo {
+    display: grid;
+      place-items: center;
+
+    width: 100%;
+    height: fit-content;
+    padding: 8vh 0;
+
+    img {
+      width: 50%;
+    }
+  }
+
+  @import './options';
+
+  @import './info-container/info';
+}
+
+@media (min-width: 768px) {
+  .home-screen__logo {
+    padding: 3rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-screen__logo {
+    width: 50%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .home-screen__logo {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .home-screen__logo {
+    width: 55%;
+
+    padding: 2vh 0;
+  }
+}
