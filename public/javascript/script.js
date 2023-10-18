@@ -288,6 +288,34 @@ function addProjectsInfo(projectsInfoArray) {
       description: "JavaScript Logo"
     },
   });
+  // JavaScript Practical - Video Game 
+  projectsInfoArray.push({
+    link: "./courses/javascript-videogames",
+    date: "17/10/23",
+    logo: "https://res.cloudinary.com/dziyyutwr/image/upload/v1696553817/videogames/videogame_icon_ketvsq.png",
+    logoDescription: "Video Game Image",
+    title: "Video Game",
+    description: "JavaScript Parctical",
+    html: {
+      display: false
+    },
+    css: {
+      display: false
+    },
+    sass: {
+      display: true,
+      icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653405/Platzi%20Portfolio/sass_logo_taah3u.svg",
+      description: "SASS Logo"
+    },
+    tailwind: {
+      display: false
+    },
+    javascript: {
+      display: true,
+      icon: "https://res.cloudinary.com/dziyyutwr/image/upload/v1695653404/Platzi%20Portfolio/javascript_logo_hzrfct.svg",
+      description: "JavaScript Logo"
+    }
+  });
 }
 
 function createProjects(projectsInfoArray, containerToAppend) {
