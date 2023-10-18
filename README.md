@@ -14,6 +14,8 @@ Git, GitHub, HTML, PUG, CSS, SASS, Tailwind, JavaScript
 - Messi's Best Moments
 - Hotel Heaven
 - Lamoure Jewelry & Accessories Store using JavaScript
+- Math Workshop
+- Video Game
 
 ### ☝👀 If you want to look at them
 [Here they are!](https://miguelkeydev.github.io/platzi-web-development-school/)
